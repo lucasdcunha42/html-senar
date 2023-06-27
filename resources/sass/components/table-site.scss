@@ -1,0 +1,25 @@
+.table-site {
+    thead {
+        tr {
+            background-color: $green-base;
+            color: #fff;
+
+            th {
+                vertical-align: middle;
+                padding: 15px;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    tbody {
+        tr {
+            background-color: $grey-base;
+
+            td {
+                vertical-align: middle;
+                padding: 15px;
+            }
+        }
+    }
+}

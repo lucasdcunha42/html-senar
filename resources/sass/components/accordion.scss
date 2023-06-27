@@ -1,0 +1,77 @@
+.accordion-container {
+    width: 70%;
+    margin: 0 auto;
+}
+.accordion-container-100 {
+    width: 100%;
+}
+
+.accord-item {
+
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #c7c7c7;
+
+    .accord-title {
+        font-size: 20px;
+        text-transform: uppercase;
+        position: relative;
+        cursor: pointer;
+    }
+
+    .accord-desc {
+        display: none;
+        color: #717171;
+        font-size: 18px;
+        margin-top: 20px;
+        width: 94%;
+
+        .table {
+            font-size: 13px;
+            color: #000;
+        }
+    }
+}
+
+button.btn-open-close {
+    top: -5px;
+    right: 0;
+    border: 0;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    cursor: pointer;
+    background: #fff;
+}
+
+button.btn-open-close span {
+    position: absolute;
+    transition: 300ms;
+    background: black;
+    border-radius: 1px;
+}
+
+/* Create the "+" shape by positioning the spans absolutely */
+button.btn-open-close span:first-child {
+    top: 25%;
+    bottom: 25%;
+    width: 2%;
+    left: 50%;
+}
+
+button.btn-open-close span:last-child {
+    left: 25%;
+    right: 25%;
+    height: 2%;
+    top: 50%;
+}
+
+  /* Morph the shape when the button is hovered over */
+button.btn-open-close.open span {
+	transform: rotate(135deg);
+}
+
+button.btn-open-close.open span:last-child {
+	// left: 50%;
+	// right: 50%;
+}

@@ -1,0 +1,2259 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+ <Sindicatos>
+  <Sindicato Codigo="19442" Nome="SINDICATO DOS TRAB NA AGRIC. FAMILIAR DE GARIBALDI" Tipo="T" EMail="strgaribaldi@fetagrs.org.br" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Nao" TipoLogradouro="RUA" Logradouro="JULIO DE CASTILHOS" Complemento="Nº 285" Bairro="" Municipio="GARIBALDI" CEP="95720-000" Regiao="Planalto Serra"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Sim" DDD="54" Numero=" 3462-1128" Tipo="Comercial"/>
+   </Telefones>
+   <Abrangencia>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="17442" Nome="SINDICATO DOS TRAB RURAIS DE ANTA GORDA" Tipo="T" EMail="strantagorda@fetagrs.org.br" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="DR. CHAVES" Complemento="Nº  506" Bairro="" Municipio="ANTA GORDA" CEP="95980-000" Regiao="Planalto Serra"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="51" Numero=" 3756-1166" Tipo="Comercial"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="ANTA GORDA"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="369" Nome="SINDICATO DOS TRAB RURAIS DE BENTO GONÇALVES" Tipo="T" EMail="strbg@strbg.com.br" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="GENERAL GOIS MONTEIRO" Complemento="Nº 232" Bairro="" Municipio="BENTO GONCALVES" CEP="95700-000" Regiao="Planalto Serra"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="54" Numero=" 3451-1470" Tipo="Residencial"/>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="54" Numero=" 3452-1744" Tipo="Comercial"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="BENTO GONCALVES"/>
+    <Municipio Nome="MONTE BELO DO SUL"/>
+    <Municipio Nome="SANTA TEREZA"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="17998" Nome="SINDICATO DOS TRAB RURAIS DE CARLOS BARBOSA" Tipo="T" EMail="strcarlosbarbosa@fetagrs.org.br" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="DR. CARLOS BARBOSA" Complemento="Nº 340" Bairro="" Municipio="CARLOS BARBOSA" CEP="95185-000" Regiao="Planalto Serra"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="54" Numero=" 3461-1327" Tipo="Comercial"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="CARLOS BARBOSA"/>
+    <Municipio Nome="CORONEL PILAR"/>
+    <Municipio Nome="GARIBALDI"/>
+    <Municipio Nome="SAO VENDELINO"/>
+    <Municipio Nome="BOA VISTA DO SUL"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="693" Nome="SINDICATO DOS TRAB RURAIS DE CASCA" Tipo="T" EMail="strcasca@fetagrs.org.br" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="CARLOS BARBOSA" Complemento="Nº 130" Bairro="" Municipio="CASCA" CEP="99260-000" Regiao="Planalto Serra"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="54" Numero=" 3347-1172" Tipo="Comercial"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="54" Numero="99909-6565" Tipo="Celular"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="CASCA"/>
+    <Municipio Nome="PARAI"/>
+    <Municipio Nome="SAO DOMINGOS DO SUL"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="17999" Nome="SINDICATO DOS TRAB RURAIS DE DOM FELICIANO" Tipo="T" EMail="strdomfeliciano@yahoo.com.br" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="TIRADENTES" Complemento="Nº  260" Bairro="" Municipio="DOM FELICIANO" CEP="96190-000" Regiao="Campanha Sul"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="51" Numero=" 3677-1395" Tipo="Comercial"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="51" Numero="99636-3665" Tipo="Celular"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="AMARAL FERRADOR"/>
+    <Municipio Nome="DOM FELICIANO"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="237" Nome="SINDICATO DOS TRAB RURAIS DE ENCANTADO E DR RICARD" Tipo="T" EMail="str.encantado@viavale.com.br" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="Duque de Caxias" Complemento="Nº 761" Bairro="Centro" Municipio="ENCANTADO" CEP="95960-000" Regiao="Litoral Vales"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="51" Numero=" 3751-2377" Tipo="Comercial"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="51" Numero=" 3751-6000" Tipo="Comercial"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="CAPITAO"/>
+    <Municipio Nome="COQUEIRO BAIXO"/>
+    <Municipio Nome="ENCANTADO"/>
+    <Municipio Nome="MUCUM"/>
+    <Municipio Nome="NOVA BRESCIA"/>
+    <Municipio Nome="RELVADO"/>
+    <Municipio Nome="DOUTOR RICARDO"/>
+    <Municipio Nome="ROCA SALES"/>
+    <Municipio Nome="TRAVESSEIRO"/>
+    <Municipio Nome="VESPASIANO CORREA"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="1530" Nome="SINDICATO DOS TRAB RURAIS DE ESTRELA" Tipo="T" EMail="administracao@strestrela.com.br" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="VENANCIO AIRES" Complemento="Nº 155" Bairro="" Municipio="ESTRELA" CEP="95880-000" Regiao="Litoral Vales"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="51" Numero=" 3712-1001" Tipo="Comercial"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="51" Numero="98159-8399" Tipo="Celular"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="51" Numero="99627-5162" Tipo="Celular"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="BOM RETIRO DO SUL"/>
+    <Municipio Nome="COLINAS"/>
+    <Municipio Nome="ESTRELA"/>
+    <Municipio Nome="FAZENDA VILANOVA"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="18035" Nome="SINDICATO DOS TRAB RURAIS DE FAXINAL DO SOTURNO" Tipo="T" EMail="strfaxinal@yahoo.com" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="7 DE SETEMBRO" Complemento="Nº 627" Bairro="" Municipio="FAXINAL DO SOTURNO" CEP="97220-000" Regiao="Centro"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="55" Numero=" 3263-1173" Tipo="Comercial"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="DONA FRANCISCA"/>
+    <Municipio Nome="FAXINAL DO SOTURNO"/>
+    <Municipio Nome="IVORA"/>
+    <Municipio Nome="NOVA PALMA"/>
+    <Municipio Nome="SAO JOAO DO POLESINE"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="692" Nome="SINDICATO DOS TRAB RURAIS DE GUAPORÉ" Tipo="T" EMail="strguapore@hotmail.com" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="DR. LUIS AUGUSTO PUPERI" Complemento="Nº 1.025" Bairro="" Municipio="GUAPORE" CEP="99200-000" Regiao="Planalto Serra"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="54" Numero=" 3443-1406" Tipo="Comercial"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="54" Numero=" 3443-1959" Tipo="Comercial"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="54" Numero=" 3443-5205" Tipo="Residencial"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="54" Numero="98132-1901" Tipo="Celular"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="DOIS LAJEADOS"/>
+    <Municipio Nome="GUAPORE"/>
+    <Municipio Nome="UNIAO DA SERRA"/>
+    <Municipio Nome="SAO VALENTIM DO SUL"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="239" Nome="SINDICATO DOS TRAB RURAIS DE IGREJINHA" Tipo="T" EMail="strigrejinha@fetagrs.org.br" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="Edmundo Lauffer" Complemento="Nº 280" Bairro="" Municipio="IGREJINHA" CEP="95650-000" Regiao="Litoral Vales"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="51" Numero=" 3545-1307" Tipo="Telefone/FAX"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="51" Numero=" 3545-2080" Tipo="Residencial"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="IGREJINHA"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="328" Nome="SINDICATO DOS TRAB RURAIS DE IVOTI" Tipo="T" EMail="strivoti@fetagrs.org.br" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="JACOB SCHNECK" Complemento="Nº 419" Bairro="FARROUPILHA" Municipio="IVOTI" CEP="93900-000" Regiao="Litoral Vales"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="51" Numero=" 3563-1116" Tipo="Comercial"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="DOIS IRMAOS"/>
+    <Municipio Nome="ESTANCIA VELHA"/>
+    <Municipio Nome="IVOTI"/>
+    <Municipio Nome="MORRO REUTER"/>
+    <Municipio Nome="LINDOLFO COLLOR"/>
+    <Municipio Nome="PRESIDENTE LUCENA"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="389" Nome="SINDICATO DOS TRAB RURAIS DE LAJEADO" Tipo="T" EMail="str@strlajeado.com.br" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="BENTO GONÇALVES" Complemento="Nº 639" Bairro="" Municipio="LAJEADO" CEP="95900-174" Regiao="Litoral Vales"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="51" Numero=" 3714-5244" Tipo="Telefone/FAX"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="ARROIO DO MEIO"/>
+    <Municipio Nome="CRUZEIRO DO SUL"/>
+    <Municipio Nome="FORQUETINHA"/>
+    <Municipio Nome="LAJEADO"/>
+    <Municipio Nome="MARQUES DE SOUZA"/>
+    <Municipio Nome="PROGRESSO"/>
+    <Municipio Nome="SANTA CLARA DO SUL"/>
+    <Municipio Nome="SERIO"/>
+    <Municipio Nome="CANUDOS DO VALE"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="18034" Nome="SINDICATO DOS TRAB RURAIS DE MAXIMILIANO ALMEIDA" Tipo="T" EMail="strmaximiliano@gmail.com" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="ANCHIETA" Complemento="Nº 166" Bairro="" Municipio="MAXIMILIANO DE ALMEIDA" CEP="99890-000" Regiao="Planalto Serra"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="54" Numero=" 3397-1111" Tipo="Residencial"/>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="54" Numero=" 3397-1180" Tipo="Comercial"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="54" Numero="99951-5216" Tipo="Celular"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="MAXIMILIANO DE ALMEIDA"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="17784" Nome="SINDICATO DOS TRAB RURAIS DE NOVA BASSANO" Tipo="T" EMail="strnb@bassanet.com.br" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="PINHEIRO MACHADO" Complemento="Nº 1181 CX POSTAL 29" Bairro="" Municipio="NOVA BASSANO" CEP="95340-000" Regiao="Planalto Serra"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="54" Numero=" 3273-1258" Tipo="Comercial"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="NOVA ARACA"/>
+    <Municipio Nome="NOVA BASSANO"/>
+    <Municipio Nome="NOVA PRATA"/>
+    <Municipio Nome="VISTA ALEGRE DO PRATA"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="390" Nome="SINDICATO DOS TRAB RURAIS DE NOVA PETRÓPOLIS" Tipo="T" EMail="sindicatonp@royalnet.com.br" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="CEL. ALFREDO STEGLICH" Complemento="Nº 68" Bairro="" Municipio="NOVA PETROPOLIS" CEP="95150-000" Regiao="Planalto Serra"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="54" Numero=" 0281-3688" Tipo="Comercial"/>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Nao" DDD="54" Numero=" 3281-1266" Tipo="Telefone/FAX"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="GRAMADO"/>
+    <Municipio Nome="NOVA PETROPOLIS"/>
+    <Municipio Nome="PICADA CAFE"/>
+    <Municipio Nome="SANTA MARIA DO HERVAL"/>
+    <Municipio Nome="LINHA NOVA"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="18033" Nome="SINDICATO DOS TRAB RURAIS DE PINHAL DA SERRA" Tipo="T" EMail="strpinhaldaserra@fetagrs.org.br" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Nao" TipoLogradouro="RUA" Logradouro="PINHEIRO MACHADO" Complemento="N° 757" Bairro="" Municipio="PINHAL DA SERRA" CEP="95390-000" Regiao="Planalto Serra"/>
+    <Endereco DisponivelPublicamente="Nao" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="SAO JOSE" Complemento="Nº S/N" Bairro="" Municipio="PINHAL DA SERRA" CEP="95390-000" Regiao="Planalto Serra"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Nao" DDD="54" Numero="98428-7487" Tipo="Celular"/>
+   </Telefones>
+   <Abrangencia>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="507" Nome="SINDICATO DOS TRAB RURAIS DE ROQUE GONZALES" Tipo="T" EMail="strroquegonzales@fetagrs.org.br" EMailDisponivelPublicamente="Sim" Site="OPCIONAL-  lucasgottardomachry@hotmail.com" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="SENADOR PINHEIRO MACHADO" Complemento="Nº 110" Bairro="" Municipio="ROQUE GONZALES" CEP="97970-000" Regiao="Noroeste"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="55" Numero=" 3365-1214" Tipo="Comercial"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="55" Numero="99972-0564" Tipo="Celular"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="ROQUE GONZALES"/>
+    <Municipio Nome="SALVADOR DAS MISSOES"/>
+    <Municipio Nome="SAO PEDRO DO BUTIA"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="17997" Nome="SINDICATO DOS TRAB RURAIS DE SALVADOR DO SUL" Tipo="T" EMail="strsalvadordosul@fetagrs.org.br" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="AVENIDA" Logradouro="DUQUE DE CAXIAS" Complemento="Nº   605" Bairro="" Municipio="SALVADOR DO SUL" CEP="95750-000" Regiao="Planalto Serra"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="51" Numero=" 3638-1077" Tipo="Comercial"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="BARAO"/>
+    <Municipio Nome="SALVADOR DO SUL"/>
+    <Municipio Nome="SAO PEDRO DA SERRA"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="16867" Nome="SINDICATO DOS TRAB RURAIS DE SÃO SEBASTIÃO DO CAI" Tipo="T" EMail="sindtrabrurais@terra.com.br" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="CORONEL PAULINO TEIXEIRA" Complemento="Nº 925" Bairro="" Municipio="SAO SEBASTIAO DO CAI" CEP="95760-000" Regiao="Litoral Vales"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="51" Numero=" 3635-1665" Tipo="Comercial"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="51" Numero=" 3635-4319" Tipo="Comercial"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="BOM PRINCIPIO"/>
+    <Municipio Nome="FELIZ"/>
+    <Municipio Nome="HARMONIA"/>
+    <Municipio Nome="PORTAO"/>
+    <Municipio Nome="SAO SEBASTIAO DO CAI"/>
+    <Municipio Nome="TUPANDI"/>
+    <Municipio Nome="VALE REAL"/>
+    <Municipio Nome="ALTO FELIZ"/>
+    <Municipio Nome="SAO JOSE DO SUL"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="391" Nome="SINDICATO DOS TRAB RURAIS DE SERAFINA CORREA" Tipo="T" EMail="strserafinacorrea@net11.com.br" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="BARRETO VIANA" Complemento="Nº 1583" Bairro="" Municipio="SERAFINA CORREA" CEP="99250-000" Regiao="Planalto Serra"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="54" Numero=" 3444-1153" Tipo="Telefone/FAX"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="MONTAURI"/>
+    <Municipio Nome="SERAFINA CORREA"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="242" Nome="SINDICATO DOS TRAB RURAIS DE SERTAO SANTANA" Tipo="T" EMail="atendimento@strsertaosantana.com.br" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="24 de março" Complemento="507" Bairro="" Municipio="SERTAO SANTANA" CEP="92850-000" Regiao="Litoral Vales"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="51" Numero=" 3495-1025" Tipo="Comercial"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="BARAO DO TRIUNFO"/>
+    <Municipio Nome="MARIANA PIMENTEL"/>
+    <Municipio Nome="SERTAO SANTANA"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="238" Nome="SINDICATO DOS TRAB RURAIS DE TEUTONIA" Tipo="T" EMail="teutoniastr@gmail.com" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="Pedro Schneider" Complemento="Nº 303" Bairro="Languiru" Municipio="TEUTONIA" CEP="95890-000" Regiao="Litoral Vales"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="51" Numero=" 3762-1362" Tipo="Comercial"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="IMIGRANTE"/>
+    <Municipio Nome="POCO DAS ANTAS"/>
+    <Municipio Nome="TEUTONIA"/>
+    <Municipio Nome="WESTFÁLIA"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="211" Nome="SINDICATO DOS TRAB RURAIS DE TORRES" Tipo="T" EMail="strtorre@terra.com.br" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="MANOEL FORTUNATO DE SOUZA" Complemento="Nº 135  CX POSTAL 66" Bairro="" Municipio="TORRES" CEP="95560-000" Regiao="Litoral Vales"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="51" Numero=" 3664-1387" Tipo="Telefone/FAX"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="ARROIO DO SAL"/>
+    <Municipio Nome="MAMPITUBA"/>
+    <Municipio Nome="DOM PEDRO DE ALCANTARA"/>
+    <Municipio Nome="TORRES"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="648" Nome="SINDICATO DOS TRAB RURAIS DE TRES CACHOEIRAS" Tipo="T" EMail="strtc@terra.com.br" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="MANOEL JOÃO MACHADO" Complemento="Nº 229" Bairro="" Municipio="TRES CACHOEIRAS" CEP="95580-000" Regiao="Litoral Vales"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="51" Numero=" 3667-1305" Tipo="Comercial"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="51" Numero="98457-0000" Tipo="Celular"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="ITATI"/>
+    <Municipio Nome="TERRA DE AREIA"/>
+    <Municipio Nome="TRES CACHOEIRAS"/>
+    <Municipio Nome="TRES FORQUILHAS"/>
+    <Municipio Nome="MORRINHOS DO SUL"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="1036" Nome="SINDICATO DOS TRAB RURAIS DE VERANOPOLIS" Tipo="T" EMail="rural@pressa.com.br" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="PRINCESA IZABEL" Complemento="Nº 460" Bairro="" Municipio="VERANOPOLIS" CEP="95330-000" Regiao="Planalto Serra"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="54" Numero=" 3441-1764" Tipo="Comercial"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="COTIPORA"/>
+    <Municipio Nome="FAGUNDES VARELA"/>
+    <Municipio Nome="VERANOPOLIS"/>
+    <Municipio Nome="VILA FLORES"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="18125" Nome="SINDICATO DOS TRAB RURAIS DE VILA MARIA" Tipo="T" EMail="strvilamaria@fetagrs.org.br" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="GEN FLORES DA CUNHA" Complemento="Nº  628" Bairro="" Municipio="VILA MARIA" CEP="99155-000" Regiao="Planalto Serra"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="54" Numero=" 3359-1272" Tipo="Comercial"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="54" Numero="99919-2167" Tipo="Celular"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="CAMARGO"/>
+    <Municipio Nome="VILA MARIA"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="19369" Nome="SINDICATO RURAL DA SERRA GAÚCHA" Tipo="R" EMail="sindruralbg@hotmail.com" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Nao" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="GETULIO VARGAS" Complemento="Nº 36" Bairro="" Municipio="BENTO GONCALVES" CEP="95700-000" Regiao="Planalto Serra"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="54" Numero=" 3702-2216" Tipo="Comercial"/>
+   </Telefones>
+   <Abrangencia>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="5" Nome="SINDICATO RURAL DE AGUDO" Tipo="R" EMail="sindruralagudo@gpsnet.com.br" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="THEODEORO WOLDT" Complemento="Nº 399" Bairro="" Municipio="AGUDO" CEP="96540-000" Regiao="Centro"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="55" Numero=" 3265-2588" Tipo="Telefone/FAX"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="AGUDO"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="6" Nome="SINDICATO RURAL DE AJURICABA" Tipo="R" EMail="sindaju@gmail.com" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="EMILIO GROSS" Complemento="Nº 287" Bairro="" Municipio="AJURICABA" CEP="98750-000" Regiao="Noroeste"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="55" Numero=" 3387-1276" Tipo="Comercial"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="AJURICABA"/>
+    <Municipio Nome="NOVA RAMADA"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="215" Nome="SINDICATO RURAL DE ALEGRETE" Tipo="R" EMail="sra.cursos@conexaorural.com.br" EMailDisponivelPublicamente="Sim" Site="www.conexaorural.com.br" SiteDisponivelPublicamente="Sim">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="VENANCIO AIRES" Complemento="654" Bairro="CENTRO" Municipio="ALEGRETE" CEP="97541-500" Regiao="Fronteira"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="55" Numero=" 3422-4577" Tipo="Comercial"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="55" Numero=" 3422-4771" Tipo="Telefone/FAX"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="ALEGRETE"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="8" Nome="SINDICATO RURAL DE ANDRÉ DA ROCHA" Tipo="R" EMail="sindiruralandre@gmail.com" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="AVENIDA" Logradouro="BUARQUE DE MACEDO" Complemento="Nº 1950" Bairro="" Municipio="ANDRE DA ROCHA" CEP="95310-000" Regiao="Planalto Serra"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="54" Numero=" 3611-1901" Tipo="Telefone/FAX"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="54" Numero=" 3611-1323" Tipo="Comercial"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="ANDRE DA ROCHA"/>
+    <Municipio Nome="GUABIJU"/>
+    <Municipio Nome="PROTASIO ALVES"/>
+    <Municipio Nome="SAO JORGE"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="9" Nome="SINDICATO RURAL DE ARROIO DO TIGRE" Tipo="R" EMail="sindicatoruralat@yahoo.com.br" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="JACO BASA" Complemento="Nº 272" Bairro="" Municipio="ARROIO DO TIGRE" CEP="96950-000" Regiao="Centro"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="51" Numero=" 3747-1252" Tipo="Telefone/FAX"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="51" Numero="99657-0104" Tipo="Celular"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="51" Numero=" 3747-1397" Tipo="Telefone/FAX"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="ARROIO DO TIGRE"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="10" Nome="SINDICATO RURAL DE ARROIO DOS RATOS" Tipo="R" EMail="sindicatar@gmail.com" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="JOÃO PEREIRA DA SILVA" Complemento="Nº 465" Bairro="" Municipio="ARROIO DOS RATOS" CEP="96740-000" Regiao="Litoral Vales"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="51" Numero=" 3656-1789" Tipo="Telefone/FAX"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="ARROIO DOS RATOS"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="145" Nome="SINDICATO RURAL DE ARROIO GRANDE" Tipo="R" EMail="sindicatoruralag@hotmail.com" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="DR. MONTEIRO" Complemento="247" Bairro="" Municipio="ARROIO GRANDE" CEP="96330-000" Regiao="Campanha Sul"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="53" Numero=" 3262-1338" Tipo="Comercial"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="53" Numero=" 3262-1882" Tipo="Telefone/FAX"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="ARROIO GRANDE"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="12" Nome="SINDICATO RURAL DE ARVOREZINHA" Tipo="R" EMail="sindicatorural.arvorezinha@gmail.com" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="AVENIDA" Logradouro="BARãO DO TRIUNFO" Complemento="Nº 239" Bairro="" Municipio="ARVOREZINHA" CEP="95995-000" Regiao="Planalto Serra"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="51" Numero=" 3772-1117" Tipo="Comercial"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="51" Numero="99933-4386" Tipo="Celular"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="ARVOREZINHA"/>
+    <Municipio Nome="ILOPOLIS"/>
+    <Municipio Nome="ITAPUCA"/>
+    <Municipio Nome="NOVA ALVORADA"/>
+    <Municipio Nome="PUTINGA"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="13" Nome="SINDICATO RURAL DE BAGÉ" Tipo="R" EMail="senar.ruralbage@hotmail.com" EMailDisponivelPublicamente="Sim" Site="www.ruralbage.com.br" SiteDisponivelPublicamente="Sim">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="AVENIDA" Logradouro="PORTUGAL" Complemento="Nº 495 CX.P. 314" Bairro="CASTRO ALVES" Municipio="BAGÉ" CEP="96415-000" Regiao="Campanha Sul"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="53" Numero=" 3242-5426" Tipo="Comercial"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="53" Numero=" 3242-5245" Tipo="Telefone/FAX"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="53" Numero=" 3242-8888" Tipo="Comercial"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="ACEGUA"/>
+    <Municipio Nome="BAGÉ"/>
+    <Municipio Nome="HULHA NEGRA"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="14" Nome="SINDICATO RURAL DE BARRA DO QUARAÍ" Tipo="R" EMail="sruralbq@terra.com.br" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="MONTEIRO LOBATO" Complemento="Nº 281" Bairro="" Municipio="BARRA DO QUARAI" CEP="97538-000" Regiao="Fronteira"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="55" Numero=" 3419-1210" Tipo="Comercial"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="55" Numero="99652-7473" Tipo="Celular"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="BARRA DO QUARAI"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="15" Nome="SINDICATO RURAL DE BARRA DO RIBEIRO" Tipo="R" EMail="sirural@uol.com.br" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="IDALINO HELLER" Complemento="Nº 217" Bairro="" Municipio="BARRA DO RIBEIRO" CEP="96790-000" Regiao="Litoral Vales"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="51" Numero=" 3482-1240" Tipo="Telefone/FAX"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="BARRA DO RIBEIRO"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="16" Nome="SINDICATO RURAL DE BOM JESUS" Tipo="R" EMail="sindicatorural00@gmail.com" EMailDisponivelPublicamente="Sim" Site="sindicatoruraldebomj.wix.com/sindicato-rural" SiteDisponivelPublicamente="Sim">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="MAJOR ANTONIO INACIO VELHO" Complemento="Nº 530" Bairro="" Municipio="BOM JESUS" CEP="95290-000" Regiao="Planalto Serra"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="54" Numero=" 3237-1396" Tipo="Telefone/FAX"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="BOM JESUS"/>
+    <Municipio Nome="JAQUIRANA"/>
+    <Municipio Nome="SAO JOSE DOS AUSENTES"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="17" Nome="SINDICATO RURAL DE BOSSOROCA" Tipo="R" EMail="srbossoroca@yahoo.com.br" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="MÁRIO ALVES PEREIRA" Complemento="Nº 361" Bairro="" Municipio="BOSSOROCA" CEP="97850-000" Regiao="Fronteira"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="55" Numero="99626-3687" Tipo="Celular"/>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="55" Numero=" 3356-1364" Tipo="Telefone/FAX"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="BOSSOROCA"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="18" Nome="SINDICATO RURAL DE BUTIÁ / MINAS DO LEÃO" Tipo="R" EMail="sindicatobutia@outlook.com" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="AVENIDA" Logradouro="LEANDRO DE ALMEIDA" Complemento="Nº 599" Bairro="" Municipio="BUTIA" CEP="96750-000" Regiao="Litoral Vales"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="51" Numero=" 3652-1258" Tipo="Comercial"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="51" Numero=" 3652-1744" Tipo="Telefone/FAX"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="51" Numero=" 3652-1407" Tipo="Comercial"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="BUTIA"/>
+    <Municipio Nome="MINAS DO LEAO"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="19" Nome="SINDICATO RURAL DE CAÇAPAVA DO SUL" Tipo="R" EMail="srcacapava@gmail.com" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="7 DE SETEMBRO" Complemento="Nº 880/1º ANDAR CX.P. 64" Bairro="" Municipio="CACAPAVA DO SUL" CEP="96570-000" Regiao="Campanha Sul"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="55" Numero=" 3281-1337" Tipo="Telefone/FAX"/>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Nao" DDD="55" Numero=" 3281-1311" Tipo="Comercial"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Sim" DDD="55" Numero=" 3281-1335" Tipo="Comercial"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="CACAPAVA DO SUL"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="20" Nome="SINDICATO RURAL DE CACEQUI" Tipo="R" EMail="sr.cacequi@bol.com.br" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="RIO BRANCO" Complemento="Nº 213" Bairro="" Municipio="CACEQUI" CEP="97450-000" Regiao="Fronteira"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="55" Numero=" 3254-1418" Tipo="Telefone/FAX"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="CACEQUI"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="21" Nome="SINDICATO RURAL DE CACHOEIRA DO SUL" Tipo="R" EMail="srcachoeira@uol.com.br" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="SANTA HELENA" Complemento="Nº S/N  PQ.DE EXPOSIÇÕES" Bairro="VILA CARVALHO" Municipio="CACHOEIRA DO SUL" CEP="96508-360" Regiao="Centro"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="51" Numero=" 3722-2797" Tipo="Comercial"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="CACHOEIRA DO SUL"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="22" Nome="SINDICATO RURAL DE CAMAQUÃ" Tipo="R" EMail="src.cam@terra.com.br" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="JOÃO FERREIRA" Complemento="Nº 850" Bairro="" Municipio="CAMAQUÃ" CEP="96789-192" Regiao="Campanha Sul"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="51" Numero=" 3671-2387" Tipo="Telefone/FAX"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="51" Numero=" 3671-4778" Tipo="Comercial"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="51" Numero="99994-6573" Tipo="Celular"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="ARAMBARE"/>
+    <Municipio Nome="CAMAQUÃ"/>
+    <Municipio Nome="CHUVISCA"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="23" Nome="SINDICATO RURAL DE CAMBARÁ DO SUL" Tipo="R" EMail="sindicatoruralcambara@hotmail.com" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="OSWALDO KROEFF" Complemento="Nº 111" Bairro="" Municipio="CAMBARA DO SUL" CEP="95480-000" Regiao="Planalto Serra"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="54" Numero=" 3251-1245" Tipo="Comercial"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="CAMBARA DO SUL"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="2" Nome="SINDICATO RURAL DE CAMPO NOVO" Tipo="R" EMail="sindicn@hotmail.com" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="MAJOR EUGÊNIO CORRÊA" Complemento="Nº 298" Bairro="" Municipio="CAMPO NOVO" CEP="98570-000" Regiao="Noroeste"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="55" Numero=" 3528-1266" Tipo="Telefone/FAX"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="BOM PROGRESSO"/>
+    <Municipio Nome="BRAGA"/>
+    <Municipio Nome="CAMPO NOVO"/>
+    <Municipio Nome="ESPERANCA DO SUL"/>
+    <Municipio Nome="HUMAITA"/>
+    <Municipio Nome="REDENTORA"/>
+    <Municipio Nome="TRES PASSOS"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="24" Nome="SINDICATO RURAL DE CANDELÁRIA" Tipo="R" EMail="sindruralcandelaria@gmail.com" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="LOPES TROVÃO" Complemento="Nº 456" Bairro="" Municipio="CANDELARIA" CEP="96930-000" Regiao="Centro"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="51" Numero=" 3743-1546" Tipo="Telefone/FAX"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="51" Numero=" 3743-1099" Tipo="Comercial"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="CANDELARIA"/>
+    <Municipio Nome="CERRO BRANCO"/>
+    <Municipio Nome="PARAISO DO SUL"/>
+    <Municipio Nome="NOVO CABRAIS"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="296" Nome="SINDICATO RURAL DE CANDIOTA" Tipo="R" EMail="sruralcandiota@gmail.com" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="VINTE" Complemento="Nº 1308 SALA 02 -VILA OPERARIA" Bairro="" Municipio="CANDIOTA" CEP="96495-000" Regiao="Campanha Sul"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="53" Numero=" 3245-1273" Tipo="Residencial"/>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Nao" DDD="53" Numero="99946-0861" Tipo="Telefone/FAX"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="CANDIOTA"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="25" Nome="SINDICATO RURAL DE CANELA" Tipo="R" EMail="sindruraldecanela@ibest.com.br" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="JOSÉ JOAQUIM RAYMUNDO" Complemento="Nº 456" Bairro="" Municipio="CANELA" CEP="95680-000" Regiao="Planalto Serra"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="54" Numero=" 3282-1186" Tipo="Telefone/FAX"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="CANELA"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="26" Nome="SINDICATO RURAL DE CANGUÇU" Tipo="R" EMail="sindruralcang@gmail.com" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="CONRADO  ERNANI BENTO" Complemento="Nº428" Bairro="" Municipio="CANGUÇU" CEP="96600-000" Regiao="Campanha Sul"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="53" Numero=" 3252-1433" Tipo="Telefone/FAX"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="53" Numero=" 3252-2664" Tipo="Comercial"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="CANGUÇU"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="27" Nome="SINDICATO RURAL DE CAPÃO DO LEÃO" Tipo="R" EMail="srcleao@uol.com.br" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="AVENIDA" Logradouro="NARCISO SILVA" Complemento="Nº 1566" Bairro="" Municipio="CAPAO DO LEAO" CEP="96160-000" Regiao="Campanha Sul"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="53" Numero=" 3275-1013" Tipo="Telefone/FAX"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="53" Numero="98428-6620" Tipo="Celular"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="CAPAO DO LEAO"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="28" Nome="SINDICATO RURAL DE CARAZINHO" Tipo="R" EMail="agro-crz@annex.com.br" EMailDisponivelPublicamente="Sim" Site="www.sindicatoruralczo.org.br" SiteDisponivelPublicamente="Sim">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="CARLOS BARBOSA" Complemento="Nº 140" Bairro="" Municipio="CARAZINHO" CEP="99500-000" Regiao="Centro"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="54" Numero=" 3331-2933" Tipo="Comercial"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="54" Numero=" 3331-4547" Tipo="Comercial"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="ALMIRANTE TAMANDARE DO SUL"/>
+    <Municipio Nome="CARAZINHO"/>
+    <Municipio Nome="CHAPADA"/>
+    <Municipio Nome="COQUEIROS DO SUL"/>
+    <Municipio Nome="SALDANHA MARINHO"/>
+    <Municipio Nome="SANTO ANTONIO DO PLANALTO"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="32" Nome="SINDICATO RURAL DE CATUÍPE" Tipo="R" EMail="sindicatoruraldecatuipe@hotmail.com" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="JOAQUIM RODRIGUES" Complemento="Nº 152" Bairro="" Municipio="CATUIPE" CEP="98770-000" Regiao="Noroeste"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="55" Numero=" 3336-1281" Tipo="Telefone/FAX"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="55" Numero="99938-5866" Tipo="Celular"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="CATUIPE"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="33" Nome="SINDICATO RURAL DE CAXIAS DO SUL" Tipo="R" EMail="sindicato@ruralcaxias.com.br" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="BORGES DE MEDEIROS" Complemento="Nº 87" Bairro="" Municipio="CAXIAS DO SUL" CEP="95020-310" Regiao="Planalto Serra"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="54" Numero=" 3221-4855" Tipo="Telefone/FAX"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="CAXIAS DO SUL"/>
+    <Municipio Nome="FARROUPILHA"/>
+    <Municipio Nome="FLORES DA CUNHA"/>
+    <Municipio Nome="NOVA PADUA"/>
+    <Municipio Nome="SAO MARCOS"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="11" Nome="SINDICATO RURAL DE CHUÍ" Tipo="R" EMail="sindchui@chuinet.com.br" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="COSTA RICA" Complemento="Nº 472" Bairro="" Municipio="CHUI" CEP="96255-000" Regiao="Campanha Sul"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="53" Numero=" 3265-1034" Tipo="Comercial"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="53" Numero=" 3265-2597" Tipo="Telefone/FAX"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="CHUI"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="16304" Nome="SINDICATO RURAL DE COLORADO" Tipo="R" EMail="srcolorado@uol.com.br" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="BOA ESPERANÇA" Complemento="Nº 664" Bairro="" Municipio="COLORADO" CEP="99460-000" Regiao="Centro"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="54" Numero=" 3334-1076" Tipo="Comercial"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="54" Numero=" 3334-1164" Tipo="Telefone/FAX"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="COLORADO"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="37" Nome="SINDICATO RURAL DE CONDOR" Tipo="R" EMail="sindicatoruralcondor@gmail.com" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="DO COMéRCIO" Complemento="Nº 1190" Bairro="" Municipio="CONDOR" CEP="98290-000" Regiao="Noroeste"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="55" Numero=" 3379-1225" Tipo="Telefone/FAX"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="CONDOR"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="51" Nome="SINDICATO RURAL DE CRISSIUMAL" Tipo="R" EMail="alceuhliesenfeld@hotmail.com" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="Costa e Silva" Complemento="Nº 71" Bairro="" Municipio="CRISSIUMAL" CEP="98640-000" Regiao="Noroeste"/>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Nao" TipoLogradouro="RUA" Logradouro="PRESIDENTE CASTELO BRANCO" Complemento="Nº 585" Bairro="" Municipio="CRISSIUMAL" CEP="98640-000" Regiao="Noroeste"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="55" Numero=" 3524-1105" Tipo="Comercial"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="55" Numero=" 3524-1853" Tipo="Telefone/FAX"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="NOVA CANDELARIA"/>
+    <Municipio Nome="CRISSIUMAL"/>
+    <Municipio Nome="TIRADENTES DO SUL"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="41" Nome="SINDICATO RURAL DE CRISTAL" Tipo="R" EMail="sindcristal@gmail.com" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="PEDRO OSÓRIO" Complemento="Nº 60" Bairro="" Municipio="CRISTAL" CEP="96195-000" Regiao="Campanha Sul"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="51" Numero=" 3678-1414" Tipo="Comercial"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="CRISTAL"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="42" Nome="SINDICATO RURAL DE CRUZ ALTA" Tipo="R" EMail="srca.secretariageral@gmail.com" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="PARQUE" Logradouro="PARQUE DE EXPOSIÇÕES" Complemento="BR 158 KM 197 CX.P.227" Bairro="VILA CONCEICAO" Municipio="CRUZ ALTA" CEP="98050-090" Regiao="Centro"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Nao" DDD="55" Numero=" 3324-2890" Tipo="Comercial"/>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="55" Numero=" 3322-8277" Tipo="Comercial"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="BOA VISTA DO INCRA"/>
+    <Municipio Nome="BOA VISTA DO CADEADO"/>
+    <Municipio Nome="CRUZ ALTA"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="43" Nome="SINDICATO RURAL DE DOM PEDRITO" Tipo="R" EMail="atendimento@sindicatoruraldp.com.br" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="AVENIDA" Logradouro="RIO BRANCO" Complemento="Nº 896 CX. P. 41" Bairro="" Municipio="DOM PEDRITO" CEP="96450-000" Regiao="Campanha Sul"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="53" Numero=" 3243-3378" Tipo="Telefone/FAX"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="DOM PEDRITO"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="44" Nome="SINDICATO RURAL DE ENCRUZILHADA DO SUL" Tipo="R" EMail="sindiruralsul@terra.com.br" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="AVENIDA" Logradouro="RIO BRANCO" Complemento="Nº 45" Bairro="" Municipio="ENCRUZILHADA DO SUL" CEP="96610-000" Regiao="Litoral Vales"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="51" Numero=" 3733-1365" Tipo="Telefone/FAX"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="ENCRUZILHADA DO SUL"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="46" Nome="SINDICATO RURAL DE ERECHIM" Tipo="R" EMail="administrativo@sindicatoruraldeerechim.com.br" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="GAURAMA" Complemento="Nº 496" Bairro="" Municipio="ERECHIM" CEP="99700-000" Regiao="Planalto Serra"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="54" Numero=" 3321-1600" Tipo="Telefone/FAX"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="54" Numero=" 3321-9011" Tipo="Comercial"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="54" Numero=" 3321-9755" Tipo="Comercial"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="54" Numero="99974-0729" Tipo="Celular"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="ARATIBA"/>
+    <Municipio Nome="AUREA"/>
+    <Municipio Nome="BARAO DE COTEGIPE"/>
+    <Municipio Nome="BARRA DO RIO AZUL"/>
+    <Municipio Nome="BENJAMIN CONSTANT DO SUL"/>
+    <Municipio Nome="CAMPINAS DO SUL"/>
+    <Municipio Nome="CARLOS GOMES"/>
+    <Municipio Nome="CENTENARIO"/>
+    <Municipio Nome="CRUZALTENSE"/>
+    <Municipio Nome="ERECHIM"/>
+    <Municipio Nome="ERVAL GRANDE"/>
+    <Municipio Nome="FAXINALZINHO"/>
+    <Municipio Nome="GAURAMA"/>
+    <Municipio Nome="ITATIBA DO SUL"/>
+    <Municipio Nome="JACUTINGA"/>
+    <Municipio Nome="MARCELINO RAMOS"/>
+    <Municipio Nome="MARIANO MORO"/>
+    <Municipio Nome="PAULO BENTO"/>
+    <Municipio Nome="PONTE PRETA"/>
+    <Municipio Nome="QUATRO IRMAOS"/>
+    <Municipio Nome="SAO VALENTIM"/>
+    <Municipio Nome="SEVERIANO DE ALMEIDA"/>
+    <Municipio Nome="TRES ARROIOS"/>
+    <Municipio Nome="VIADUTOS"/>
+    <Municipio Nome="ENTRE RIOS DO SUL"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="52" Nome="SINDICATO RURAL DE ESMERALDA" Tipo="R" EMail="sresm@uol.com.br" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="AVENIDA" Logradouro="PRES. CASTELO BRANCO" Complemento="Nº 1706" Bairro="" Municipio="ESMERALDA" CEP="95380-000" Regiao="Planalto Serra"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="54" Numero=" 3354-1333" Tipo="Telefone/FAX"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="54" Numero=" 3231-2498" Tipo="Residencial"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="ESMERALDA"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="59" Nome="SINDICATO RURAL DE ESPUMOSO" Tipo="R" EMail="sindicato.espumoso@terra.com.br" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="SILVEIRA MARTINS" Complemento="Nº 60" Bairro="" Municipio="ESPUMOSO" CEP="99400-000" Regiao="Centro"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="54" Numero=" 3383-1531" Tipo="Telefone/FAX"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="54" Numero=" 3383-2133" Tipo="Comercial"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="ALTO ALEGRE"/>
+    <Municipio Nome="CAMPOS BORGES"/>
+    <Municipio Nome="ESPUMOSO"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="65" Nome="SINDICATO RURAL DE FONTOURA XAVIER" Tipo="R" EMail="sindiruralfx@gmail.com" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="DUQUE DE CAXIAS" Complemento="Nº 15" Bairro="" Municipio="FONTOURA XAVIER" CEP="99370-000" Regiao="Centro"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="54" Numero=" 3389-1172" Tipo="Telefone/FAX"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="FONTOURA XAVIER"/>
+    <Municipio Nome="POUSO NOVO"/>
+    <Municipio Nome="SAO JOSE DO HERVAL"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="68" Nome="SINDICATO RURAL DE FORMIGUEIRO" Tipo="R" EMail="ruralfor@plugnet.psi.br" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="CORONEL VERíSSIMO" Complemento="Nº 96" Bairro="" Municipio="FORMIGUEIRO" CEP="97210-000" Regiao="Centro"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="55" Numero=" 3236-1292" Tipo="Telefone/FAX"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="FORMIGUEIRO"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="143" Nome="SINDICATO RURAL DE FORTALEZA DOS VALOS" Tipo="R" EMail="sindicatoruralfv@gmail.com" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="GERONIMO STEFANELO" Complemento="137" Bairro="" Municipio="FORTALEZA DOS VALOS" CEP="98125-000" Regiao="Centro"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="55" Numero=" 3328-1305" Tipo="Telefone/FAX"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="FORTALEZA DOS VALOS"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="71" Nome="SINDICATO RURAL DE FREDERICO WESTPHALEN" Tipo="R" EMail="sindicatoruralfw@gmail.com" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="MONSENHOR VITOR BATISTELLA" Complemento="07" Bairro="" Municipio="FREDERICO WESTPHALEN" CEP="98400-000" Regiao="Noroeste"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="55" Numero=" 3744-3871" Tipo="Telefone/FAX"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="55" Numero="98114-4392" Tipo="Celular"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="55" Numero="99112-5710" Tipo="Celular"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="CAICARA"/>
+    <Municipio Nome="ERVAL SECO"/>
+    <Municipio Nome="FREDERICO WESTPHALEN"/>
+    <Municipio Nome="IRAI"/>
+    <Municipio Nome="PALMITINHO"/>
+    <Municipio Nome="PINHAL"/>
+    <Municipio Nome="PINHEIRINHO DO VALE"/>
+    <Municipio Nome="RODEIO BONITO"/>
+    <Municipio Nome="AMETISTA DO SUL"/>
+    <Municipio Nome="SEBERI"/>
+    <Municipio Nome="TAQUARUÇU DO SUL"/>
+    <Municipio Nome="VICENTE DUTRA"/>
+    <Municipio Nome="CRISTAL DO SUL"/>
+    <Municipio Nome="VISTA ALEGRE"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="144" Nome="SINDICATO RURAL DE GARRUCHOS" Tipo="R" EMail="jp.zequinha@hotmail.com" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="SENA MADUREIRA" Complemento="S/Nº." Bairro="" Municipio="GARRUCHOS" CEP="97690-000" Regiao="Fronteira"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="55" Numero=" 3613-7059" Tipo="Comercial"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="GARRUCHOS"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="73" Nome="SINDICATO RURAL DE GENERAL CÂMARA" Tipo="R" EMail="sind.camara@cpovo.net" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="JANUÁRIO BATISTA" Complemento="Nº 638" Bairro="" Municipio="GENERAL CAMARA" CEP="95820-000" Regiao="Litoral Vales"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="51" Numero=" 3655-1321" Tipo="Telefone/FAX"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="GENERAL CAMARA"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="76" Nome="SINDICATO RURAL DE GETÚLIO VARGAS" Tipo="R" EMail="secretaria@srgetuliovargas.com.br;sindigrv@hotmail.com" EMailDisponivelPublicamente="Sim" Site="www.srgetuliovargas.com.br" SiteDisponivelPublicamente="Sim">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="IRMAO GABRIEL LEAO" Complemento="Nº145" Bairro="" Municipio="GETULIO VARGAS" CEP="99900-000" Regiao="Planalto Serra"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="54" Numero=" 3341-1832" Tipo="Telefone/FAX"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="EREBANGO"/>
+    <Municipio Nome="FLORIANO PEIXOTO"/>
+    <Municipio Nome="GETULIO VARGAS"/>
+    <Municipio Nome="IPIRANGA DO SUL"/>
+    <Municipio Nome="ESTACAO"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="77" Nome="SINDICATO RURAL DE GIRUÁ" Tipo="R" EMail="sindicatogirua@gmail.com" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="CORONEL BRÁULIO DE OLIVEIRA" Complemento="Nº 475" Bairro="" Municipio="GIRUA" CEP="98870-000" Regiao="Noroeste"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="55" Numero=" 3361-1633" Tipo="Telefone/FAX"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="CERRO LARGO"/>
+    <Municipio Nome="GIRUA"/>
+    <Municipio Nome="SENADOR SALGADO FILHO"/>
+    <Municipio Nome="SETE DE SETEMBRO"/>
+    <Municipio Nome="UBIRETAMA"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="80" Nome="SINDICATO RURAL DE GRAVATAÍ" Tipo="R" EMail="srg1519@yahoo.com" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="PREFEITO ARY TUBBS" Complemento="Nº 722/205" Bairro="CENTRO" Municipio="GRAVATAI" CEP="94010-180" Regiao="Litoral Vales"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="51" Numero=" 3488-1967" Tipo="Telefone/FAX"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="GLORINHA"/>
+    <Municipio Nome="GRAVATAI"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="84" Nome="SINDICATO RURAL DE GUAÍBA" Tipo="R" EMail="ruralguaiba@ig.com.br" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="TRECHO" Logradouro="SANTA MARIA" Complemento="Nº 2400 CP 54" Bairro="" Municipio="GUAIBA" CEP="92500-000" Regiao="Litoral Vales"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Nao" DDD="51" Numero="99512-4649" Tipo="Celular"/>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="51" Numero=" 3480-1077" Tipo="Comercial"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="CHARQUEADAS"/>
+    <Municipio Nome="ELDORADO DO SUL"/>
+    <Municipio Nome="GUAIBA"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="87" Nome="SINDICATO RURAL DE HERVAL" Tipo="R" EMail="srherval@hotmail.com" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="15 DE NOVEMBRO" Complemento="Nº 310" Bairro="" Municipio="HERVAL" CEP="96310-000" Regiao="Campanha Sul"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="53" Numero=" 3267-1256" Tipo="Telefone/FAX"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="HERVAL"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="89" Nome="SINDICATO RURAL DE IBIRUBÁ" Tipo="R" EMail="sindicatoruralibiruba@gmail.com" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="MERITO" Complemento="570" Bairro="" Municipio="IBIRUBA" CEP="98200-000" Regiao="Centro"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="54" Numero=" 3324-3099" Tipo="Telefone/FAX"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="IBIRUBA"/>
+    <Municipio Nome="QUINZE DE NOVEMBRO"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="99" Nome="SINDICATO RURAL DE IJUÍ" Tipo="R" EMail="sri.iju@terra.com.br" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="DOM PEDRO I" Complemento="Nº 46 - SALA 4" Bairro="" Municipio="IJUI" CEP="98700-000" Regiao="Noroeste"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="55" Numero=" 3332-7625" Tipo="Telefone/FAX"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="55" Numero=" 3332-8032" Tipo="Residencial"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="AUGUSTO PESTANA"/>
+    <Municipio Nome="CHIAPETTA"/>
+    <Municipio Nome="CORONEL BARROS"/>
+    <Municipio Nome="BOZANO"/>
+    <Municipio Nome="IJUI"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="100" Nome="SINDICATO RURAL DE IPÊ" Tipo="R" EMail="sindipe@gmail.com" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="LUIZ AUGUSTO BRANCO" Complemento="Nº 97" Bairro="" Municipio="IPE" CEP="95240-000" Regiao="Planalto Serra"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="54" Numero=" 3233-1127" Tipo="Telefone/FAX"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="54" Numero="99917-7021" Tipo="Celular"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="ANTONIO PRADO"/>
+    <Municipio Nome="IPE"/>
+    <Municipio Nome="NOVA ROMA DO SUL"/>
+    <Municipio Nome="CAMPESTRE DA SERRA"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="102" Nome="SINDICATO RURAL DE ITACURUBI" Tipo="R" EMail="sind.ruralitacurubi@hotmail.com" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="JOSé CARLOS MACHADO" Complemento="Nº 173" Bairro="" Municipio="ITACURUBI" CEP="97685-000" Regiao="Fronteira"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="55" Numero=" 3366-1077" Tipo="Comercial"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="55" Numero=" 3366-1085" Tipo="Telefone/FAX"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="ITACURUBI"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="105" Nome="SINDICATO RURAL DE ITAQUI E MAÇAMBARÁ" Tipo="R" EMail="sindicatorural@srim.com.br" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="TIRADENTES" Complemento="Nº 1113" Bairro="" Municipio="ITAQUI" CEP="97650-000" Regiao="Fronteira"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Nao" DDD="55" Numero=" 3435-1105" Tipo="Comercial"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="55" Numero="98437-4094" Tipo="Celular"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="ITAQUI"/>
+    <Municipio Nome="MACAMBARA"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="109" Nome="SINDICATO RURAL DE JAGUARÃO" Tipo="R" EMail="srjaguarao@gmail.com" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="BENTO GONÇALVES" Complemento="Nº 2177 -" Bairro="" Municipio="JAGUARAO" CEP="96300-000" Regiao="Campanha Sul"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="53" Numero=" 3261-1122" Tipo="Comercial"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="53" Numero=" 3261-2168" Tipo="Telefone/FAX"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="JAGUARAO"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="226" Nome="SINDICATO RURAL DE JAGUARI" Tipo="R" EMail="sirjajaguari@bol.com.br" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="JOSÉ BONIFÁCIO" Complemento="Nº 1315" Bairro="" Municipio="JAGUARI" CEP="97760-000" Regiao="Fronteira"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="55" Numero=" 3255-1801" Tipo="Telefone/FAX"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="JAGUARI"/>
+    <Municipio Nome="NOVA ESPERANCA DO SUL"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="112" Nome="SINDICATO RURAL DE JÓIA" Tipo="R" EMail="srural@mksnet.com.br" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="BRASILINA TERRA" Complemento="Nº 1930" Bairro="" Municipio="JOIA" CEP="98180-000" Regiao="Noroeste"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="55" Numero=" 3318-1268" Tipo="Telefone/FAX"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="JOIA"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="114" Nome="SINDICATO RURAL DE JULIO DE CASTILHOS" Tipo="R" EMail="sindjuc@jcvirtual.com.br;srjuc@jcvirtual.com.br" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="AVENIDA" Logradouro="JORGE MASCARENHAS" Complemento="Nº" Bairro="" Municipio="JULIO DE CASTILHOS" CEP="98130-000" Regiao="Centro"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="55" Numero=" 3271-1734" Tipo="Telefone/FAX"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="55" Numero=" 3271-1736" Tipo="Comercial"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="55" Numero=" 3271-1737" Tipo="Comercial"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="55" Numero="99983-7611" Tipo="Celular"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="JULIO DE CASTILHOS"/>
+    <Municipio Nome="PINHAL GRANDE"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="115" Nome="SINDICATO RURAL DE LAGOA VERMELHA" Tipo="R" EMail="sindicatorlv@datacenterlagoa.com.br" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="JOSÉ BONIFÁCIO" Complemento="400 SALA 03" Bairro="" Municipio="LAGOA VERMELHA" CEP="95300-000" Regiao="Planalto Serra"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="54" Numero=" 3358-2585" Tipo="Telefone/FAX"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="CAPAO BONITO DO SUL"/>
+    <Municipio Nome="CASEIROS"/>
+    <Municipio Nome="IBIRAIARAS"/>
+    <Municipio Nome="LAGOA VERMELHA"/>
+    <Municipio Nome="MULITERNO"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="116" Nome="SINDICATO RURAL DE LAVRAS DO SUL" Tipo="R" EMail="srural@farrapo.com.br" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="DOUTOR PIRES PORTO" Complemento="Nº 240" Bairro="" Municipio="LAVRAS DO SUL" CEP="97390-000" Regiao="Campanha Sul"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="55" Numero=" 3282-1256" Tipo="Telefone/FAX"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="55" Numero=" 3282-1020" Tipo="Comercial"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="LAVRAS DO SUL"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="117" Nome="SINDICATO RURAL DE MANOEL VIANA" Tipo="R" EMail="sindicatoruralmv@gmail.com" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="ARNO JOSE NEMITZ" Complemento="475" Bairro="" Municipio="MANOEL VIANA" CEP="97640-000" Regiao="Fronteira"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="55" Numero=" 3256-1246" Tipo="Telefone/FAX"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="51" Numero="99704-4340" Tipo="Celular"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="MANOEL VIANA"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="118" Nome="SINDICATO RURAL DE MARAU" Tipo="R" EMail="sindicatoruraldemarau@gmail.com" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="DUQUE DE CAXIAS" Complemento="Nº 26 CP 18" Bairro="" Municipio="MARAU" CEP="99150-000" Regiao="Planalto Serra"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="54" Numero=" 3342-1008" Tipo="Telefone/FAX"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="MARAU"/>
+    <Municipio Nome="NICOLAU VERGUEIRO"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="61" Nome="SINDICATO RURAL DE MATA" Tipo="R" EMail="ruraisdemata@gmail.com" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="DO COMERCIO" Complemento="Nº 631, CP 17" Bairro="" Municipio="MATA" CEP="97410-000" Regiao="Fronteira"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Nao" DDD="55" Numero="99630-7155" Tipo="Telefone/FAX"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="MATA"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="62" Nome="SINDICATO RURAL DE MONTENEGRO" Tipo="R" EMail="srmont@terra.com.br" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="JOAO PESSOA" Complemento="Nº 2285" Bairro="" Municipio="MONTENEGRO" CEP="95780-000" Regiao="Litoral Vales"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="51" Numero=" 3057-2060" Tipo="Comercial"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="51" Numero=" 3632-1676" Tipo="Comercial"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="CAPELA DE SANTANA"/>
+    <Municipio Nome="BROCHIER"/>
+    <Municipio Nome="MONTENEGRO"/>
+    <Municipio Nome="PARECI NOVO"/>
+    <Municipio Nome="MARATA"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="63" Nome="SINDICATO RURAL DE MOSTARDAS" Tipo="R" EMail="sindmostardas@uol.com.br" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="15 DE NOVEMBRO" Complemento="Nº 440" Bairro="" Municipio="MOSTARDAS" CEP="96270-000" Regiao="Litoral Vales"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="51" Numero=" 3673-1473" Tipo="Telefone/FAX"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="MOSTARDAS"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="64" Nome="SINDICATO RURAL DE MUITOS CAPÕES" Tipo="R" EMail="srmuitoscapoes@hotmail.com" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="DORIVAL ROVEDA" Complemento="Nº 611" Bairro="" Municipio="MUITOS CAPOES" CEP="95230-000" Regiao="Planalto Serra"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="54" Numero=" 3612-2093" Tipo="Comercial"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="54" Numero="99679-0354" Tipo="Celular"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="MUITOS CAPOES"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="66" Nome="SINDICATO RURAL DE NÃO-ME-TOQUE" Tipo="R" EMail="sindiruralnmt@dgnet.com.br" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="PEDRO FLECK" Complemento="Nº 166" Bairro="" Municipio="NAO-ME-TOQUE" CEP="99470-000" Regiao="Centro"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="54" Numero=" 3332-1621" Tipo="Comercial"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="54" Numero="99122-2660" Tipo="Celular"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="55" Numero=" 3332-3400" Tipo="Comercial"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="LAGOA DOS TRES CANTOS"/>
+    <Municipio Nome="NAO-ME-TOQUE"/>
+    <Municipio Nome="VICTOR GRAEFF"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="67" Nome="SINDICATO RURAL DE NONOAI" Tipo="R" EMail="srnonoai@terra.com.br" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="RUI BARBOSA" Complemento="768" Bairro="" Municipio="NONOAI" CEP="99600-000" Regiao="Noroeste"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="54" Numero=" 3362-1313" Tipo="Telefone/FAX"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="ALPESTRE"/>
+    <Municipio Nome="GRAMADO DOS LOUREIROS"/>
+    <Municipio Nome="NONOAI"/>
+    <Municipio Nome="PLANALTO"/>
+    <Municipio Nome="RIO DOS INDIOS"/>
+    <Municipio Nome="TRES PALMEIRAS"/>
+    <Municipio Nome="TRINDADE DO SUL"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="146" Nome="SINDICATO RURAL DE OSÓRIO" Tipo="R" EMail="sindosorio@terra.com.br" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="MAJOR JOAO MARQUES" Complemento="Nº 149" Bairro="" Municipio="OSORIO" CEP="95520-000" Regiao="Litoral Vales"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="51" Numero=" 3663-1229" Tipo="Telefone/FAX"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="51" Numero=" 3663-6123" Tipo="Telefone/FAX"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="CAPAO DA CANOA"/>
+    <Municipio Nome="MAQUINE"/>
+    <Municipio Nome="OSORIO"/>
+    <Municipio Nome="TRAMANDAI"/>
+    <Municipio Nome="IMBE"/>
+    <Municipio Nome="XANGRI-LA"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="69" Nome="SINDICATO RURAL DE PAIM FILHO" Tipo="R" EMail="sinruralts@ouronetonline.com.br" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="AVENIDA" Logradouro="LAGOA VERMELHA" Complemento="Nº 65" Bairro="" Municipio="PAIM FILHO" CEP="99850-000" Regiao="Planalto Serra"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="54" Numero=" 3531-1303" Tipo="Telefone/FAX"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="PAIM FILHO"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="70" Nome="SINDICATO RURAL DE PALMARES DO SUL" Tipo="R" EMail="sindpalmares@terra.com.br" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="27 DE ABRIL" Complemento="Nº 974" Bairro="" Municipio="PALMARES DO SUL" CEP="95540-000" Regiao="Litoral Vales"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="51" Numero=" 3668-1186" Tipo="Telefone/FAX"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="CAPIVARI DO SUL"/>
+    <Municipio Nome="CIDREIRA"/>
+    <Municipio Nome="PALMARES DO SUL"/>
+    <Municipio Nome="BALNEARIO PINHAL"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="103" Nome="SINDICATO RURAL DE PALMEIRA DAS MISSÕES" Tipo="R" EMail="sr.palmeirars@mksnet.com.br" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="CEL EVARISTO" Complemento="Nº 43" Bairro="" Municipio="PALMEIRA DAS MISSOES" CEP="98300-000" Regiao="Noroeste"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="55" Numero=" 3742-1282" Tipo="Telefone/FAX"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="55" Numero=" 3742-1056" Tipo="Telefone/FAX"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="NOVO BARREIRO"/>
+    <Municipio Nome="BOA VISTA DAS MISSOES"/>
+    <Municipio Nome="DOIS IRMAOS DAS MISSOES"/>
+    <Municipio Nome="JABOTICABA"/>
+    <Municipio Nome="PALMEIRA DAS MISSOES"/>
+    <Municipio Nome="SAGRADA FAMILIA"/>
+    <Municipio Nome="LAJEADO DO BUGRE"/>
+    <Municipio Nome="SAO JOSE DAS MISSOES"/>
+    <Municipio Nome="NOVO TIRADENTES"/>
+    <Municipio Nome="SAO PEDRO DAS MISSÕES"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="74" Nome="SINDICATO RURAL DE PANAMBI" Tipo="R" EMail="sindicatorural.pbi@hotmail.com" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="GASPAR MARTINS" Complemento="Nº 90" Bairro="" Municipio="PANAMBI" CEP="98280-000" Regiao="Noroeste"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="55" Numero=" 3375-4750" Tipo="Comercial"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="55" Numero=" 3375-6524" Tipo="Telefone/FAX"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="PANAMBI"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="75" Nome="SINDICATO RURAL DE PANTANO GRANDE" Tipo="R" EMail="sindirpg@gmail.com" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="Tales Colombo" Complemento="Nº 137" Bairro="" Municipio="PANTANO GRANDE" CEP="96690-000" Regiao="Litoral Vales"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="51" Numero=" 3734-1372" Tipo="Telefone/FAX"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="51" Numero="99996-0355" Tipo="Celular"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="PANTANO GRANDE"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="78" Nome="SINDICATO RURAL DE PASSO FUNDO" Tipo="R" EMail="sindi.rural@terra.com.br" EMailDisponivelPublicamente="Sim" Site="sindicatoruralpassofundo.com.br" SiteDisponivelPublicamente="Sim">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="AVENIDA" Logradouro="BRASIL OESTE" Complemento="Nº 1185" Bairro="BOQUEIRAO" Municipio="PASSO FUNDO" CEP="99025-000" Regiao="Planalto Serra"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="54" Numero=" 3312-1222" Tipo="Comercial"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="54" Numero=" 3327-0188" Tipo="Comercial"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="54" Numero="99932-0616" Tipo="Celular"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="CIRIACO"/>
+    <Municipio Nome="DAVID CANABARRO"/>
+    <Municipio Nome="ERNESTINA"/>
+    <Municipio Nome="GENTIL"/>
+    <Municipio Nome="PASSO FUNDO"/>
+    <Municipio Nome="PONTAO"/>
+    <Municipio Nome="SANTO ANTONIO DO PALMA"/>
+    <Municipio Nome="VANINI"/>
+    <Municipio Nome="MATO CASTELHANO"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="925" Nome="SINDICATO RURAL DE PEDRAS ALTAS" Tipo="R" EMail="srpedrasaltas@gmail.com" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="COMENDADOR ÁVILA" Complemento="Nº 65" Bairro="" Municipio="PEDRAS ALTAS" CEP="96487-000" Regiao="Campanha Sul"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="53" Numero="98457-7741" Tipo="Celular"/>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Nao" DDD="53" Numero="98447-4895" Tipo="Celular"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="PEDRAS ALTAS"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="79" Nome="SINDICATO RURAL DE PEDRO OSÓRIO E CERRITO" Tipo="R" EMail="sinrpoc@gmail.com" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="JORGE EMILIO FELIX" Complemento="Nº 225" Bairro="" Municipio="PEDRO OSORIO" CEP="96360-000" Regiao="Campanha Sul"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="53" Numero=" 3255-1337" Tipo="Telefone/FAX"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="53" Numero=" 3255-1301" Tipo="Comercial"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="PEDRO OSORIO"/>
+    <Municipio Nome="CERRITO"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="81" Nome="SINDICATO RURAL DE PEJUÇARA" Tipo="R" EMail="sindicatoruralpeju@gmail.com" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="LUIZ BASSO" Complemento="Nº 1010" Bairro="" Municipio="PEJUCARA" CEP="98270-000" Regiao="Noroeste"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="55" Numero=" 3377-1373" Tipo="Telefone/FAX"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="PEJUCARA"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="82" Nome="SINDICATO RURAL DE PELOTAS" Tipo="R" EMail="sirpel@terra.com.br" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="AVENIDA" Logradouro="FERNANDO OSORIO" Complemento="Nº 1754" Bairro="" Municipio="PELOTAS" CEP="96055-000" Regiao="Campanha Sul"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="53" Numero=" 3223-2351" Tipo="Comercial"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="53" Numero=" 3223-2588" Tipo="Telefone/FAX"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="ARROIO DO PADRE"/>
+    <Municipio Nome="MORRO REDONDO"/>
+    <Municipio Nome="PELOTAS"/>
+    <Municipio Nome="TURUÇU"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="83" Nome="SINDICATO RURAL DE PINHEIRO MACHADO" Tipo="R" EMail="feovelha.sul@supersul.com.br" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="NICO DE OLIVEIRA" Complemento="Nº 578" Bairro="" Municipio="PINHEIRO MACHADO" CEP="96470-000" Regiao="Campanha Sul"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="53" Numero=" 3248-1600" Tipo="Comercial"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="53" Numero=" 3248-1267" Tipo="Comercial"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="53" Numero=" 3248-1564" Tipo="Telefone/FAX"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="PINHEIRO MACHADO"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="85" Nome="SINDICATO RURAL DE PIRATINI" Tipo="R" EMail="sindicatoruralpiratini@sindicatoruralpiratini.com.br" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="BENTO GONÇALVES" Complemento="Nº 85" Bairro="" Municipio="PIRATINI" CEP="96490-000" Regiao="Campanha Sul"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="53" Numero=" 3257-1328" Tipo="Telefone/FAX"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="PIRATINI"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="86" Nome="SINDICATO RURAL DE PORTO ALEGRE" Tipo="R" EMail="ruralsin@terra.com.br" EMailDisponivelPublicamente="Sim" Site="blog.clickgratis.com.br/sindiruralpalegre" SiteDisponivelPublicamente="Sim">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="AVENIDA" Logradouro="JUCA BATISTA" Complemento="2275 SALA 207" Bairro="CAVALHADA" Municipio="PORTO ALEGRE" CEP="91755-000" Regiao="Litoral Vales"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="51" Numero=" 3022-6454" Tipo="Telefone/FAX"/>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="51" Numero=" 3241-0631" Tipo="Comercial"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="PORTO ALEGRE"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="88" Nome="SINDICATO RURAL DE QUARAÍ" Tipo="R" EMail="srquarai@gmail.com" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="CORONEL PILLAR" Complemento="Nº 630" Bairro="Centro" Municipio="QUARAI" CEP="97560-000" Regiao="Fronteira"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="55" Numero="99141-3624" Tipo="Celular"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="55" Numero="99152-5917" Tipo="Celular"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="QUARAI"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="90" Nome="SINDICATO RURAL DE RESTINGA SECA" Tipo="R" EMail="sindicatorrs@gmail.com" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="EDMUNDO BISCHOFF" Complemento="171" Bairro="" Municipio="RESTINGA SECA" CEP="97200-000" Regiao="Centro"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="55" Numero=" 3261-1099" Tipo="Telefone/FAX"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="RESTINGA SECA"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="91" Nome="SINDICATO RURAL DE RIO GRANDE" Tipo="R" EMail="sindrg@vetorial.net" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="VISCONDE DO RIO BRANCO" Complemento="Nº 1445" Bairro="CIDADE NOVA" Municipio="RIO GRANDE" CEP="96211-012" Regiao="Campanha Sul"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="53" Numero=" 3232-2121" Tipo="Telefone/FAX"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="53" Numero=" 3230-1174" Tipo="Comercial"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="53" Numero="99122-6607" Tipo="Celular"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="RIO GRANDE"/>
+    <Municipio Nome="SAO JOSE DO NORTE"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="92" Nome="SINDICATO RURAL DE RIO PARDO" Tipo="R" EMail="sindicatoriopardo@gmail.com" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="ANDRADE NEVES" Complemento="Nº 1149" Bairro="" Municipio="RIO PARDO" CEP="96640-000" Regiao="Litoral Vales"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="51" Numero=" 3731-1229" Tipo="Telefone/FAX"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="51" Numero=" 3731-1014" Tipo="Comercial"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="RIO PARDO"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="93" Nome="SINDICATO RURAL DE ROSÁRIO DO SUL" Tipo="R" EMail="sindirosario@gmail.com" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="JOAO BRASIL" Complemento="Nº 860" Bairro="" Municipio="ROSARIO DO SUL" CEP="97590-000" Regiao="Fronteira"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="55" Numero=" 3231-2345" Tipo="Telefone/FAX"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="55" Numero=" 3231-2872" Tipo="Telefone/FAX"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="55" Numero=" 3231-4791" Tipo="Comercial"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="ROSARIO DO SUL"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="94" Nome="SINDICATO RURAL DE SALTO DO JACUÍ" Tipo="R" EMail="srsjacui@gmail.com" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="AVENIDA" Logradouro="MAIA FILHO" Complemento="Nº 57" Bairro="" Municipio="SALTO DO JACUI" CEP="99440-000" Regiao="Centro"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="55" Numero=" 3327-1399" Tipo="Telefone/FAX"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="ESTRELA VELHA"/>
+    <Municipio Nome="JACUIZINHO"/>
+    <Municipio Nome="SALTO DO JACUI"/>
+    <Municipio Nome="TUNAS"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="95" Nome="SINDICATO RURAL DE SANANDUVA" Tipo="R" EMail="sindisan@terra.com.br" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="AVENIDA" Logradouro="SALZANO DA CUNHA" Complemento="1041 SALA 4" Bairro="" Municipio="SANANDUVA" CEP="99840-000" Regiao="Planalto Serra"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="54" Numero=" 3343-2858" Tipo="Comercial"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="54" Numero=" 3343-2128" Tipo="Telefone/FAX"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="IBIACA"/>
+    <Municipio Nome="SANANDUVA"/>
+    <Municipio Nome="SAO JOAO DA URTIGA"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="96" Nome="SINDICATO RURAL DE SANTA BÁRBARA DO SUL" Tipo="R" EMail="sindirur@uol.com.br" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="EDUARDO VITOR DUMONCEL" Complemento="Nº 124" Bairro="" Municipio="SANTA BARBARA DO SUL" CEP="98240-000" Regiao="Noroeste"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="55" Numero=" 3372-1298" Tipo="Telefone/FAX"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="SANTA BARBARA DO SUL"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="97" Nome="SINDICATO RURAL DE SANTA CRUZ DO SUL" Tipo="R" EMail="sirscs@outlook.com.br" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="OLAVO BILAC" Complemento="Nº 121" Bairro="CENTRO" Municipio="SANTA CRUZ DO SUL" CEP="96810-290" Regiao="Litoral Vales"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="51" Numero=" 3711-2667" Tipo="Comercial"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="51" Numero=" 3715-5131" Tipo="Telefone/FAX"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="BOQUEIRAO DO LEAO"/>
+    <Municipio Nome="GRAMADO XAVIER"/>
+    <Municipio Nome="VALE VERDE"/>
+    <Municipio Nome="PASSO DO SOBRADO"/>
+    <Municipio Nome="SANTA CRUZ DO SUL"/>
+    <Municipio Nome="SINIMBU"/>
+    <Municipio Nome="VALE DO SOL"/>
+    <Municipio Nome="VERA CRUZ"/>
+    <Municipio Nome="HERVEIRAS"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="98" Nome="SINDICATO RURAL DE SANTA MARIA" Tipo="R" EMail="sruralsm@terra.com.br" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="APPEL" Complemento="Nº 475" Bairro="" Municipio="SANTA MARIA" CEP="97015-030" Regiao="Centro"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="55" Numero=" 3221-4424" Tipo="Telefone/FAX"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="DILERMANDO DE AGUIAR"/>
+    <Municipio Nome="ITAARA"/>
+    <Municipio Nome="SANTA MARIA"/>
+    <Municipio Nome="SILVEIRA MARTINS"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="101" Nome="SINDICATO RURAL DE SANTA ROSA" Tipo="R" EMail="sndrural@bol.com.br" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="SINVAL SALDANHA" Complemento="286" Bairro="" Municipio="SANTA ROSA" CEP="98900-000" Regiao="Noroeste"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="55" Numero=" 3512-1408" Tipo="Telefone/FAX"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="55" Numero="99979-0357" Tipo="Celular"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="ALECRIM"/>
+    <Municipio Nome="CAMPINA DAS MISSOES"/>
+    <Municipio Nome="CANDIDO GODOI"/>
+    <Municipio Nome="PORTO LUCENA"/>
+    <Municipio Nome="PORTO XAVIER"/>
+    <Municipio Nome="SANTA ROSA"/>
+    <Municipio Nome="SANTO CRISTO"/>
+    <Municipio Nome="SAO PAULO DAS MISSOES"/>
+    <Municipio Nome="PORTO VERA CRUZ"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="104" Nome="SINDICATO RURAL DE SANTA VITÓRIA DO PALMAR" Tipo="R" EMail="sindicatoruralsvp@gmail.com" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="CORONEL D&apos;DEUS" Complemento="CX.POSTAL 19 - PARQUE RURAL" Bairro="" Municipio="SANTA VITORIA DO PALMAR" CEP="96230-000" Regiao="Campanha Sul"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="53" Numero=" 3263-1534" Tipo="Telefone/FAX"/>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="53" Numero=" 3263-1551" Tipo="Comercial"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="SANTA VITORIA DO PALMAR"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="106" Nome="SINDICATO RURAL DE SANTANA DA BOA VISTA" Tipo="R" EMail="sindicatorural@farrapo.com.br" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="PREFEITO ANTONIO CANDIDO" Complemento="Nº 136" Bairro="" Municipio="SANTANA DA BOA VISTA" CEP="96590-000" Regiao="Campanha Sul"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="53" Numero=" 3258-1492" Tipo="Telefone/FAX"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="SANTANA DA BOA VISTA"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="107" Nome="SINDICATO RURAL DE SANTANA DO LIVRAMENTO" Tipo="R" EMail="cursoseeventos@ruraldelivramento.com" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="AVENIDA" Logradouro="SALDANHA DA GAMA" Complemento="1310" Bairro="PRADO" Municipio="SANTANA DO LIVRAMENTO" CEP="97573-176" Regiao="Fronteira"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="55" Numero=" 3242-1204" Tipo="Comercial"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="55" Numero=" 3242-1058" Tipo="Telefone/FAX"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="SANTANA DO LIVRAMENTO"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="108" Nome="SINDICATO RURAL DE SANTIAGO" Tipo="R" EMail="cursosenar@sinsantiago.com.br" EMailDisponivelPublicamente="Sim" Site="www.sinsantiago.com.br" SiteDisponivelPublicamente="Sim">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="AVENIDA" Logradouro="GETULIO VARGAS" Complemento="Nº 1488" Bairro="" Municipio="SANTIAGO" CEP="97700-000" Regiao="Fronteira"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="55" Numero=" 3251-2122" Tipo="Telefone/FAX"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="55" Numero=" 3251-4373" Tipo="Comercial"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="SANTIAGO"/>
+    <Municipio Nome="UNISTALDA"/>
+    <Municipio Nome="CAPAO DO CIPO"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="110" Nome="SINDICATO RURAL DE SANTO ÂNGELO" Tipo="R" EMail="sindiruralsantoangelo@gmail.com" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="SETE DE SETEMBRO" Complemento="755" Bairro="CENTRO" Municipio="SANTO ANGELO" CEP="98801-723" Regiao="Noroeste"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="55" Numero=" 3313-3775" Tipo="Comercial"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="ENTRE-IJUIS"/>
+    <Municipio Nome="EUGENIO DE CASTRO"/>
+    <Municipio Nome="GUARANI DAS MISSOES"/>
+    <Municipio Nome="SANTO ANGELO"/>
+    <Municipio Nome="VITORIA DAS MISSOES"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="119" Nome="SINDICATO RURAL DE SANTO ANTONIO DA PATRULHA" Tipo="R" EMail="sindicatoruralsap@gmail.com" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="JOAO PEDROSO DA LUZ" Complemento="Nº 192" Bairro="" Municipio="SANTO ANTONIO DA PATRULHA" CEP="95500-000" Regiao="Litoral Vales"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="51" Numero=" 3662-1845" Tipo="Telefone/FAX"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="CARAA"/>
+    <Municipio Nome="SANTO ANTONIO DA PATRULHA"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="113" Nome="SINDICATO RURAL DE SANTO ANTONIO DAS MISSOES" Tipo="R" EMail="sindsamrs@gmail.com" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="ADRIANO DORNELLES" Complemento="Nº 3635" Bairro="" Municipio="SANTO ANTONIO DAS MISSOES" CEP="97870-000" Regiao="Fronteira"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="55" Numero=" 3367-1512" Tipo="Telefone/FAX"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="SANTO ANTONIO DAS MISSOES"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="120" Nome="SINDICATO RURAL DE SANTO AUGUSTO" Tipo="R" EMail="sruralsa@terra.com.br" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="AVENIDA" Logradouro="ANGELO SANTI" Complemento="1245" Bairro="" Municipio="SANTO AUGUSTO" CEP="98590-000" Regiao="Noroeste"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="55" Numero=" 3781-1711" Tipo="Telefone/FAX"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="CORONEL BICACO"/>
+    <Municipio Nome="SANTO AUGUSTO"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="121" Nome="SINDICATO RURAL DE SÃO BORJA" Tipo="R" EMail="sindicatosb.senar@gmail.com" EMailDisponivelPublicamente="Sim" Site="www.sindiruralsaoborja.com.br" SiteDisponivelPublicamente="Sim">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="CANDIDO FALCAO" Complemento="Nº 1155" Bairro="" Municipio="SAO BORJA" CEP="97670-000" Regiao="Fronteira"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="55" Numero=" 3431-2911" Tipo="Comercial"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="55" Numero=" 3431-3588" Tipo="Telefone/FAX"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="SAO BORJA"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="122" Nome="SINDICATO RURAL DE SAO FRANCISCO DE ASSIS" Tipo="R" EMail="sindrur@hotmail.com" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="Treze de Janeiro" Complemento="Nº 324" Bairro="" Municipio="SAO FRANCISCO DE ASSIS" CEP="97610-000" Regiao="Fronteira"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="55" Numero=" 3252-1366" Tipo="Comercial"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="55" Numero=" 3252-1822" Tipo="Telefone/FAX"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="SAO FRANCISCO DE ASSIS"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="123" Nome="SINDICATO RURAL DE SAO FRANCISCO DE PAULA" Tipo="R" EMail="sindicatoruralsfp@gmail.com" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="SANTOS DUMONT" Complemento="536 - ESQUINA CEL LULU MACHADO" Bairro="" Municipio="SAO FRANCISCO DE PAULA" CEP="95400-000" Regiao="Planalto Serra"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="54" Numero=" 3244-1057" Tipo="Telefone/FAX"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="SAO FRANCISCO DE PAULA"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="124" Nome="SINDICATO RURAL DE SAO GABRIEL" Tipo="R" EMail="sindirural@sgnet-rs.com.br" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="BARÃO DE SÃO GABRIEL" Complemento="Nº 943" Bairro="" Municipio="SAO GABRIEL" CEP="97300-000" Regiao="Campanha Sul"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="55" Numero=" 3232-6420" Tipo="Telefone/FAX"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="SAO GABRIEL"/>
+    <Municipio Nome="SANTA MARGARIDA DO SUL"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="125" Nome="SINDICATO RURAL DE SAO JERONIMO" Tipo="R" EMail="sindrursj@gmail.com" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="NICÁCIO MACHADO" Complemento="Nº 15" Bairro="" Municipio="SAO JERONIMO" CEP="96700-000" Regiao="Litoral Vales"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="51" Numero=" 3651-1019" Tipo="Telefone/FAX"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="51" Numero=" 3651-1402" Tipo="Comercial"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="SAO JERONIMO"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="3" Nome="SINDICATO RURAL DE SAO JOSÉ DO OURO" Tipo="R" EMail="sindi.sjo@gmail.com" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="AVENIDA" Logradouro="MARECHAL FLORIANO" Complemento="570 SALA 04" Bairro="" Municipio="SAO JOSE DO OURO" CEP="99870-000" Regiao="Planalto Serra"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Nao" DDD="54" Numero=" 3352-1268" Tipo="Comercial"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="BARRACAO"/>
+    <Municipio Nome="CACIQUE DOBLE"/>
+    <Municipio Nome="MACHADINHO"/>
+    <Municipio Nome="SANTO EXPEDITO DO SUL"/>
+    <Municipio Nome="SAO JOSE DO OURO"/>
+    <Municipio Nome="TUPANCI DO SUL"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="126" Nome="SINDICATO RURAL DE SAO LEOPOLDO" Tipo="R" EMail="sindicatoruralsaoleopoldo@gmail.com" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="SAO DOMINGOS" Complemento="Nº 1090" Bairro="CENTRO" Municipio="SAO LEOPOLDO" CEP="93010-290" Regiao="Litoral Vales"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="51" Numero=" 3099-1505" Tipo="Comercial"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Sim" DDD="51" Numero=" 3592-2318" Tipo="Comercial"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="51" Numero="99976-4852" Tipo="Celular"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="CACHOEIRINHA"/>
+    <Municipio Nome="ESTEIO"/>
+    <Municipio Nome="NOVO HAMBURGO"/>
+    <Municipio Nome="SAO LEOPOLDO"/>
+    <Municipio Nome="SAPUCAIA DO SUL"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="127" Nome="SINDICATO RURAL DE SAO LOURENÇO DO SUL" Tipo="R" EMail="sindruralsul@gmail.com" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="AVENIDA" Logradouro="CEL. NONO CENTENO" Complemento="Nº 1441" Bairro="" Municipio="SAO LOURENCO DO SUL" CEP="96170-000" Regiao="Campanha Sul"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="53" Numero="98414-2348" Tipo="Celular"/>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Nao" DDD="53" Numero=" 3251-3350" Tipo="Telefone/FAX"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="SAO LOURENCO DO SUL"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="128" Nome="SINDICATO RURAL DE SAO LUIZ GONZAGA" Tipo="R" EMail="rural@viacom.com.br" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="SALVADOR PINHEIRO MACHADO" Complemento="4951" Bairro="" Municipio="SAO LUIZ GONZAGA" CEP="97800-000" Regiao="Fronteira"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="55" Numero=" 3352-1209" Tipo="Telefone/FAX"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="DEZESSEIS DE NOVEMBRO"/>
+    <Municipio Nome="ROLADOR"/>
+    <Municipio Nome="SAO LUIZ GONZAGA"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="129" Nome="SINDICATO RURAL DE SAO MARTINHO" Tipo="R" EMail="sruralsmartinho@gmail.com" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="AVENIDA" Logradouro="JACOB H. HARTMANN" Complemento="Nº 292" Bairro="" Municipio="SAO MARTINHO" CEP="98690-000" Regiao="Noroeste"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="55" Numero=" 3533-1275" Tipo="Telefone/FAX"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="BOA VISTA DO BURICA"/>
+    <Municipio Nome="SAO MARTINHO"/>
+    <Municipio Nome="SAO VALERIO DO SUL"/>
+    <Municipio Nome="SEDE NOVA"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="1482" Nome="SINDICATO RURAL DE SAO MARTINHO DA SERRA" Tipo="R" EMail="sindiruralsms@gmail.com" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="CEL. SERAFIN BRAVO" Complemento="Nº 325" Bairro="" Municipio="SAO MARTINHO DA SERRA" CEP="97190-000" Regiao="Centro"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="55" Numero="99971-1587" Tipo="Celular"/>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Nao" DDD="55" Numero="99971-7070" Tipo="Celular"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="SAO MARTINHO DA SERRA"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="16367" Nome="SINDICATO RURAL DE SAO MIGUEL DAS MISSOES" Tipo="R" EMail="sindicatoruralsm@gmail.com" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="GOMES FREIRE" Complemento="Nº 159" Bairro="" Municipio="SAO MIGUEL DAS MISSOES" CEP="98865-000" Regiao="Noroeste"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="55" Numero=" 3381-1224" Tipo="Telefone/FAX"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="55" Numero="98127-6990" Tipo="Celular"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="CAIBATE"/>
+    <Municipio Nome="MATO QUEIMADO"/>
+    <Municipio Nome="SAO MIGUEL DAS MISSOES"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="130" Nome="SINDICATO RURAL DE SAO NICOLAU" Tipo="R" EMail="sindicatoruralsn@gmail.com" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="ADEMAR SILVA" Complemento="Nº 836" Bairro="" Municipio="SAO NICOLAU" CEP="97880-000" Regiao="Noroeste"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="55" Numero=" 3363-1231" Tipo="Comercial"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="PIRAPO"/>
+    <Municipio Nome="SAO NICOLAU"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="131" Nome="SINDICATO RURAL DE SAO PEDRO DO SUL" Tipo="R" EMail="sindruralsps@yahoo.com.br" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="INTENDENTE MULLER" Complemento="1149 SALA 01" Bairro="" Municipio="SAO PEDRO DO SUL" CEP="97400-000" Regiao="Centro"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="55" Numero=" 3276-1840" Tipo="Telefone/FAX"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="SAO PEDRO DO SUL"/>
+    <Municipio Nome="TOROPI"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="30" Nome="SINDICATO RURAL DE SAO SEPE" Tipo="R" EMail="sinruralsaosepe@gmail.com" EMailDisponivelPublicamente="Sim" Site="www.sindicatoruraldesaosepe.com.br" SiteDisponivelPublicamente="Sim">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="ANTAO FARIA" Complemento="Nº 1028 - CAIXA POSTAL 67" Bairro="" Municipio="SAO SEPE" CEP="97340-000" Regiao="Centro"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Nao" DDD="55" Numero="99972-9812" Tipo="Celular"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="SAO SEPE"/>
+    <Municipio Nome="VILA NOVA DO SUL"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="132" Nome="SINDICATO RURAL DE SAO VICENTE DO SUL" Tipo="R" EMail="ruralsul@terra.com.br" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="SETE DE SETEMBRO" Complemento="Nº 1045" Bairro="" Municipio="SAO VICENTE DO SUL" CEP="97420-000" Regiao="Fronteira"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="55" Numero=" 3257-1102" Tipo="Telefone/FAX"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="55" Numero=" 3257-1292" Tipo="Comercial"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="SAO VICENTE DO SUL"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="133" Nome="SINDICATO RURAL DE SARANDI" Tipo="R" EMail="sindisarandi@outlook.com" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="TIRADENTES" Complemento="Nº 1300  SALA 2" Bairro="" Municipio="SARANDI" CEP="99560-000" Regiao="Noroeste"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="54" Numero=" 3361-1160" Tipo="Comercial"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="54" Numero=" 3361-1724" Tipo="Telefone/FAX"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="BARRA FUNDA"/>
+    <Municipio Nome="NOVA BOA VISTA"/>
+    <Municipio Nome="CONSTANTINA"/>
+    <Municipio Nome="ENGENHO VELHO"/>
+    <Municipio Nome="LIBERATO SALZANO"/>
+    <Municipio Nome="RONDA ALTA"/>
+    <Municipio Nome="RONDINHA"/>
+    <Municipio Nome="SARANDI"/>
+    <Municipio Nome="NOVO XINGU"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="134" Nome="SINDICATO RURAL DE SERTAO" Tipo="R" EMail="sindsertao@hotmail.com" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="AVENIDA" Logradouro="BRASIL" Complemento="Nº 1271" Bairro="" Municipio="SERTAO" CEP="99170-000" Regiao="Planalto Serra"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="54" Numero=" 3345-1092" Tipo="Telefone/FAX"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="COXILHA"/>
+    <Municipio Nome="SERTAO"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="36" Nome="SINDICATO RURAL DE SOBRADINHO" Tipo="R" EMail="srregional.sobradinho@gmail.com" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="BERTO LAZZARI" Complemento="Nº 170" Bairro="" Municipio="SOBRADINHO" CEP="96900-000" Regiao="Centro"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="51" Numero=" 3742-1366" Tipo="Telefone/FAX"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="IBARAMA"/>
+    <Municipio Nome="LAGOAO"/>
+    <Municipio Nome="PASSA SETE"/>
+    <Municipio Nome="SEGREDO"/>
+    <Municipio Nome="SOBRADINHO"/>
+    <Municipio Nome="LAGOA BONITA DO SUL"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="38" Nome="SINDICATO RURAL DE SOLEDADE" Tipo="R" EMail="sindicatoruralsoledade.rs@gmail.com" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="AVENIDA" Logradouro="MARECHAL FLORIANO PEIXOTO" Complemento="Nº 375" Bairro="" Municipio="SOLEDADE" CEP="99300-000" Regiao="Centro"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="54" Numero=" 3381-1011" Tipo="Telefone/FAX"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="BARROS CASSAL"/>
+    <Municipio Nome="IBIRAPUITA"/>
+    <Municipio Nome="MORMACO"/>
+    <Municipio Nome="SOLEDADE"/>
+    <Municipio Nome="TIO HUGO"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="18041" Nome="SINDICATO RURAL DE TAPEJARA" Tipo="R" EMail="sindrural.tap@bol.com.br" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="SANTO CANALI" Complemento="Nº 295 SALA 02" Bairro="Centro" Municipio="TAPEJARA" CEP="99950-000" Regiao="Planalto Serra"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="54" Numero=" 3344-1063" Tipo="Residencial"/>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="54" Numero=" 3344-2857" Tipo="Telefone/FAX"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="54" Numero="99982-5456" Tipo="Celular"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="AGUA SANTA"/>
+    <Municipio Nome="CHARRUA"/>
+    <Municipio Nome="VILA LANGARO"/>
+    <Municipio Nome="TAPEJARA"/>
+    <Municipio Nome="SANTA CECILIA DO SUL"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="18000" Nome="SINDICATO RURAL DE TAPERA E SELBACH" Tipo="R" EMail="sindicatoruraltapera@yahoo.com.br" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="AVENIDA" Logradouro="15 DE NOVEMBRO" Complemento="Nº 227" Bairro="" Municipio="TAPERA" CEP="99490-000" Regiao="Centro"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Nao" DDD="54" Numero="99629-5301" Tipo="Celular"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="SELBACH"/>
+    <Municipio Nome="TAPERA"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="135" Nome="SINDICATO RURAL DE TAPES" Tipo="R" EMail="sindruraltapes@hotmail.com" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="AVENIDA" Logradouro="ASSIS BRASIL" Complemento="2800 PQ RURAL" Bairro="" Municipio="TAPES" CEP="96760-000" Regiao="Litoral Vales"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="51" Numero=" 3672-1324" Tipo="Telefone/FAX"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="CERRO GRANDE DO SUL"/>
+    <Municipio Nome="TAPES"/>
+    <Municipio Nome="SENTINELA DO SUL"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="16604" Nome="SINDICATO RURAL DE TAQUARI" Tipo="R" EMail="sindicatoruraltk@hotmail.com" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="LAUTERT FILHO" Complemento="Nº  953" Bairro="" Municipio="TAQUARI" CEP="95860-000" Regiao="Litoral Vales"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="51" Numero=" 3653-3818" Tipo="Comercial"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="PAVERAMA"/>
+    <Municipio Nome="TABAI"/>
+    <Municipio Nome="TAQUARI"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="17977" Nome="SINDICATO RURAL DE TAVARES" Tipo="R" EMail="sindicatoruraltavares@hotmail.com" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="DONA LEONOR" Complemento="103" Bairro="" Municipio="TAVARES" CEP="96290-000" Regiao="Litoral Vales"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="51" Numero=" 3674-1073" Tipo="Comercial"/>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="51" Numero=" 3674-1514" Tipo="Comercial"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="TAVARES"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="16087" Nome="SINDICATO RURAL DE TENENTE PORTELA" Tipo="R" EMail="sr.portela@yahoo.com.br" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="TAPAJOS" Complemento="Nº  226" Bairro="" Municipio="TENENTE PORTELA" CEP="98500-000" Regiao="Noroeste"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="55" Numero=" 3551-3210" Tipo="Comercial"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="55" Numero="99964-1623" Tipo="-????"/>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Nao" DDD="55" Numero=" 3551-2619" Tipo="Comercial"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="55" Numero="99962-4063" Tipo="Celular"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="BARRA DO GUARITA"/>
+    <Municipio Nome="DERRUBADAS"/>
+    <Municipio Nome="MIRAGUAI"/>
+    <Municipio Nome="TENENTE PORTELA"/>
+    <Municipio Nome="VISTA GAUCHA"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="136" Nome="SINDICATO RURAL DE TRÊS DE MAIO" Tipo="R" EMail="srtmrs@yahoo.com.br" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="AVENIDA" Logradouro="ALBERTO PASQUALIN" Complemento="575" Bairro="" Municipio="TRES DE MAIO" CEP="98910-000" Regiao="Noroeste"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="55" Numero=" 3535-2983" Tipo="Telefone/FAX"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="ALEGRIA"/>
+    <Municipio Nome="DOUTOR MAURICIO CARDOSO"/>
+    <Municipio Nome="HORIZONTINA"/>
+    <Municipio Nome="INDEPENDENCIA"/>
+    <Municipio Nome="INHACORA"/>
+    <Municipio Nome="SAO JOSE DO INHACORA"/>
+    <Municipio Nome="TRES DE MAIO"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="137" Nome="SINDICATO RURAL DE TRIUNFO" Tipo="R" EMail="sindtri@terra.com.br" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="OSVALDO ARANHA" Complemento="92" Bairro="" Municipio="TRIUNFO" CEP="95840-000" Regiao="Litoral Vales"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="51" Numero=" 3654-1953" Tipo="Telefone/FAX"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="51" Numero=" 3654-1018" Tipo="Comercial"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="CANOAS"/>
+    <Municipio Nome="NOVA SANTA RITA"/>
+    <Municipio Nome="TRIUNFO"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="138" Nome="SINDICATO RURAL DE TUPANCIRETÃ" Tipo="R" EMail="srtupan@brturbo.com.br" EMailDisponivelPublicamente="Sim" Site="www.srtupan.com.br" SiteDisponivelPublicamente="Sim">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="FREDERICO HERTER" Complemento="182" Bairro="" Municipio="TUPANCIRETA" CEP="98170-000" Regiao="Centro"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="55" Numero=" 3272-1403" Tipo="Telefone/FAX"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="JARI"/>
+    <Municipio Nome="QUEVEDOS"/>
+    <Municipio Nome="TUPANCIRETA"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="139" Nome="SINDICATO RURAL DE TUPARENDI" Tipo="R" EMail="sr-tuparendi@uol.com.br" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="AVENIDA" Logradouro="TUCUNDUVA" Complemento="2404" Bairro="" Municipio="TUPARENDI" CEP="98940-000" Regiao="Noroeste"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="55" Numero=" 3543-1922" Tipo="Telefone/FAX"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="NOVO MACHADO"/>
+    <Municipio Nome="PORTO MAUA"/>
+    <Municipio Nome="TUCUNDUVA"/>
+    <Municipio Nome="TUPARENDI"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="140" Nome="SINDICATO RURAL DE URUGUAIANA" Tipo="R" EMail="sruralurg@sindicatoruraldeuruguaiana.com.br" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="SANTANA" Complemento="2717" Bairro="" Municipio="URUGUAIANA" CEP="97510-471" Regiao="Fronteira"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="55" Numero=" 3412-4190" Tipo="Comercial"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="55" Numero=" 3412-4259" Tipo="Telefone/FAX"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="URUGUAIANA"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="54" Nome="SINDICATO RURAL DE VACARIA" Tipo="R" EMail="sinvacar@gmail.com" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="BORGES DE MEDEIROS" Complemento="Nº 1260" Bairro="" Municipio="VACARIA" CEP="95200-000" Regiao="Planalto Serra"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="54" Numero=" 3231-1586" Tipo="Comercial"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="54" Numero=" 3232-6174" Tipo="Telefone/FAX"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="VACARIA"/>
+    <Municipio Nome="MONTE ALEGRE DOS CAMPOS"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="1433" Nome="SINDICATO RURAL DE VALE DO PARANHANA" Tipo="R" EMail="sindrural.cursos@yahoo.com.br" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="GUILHERME LAHM" Complemento="Nº 870" Bairro="" Municipio="TAQUARA" CEP="95600-104" Regiao="Litoral Vales"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Nao" DDD="51" Numero=" 3899-6199" Tipo="Telefone/FAX"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="51" Numero="99694-7126" Tipo="Celular"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="51" Numero="99831-8641" Tipo="Celular"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="ARARICA"/>
+    <Municipio Nome="CAMPO BOM"/>
+    <Municipio Nome="PAROBE"/>
+    <Municipio Nome="NOVA HARTZ"/>
+    <Municipio Nome="RIOZINHO"/>
+    <Municipio Nome="ROLANTE"/>
+    <Municipio Nome="SAPIRANGA"/>
+    <Municipio Nome="TAQUARA"/>
+    <Municipio Nome="TRES COROAS"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="141" Nome="SINDICATO RURAL DE VENÂNCIO AIRES" Tipo="R" EMail="sindicatoruralvenancio@gmail.com" EMailDisponivelPublicamente="Sim" Site="" SiteDisponivelPublicamente="Nao">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="PRIMEIRO DE MARÇO" Complemento="1208" Bairro="" Municipio="VENANCIO AIRES" CEP="95800-000" Regiao="Litoral Vales"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="51" Numero=" 3741-1946" Tipo="Comercial"/>
+    <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="51" Numero=" 3741-5627" Tipo="Telefone/FAX"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="MATO LEITAO"/>
+    <Municipio Nome="VENANCIO AIRES"/>
+   </Abrangencia>
+  </Sindicato>
+  <Sindicato Codigo="58" Nome="SINDICATO RURAL DE VIAMÃO" Tipo="R" EMail="sindicatoruraldeviamao@gmail.com" EMailDisponivelPublicamente="Sim" Site="www.sindicatoruraldeviamao.com.br" SiteDisponivelPublicamente="Sim">
+   <Enderecos>
+    <Endereco DisponivelPublicamente="Sim" EnderecoPrincipal="Sim" TipoLogradouro="RUA" Logradouro="LUIS ROSSETTI" Complemento="Nº 331" Bairro="CENTRO" Municipio="VIAMAO" CEP="94410-230" Regiao="Litoral Vales"/>
+   </Enderecos>
+   <Telefones>
+    <Telefone DisponivelPublicamente="Sim" TelefonePrincipal="Sim" DDD="51" Numero=" 3485-1191" Tipo="Telefone/FAX"/>
+   </Telefones>
+   <Abrangencia>
+    <Municipio Nome="ALVORADA"/>
+    <Municipio Nome="VIAMAO"/>
+   </Abrangencia>
+  </Sindicato>
+ </Sindicatos>

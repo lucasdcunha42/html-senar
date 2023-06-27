@@ -1,0 +1,47 @@
+@import '_mixins';
+
+@import '_variables';
+@import '_config';
+
+@import '_hamburger';
+
+@import '_header';
+@import '_footer';
+@import '_side-menu';
+
+@import 'components/c-thumb-1';
+@import 'components/c-thumb-2';
+@import 'components/c-thumb-3';
+@import 'components/c-thumb-4';
+@import 'components/select';
+@import 'components/accordion';
+@import 'components/forms';
+@import 'components/buttons-animated';
+@import 'components/carousel';
+
+@import 'components/banner-carousel';
+@import 'components/table-site';
+
+@import 'vendor/date-range-picker';
+
+@import 'pages/home';
+@import 'pages/cursos';
+@import 'pages/agenda';
+@import 'pages/programas';
+@import 'pages/eventos';
+@import 'pages/sindicatos';
+@import 'pages/news';
+@import 'pages/contato';
+@import 'pages/supervisao';
+@import 'pages/apoiadores';
+@import 'pages/onde-estamos';
+@import 'pages/quero-ser-fornecedor';
+@import 'pages/trabalhe-conosco';
+@import 'pages/transparencia';
+
+@import 'pages/institucional/o-senar';
+@import 'pages/institucional/legislacao';
+@import 'pages/institucional/licitacoes-e-contrato';
+
+@import '_media-queries';
+

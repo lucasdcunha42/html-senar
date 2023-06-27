@@ -1,0 +1,50 @@
+
+@mixin desktop {
+    @media (max-width: 1199px) { @content; }
+}
+
+@mixin tablet {
+    @media (max-width: 991px) { @content; }
+}
+
+@mixin phone {
+    @media (max-width: 767px) { @content; }
+}
+
+@mixin w560 {
+    @media (max-width: 560px) { @content; }
+}
+
+
+@mixin auto-width($initialWidth: 70%, $desktopWidth: 80%, $tabletWidth: 90%, $phoneWidth: 100%) {
+    width: $initialWidth;
+
+    @include desktop {
+        width: $desktopWidth;
+    }
+    @include tablet {
+        width: $tabletWidth;
+    }
+    @include phone {
+        width: $phoneWidth;
+    }
+}
+
+@mixin auto-width-50 {
+    @include auto-width(50%, 65%, 85%, 100%);
+}
+
+@mixin auto-width-60 {
+    @include auto-width(60%, 75%);
+}
+
+@mixin auto-width-70 {
+    @include auto-width;
+}
+
+@mixin animating($prop: all, $time: .25s, $ease: ease-in-out) {
+    -webkit-transition: $prop $time $ease;
+    -moz-transition: $prop $time $ease;
+    -o-transition: $prop $time $ease;
+    transition: $prop $time $ease;
+}

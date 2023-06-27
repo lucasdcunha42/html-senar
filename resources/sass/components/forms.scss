@@ -1,0 +1,27 @@
+.form-site {
+    .form-control {
+        height: 40px;
+        font-size: 16px;
+        color: #000;
+        border: 0;
+        border-radius: 0;
+        background-color: $grey-base;
+    }
+
+    button[type="submit"] {
+        background-color: $green-base;
+        width: 100%;
+        border: 0;
+        color: #fff;
+        font-weight: bold;
+        height: 40px;
+    }
+
+    .custom-select {
+        background-color: $grey-base;
+    }
+
+    textarea.form-control {
+        height: auto;
+    }
+}

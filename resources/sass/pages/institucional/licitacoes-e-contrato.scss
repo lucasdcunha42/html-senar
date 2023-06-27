@@ -1,0 +1,14 @@
+.form-licitacoes-container {
+    margin: 0 auto;
+
+    @include auto-width(50%, 60%, 90%, 100%);
+
+    .buttons-animated {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    .buttons-animated button {
+        width: 40%;
+    }
+}

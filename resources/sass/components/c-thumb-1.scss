@@ -1,0 +1,50 @@
+// <div class="c-thumb-1">
+//     <img src="{{ asset('images/agropecuaria.png') }}" class="img-responsive" alt="">
+//     <div class="c-thumb-caption">
+//         <h5><a href="#">Programa Leitec</a></h5>
+//     </div>
+// </div>
+
+.c-thumb-1 {
+    position: relative;
+    margin-bottom: 30px;
+
+    .c-thumb-caption {
+        background:rgba($color: #333, $alpha: 0.9);
+        position: absolute;
+        width: 100%;
+        top: 60%;
+        height: 40%;
+        text-align: center;
+        color: #fff;
+        // display: table;
+        transition: all 0.5s;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        h5 {
+            // display: table-cell;
+            // vertical-align: middle;
+            // text-align: center;
+            color: #fff;
+            font-size: 18px;
+            position: relative;
+            text-transform: uppercase;
+
+            a {
+                color: #fff;
+            }
+        }
+    }
+}
+
+.c-thumb-1:hover .c-thumb-caption {
+    top: 0;
+    height: 100%;
+    background:rgba($color: $green-base, $alpha: 0.9);
+}

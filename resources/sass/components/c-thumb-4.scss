@@ -1,0 +1,54 @@
+// <div class="c-thumb-4">
+//     <div class="c-thumb-4__date">
+//         <span>24.07.2017</span>
+//     </div>
+//     <div class="c-thummb-4__title">
+//         <h4>Fabricação de Queijos</h4>
+//     </div>
+//     <div class="c-thummb-4__city">
+//         <p>Alegrete</p>
+//     </div>
+//     <div class="c-thumb-4__link">
+//         <a href="#">Ler mais</a>
+//     </div>
+// </div>
+
+$c_table_max_height: 120px;
+
+.c-thumb-4 {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+    height: 300px;
+
+    .c-thumb-4__date {
+        color: $green-base;
+    }
+
+    .c-thummb-4__title {
+        .d-table-cell {
+            height: $c_table_max_height;
+            overflow-y: auto;
+        }
+
+        h4 {
+            max-height: $c_table_max_height;
+            font-weight: bold;
+        }
+    }
+
+    .c-thummb-4__city {
+        padding-top: 10px;
+        padding-bottom: 20px;
+        font-size: 18px;
+    }
+
+    .c-thumb-4__link {
+        a {
+            text-transform: uppercase;
+            color: #000;
+            text-decoration: underline;
+        }
+    }
+}

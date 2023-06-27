@@ -1,0 +1,115 @@
+.o-senar-objetivos {
+    margin-top: 60px;
+    padding: 60px 0;
+}
+
+.objetivos-item {
+    float: left;
+    width: 20%;
+    margin-bottom: 30px;
+
+    .n {
+        text-align: center;
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    .desc {
+        font-size: 16px;
+        padding: 0 20px;
+    }
+
+    @include tablet {
+        width: 33.33%;
+    }
+
+    @include phone {
+        width: 100%;
+    }
+}
+
+.estrutura-arvore {
+
+    margin-top: 40px;
+    text-align: center;
+
+    .label-item {
+        display: inline-block;
+        padding: 15px 30px;
+    }
+
+    .label-superintendencia {
+        color: #fff;
+        background-color: #004030;
+        font-size: 18px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .label-secretarias {
+        background-color: $grey-base;
+        margin: 5px 3px;
+        width: 250px;
+
+        @include w560 {
+            width: 100%;
+        }
+    }
+
+    .section-secretarias {
+        margin-top: 40px;
+    }
+}
+
+.section-divisoes {
+
+    margin-top: 40px;
+
+    .divisao {
+        width: 278px;
+        float: left;
+        margin: 0 4px;
+
+        @include desktop {
+            width: 464px;
+            margin-bottom: 60px;
+        }
+
+        @include tablet {
+            width: 354px;
+        }
+
+        @include phone {
+            width: 100%;
+        }
+    }
+
+    .divisao-item {
+        margin-bottom: 10px;
+        width: 100%;
+        height: 50px;
+        background-color: $grey-base;
+
+        span {
+            vertical-align: middle;
+        }
+    }
+
+    .divisao:first-child {
+        margin-left: 0;
+    }
+
+    .divisao:last-child {
+        margin-right: 0;
+    }
+
+    .divisao-item-title {
+        background-color: #004030;
+        color: #fff;
+    }
+}
+
+.o-senar-video {
+    margin-top: 60px;
+    padding-bottom: 60px;
+}

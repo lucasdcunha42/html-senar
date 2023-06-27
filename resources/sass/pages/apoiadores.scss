@@ -1,0 +1,25 @@
+.logos-apoiadores-list {
+    a.thumbnail {
+        border: 0;
+        margin-bottom: 1px;
+    }
+}
+
+.quer-ser-patrocinador {
+    margin-top: 60px;
+}
+
+.regras-list {
+    margin: 0 auto;
+    @include auto-width;
+
+    p {
+        font-size: 16px;
+        span {
+            font-size: 20px;
+            font-weight: bold;
+            display: inline-block;
+            width: 30px;
+        }
+    }
+}

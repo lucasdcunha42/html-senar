@@ -1,0 +1,27 @@
+.onde-estamos {
+    padding: 60px 0 40px;
+
+    .custom-select {
+        margin-bottom: 20px;
+    }
+
+    .selects-container {
+        margin-top: 30px;
+    }
+}
+
+.onde-estamos.table-results table {
+    margin: 0 auto;
+    @include auto-width(50%, 70%, 90%, 100%);
+
+    tr {
+        width: 100%;
+
+        th {
+            width: 50%;
+        }
+        td {
+            width: 50%;
+        }
+    }
+}

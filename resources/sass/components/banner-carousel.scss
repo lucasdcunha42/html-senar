@@ -1,0 +1,17 @@
+.carousel-caption {
+    /* 100% - largura do contaier / 2 (sobra os 2 espaços - direito e esquerdo) - 15px da margin das col e row */
+    left: calc(((100% - 1170px) / 2) + 15px);
+    right: 0;
+    text-align: left;
+    top: 100px;
+    text-shadow: none;
+
+    h3 {
+        font-size: 40px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+}
+

@@ -1,0 +1,32 @@
+.button-actions-container {
+    text-align: center;
+
+    button {
+        width: 20%;
+        border: 0;
+        padding: 10px 0;
+        font-size: 14px;
+        text-transform: uppercase;
+    }
+
+    a {
+        color: #000;
+    }
+}
+
+.eventos-container {
+    margin-top: 70px;
+    padding: 70px 0;
+}
+
+.buttons-eventos {
+
+    button[data-type] {
+        @include animating(all)
+    }
+
+    button[data-type].active {
+        background-color: $green-base;
+        color: #fff;
+    }
+}

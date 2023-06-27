@@ -1,0 +1,32 @@
+.footer {
+    margin-top: 60px;
+    padding: 40px 0;
+    background-color: $grey-base;
+
+    .logo-footer {
+        position: relative;
+        top: 10px;
+    }
+
+    .address {
+        padding-top: 20px;
+
+        p {
+            margin-bottom: 0;
+            font-size: 16px;
+        }
+    }
+
+    .footer-icons {
+
+        padding-top: 20px;
+        a {
+            display: inline-block;
+            margin-left: 5px;
+        }
+
+        @include tablet {
+            text-align: center !important;
+        }
+    }
+}

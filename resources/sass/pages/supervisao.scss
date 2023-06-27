@@ -1,0 +1,55 @@
+.supervisao-item {
+    position: relative;
+    text-align: center;
+    background-color: $grey-base;
+    height: 260px;
+    min-height: 260px;
+    margin-bottom: 50px;
+    @include animating(background-color);
+
+    .supervisao-item__header {
+        position: absolute;
+        padding: 5px 15px;
+        background-color: $grey-dark;
+        width: 80%;
+        left: 10%;
+        top: -20px;
+        @include animating(background-color, .50);
+
+        h6 {
+            color: #fff;
+            font-weight: bold;
+            font-size: 16px;
+            text-transform: uppercase;
+            padding: 0;
+        }
+    }
+
+    .supervisao-item__body {
+        padding: 30px 20px 20px;
+        height: 100%;
+
+        .d-table-cell {
+            vertical-align: middle;
+        }
+
+        h4 {
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        p.email {
+            margin-bottom: 20px;
+        }
+    }
+
+    &:hover {
+
+        background-color: $green-base;
+        color: #fff;
+
+        .supervisao-item__header {
+            background-color: $green-dark;
+        }
+    }
+}

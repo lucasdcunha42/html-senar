@@ -1,0 +1,31 @@
+.custom-select {
+    width: 100%;
+    padding: 10px;
+    text-transform: uppercase;
+    color: #464646;
+    border: 0;
+    outline: 0;
+
+    -moz-appearance:none; /* Firefox */
+    -webkit-appearance:none; /* Safari and Chrome */
+    appearance:none;
+
+    background-image: url('../images/arrow-down-1.png');
+    background-size: 26px;
+    background-repeat: no-repeat;
+    background-position: 90% center;
+    background-color: #ddd;
+
+    @include phone {
+        background-position: 95% center;
+        margin-bottom: 15px;
+    }
+}
+
+.custom-select:focus-visible {
+    outline: 0;
+}
+
+.custom-select.bg-white {
+    background-color: #fff;
+}

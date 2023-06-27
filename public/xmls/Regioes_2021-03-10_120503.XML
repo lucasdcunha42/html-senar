@@ -1,0 +1,563 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+ <Regioes>
+  <Regiao Codigo="1" Nome="Campanha Sul">
+   <Supervisor Codigo="55112" Nome="Giovani Bolzoni" EMail="giovani@senar-rs.com.br" EMailDisponivelPublicamente="Sim">
+    <Telefones>
+     <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Sim" DDD="53" Numero=" 0273-1904" Tipo="Residencial"/>
+     <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="53" Numero="99971-0606" Tipo="Celular"/>
+    </Telefones>
+   </Supervisor>
+   <Municipios>
+    <Municipio Nome="ACEGUA"/>
+    <Municipio Nome="AMARAL FERRADOR"/>
+    <Municipio Nome="ARAMBARE"/>
+    <Municipio Nome="ARROIO DO PADRE"/>
+    <Municipio Nome="ARROIO GRANDE"/>
+    <Municipio Nome="BAGÉ"/>
+    <Municipio Nome="CACAPAVA DO SUL"/>
+    <Municipio Nome="CAMAQUÃ"/>
+    <Municipio Nome="CANDIOTA"/>
+    <Municipio Nome="CANGUÇU"/>
+    <Municipio Nome="CAPAO DO LEAO"/>
+    <Municipio Nome="CHUI"/>
+    <Municipio Nome="CRISTAL"/>
+    <Municipio Nome="DOM FELICIANO"/>
+    <Municipio Nome="DOM PEDRITO"/>
+    <Municipio Nome="HERVAL"/>
+    <Municipio Nome="HULHA NEGRA"/>
+    <Municipio Nome="JAGUARAO"/>
+    <Municipio Nome="LAVRAS DO SUL"/>
+    <Municipio Nome="MORRO REDONDO"/>
+    <Municipio Nome="PEDRAS ALTAS"/>
+    <Municipio Nome="PEDRO OSORIO"/>
+    <Municipio Nome="PELOTAS"/>
+    <Municipio Nome="PINHEIRO MACHADO"/>
+    <Municipio Nome="PIRATINI"/>
+    <Municipio Nome="RIO GRANDE"/>
+    <Municipio Nome="SANTA VITORIA DO PALMAR"/>
+    <Municipio Nome="SANTANA DA BOA VISTA"/>
+    <Municipio Nome="CHUVISCA"/>
+    <Municipio Nome="SAO GABRIEL"/>
+    <Municipio Nome="SAO JOSE DO NORTE"/>
+    <Municipio Nome="SAO LOURENCO DO SUL"/>
+    <Municipio Nome="TURUÇU"/>
+    <Municipio Nome="CERRITO"/>
+    <Municipio Nome="SANTA MARGARIDA DO SUL"/>
+   </Municipios>
+  </Regiao>
+  <Regiao Codigo="2" Nome="Centro">
+   <Supervisor Codigo="80" Nome="Gilmar Desconzi" EMail="desconzi@senar-rs.com.br" EMailDisponivelPublicamente="Sim">
+    <Telefones>
+     <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Sim" DDD="55" Numero=" 0223-6699" Tipo="Residencial"/>
+     <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="55" Numero="99935-8535" Tipo="Celular"/>
+     <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="55" Numero=" 0211-2300" Tipo="Telefone/FAX"/>
+     <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="55" Numero="98115-9371" Tipo="Celular"/>
+    </Telefones>
+   </Supervisor>
+   <Municipios>
+    <Municipio Nome="AGUDO"/>
+    <Municipio Nome="ALMIRANTE TAMANDARE DO SUL"/>
+    <Municipio Nome="ALTO ALEGRE"/>
+    <Municipio Nome="ARROIO DO TIGRE"/>
+    <Municipio Nome="BARROS CASSAL"/>
+    <Municipio Nome="BOA VISTA DO INCRA"/>
+    <Municipio Nome="CACHOEIRA DO SUL"/>
+    <Municipio Nome="BOA VISTA DO CADEADO"/>
+    <Municipio Nome="CAMPOS BORGES"/>
+    <Municipio Nome="CANDELARIA"/>
+    <Municipio Nome="CARAZINHO"/>
+    <Municipio Nome="CERRO BRANCO"/>
+    <Municipio Nome="CHAPADA"/>
+    <Municipio Nome="COLORADO"/>
+    <Municipio Nome="COQUEIROS DO SUL"/>
+    <Municipio Nome="CRUZ ALTA"/>
+    <Municipio Nome="DILERMANDO DE AGUIAR"/>
+    <Municipio Nome="DONA FRANCISCA"/>
+    <Municipio Nome="ESPUMOSO"/>
+    <Municipio Nome="ESTRELA VELHA"/>
+    <Municipio Nome="FAXINAL DO SOTURNO"/>
+    <Municipio Nome="FONTOURA XAVIER"/>
+    <Municipio Nome="FORMIGUEIRO"/>
+    <Municipio Nome="FORTALEZA DOS VALOS"/>
+    <Municipio Nome="IBARAMA"/>
+    <Municipio Nome="IBIRAPUITA"/>
+    <Municipio Nome="IBIRUBA"/>
+    <Municipio Nome="ITAARA"/>
+    <Municipio Nome="IVORA"/>
+    <Municipio Nome="JACUIZINHO"/>
+    <Municipio Nome="JARI"/>
+    <Municipio Nome="JULIO DE CASTILHOS"/>
+    <Municipio Nome="LAGOA DOS TRES CANTOS"/>
+    <Municipio Nome="LAGOAO"/>
+    <Municipio Nome="MORMACO"/>
+    <Municipio Nome="NAO-ME-TOQUE"/>
+    <Municipio Nome="NOVA PALMA"/>
+    <Municipio Nome="PARAISO DO SUL"/>
+    <Municipio Nome="PASSA SETE"/>
+    <Municipio Nome="PINHAL GRANDE"/>
+    <Municipio Nome="POUSO NOVO"/>
+    <Municipio Nome="QUEVEDOS"/>
+    <Municipio Nome="QUINZE DE NOVEMBRO"/>
+    <Municipio Nome="RESTINGA SECA"/>
+    <Municipio Nome="SALTO DO JACUI"/>
+    <Municipio Nome="SANTA MARIA"/>
+    <Municipio Nome="SANTO ANTONIO DO PLANALTO"/>
+    <Municipio Nome="SAO JOAO DO POLESINE"/>
+    <Municipio Nome="SAO JOSE DO HERVAL"/>
+    <Municipio Nome="SAO MARTINHO DA SERRA"/>
+    <Municipio Nome="SAO PEDRO DO SUL"/>
+    <Municipio Nome="SAO SEPE"/>
+    <Municipio Nome="SEGREDO"/>
+    <Municipio Nome="SELBACH"/>
+    <Municipio Nome="SILVEIRA MARTINS"/>
+    <Municipio Nome="SOBRADINHO"/>
+    <Municipio Nome="SOLEDADE"/>
+    <Municipio Nome="TAPERA"/>
+    <Municipio Nome="TOROPI"/>
+    <Municipio Nome="TUNAS"/>
+    <Municipio Nome="TUPANCIRETA"/>
+    <Municipio Nome="VICTOR GRAEFF"/>
+    <Municipio Nome="VILA NOVA DO SUL"/>
+    <Municipio Nome="NOVO CABRAIS"/>
+    <Municipio Nome="LAGOA BONITA DO SUL"/>
+    <Municipio Nome="TIO HUGO"/>
+   </Municipios>
+  </Regiao>
+  <Regiao Codigo="3" Nome="Fronteira">
+   <Supervisor Codigo="54028" Nome="Hermenegildo de Freitas Uberti" EMail="hermenegildo@senar-rs.com.br" EMailDisponivelPublicamente="Sim">
+    <Telefones>
+     <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Sim" DDD="55" Numero=" 0422-3702" Tipo="Residencial"/>
+     <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="55" Numero="99971-7974" Tipo="Celular"/>
+    </Telefones>
+   </Supervisor>
+   <Municipios>
+    <Municipio Nome="ALEGRETE"/>
+    <Municipio Nome="BARRA DO QUARAI"/>
+    <Municipio Nome="BOSSOROCA"/>
+    <Municipio Nome="CACEQUI"/>
+    <Municipio Nome="DEZESSEIS DE NOVEMBRO"/>
+    <Municipio Nome="GARRUCHOS"/>
+    <Municipio Nome="ITACURUBI"/>
+    <Municipio Nome="ITAQUI"/>
+    <Municipio Nome="JAGUARI"/>
+    <Municipio Nome="MANOEL VIANA"/>
+    <Municipio Nome="MACAMBARA"/>
+    <Municipio Nome="MATA"/>
+    <Municipio Nome="NOVA ESPERANCA DO SUL"/>
+    <Municipio Nome="QUARAI"/>
+    <Municipio Nome="ROLADOR"/>
+    <Municipio Nome="ROSARIO DO SUL"/>
+    <Municipio Nome="SANTANA DO LIVRAMENTO"/>
+    <Municipio Nome="SANTIAGO"/>
+    <Municipio Nome="SANTO ANTONIO DAS MISSOES"/>
+    <Municipio Nome="SAO BORJA"/>
+    <Municipio Nome="SAO FRANCISCO DE ASSIS"/>
+    <Municipio Nome="SAO LUIZ GONZAGA"/>
+    <Municipio Nome="SAO VICENTE DO SUL"/>
+    <Municipio Nome="UNISTALDA"/>
+    <Municipio Nome="URUGUAIANA"/>
+    <Municipio Nome="CAPAO DO CIPO"/>
+   </Municipios>
+  </Regiao>
+  <Regiao Codigo="6" Nome="Litoral Vales">
+   <Supervisor Codigo="7829" Nome="Ricardo Lopes de Almeida" EMail="ricardo@senar-rs.com.br" EMailDisponivelPublicamente="Sim">
+    <Telefones>
+     <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Sim" DDD="51" Numero=" 3333-2635" Tipo="Residencial"/>
+     <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="51" Numero="99993-7972" Tipo="Celular"/>
+    </Telefones>
+   </Supervisor>
+   <Municipios>
+    <Municipio Nome="ALVORADA"/>
+    <Municipio Nome="ARARICA"/>
+    <Municipio Nome="IMIGRANTE"/>
+    <Municipio Nome="ARROIO DO MEIO"/>
+    <Municipio Nome="ARROIO DO SAL"/>
+    <Municipio Nome="ARROIO DOS RATOS"/>
+    <Municipio Nome="BARAO DO TRIUNFO"/>
+    <Municipio Nome="BARRA DO RIBEIRO"/>
+    <Municipio Nome="BOM PRINCIPIO"/>
+    <Municipio Nome="BOM RETIRO DO SUL"/>
+    <Municipio Nome="BOQUEIRAO DO LEAO"/>
+    <Municipio Nome="BUTIA"/>
+    <Municipio Nome="CACHOEIRINHA"/>
+    <Municipio Nome="CAMPO BOM"/>
+    <Municipio Nome="CANOAS"/>
+    <Municipio Nome="CAPAO DA CANOA"/>
+    <Municipio Nome="CAPELA DE SANTANA"/>
+    <Municipio Nome="CAPITAO"/>
+    <Municipio Nome="CAPIVARI DO SUL"/>
+    <Municipio Nome="CARAA"/>
+    <Municipio Nome="CERRO GRANDE DO SUL"/>
+    <Municipio Nome="CHARQUEADAS"/>
+    <Municipio Nome="CIDREIRA"/>
+    <Municipio Nome="COQUEIRO BAIXO"/>
+    <Municipio Nome="COLINAS"/>
+    <Municipio Nome="CRUZEIRO DO SUL"/>
+    <Municipio Nome="DOIS IRMAOS"/>
+    <Municipio Nome="ELDORADO DO SUL"/>
+    <Municipio Nome="ENCANTADO"/>
+    <Municipio Nome="ENCRUZILHADA DO SUL"/>
+    <Municipio Nome="ESTANCIA VELHA"/>
+    <Municipio Nome="ESTEIO"/>
+    <Municipio Nome="ESTRELA"/>
+    <Municipio Nome="FAZENDA VILANOVA"/>
+    <Municipio Nome="FELIZ"/>
+    <Municipio Nome="FORQUETINHA"/>
+    <Municipio Nome="GENERAL CAMARA"/>
+    <Municipio Nome="GLORINHA"/>
+    <Municipio Nome="GRAMADO XAVIER"/>
+    <Municipio Nome="GRAVATAI"/>
+    <Municipio Nome="GUAIBA"/>
+    <Municipio Nome="HARMONIA"/>
+    <Municipio Nome="IGREJINHA"/>
+    <Municipio Nome="ITATI"/>
+    <Municipio Nome="IVOTI"/>
+    <Municipio Nome="LAJEADO"/>
+    <Municipio Nome="MAQUINE"/>
+    <Municipio Nome="BROCHIER"/>
+    <Municipio Nome="MARIANA PIMENTEL"/>
+    <Municipio Nome="MARQUES DE SOUZA"/>
+    <Municipio Nome="MATO LEITAO"/>
+    <Municipio Nome="VALE VERDE"/>
+    <Municipio Nome="MONTENEGRO"/>
+    <Municipio Nome="MORRO REUTER"/>
+    <Municipio Nome="MOSTARDAS"/>
+    <Municipio Nome="MUCUM"/>
+    <Municipio Nome="NOVA BRESCIA"/>
+    <Municipio Nome="NOVO HAMBURGO"/>
+    <Municipio Nome="OSORIO"/>
+    <Municipio Nome="PALMARES DO SUL"/>
+    <Municipio Nome="PANTANO GRANDE"/>
+    <Municipio Nome="PARECI NOVO"/>
+    <Municipio Nome="PAROBE"/>
+    <Municipio Nome="PASSO DO SOBRADO"/>
+    <Municipio Nome="PAVERAMA"/>
+    <Municipio Nome="NOVA HARTZ"/>
+    <Municipio Nome="POCO DAS ANTAS"/>
+    <Municipio Nome="PORTAO"/>
+    <Municipio Nome="PORTO ALEGRE"/>
+    <Municipio Nome="PROGRESSO"/>
+    <Municipio Nome="RELVADO"/>
+    <Municipio Nome="DOUTOR RICARDO"/>
+    <Municipio Nome="RIO PARDO"/>
+    <Municipio Nome="RIOZINHO"/>
+    <Municipio Nome="ROCA SALES"/>
+    <Municipio Nome="ROLANTE"/>
+    <Municipio Nome="MAMPITUBA"/>
+    <Municipio Nome="SANTA CLARA DO SUL"/>
+    <Municipio Nome="SANTA CRUZ DO SUL"/>
+    <Municipio Nome="NOVA SANTA RITA"/>
+    <Municipio Nome="SANTO ANTONIO DA PATRULHA"/>
+    <Municipio Nome="SAO JERONIMO"/>
+    <Municipio Nome="SAO JOSE DO HORTENCIO"/>
+    <Municipio Nome="SAO LEOPOLDO"/>
+    <Municipio Nome="DOM PEDRO DE ALCANTARA"/>
+    <Municipio Nome="SAO SEBASTIAO DO CAI"/>
+    <Municipio Nome="SAPIRANGA"/>
+    <Municipio Nome="SAPUCAIA DO SUL"/>
+    <Municipio Nome="SERIO"/>
+    <Municipio Nome="SERTAO SANTANA"/>
+    <Municipio Nome="SINIMBU"/>
+    <Municipio Nome="TABAI"/>
+    <Municipio Nome="TAPES"/>
+    <Municipio Nome="TAQUARA"/>
+    <Municipio Nome="TAQUARI"/>
+    <Municipio Nome="TAVARES"/>
+    <Municipio Nome="TERRA DE AREIA"/>
+    <Municipio Nome="TEUTONIA"/>
+    <Municipio Nome="TORRES"/>
+    <Municipio Nome="TRAMANDAI"/>
+    <Municipio Nome="TRAVESSEIRO"/>
+    <Municipio Nome="TRES CACHOEIRAS"/>
+    <Municipio Nome="TRES COROAS"/>
+    <Municipio Nome="TRES FORQUILHAS"/>
+    <Municipio Nome="TRIUNFO"/>
+    <Municipio Nome="VALE DO SOL"/>
+    <Municipio Nome="TUPANDI"/>
+    <Municipio Nome="SENTINELA DO SUL"/>
+    <Municipio Nome="VENANCIO AIRES"/>
+    <Municipio Nome="VERA CRUZ"/>
+    <Municipio Nome="VESPASIANO CORREA"/>
+    <Municipio Nome="VIAMAO"/>
+    <Municipio Nome="IMBE"/>
+    <Municipio Nome="LINDOLFO COLLOR"/>
+    <Municipio Nome="PRESIDENTE LUCENA"/>
+    <Municipio Nome="MORRINHOS DO SUL"/>
+    <Municipio Nome="XANGRI-LA"/>
+    <Municipio Nome="VALE REAL"/>
+    <Municipio Nome="ALTO FELIZ"/>
+    <Municipio Nome="LINHA NOVA"/>
+    <Municipio Nome="MARATA"/>
+    <Municipio Nome="BALNEARIO PINHAL"/>
+    <Municipio Nome="HERVEIRAS"/>
+    <Municipio Nome="CANUDOS DO VALE"/>
+    <Municipio Nome="SAO JOSE DO SUL"/>
+    <Municipio Nome="MINAS DO LEAO"/>
+    <Municipio Nome="WESTFÁLIA"/>
+   </Municipios>
+  </Regiao>
+  <Regiao Codigo="4" Nome="Noroeste">
+   <Supervisor Codigo="53686" Nome="Diego da Silva Coimbra" EMail="diego@senar-rs.com.br" EMailDisponivelPublicamente="Sim">
+    <Telefones>
+     <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Sim" DDD="55" Numero=" 0321-1693" Tipo="Residencial"/>
+     <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="55" Numero=" 3333-0137" Tipo="Residencial"/>
+     <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="55" Numero="99971-7976" Tipo="Celular"/>
+    </Telefones>
+   </Supervisor>
+   <Municipios>
+    <Municipio Nome="AJURICABA"/>
+    <Municipio Nome="ALECRIM"/>
+    <Municipio Nome="ALEGRIA"/>
+    <Municipio Nome="ALPESTRE"/>
+    <Municipio Nome="AUGUSTO PESTANA"/>
+    <Municipio Nome="BARRA DO GUARITA"/>
+    <Municipio Nome="BARRA FUNDA"/>
+    <Municipio Nome="NOVO BARREIRO"/>
+    <Municipio Nome="BOA VISTA DAS MISSOES"/>
+    <Municipio Nome="NOVA BOA VISTA"/>
+    <Municipio Nome="BOA VISTA DO BURICA"/>
+    <Municipio Nome="BOM PROGRESSO"/>
+    <Municipio Nome="BRAGA"/>
+    <Municipio Nome="CAIBATE"/>
+    <Municipio Nome="CAICARA"/>
+    <Municipio Nome="CAMPINA DAS MISSOES"/>
+    <Municipio Nome="CAMPO NOVO"/>
+    <Municipio Nome="NOVA CANDELARIA"/>
+    <Municipio Nome="CANDIDO GODOI"/>
+    <Municipio Nome="CATUIPE"/>
+    <Municipio Nome="CERRO GRANDE"/>
+    <Municipio Nome="CERRO LARGO"/>
+    <Municipio Nome="CHIAPETTA"/>
+    <Municipio Nome="CONDOR"/>
+    <Municipio Nome="CONSTANTINA"/>
+    <Municipio Nome="CORONEL BARROS"/>
+    <Municipio Nome="CORONEL BICACO"/>
+    <Municipio Nome="CRISSIUMAL"/>
+    <Municipio Nome="DERRUBADAS"/>
+    <Municipio Nome="DOIS IRMAOS DAS MISSOES"/>
+    <Municipio Nome="BOZANO"/>
+    <Municipio Nome="DOUTOR MAURICIO CARDOSO"/>
+    <Municipio Nome="ENGENHO VELHO"/>
+    <Municipio Nome="ENTRE-IJUIS"/>
+    <Municipio Nome="ERVAL SECO"/>
+    <Municipio Nome="ESPERANCA DO SUL"/>
+    <Municipio Nome="EUGENIO DE CASTRO"/>
+    <Municipio Nome="FREDERICO WESTPHALEN"/>
+    <Municipio Nome="GIRUA"/>
+    <Municipio Nome="GRAMADO DOS LOUREIROS"/>
+    <Municipio Nome="GUARANI DAS MISSOES"/>
+    <Municipio Nome="HORIZONTINA"/>
+    <Municipio Nome="HUMAITA"/>
+    <Municipio Nome="IJUI"/>
+    <Municipio Nome="INDEPENDENCIA"/>
+    <Municipio Nome="INHACORA"/>
+    <Municipio Nome="IRAI"/>
+    <Municipio Nome="JABOTICABA"/>
+    <Municipio Nome="JOIA"/>
+    <Municipio Nome="LIBERATO SALZANO"/>
+    <Municipio Nome="NOVO MACHADO"/>
+    <Municipio Nome="MATO QUEIMADO"/>
+    <Municipio Nome="MIRAGUAI"/>
+    <Municipio Nome="NONOAI"/>
+    <Municipio Nome="PALMEIRA DAS MISSOES"/>
+    <Municipio Nome="PALMITINHO"/>
+    <Municipio Nome="PANAMBI"/>
+    <Municipio Nome="PEJUCARA"/>
+    <Municipio Nome="PINHAL"/>
+    <Municipio Nome="PINHEIRINHO DO VALE"/>
+    <Municipio Nome="PIRAPO"/>
+    <Municipio Nome="PLANALTO"/>
+    <Municipio Nome="PORTO LUCENA"/>
+    <Municipio Nome="PORTO MAUA"/>
+    <Municipio Nome="PORTO XAVIER"/>
+    <Municipio Nome="NOVA RAMADA"/>
+    <Municipio Nome="REDENTORA"/>
+    <Municipio Nome="RIO DOS INDIOS"/>
+    <Municipio Nome="RODEIO BONITO"/>
+    <Municipio Nome="RONDA ALTA"/>
+    <Municipio Nome="RONDINHA"/>
+    <Municipio Nome="ROQUE GONZALES"/>
+    <Municipio Nome="SAGRADA FAMILIA"/>
+    <Municipio Nome="SALDANHA MARINHO"/>
+    <Municipio Nome="SENADOR SALGADO FILHO"/>
+    <Municipio Nome="SALVADOR DAS MISSOES"/>
+    <Municipio Nome="SANTA BARBARA DO SUL"/>
+    <Municipio Nome="SANTA ROSA"/>
+    <Municipio Nome="SANTO ANGELO"/>
+    <Municipio Nome="LAJEADO DO BUGRE"/>
+    <Municipio Nome="SANTO AUGUSTO"/>
+    <Municipio Nome="SANTO CRISTO"/>
+    <Municipio Nome="AMETISTA DO SUL"/>
+    <Municipio Nome="SAO JOSE DAS MISSOES"/>
+    <Municipio Nome="SAO JOSE DO INHACORA"/>
+    <Municipio Nome="SAO MARTINHO"/>
+    <Municipio Nome="SAO MIGUEL DAS MISSOES"/>
+    <Municipio Nome="SAO NICOLAU"/>
+    <Municipio Nome="SAO PAULO DAS MISSOES"/>
+    <Municipio Nome="SAO PEDRO DO BUTIA"/>
+    <Municipio Nome="SAO VALERIO DO SUL"/>
+    <Municipio Nome="SARANDI"/>
+    <Municipio Nome="SEBERI"/>
+    <Municipio Nome="SEDE NOVA"/>
+    <Municipio Nome="SETE DE SETEMBRO"/>
+    <Municipio Nome="TAQUARUÇU DO SUL"/>
+    <Municipio Nome="TENENTE PORTELA"/>
+    <Municipio Nome="NOVO TIRADENTES"/>
+    <Municipio Nome="TIRADENTES DO SUL"/>
+    <Municipio Nome="TRES DE MAIO"/>
+    <Municipio Nome="TRES PALMEIRAS"/>
+    <Municipio Nome="TRES PASSOS"/>
+    <Municipio Nome="TRINDADE DO SUL"/>
+    <Municipio Nome="TUCUNDUVA"/>
+    <Municipio Nome="TUPARENDI"/>
+    <Municipio Nome="UBIRETAMA"/>
+    <Municipio Nome="PORTO VERA CRUZ"/>
+    <Municipio Nome="VICENTE DUTRA"/>
+    <Municipio Nome="CRISTAL DO SUL"/>
+    <Municipio Nome="VISTA ALEGRE"/>
+    <Municipio Nome="VISTA GAUCHA"/>
+    <Municipio Nome="VITORIA DAS MISSOES"/>
+    <Municipio Nome="NOVO XINGU"/>
+    <Municipio Nome="SAO PEDRO DAS MISSÕES"/>
+   </Municipios>
+  </Regiao>
+  <Regiao Codigo="5" Nome="Planalto Serra">
+   <Supervisor Codigo="36242" Nome="Nilson Cleto Silveira Finger" EMail="nilson@senar-rs.com.br" EMailDisponivelPublicamente="Sim">
+    <Telefones>
+     <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Sim" DDD="54" Numero=" 3534-7848" Tipo="Residencial"/>
+     <Telefone DisponivelPublicamente="Nao" TelefonePrincipal="Nao" DDD="54" Numero="99975-7978" Tipo="Celular"/>
+    </Telefones>
+   </Supervisor>
+   <Municipios>
+    <Municipio Nome="AGUA SANTA"/>
+    <Municipio Nome="ANDRE DA ROCHA"/>
+    <Municipio Nome="ANTA GORDA"/>
+    <Municipio Nome="ANTONIO PRADO"/>
+    <Municipio Nome="ARATIBA"/>
+    <Municipio Nome="ARVOREZINHA"/>
+    <Municipio Nome="AUREA"/>
+    <Municipio Nome="BARAO"/>
+    <Municipio Nome="BARAO DE COTEGIPE"/>
+    <Municipio Nome="BARRA DO RIO AZUL"/>
+    <Municipio Nome="BARRACAO"/>
+    <Municipio Nome="BENJAMIN CONSTANT DO SUL"/>
+    <Municipio Nome="BENTO GONCALVES"/>
+    <Municipio Nome="BOM JESUS"/>
+    <Municipio Nome="CACIQUE DOBLE"/>
+    <Municipio Nome="CAMARGO"/>
+    <Municipio Nome="CAMBARA DO SUL"/>
+    <Municipio Nome="CAMPINAS DO SUL"/>
+    <Municipio Nome="CANELA"/>
+    <Municipio Nome="CAPAO BONITO DO SUL"/>
+    <Municipio Nome="CARLOS BARBOSA"/>
+    <Municipio Nome="CARLOS GOMES"/>
+    <Municipio Nome="CASCA"/>
+    <Municipio Nome="CASEIROS"/>
+    <Municipio Nome="CAXIAS DO SUL"/>
+    <Municipio Nome="CENTENARIO"/>
+    <Municipio Nome="CHARRUA"/>
+    <Municipio Nome="CIRIACO"/>
+    <Municipio Nome="VILA LANGARO"/>
+    <Municipio Nome="CORONEL PILAR"/>
+    <Municipio Nome="COTIPORA"/>
+    <Municipio Nome="COXILHA"/>
+    <Municipio Nome="CRUZALTENSE"/>
+    <Municipio Nome="DAVID CANABARRO"/>
+    <Municipio Nome="DOIS LAJEADOS"/>
+    <Municipio Nome="EREBANGO"/>
+    <Municipio Nome="ERECHIM"/>
+    <Municipio Nome="ERNESTINA"/>
+    <Municipio Nome="ERVAL GRANDE"/>
+    <Municipio Nome="ESMERALDA"/>
+    <Municipio Nome="FAGUNDES VARELA"/>
+    <Municipio Nome="FARROUPILHA"/>
+    <Municipio Nome="FAXINALZINHO"/>
+    <Municipio Nome="FLORES DA CUNHA"/>
+    <Municipio Nome="FLORIANO PEIXOTO"/>
+    <Municipio Nome="GENTIL"/>
+    <Municipio Nome="GARIBALDI"/>
+    <Municipio Nome="GAURAMA"/>
+    <Municipio Nome="GETULIO VARGAS"/>
+    <Municipio Nome="GRAMADO"/>
+    <Municipio Nome="GUABIJU"/>
+    <Municipio Nome="GUAPORE"/>
+    <Municipio Nome="IBIACA"/>
+    <Municipio Nome="IBIRAIARAS"/>
+    <Municipio Nome="ILOPOLIS"/>
+    <Municipio Nome="IPE"/>
+    <Municipio Nome="IPIRANGA DO SUL"/>
+    <Municipio Nome="ITATIBA DO SUL"/>
+    <Municipio Nome="JACUTINGA"/>
+    <Municipio Nome="JAQUIRANA"/>
+    <Municipio Nome="LAGOA VERMELHA"/>
+    <Municipio Nome="MACHADINHO"/>
+    <Municipio Nome="MARAU"/>
+    <Municipio Nome="MARCELINO RAMOS"/>
+    <Municipio Nome="VILA MARIA"/>
+    <Municipio Nome="MARIANO MORO"/>
+    <Municipio Nome="ITAPUCA"/>
+    <Municipio Nome="MAXIMILIANO DE ALMEIDA"/>
+    <Municipio Nome="MONTAURI"/>
+    <Municipio Nome="MONTE BELO DO SUL"/>
+    <Municipio Nome="MUITOS CAPOES"/>
+    <Municipio Nome="MULITERNO"/>
+    <Municipio Nome="NICOLAU VERGUEIRO"/>
+    <Municipio Nome="NOVA ALVORADA"/>
+    <Municipio Nome="NOVA ARACA"/>
+    <Municipio Nome="NOVA BASSANO"/>
+    <Municipio Nome="NOVA PADUA"/>
+    <Municipio Nome="NOVA PETROPOLIS"/>
+    <Municipio Nome="NOVA PRATA"/>
+    <Municipio Nome="NOVA ROMA DO SUL"/>
+    <Municipio Nome="CAMPESTRE DA SERRA"/>
+    <Municipio Nome="PAIM FILHO"/>
+    <Municipio Nome="PARAI"/>
+    <Municipio Nome="PASSO FUNDO"/>
+    <Municipio Nome="PAULO BENTO"/>
+    <Municipio Nome="PICADA CAFE"/>
+    <Municipio Nome="PINHAL DA SERRA"/>
+    <Municipio Nome="PINTO BANDEIRA"/>
+    <Municipio Nome="PONTAO"/>
+    <Municipio Nome="PONTE PRETA"/>
+    <Municipio Nome="PROTASIO ALVES"/>
+    <Municipio Nome="UNIAO DA SERRA"/>
+    <Municipio Nome="PUTINGA"/>
+    <Municipio Nome="QUATRO IRMAOS"/>
+    <Municipio Nome="SALVADOR DO SUL"/>
+    <Municipio Nome="SANANDUVA"/>
+    <Municipio Nome="SANTA MARIA DO HERVAL"/>
+    <Municipio Nome="SANTA TEREZA"/>
+    <Municipio Nome="SANTO ANTONIO DO PALMA"/>
+    <Municipio Nome="SANTO EXPEDITO DO SUL"/>
+    <Municipio Nome="SAO DOMINGOS DO SUL"/>
+    <Municipio Nome="SAO FRANCISCO DE PAULA"/>
+    <Municipio Nome="SAO JOAO DA URTIGA"/>
+    <Municipio Nome="SAO JORGE"/>
+    <Municipio Nome="SAO JOSE DO OURO"/>
+    <Municipio Nome="SAO JOSE DOS AUSENTES"/>
+    <Municipio Nome="SAO MARCOS"/>
+    <Municipio Nome="SAO VALENTIM"/>
+    <Municipio Nome="SAO VALENTIM DO SUL"/>
+    <Municipio Nome="SAO VENDELINO"/>
+    <Municipio Nome="SERAFINA CORREA"/>
+    <Municipio Nome="SERTAO"/>
+    <Municipio Nome="SEVERIANO DE ALMEIDA"/>
+    <Municipio Nome="TAPEJARA"/>
+    <Municipio Nome="TRES ARROIOS"/>
+    <Municipio Nome="TUPANCI DO SUL"/>
+    <Municipio Nome="VACARIA"/>
+    <Municipio Nome="VANINI"/>
+    <Municipio Nome="VERANOPOLIS"/>
+    <Municipio Nome="VIADUTOS"/>
+    <Municipio Nome="ENTRE RIOS DO SUL"/>
+    <Municipio Nome="VILA FLORES"/>
+    <Municipio Nome="VISTA ALEGRE DO PRATA"/>
+    <Municipio Nome="BOA VISTA DO SUL"/>
+    <Municipio Nome="ESTACAO"/>
+    <Municipio Nome="MATO CASTELHANO"/>
+    <Municipio Nome="SAO PEDRO DA SERRA"/>
+    <Municipio Nome="MONTE ALEGRE DOS CAMPOS"/>
+    <Municipio Nome="SANTA CECILIA DO SUL"/>
+   </Municipios>
+  </Regiao>
+ </Regioes>
