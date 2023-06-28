@@ -29,7 +29,7 @@ class CursosController extends Controller
         }
 
         try {
-            $xmlAgendas = XML::import($pathAgenda)->get()->toArray();            
+            $xmlAgendas = XML::import($pathAgenda)->get()->toArray();
         } catch (\Exception $e) {
              return redirect('/admin/cursos')->with('error', 'XML de Agendas inválido, verifique e tente novamente.');
         }
