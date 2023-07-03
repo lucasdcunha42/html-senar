@@ -24,7 +24,7 @@
                 <div class="col-xs-12">
                     <div class="container-auto-width-cursos">
                         <div class="row">
-                            <div class="col-sm-4">
+                            <div class="col-sm-3">
                                 <select
                                     name="area-interesse"
                                     id="cursos-area-interesse-select"
@@ -35,7 +35,7 @@
                                     @endforeach
                                 </select>
                             </div>
-                            <div class="col-sm-4">
+                            <div class="col-sm-3">
                                 <select
                                     name="regiao"
                                     id="cursos-regiao-select"
@@ -46,7 +46,7 @@
                                     @endforeach
                                 </select>
                             </div>
-                            <div class="col-sm-4">
+                            <div class="col-sm-3">
                                 <select
                                     name="ano-mes"
                                     id="cursos-ano-mes-select"
@@ -57,6 +57,7 @@
                                     @endforeach
                                 </select>
                             </div>
+                            
                         </div>
                     </div>
                 </div>
