@@ -21,7 +21,7 @@
                                         <div class="col-sm-3">
                                             <ul>
                                                 <li>
-                                                    <a href="{{ route('page.o-senar') }}">Institucional Test</a>
+                                                    <a href="{{ route('page.o-senar') }}">Institucional</a>
                                                 </li>
                                                 <li>
                                                     <a href="{{ route('page.legislacao') }}">Legislação</a>
