@@ -96,7 +96,7 @@ class CoursesController extends Controller
 
         $skip = $request->get('skip', 0);
 
-        $perPage = 6;
+        $perPage = 8;
 
         $query = \App\Curso::query();
         $query->where('desc_fase_evento', 'Aprovado');
