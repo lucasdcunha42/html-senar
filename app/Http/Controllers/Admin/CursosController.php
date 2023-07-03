@@ -57,7 +57,6 @@ class CursosController extends Controller
                         {
                             $xmlArray = [];
 
-
                             $xmlArray['cod_curso'] = $evento['COD_CURSO'];
                             $data = new \DateTime(str_replace('/', '-', $evento['DATA_INICIO']));
                             $dataFormatada = $data->format('Y-m-d');
@@ -66,6 +65,7 @@ class CursosController extends Controller
                             $dataFormatada = $data->format('Y-m-d');
                             $xmlArray['data_fim'] = $dataFormatada;
                             $xmlArray['titulo'] = $evento['DESC_EVENTO'];
+                            $xmlArray['nome_curso'] = $evento['NOME_CURSO'];
                             $xmlArray['desc_fase_evento'] = $evento['DESC_FASE_EVENTO'];
                             $xmlArray['regiaoevento'] = $evento['REGIAOEVENTO'];
                             $xmlArray['agenda_num_evento'] = intval($evento['NUM_EVENTO']);
@@ -81,7 +81,6 @@ class CursosController extends Controller
                             $xmlArray['idade'] = $curso['Idade'];
                             $xmlArray['created_at'] = now();
                             $xmlArray['updated_at'] = now();
-
                             // $xmlArray['outros_requisitos'] = [];
 
                             $xmlArray['cod_curso'] = intval($evento['COD_CURSO']);
@@ -111,15 +110,17 @@ class CursosController extends Controller
             DB::beginTransaction();
             try {
                 foreach($deParaAgenda as $key => $item) {
-
                     $item['slug'] = \Str::slug($item['titulo'] . ' ' . $item['cod_curso'] . ' ' . $item['regiaoevento']);
 
-                    if(DB::table('cursos')->where('slug', $item['slug'])->first()) {
+                    if (DB::table('cursos')
+                    ->where('slug', $item['slug'])
+                    ->where('nome_curso', $item['nome_curso'])
+                    ->first()) {
                         continue;
                     }
 
                     DB::table('cursos')->updateOrInsert(
-                        ['agenda_num_evento' => $item['agenda_num_evento']],
+                        ['agenda_num_evento' => $item['agenda_num_evento']],     
                         $item
                     );
                     if(
