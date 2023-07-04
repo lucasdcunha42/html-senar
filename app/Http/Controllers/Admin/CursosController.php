@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use XML;
-
+set_time_limit(300);
 class CursosController extends Controller
 {
     use XMLTrait;
@@ -23,7 +23,7 @@ class CursosController extends Controller
         }
 
         try {
-            $xmlCursos = XML::import($pathCursos)->get()->toArray();
+            $xmlCursos =  XML::import($pathCursos)->get()->toArray();
         } catch (\Exception $e) {
              return redirect('/admin/cursos')->with('error', 'XML de CURSOS inválido, verifique e tente novamente.');
         }
@@ -33,7 +33,6 @@ class CursosController extends Controller
         } catch (\Exception $e) {
              return redirect('/admin/cursos')->with('error', 'XML de Agendas inválido, verifique e tente novamente.');
         }
-
 
         if(isset($xmlCursos['Curso']) && isset($xmlAgendas['Evento'])) {
             $deParaAgenda = [];
@@ -120,7 +119,7 @@ class CursosController extends Controller
                     }
 
                     DB::table('cursos')->updateOrInsert(
-                        ['agenda_num_evento' => $item['agenda_num_evento']],     
+                        ['agenda_num_evento' => $item['agenda_num_evento']],
                         $item
                     );
                     if(

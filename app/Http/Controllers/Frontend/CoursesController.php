@@ -3,10 +3,13 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
+
+;
 
 class CoursesController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
         [$page, $blocos] = $this->getPageById(19);
 
@@ -49,10 +52,19 @@ class CoursesController extends Controller
         // $cursos = \App\Curso::where('data_fim', '>=', now()->format('Y-m-d'))->get();
         // $cursos = \App\Curso::where('desc_fase_evento', 'Aprovado')
 
-        $cursos = \App\Curso::situacaoA()
+
+        if($request->input('s')){
+            $cursos = \App\Curso::situacaoA()
                         ->take(12)
                         ->orderBy('data_inicio', 'desc')
+                        ->where('titulo', "like", "%{$request->input('s')}%")
                         ->get();
+        } else {
+            $cursos = \App\Curso::situacaoA()
+                            ->take(12)
+                            ->orderBy('data_inicio', 'desc')
+                            ->get();
+        }
 
         $regiaoEvento = \DB::table('cursos')
                             ->where('situacao', 'A')
@@ -136,4 +148,6 @@ class CoursesController extends Controller
             // 'sql' => $sql
         ]);
     }
+
+
 }

@@ -733,6 +733,25 @@ a.internal-link {
   background-position: 90% center;
   background-color: #ddd;
 }
+
+.custom-search {
+    width: 100%;
+  padding: 10px;
+  text-transform: uppercase;
+  color: #464646;
+  border: 0;
+  outline: 0;
+  -moz-appearance: none;
+  /* Firefox */
+  -webkit-appearance: none;
+  /* Safari and Chrome */
+  appearance: none;
+  background-size: 26px;
+  background-repeat: no-repeat;
+  background-position: 90% center;
+  background-color: #ddd;
+}
+
 @media (max-width: 767px) {
   .custom-select {
     background-position: 95% center;
