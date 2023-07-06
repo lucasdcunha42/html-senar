@@ -119,7 +119,7 @@ class CursosController extends Controller
                     }
 
                     DB::table('cursos')->updateOrInsert(
-                        ['agenda_num_evento' => $item['agenda_num_evento']],
+                        ['agenda_num_evento' => $item['agenda_num_evento']],     
                         $item
                     );
                     if(
