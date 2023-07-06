@@ -9,7 +9,7 @@
             <div class="curso-overlay"></div>
             <div class="d-table">
                 <div class="d-table-cell v-center h-center">
-                    <h4><a href="{{ route('page.cursos.single', $curso->slug) }}">{{ $curso->nome_curso }}</a></h4>
+                    <h4><a href="{{ route('page.cursos.single', $curso->slug) }}">{{ $curso->titulo }}</a></h4>
                 </div>
             </div>
         </div>
