@@ -24,40 +24,17 @@
                 <div class="col-xs-12">
                     <div class="container-auto-width-cursos">
                         <div class="row">
-                            <div class="col-sm-3">
-                                <select
-                                    name="area-interesse"
-                                    id="cursos-area-interesse-select"
-                                    class="custom-select">
-                                    <option value="">Área de Interesse</option>
-                                    @foreach ($areaInteresse as $value)
-                                        <option value="{{ $value->interesse }}">{{ $value->interesse }}</option>
-                                    @endforeach
-                                </select>
-                            </div>
-                            <div class="col-sm-3">
-                                <select
-                                    name="regiao"
-                                    id="cursos-regiao-select"
-                                    class="custom-select">
-                                    <option value="">Região</option>
-                                    @foreach ($regiaoEvento as $value)
-                                        <option value="{{ $value->regiao }}">{{ $value->regiao }}</option>
-                                    @endforeach
-                                </select>
-                            </div>
-                            <div class="col-sm-3">
-                                <select
-                                    name="ano-mes"
-                                    id="cursos-ano-mes-select"
-                                    class="custom-select">
-                                    <option value="">Mês</option>
-                                    @foreach ($mesAno as $key => $value)
-                                        <option value="{{ $key }}">{{ $key }}</option>
-                                    @endforeach
-                                </select>
-                            </div>
-                            
+                            <form action="" method="GET" class="search-form">
+                                @csrf
+                                <div class="col-sm-12 col-xs-12">
+                                    <div class="search">
+                                        <input type="text" name="s" placeholder="Pesquisa" class="custom-search">
+                                        <div class="search-button">
+                                            <button type="submit">Buscar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -1145,5 +1122,24 @@
     </div>
 
     @include('frontend.partials.agenda')
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript">
+        $('#search').on('keyup', function()
+        {
+            $value=$(this).val();
+
+            $.ajax({
+                type:'get',
+                url:'{{URL::to('search')}}',
+                data: {'search':$value},
+
+                success:function(data)
+                {
+                    console.log(data);
+                    $('#content').html(data);
+                }
+            })
+        })
+    </script>
 
 @endsection
