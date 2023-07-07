@@ -54,7 +54,7 @@
                                     data-target="cidade"
                                     class="custom-select">
                                     <option value="">Cidade</option>
-                                    @foreach ($cidades as $key => $value)
+                                    @foreach ($cidades as $key)
                                         <option value="{{ $key }}">{{ $key }}</option>
                                     @endforeach
                                 </select>
