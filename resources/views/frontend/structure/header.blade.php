@@ -107,7 +107,7 @@
                         </li>
                         <li class="menu-separator">|</li>
                         <li>
-                            <a href="https://www.senar-rs.com.br/contato">Contato</a>
+                            <a href="{{ route('page.contato') }}">Contato</a>
                             {{-- <div class="sub-menu-container">
                                 <div class="sub-menu-container-internal">
                                     <div class="row"> --}}
