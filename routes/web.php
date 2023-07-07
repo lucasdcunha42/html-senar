@@ -49,7 +49,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index'])->name('page.home');
 Route::get('/cursos', [CoursesController::class, 'index'])->name('page.cursos');
-Route::post('/cursos-load-more', [CoursesController::class, 'loadMore'])->name('page.cursos.load.more');
+Route::post('/cursos-load-more', [CoursesController::class, 'loadMore'])->name('page.curso.loadMore');
 Route::get('/cursos/{slug}', [CoursesController::class, 'single'])->name('page.cursos.single');
 
 Route::get('/contato', [PagesController::class, 'contato'])->name('page.contato');

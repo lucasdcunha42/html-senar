@@ -51,9 +51,9 @@
                 <div class="cursos-loading-container text-center hide-on-load">
                     <img src="{{ asset('images/loading.gif') }}" alt="">
                 </div>
-                <div class="col-xs-12 text-center">
-                    <div class="see-more carregar-mais-cursos">
-                        <a href="{{ route('page.cursos.load.more') }}">Ver mais</a>
+                <div class="col-xs-12">
+                    <div class="row agenda-itens" data-auto-load="{{ $startAutoLoadObject }}">
+                            @include('frontend.pages.curso-load-more', ['cursos' => $cursos])
                     </div>
                 </div>
             </div>

@@ -11,6 +11,23 @@ class CoursesController extends Controller
     {
         [$page, $blocos] = $this->getPageById(19);
 
+        $query = \App\Curso::orderBy('data_inicio', 'asc')
+            ->sinceTomorrow('data_inicio')
+            ->take(12);
+
+        $perPage = 8;
+        $total = $query->count();
+
+        $cursos = $query->get();
+
+        $startAutoLoadObject = json_encode([
+            'perPage' => $perPage,
+            'filters' => ['cursos-regiao', 'cursos-modalidade','cursos-cidade'],
+            'total' => $total,
+            'currentCount' => $cursos->count(),
+            'urlAjax' => route('page.curso.loadMore')
+        ]);
+
         // $todosOsCursos = \App\Curso::where('desc_fase_evento', 'Aprovado')->get();
         $todosOsCursos = \App\Curso::where('situacao', 'A')->get();
 
@@ -87,7 +104,7 @@ class CoursesController extends Controller
                             ->format('Y/m');
                     });
 
-        return view('frontend.pages.cursos', compact('cursos', 'regiaoEvento', 'areaInteresse', 'mesAno', 'page', 'blocos', 'finalArrayCollumns', 'cursosGrouped'));
+        return view('frontend.pages.cursos', compact('cursos', 'regiaoEvento', 'areaInteresse', 'mesAno', 'page', 'blocos', 'finalArrayCollumns', 'cursosGrouped', 'startAutoLoadObject'));
     }
 
     public function single($slug)
@@ -100,17 +117,56 @@ class CoursesController extends Controller
         return view('frontend.pages.cursos-single', compact('curso'));
     }
 
+
     public function loadMore()
     {
         $request = request();
 
+        $perPage = $request->get('perPage');
+
+        $currentCount = $request->get('currentCount');
+
+        $query = \App\Curso::orderBy('data_inicio', 'asc')
+            ->sinceTomorrow('data_inicio');
+
+        if ($request->has('s')) {
+            $query->where('s', $request->get('s'));
+        }
+
+        $total = $query->count();
+
+        $query->take($perPage)
+            ->skip($currentCount);
+
+        $cursos = $query->get();
+
+        $view = view('frontend.pages.curso.load.more', compact('cursos'))->render();
+
+        return response()->json([
+            'view' => $view,
+            'currentCount' => $currentCount + $cursos->count(),
+            'total' => $total
+        ]);
+    }
+
+    /*
+    public function loadMore(Request $request)
+    {
+
         $skip = $request->get('skip', 0);
 
-        $perPage = 6;
+        $perPage = 8;
 
         $query = \App\Curso::query();
         $query->where('desc_fase_evento', 'Aprovado');
 
+
+        if(!empty($request->input('s'))) {
+            $query->orderBy('data_inicio', 'desc')
+            ->where('titulo', "like", "%{$request->input('s')}%");
+        }
+
+        Filtros antigos do Load More
         if(!empty($request->filled('interesse'))) {
             $query->where('areadeinteresse', $request->get('interesse'));
         }
@@ -124,6 +180,7 @@ class CoursesController extends Controller
             $query->whereYear('data_inicio', $anoMes[0]);
             $query->whereMonth('data_inicio', $anoMes[1]);
         }
+
 
         $query->take($perPage)->skip($skip)->orderBy('data_inicio', 'desc');
 
@@ -146,5 +203,6 @@ class CoursesController extends Controller
             // 'sql' => $sql
         ]);
     }
+    */
 
 }
