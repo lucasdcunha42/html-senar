@@ -1506,9 +1506,11 @@ button.btn-open-close.open span {
   padding: 70px 0;
   background-color: #eeeeee;
 }
+
 .como-participar h6 {
   font-size: 56px;
 }
+
 .como-participar h6 + p {
   font-size: 18px;
   position: relative;
@@ -1519,11 +1521,22 @@ button.btn-open-close.open span {
   margin-bottom: 20px;
   font-size: 18px;
 }
+
 .required-item img {
   display: inline-block;
   margin-right: 10px;
   width: 30px;
   float: left;
+}
+
+.sindicato {
+  padding: 10px 0;
+  background-color: #005c3c;
+  color: #ffffff;
+}
+
+.sindicato-item {
+  font-size: 18px;
 }
 
 .conteudo-programatico.curso-single p {

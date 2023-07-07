@@ -56,7 +56,7 @@ class CursosController extends Controller
                         {
                             $xmlArray = [];
 
-                            $xmlArray['cod_curso'] = $evento['COD_CURSO'];
+                            $xmlArray['cod_curso'] = intval($evento['COD_CURSO']);
                             $data = new \DateTime(str_replace('/', '-', $evento['DATA_INICIO']));
                             $dataFormatada = $data->format('Y-m-d');
                             $xmlArray['data_inicio'] = $dataFormatada;
@@ -65,7 +65,9 @@ class CursosController extends Controller
                             $xmlArray['data_fim'] = $dataFormatada;
                             $xmlArray['titulo'] = $evento['DESC_EVENTO'];
                             $xmlArray['nome_curso'] = $evento['NOME_CURSO'];
+                            $xmlArray['entidade_coordenadora'] = $evento['NOMECOMPLETO_ENTCOORD'];
                             $xmlArray['desc_fase_evento'] = $evento['DESC_FASE_EVENTO'];
+                            $xmlArray['cidade'] = $evento['NOME_LOCALIDADE'];
                             $xmlArray['regiaoevento'] = $evento['REGIAOEVENTO'];
                             $xmlArray['agenda_num_evento'] = intval($evento['NUM_EVENTO']);
                             $xmlArray['modalidade'] = $curso['Modalidade'];
@@ -82,7 +84,6 @@ class CursosController extends Controller
                             $xmlArray['updated_at'] = now();
                             // $xmlArray['outros_requisitos'] = [];
 
-                            $xmlArray['cod_curso'] = intval($evento['COD_CURSO']);
                             array_push($deParaRequisitos, $xmlArray);
                             $deParaAgenda[] = $xmlArray;
                         }
@@ -113,7 +114,7 @@ class CursosController extends Controller
 
                     if (DB::table('cursos')
                     ->where('slug', $item['slug'])
-                    ->where('nome_curso', $item['nome_curso'])
+                    ->where('cidade', $item['cidade'])
                     ->first()) {
                         continue;
                     }
