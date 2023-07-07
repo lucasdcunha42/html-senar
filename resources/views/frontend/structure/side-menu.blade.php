@@ -46,7 +46,18 @@
                     </ul>
                 </li>
                 <li class="side-menu-item">
-                    <a href="{{ route('page.news.index') }}">NOTÍCIAS</a>
+                    <a href="#">Imprensa</a>
+                    <ul class="side-sub-menu">
+                        <li>
+                            <a href="{{ route('page.news.index') }}">Notícias</a>
+                        </li>
+                        {{-- <li>
+                            <a href="#">Multimídia</a>
+                        </li>
+                        <li>
+                            <a href="#">Downloads</a>
+                        </li> --}}
+                    </ul>
                 </li>
                 {{-- <li class="side-menu-item">
                     <a href="#">Certificados</a>
@@ -55,7 +66,7 @@
                     <a href="{{ route('page.transparencia') }}">Transparência e Prestação de Contas</a>
                 </li>
                 <li class="side-menu-item">
-                    <a href="{{ route('page.contato') }}" target="_blank">Contato</a>
+                    <a href="https://cnabrasil.org.br/fale-conosco/senar" target="_blank">Contato</a>
                     {{-- <ul class="side-sub-menu">
                         <li>
                             <a href="{{ route('page.contato') }}">Geral</a>
