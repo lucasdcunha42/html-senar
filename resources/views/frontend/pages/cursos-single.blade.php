@@ -65,6 +65,24 @@
         </div>
     </div>
 
+    <div class="sindicato">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="row">
+                        <div class="course-requires">
+                            <div class="sindicato-item">
+                                <span class="fw-bold">SINDICATO DOS TRAB NA AGRIC. FAMILIAR DE GARIBALDI</span> <span></span><br>
+                                <span class="fw-bold">Contato: </span> <span>(54) 3462.1128</span><br>
+                                <span class="fw-bold">Email: </span> <span>strgaribaldi@fetagrs.org.br</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     @if(!empty(trim($curso->conteudoprogramatico)))
     <div class="conteudo-programatico curso-single">
         <div class="container">
