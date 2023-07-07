@@ -22,7 +22,7 @@ class PagesController extends Controller
 
         $startAutoLoadObject = json_encode([
             'perPage' => $perPage,
-            'filters' => ['cursos-regiao', 'cursos-modalidade','cursos-cidade'],
+            'filters' => ['cursos-regiao', 'cursos-modalidade'],
             'total' => $total,
             'currentCount' => $cursos->count(),
             'urlAjax' => route('page.agenda.loadMore')
@@ -30,9 +30,8 @@ class PagesController extends Controller
 
         $regioes = $cursos->groupBy('regiaoevento');
         $modalidades = $cursos->groupBy('modalidade');
-        $cidades = $cursos->groupBy('cidade');
 
-        $vars = ['page', 'blocos', 'cursos', 'regioes', 'modalidades','cidades', 'total', 'startAutoLoadObject'];
+        $vars = ['page', 'blocos', 'cursos', 'regioes', 'modalidades', 'total', 'startAutoLoadObject'];
 
         return view('frontend.pages.agenda', compact($vars));
     }
@@ -55,10 +54,6 @@ class PagesController extends Controller
 
         if ($request->has('cursos-modalidade')) {
             $query->where('modalidade', $request->get('cursos-modalidade'));
-        }
-
-        if ($request->has('cursos-cidade')) {
-            $query->where('cidade', $request->get('cursos-cidade'));
         }
 
         $total = $query->count();
