@@ -31,32 +31,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 text-center">
-                    {{-- <div class="buttons-animated buttons-tipos">
 
-                        @foreach($tipos as $key => $tipo)
-                            <button
-                                class="{{ $loop->first ? 'active' : '' }}"
-                                data-tipo="{{ $key }}">
-                                <span>{{ $tipo }}</span>
-                            </button>
-                        @endforeach
-
-                            <button
-                                class=""
-                                data-tipo="0">
-                                <span>Todos</span>
-                            </button>
-
-                        <div class="line-container">
-                            <div class="line-indicator"></div>
-                        </div>
-
-                    </div> --}}
-
+                    {{-- Barra de Filtros --}}
                     <div class="select-agenda-container">
                         <div class="row">
-                            <div class="col-sm-2 hidden-xs"></div>
-                            <div class="col-xs-6 col-sm-4">
+                            {{-- Filtro de Região
+                            <div class="col-xs-12 col-sm-6">
                                 <select
                                     id="cursos-regiao"
                                     data-target="regiao"
@@ -66,22 +46,33 @@
                                         <option value="{{ $key }}">{{ $key }}</option>
                                     @endforeach
                                 </select>
-                            </div>
-                            <div class="col-xs-6 col-sm-4">
+                            </div> --}}
+                            {{-- Filtro de Cidade --}}
+                            <div class="col-xs-12 col-sm-12">
                                 <select
-                                    id="cursos-modalidade"
-                                    data-target="modalidade"
+                                    id="cursos-cidade"
+                                    data-target="cidade"
                                     class="custom-select">
-                                    <option value="">Modalidades</option>
-                                    @foreach ($modalidades as $key => $value)
+                                    <option value="">Cidade</option>
+                                    @foreach ($cidades as $key => $value)
                                         <option value="{{ $key }}">{{ $key }}</option>
                                     @endforeach
                                 </select>
                             </div>
                         </div>
                     </div>
+                    {{-- Texto Região Cidade
+                    <div class="select-agenda-container">
+                        <div class="row">
+                            <p class="page-title center">
+                            </p>
+                        </div>
+                    </div>  --}}
                 </div>
             </div>
+
+            {{-- Lista Cursos --}}
+
             <div class="row">
                 <div class="col-xs-12">
                     <div class="row agenda-itens" data-auto-load="{{ $startAutoLoadObject }}">
