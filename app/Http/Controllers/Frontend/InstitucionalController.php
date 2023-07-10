@@ -38,12 +38,12 @@ class InstitucionalController extends Controller
         $legislacaoCategorias = \App\LegislacoesCategoria::with([
             'legislacoes' => function ($query) {
                 $query->where('status', 1);
-                $query->orderBy('created_at', 'desc');
-                $query->orderBy('id', 'desc');
+                $query->orderBy('ordem', 'desc');
+                $query->orderBy('updated_at', 'desc');
             }
         ])
             ->where('status', 1)
-            ->orderBy('created_at', 'desc')
+            ->orderBy('ordem', 'desc')
             ->orderBy('id', 'desc')
             ->get();
 
