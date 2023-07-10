@@ -30,7 +30,8 @@ class PagesController extends Controller
 
         $regioes = $cursos->groupBy('regiaoevento');
         $modalidades = $cursos->groupBy('modalidade');
-        $cidades = $cursos->groupBy('cidade');
+        $cidades = \App\Curso::distinct()->orderBy('cidade')->pluck('cidade');
+
 
         $vars = ['page', 'blocos', 'cursos', 'regioes', 'modalidades','cidades', 'total', 'startAutoLoadObject'];
 

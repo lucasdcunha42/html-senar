@@ -1,7 +1,7 @@
 <div class="c-thumb-4">
-    {{-- <div class="c-thumb-4__date">
+    <div class="c-thumb-4__date">
         <span>{{ $evento->getAttrDateFromFormat('data_inicio', 'Y-m-d', 'd.m.Y') }}</span>
-    </div> --}}
+    </div>
     <div class="c-thummb-4__title">
         <div class="d-table">
             <div class="d-table-cell v-center h-center">
