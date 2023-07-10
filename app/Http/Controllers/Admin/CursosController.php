@@ -17,7 +17,6 @@ class CursosController extends Controller
 
         try {
             $pathCursos = $this->getXmlPathBySettings('xml.curso');
-            $pathAgenda = $this->getXmlPathBySettings('xml.agenda');
         } catch (\Exception $e) {
             return redirect('/admin/cursos')->with('error', $e->getMessage());
         }
@@ -28,90 +27,45 @@ class CursosController extends Controller
              return redirect('/admin/cursos')->with('error', 'XML de CURSOS inválido, verifique e tente novamente.');
         }
 
-        try {
-            $xmlAgendas = XML::import($pathAgenda)->get()->toArray();
-        } catch (\Exception $e) {
-             return redirect('/admin/cursos')->with('error', 'XML de Agendas inválido, verifique e tente novamente.');
-        }
-
-        if(isset($xmlCursos['Curso']) && isset($xmlAgendas['Evento'])) {
-            $deParaAgenda = [];
+        if(isset($xmlCursos['Curso'])) {
             $deParaRequisitos = [];
 
-            foreach($xmlAgendas['Evento'] as $_evento) {
-
-                foreach($_evento->attributes() as $k => $v) {
-                    $evento[$k] = (string)$v;
+            foreach($xmlCursos['Curso'] as $_curso)
+            {
+                foreach($_curso->attributes() as $k => $v) {
+                    $curso[$k] = (string)$v;
                 }
 
-                // if ($evento['DESC_FASE_EVENTO'] == 'Aprovado') {
+                    $xmlArray = [];
 
-                    foreach($xmlCursos['Curso'] as $_curso)
-                    {
-                        foreach($_curso->attributes() as $k => $v) {
-                            $curso[$k] = (string)$v;
-                        }
+                    $xmlArray['codigo'] = intval($curso['Codigo']);
+                    $xmlArray['nome'] = $curso['Nome'];
+                    $xmlArray['modalidade'] = $curso['Modalidade'];
+                    $xmlArray['descricao'] = $curso['Nota'];
+                    $xmlArray['areadeinteresse'] = $curso['AreaDeInteresse'];
+                    $xmlArray['situacao'] = $curso['Situacao'];
+                    $xmlArray['cargahorariatotal'] = $curso['CargaHorariaTotal'];
+                    $xmlArray['escolaridade'] = $curso['Escolaridade'];
+                    $xmlArray['minimodeparticipantes'] = $curso['MinimoDeParticipantes'];
+                    $xmlArray['maximodeparticipantes'] = $curso['MaximoDeParticipantes'];
+                    $xmlArray['conteudoprogramatico'] = $curso['ConteudoProgramatico'];
+                    $xmlArray['idade'] = $curso['Idade'];
+                    $xmlArray['created_at'] = now();
+                    $xmlArray['updated_at'] = now();
 
-                        if($evento['COD_CURSO'] == $curso['Codigo'])
-                        {
-                            $xmlArray = [];
-
-                            $xmlArray['cod_curso'] = intval($evento['COD_CURSO']);
-                            $data = new \DateTime(str_replace('/', '-', $evento['DATA_INICIO']));
-                            $dataFormatada = $data->format('Y-m-d');
-                            $xmlArray['data_inicio'] = $dataFormatada;
-                            $data = new \DateTime(str_replace('/', '-', $evento['DATA_FIM']));
-                            $dataFormatada = $data->format('Y-m-d');
-                            $xmlArray['data_fim'] = $dataFormatada;
-                            $xmlArray['titulo'] = $evento['DESC_EVENTO'];
-                            $xmlArray['nome_curso'] = $evento['NOME_CURSO'];
-                            $xmlArray['entidade_coordenadora'] = $evento['NOMECOMPLETO_ENTCOORD'];
-                            $xmlArray['desc_fase_evento'] = $evento['DESC_FASE_EVENTO'];
-                            $xmlArray['cidade'] = $evento['NOME_LOCALIDADE'];
-                            $xmlArray['regiaoevento'] = $evento['REGIAOEVENTO'];
-                            $xmlArray['agenda_num_evento'] = intval($evento['NUM_EVENTO']);
-                            $xmlArray['modalidade'] = $curso['Modalidade'];
-                            $xmlArray['descricao'] = $curso['Nota'];
-                            $xmlArray['areadeinteresse'] = $curso['AreaDeInteresse'];
-                            $xmlArray['situacao'] = $curso['Situacao'];
-                            $xmlArray['cargahorariatotal'] = $curso['CargaHorariaTotal'];
-                            $xmlArray['escolaridade'] = $curso['Escolaridade'];
-                            $xmlArray['minimodeparticipantes'] = $curso['MinimoDeParticipantes'];
-                            $xmlArray['maximodeparticipantes'] = $curso['MaximoDeParticipantes'];
-                            $xmlArray['conteudoprogramatico'] = $curso['ConteudoProgramatico'];
-                            $xmlArray['idade'] = $curso['Idade'];
-                            $xmlArray['created_at'] = now();
-                            $xmlArray['updated_at'] = now();
-                            // $xmlArray['outros_requisitos'] = [];
-
-                            array_push($deParaRequisitos, $xmlArray);
-                            $deParaAgenda[] = $xmlArray;
-                        }
-                    }
-
-                // }
+                    array_push($deParaRequisitos, $xmlArray);
             }
 
-            foreach($deParaRequisitos as $key => &$item) {
-                $array = [];
-                foreach ($xmlCursos['Curso'] as $curso) {
-                    if($item['cod_curso'] === intval($curso['Codigo'])) {
-                        if(isset($curso->OutrosRequisitos->Requisito[0]) &&  $curso->OutrosRequisitos->Requisito[0]){
-                            foreach($curso->OutrosRequisitos as $requisito) {
-                                array_push($array, $requisito->Requisito['Descricao']);
-                            }
-                        }
-                    }
-                }
-                $item['outros_requisitos'] = $array;
-            }
 
-            // dd($deParaRequisitos);
+            $xmlArray = C
+
+            /*
             DB::beginTransaction();
             try {
-                foreach($deParaAgenda as $key => $item) {
-                    $item['slug'] = \Str::slug($item['titulo'] . ' ' . $item['cod_curso'] . ' ' . $item['regiaoevento']);
+                foreach($xmlArray as $key => $item) {
+                    $item['slug'] = \Str::slug($item['nome'] . ' ' . $item['codigo']);
 
+                    /* Verificação de Update
                     if (DB::table('cursos')
                     ->where('slug', $item['slug'])
                     ->where('cidade', $item['cidade'])
@@ -120,23 +74,23 @@ class CursosController extends Controller
                     }
 
                     DB::table('cursos')->updateOrInsert(
-                        ['agenda_num_evento' => $item['agenda_num_evento']],     
+                        ['agenda_num_evento' => $item['agenda_num_evento']],
                         $item
                     );
                     if(
                         array_key_exists('outros_requisitos', $deParaRequisitos[$key]) &&
                         $deParaRequisitos[$key]['outros_requisitos'] !== []) {
-                        $curso = DB::table('cursos')->where('agenda_num_evento', $item['agenda_num_evento'])->first();
-                        $insertRequisito = [];
-                        $insertRequisito['curso_id'] = $curso->id;
-                        foreach($deParaRequisitos[$key]['outros_requisitos'] as $value => $requisito) {
-                            $insertRequisito['texto'] = $requisito;
-                            $insertRequisito['requisito_numero'] = $value;
-                            DB::table('cursos_requisitos')->updateOrInsert(
-                                ['curso_id' => $curso->id, 'requisito_numero' => $value],
-                                $insertRequisito
-                            );
-                        }
+                            $curso = DB::table('cursos')->where('agenda_num_evento', $item['agenda_num_evento'])->first();
+                            $insertRequisito = [];
+                            $insertRequisito['curso_id'] = $curso->id;
+                            foreach($deParaRequisitos[$key]['outros_requisitos'] as $value => $requisito) {
+                                $insertRequisito['texto'] = $requisito;
+                                $insertRequisito['requisito_numero'] = $value;
+                                DB::table('cursos_requisitos')->updateOrInsert(
+                                    ['curso_id' => $curso->id, 'requisito_numero' => $value],
+                                    $insertRequisito
+                                );
+                            }
                     }
                 }
                 DB::commit();
@@ -146,7 +100,7 @@ class CursosController extends Controller
                 DB::rollBack();
                 throw $e;
                 return redirect('/admin/cursos')->with('error', 'Falha ao salvar registros no Banco de Dados.');
-            }
+            }*/
         }
         return redirect('/admin/cursos')->with('error', 'Falha ao atualizar cursos e requisitos');
     }
