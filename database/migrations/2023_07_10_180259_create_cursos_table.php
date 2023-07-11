@@ -15,23 +15,22 @@ return new class extends Migration
     {
         Schema::create('cursos', function (Blueprint $table) {
             $table->increments('id');
-            $table->bigInteger('Codigo')->nullable();
+            $table->bigInteger('codigo')->nullable();
             $table->text('nome')->nullable();
             $table->string('modalidade')->nullable();
             $table->text('descricao')->nullable();
             $table->string('areadeinteresse')->nullable();
             $table->string('situacao', 10)->nullable();
-            $table->integer('cargahorariatotal')->nullable();
+            $table->string('cargahorariatotal')->nullable();
             $table->string('escolaridade')->nullable();
-            $table->integer('minimodeparticipantes')->nullable();
-            $table->integer('maximodeparticipantes')->nullable();
+            $table->string('minimodeparticipantes')->nullable();
+            $table->string('maximodeparticipantes')->nullable();
             $table->text('conteudoprogramatico')->nullable();
             $table->string('idade')->nullable();
             $table->string('imagem')->nullable();
             $table->timestamps();
             $table->softDeletes();
             $table->string('slug')->nullable();
-
         });
     }
 
