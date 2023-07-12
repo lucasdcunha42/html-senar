@@ -56,6 +56,7 @@ class CursosController extends Controller
                         {
                             $xmlArray = [];
 
+                            /** Agenda */
                             $xmlArray['cod_curso'] = intval($evento['COD_CURSO']);
                             $data = new \DateTime(str_replace('/', '-', $evento['DATA_INICIO']));
                             $dataFormatada = $data->format('Y-m-d');
@@ -70,6 +71,8 @@ class CursosController extends Controller
                             $xmlArray['cidade'] = $evento['NOME_LOCALIDADE'];
                             $xmlArray['regiaoevento'] = $evento['REGIAOEVENTO'];
                             $xmlArray['agenda_num_evento'] = intval($evento['NUM_EVENTO']);
+
+                            /** Curso */
                             $xmlArray['modalidade'] = $curso['Modalidade'];
                             $xmlArray['descricao'] = $curso['Nota'];
                             $xmlArray['areadeinteresse'] = $curso['AreaDeInteresse'];
@@ -83,6 +86,10 @@ class CursosController extends Controller
                             $xmlArray['created_at'] = now();
                             $xmlArray['updated_at'] = now();
                             // $xmlArray['outros_requisitos'] = [];
+
+                            /** Teste para banco Agenda */
+                            //$xmlParaAgenda['titulo'] = $evento['DESC_EVENTO'];
+                            //$xmlParaAgenda['cod_teste'] = intval($evento['COD_CURSO']);
 
                             array_push($deParaRequisitos, $xmlArray);
                             $deParaAgenda[] = $xmlArray;
@@ -112,6 +119,11 @@ class CursosController extends Controller
                 foreach($deParaAgenda as $key => $item) {
                     $item['slug'] = \Str::slug($item['titulo'] . ' ' . $item['cod_curso'] . ' ' . $item['regiaoevento']);
 
+                    DB::table('agendas')->updateOrInsert(
+                        ['titulo' => $item['titulo']],
+                        ['titulo' => $item['titulo']]
+                    );
+
                     if (DB::table('cursos')
                     ->where('slug', $item['slug'])
                     ->where('cidade', $item['cidade'])
@@ -120,9 +132,10 @@ class CursosController extends Controller
                     }
 
                     DB::table('cursos')->updateOrInsert(
-                        ['agenda_num_evento' => $item['agenda_num_evento']],     
+                        ['agenda_num_evento' => $item['agenda_num_evento']],
                         $item
                     );
+
                     if(
                         array_key_exists('outros_requisitos', $deParaRequisitos[$key]) &&
                         $deParaRequisitos[$key]['outros_requisitos'] !== []) {
