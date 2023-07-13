@@ -118,10 +118,10 @@ class CursosController extends Controller
             try {
                 foreach($deParaAgenda as $key => $item) {
                     $item['slug'] = \Str::slug($item['titulo'] . ' ' . $item['cod_curso'] . ' ' . $item['regiaoevento']);
-
+                    //ddd($curso);
                     DB::table('agendas')->updateOrInsert(
                         ['titulo' => $item['titulo']],
-                        ['titulo' => $item['titulo']]
+                        ['titulo' => $item['titulo'], 'curso_id' => $item['cod_curso'] ]
                     );
 
                     if (DB::table('cursos')

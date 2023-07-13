@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Frontend;
 
+use App\Agenda;
 use App\Http\Controllers\Controller;
 
 class PagesController extends Controller
@@ -32,8 +33,12 @@ class PagesController extends Controller
         $modalidades = $cursos->groupBy('modalidade');
         $cidades = \App\Curso::distinct()->orderBy('cidade')->pluck('cidade');
 
+        $agenda = Agenda::whereHas('curso')
+            ->with('curso')
+            ->orderBy('id')
+            ->get();
 
-        $vars = ['page', 'blocos', 'cursos', 'regioes', 'modalidades','cidades', 'total', 'startAutoLoadObject'];
+        $vars = ['page', 'blocos', 'agenda', 'cursos', 'regioes', 'modalidades','cidades', 'total', 'startAutoLoadObject'];
 
         return view('frontend.pages.agenda', compact($vars));
     }

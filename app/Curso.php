@@ -21,4 +21,9 @@ class Curso extends CustomModel
     {
         return $this->hasMany(CursosDepoimento::class, 'curso_id');
     }
+    //verificar
+    public function agendas()
+    {
+        return $this->hasMany(Agenda::class, 'curso_id');
+    }
 }

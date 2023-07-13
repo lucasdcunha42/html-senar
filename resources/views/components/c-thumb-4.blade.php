@@ -10,12 +10,12 @@
         </div>
     </div>
     <div class="c-thummb-4__city">
-        <p>{{ $evento->regiaoevento ?? $evento->cidade }}</p>
+        <p>{{ $evento->cidade }}</p>
     </div>
     <div class="c-thumb-4__link">
         <a href="{{ route('page.cursos.single', $evento->slug) }}">Ler mais</a>
     </div>
-
+    {{-- --}}
     @if($evento->desc_fase_evento == 'Cancelado')
         <div class="curso-cancelado">
             Cancelado
