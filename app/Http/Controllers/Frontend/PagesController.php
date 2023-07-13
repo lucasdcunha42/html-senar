@@ -51,7 +51,6 @@ class PagesController extends Controller
 
         $currentCount = $request->get('currentCount');
 
-
         $query = \App\Curso::orderBy('data_inicio', 'asc')
             ->sinceTomorrow('data_inicio');
 
