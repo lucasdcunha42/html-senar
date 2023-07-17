@@ -3,12 +3,43 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Sindicato;
 use Illuminate\Support\Facades\DB;
+use Symfony\Polyfill\Intl\Normalizer\Normalizer;
 use XML;
+
 set_time_limit(300);
 class CursosController extends Controller
 {
     use XMLTrait;
+
+    public function limparString($str) {
+        // Remove acentos
+        $str = normalizer_normalize($str, Normalizer::FORM_KD);
+        $str = preg_replace('/[^a-zA-Z0-9]/', '', $str);
+
+        // Remove espaços em branco
+        $str = preg_replace('/\s+/', '', $str);
+
+        return $str;
+    }
+
+    public function obterIdSindicato($nomeSindicato)
+    {
+        $nomeSindicatoNormalizado = $this->limparString($nomeSindicato);
+
+        $sindicatos = Sindicato::all();
+
+        foreach ($sindicatos as $sindicato) {
+            $nomeSindicatoBanco = $this->limparString($sindicato->nome);
+
+            if (strcmp(strtoupper($nomeSindicatoNormalizado), strtoupper($nomeSindicatoBanco)) === 0) {
+                return $sindicato->id;
+            }
+        }
+
+        return null;
+}
 
     public function update()
     {
@@ -71,6 +102,7 @@ class CursosController extends Controller
                             $xmlArray['cidade'] = $evento['NOME_LOCALIDADE'];
                             $xmlArray['regiaoevento'] = $evento['REGIAOEVENTO'];
                             $xmlArray['agenda_num_evento'] = intval($evento['NUM_EVENTO']);
+                            $xmlArray['nome_sindicato'] = mb_strtoupper( $evento['NOMECOMPLETO_ENTCOORD'], 'UTF-8');
 
                             /** Curso */
                             $xmlArray['modalidade'] = $curso['Modalidade'];
@@ -90,7 +122,6 @@ class CursosController extends Controller
                             /** Teste para banco Agenda */
                             //$xmlParaAgenda['titulo'] = $evento['DESC_EVENTO'];
                             //$xmlParaAgenda['cod_teste'] = intval($evento['COD_CURSO']);
-
                             array_push($deParaRequisitos, $xmlArray);
                             $deParaAgenda[] = $xmlArray;
                         }
@@ -113,15 +144,17 @@ class CursosController extends Controller
                 $item['outros_requisitos'] = $array;
             }
 
-            // dd($deParaRequisitos);
             DB::beginTransaction();
             try {
                 foreach($deParaAgenda as $key => $item) {
                     $item['slug'] = \Str::slug($item['titulo'] . ' ' . $item['cod_curso'] . ' ' . $item['regiaoevento']);
                     //ddd($curso);
+
+                    $item['id_sindicato'] = intval($this->obterIdSindicato($item['nome_sindicato']));
+
                     DB::table('agendas')->updateOrInsert(
                         ['titulo' => $item['titulo']],
-                        ['titulo' => $item['titulo'], 'curso_id' => $item['cod_curso'] ]
+                        ['titulo' => $item['titulo'], 'cod_curso' => $item['cod_curso'], 'id_sindicato' => $item['id_sindicato'] ]
                     );
 
                     if (DB::table('cursos')
