@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Sindicato;
+use App\SindicatosMunicipio;
 use Illuminate\Support\Facades\DB;
 use Symfony\Polyfill\Intl\Normalizer\Normalizer;
 use XML;
@@ -24,17 +24,17 @@ class CursosController extends Controller
         return $str;
     }
 
-    public function obterIdSindicato($nomeSindicato)
+    public function obterIdMunicipio($nomeMunicipio)
     {
-        $nomeSindicatoNormalizado = $this->limparString($nomeSindicato);
+        $nomeMunicipioNormalizado = $this->limparString($nomeMunicipio);
 
-        $sindicatos = Sindicato::all();
+        $municipios = SindicatosMunicipio::all();
 
-        foreach ($sindicatos as $sindicato) {
-            $nomeSindicatoBanco = $this->limparString($sindicato->nome);
+        foreach ($municipios as $municipio) {
+            $nomeMunicipioBanco = $this->limparString($municipio->municipio);
 
-            if (strcmp(strtoupper($nomeSindicatoNormalizado), strtoupper($nomeSindicatoBanco)) === 0) {
-                return $sindicato->id;
+            if (strcmp(strtoupper($nomeMunicipioNormalizado), strtoupper($nomeMunicipioBanco)) === 0) {
+                return $municipio->id;
             }
         }
 
@@ -102,7 +102,7 @@ class CursosController extends Controller
                             $xmlArray['cidade'] = $evento['NOME_LOCALIDADE'];
                             $xmlArray['regiaoevento'] = $evento['REGIAOEVENTO'];
                             $xmlArray['agenda_num_evento'] = intval($evento['NUM_EVENTO']);
-                            $xmlArray['nome_sindicato'] = mb_strtoupper( $evento['NOMECOMPLETO_ENTCOORD'], 'UTF-8');
+                            $xmlArray['nome_sindicato'] = $evento['NOMECOMPLETO_ENTCOORD'];
 
                             /** Curso */
                             $xmlArray['modalidade'] = $curso['Modalidade'];
@@ -150,11 +150,11 @@ class CursosController extends Controller
                     $item['slug'] = \Str::slug($item['titulo'] . ' ' . $item['cod_curso'] . ' ' . $item['regiaoevento']);
                     //ddd($curso);
 
-                    $item['id_sindicato'] = intval($this->obterIdSindicato($item['nome_sindicato']));
+                    $item['id_municipio'] = intval($this->obterIdMunicipio($item['cidade']));
 
                     DB::table('agendas')->updateOrInsert(
                         ['titulo' => $item['titulo']],
-                        ['titulo' => $item['titulo'], 'cod_curso' => $item['cod_curso'], 'id_sindicato' => $item['id_sindicato'] ]
+                        ['titulo' => $item['titulo'], 'cod_curso' => $item['cod_curso'], 'id_municipio' => $item['id_municipio'] ]
                     );
 
                     if (DB::table('cursos')

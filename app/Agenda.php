@@ -1,7 +1,7 @@
 <?php
 
 namespace App;
-
+use App\SindicatosMunicipio;
 use Illuminate\Database\Eloquent\Model;
 
 
@@ -15,7 +15,8 @@ class Agenda extends CustomModel
 
     public function sindicato()
     {
-        return $this->belongsTo(Sindicato::class, 'nome_sindicato', 'nome');
+        return $this->belongsTo(SindicatosMunicipio::class, 'id_municipio', 'id')
+                    ->join('sindicatos', 'sindicatos_municipios.sindicato_id', '=', 'sindicatos.id');
     }
 
 }

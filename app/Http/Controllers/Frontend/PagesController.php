@@ -34,13 +34,11 @@ class PagesController extends Controller
         $cidades = \App\Curso::distinct()->orderBy('cidade')->pluck('cidade');
 
         $agendas = Agenda::whereHas('curso')
-            ->with('curso','sindicato')
+            ->with('curso', 'sindicato.sindicato')
             ->orderBy('id')
             ->get();
 
-        dd($agendas[1]);
-
-        $vars = ['page', 'blocos', 'agendas', 'cursos', 'regioes', 'modalidades','cidades', 'total', 'startAutoLoadObject'];
+        $vars = ['page', 'blocos', 'cursos', 'regioes', 'agendas', 'modalidades','cidades', 'total', 'startAutoLoadObject'];
 
         return view('frontend.pages.agenda', compact($vars));
     }

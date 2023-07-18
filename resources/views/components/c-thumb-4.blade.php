@@ -1,4 +1,5 @@
 <div class="c-thumb-4">
+    {{dd($evento)}}
     <div class="c-thumb-4__date">
         <span>{{ $evento->getAttrDateFromFormat('data_inicio', 'Y-m-d', 'd.m.Y') }}</span>
     </div>
