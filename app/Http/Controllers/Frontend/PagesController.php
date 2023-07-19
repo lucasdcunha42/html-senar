@@ -34,7 +34,7 @@ class PagesController extends Controller
         $cidades = \App\Curso::distinct()->orderBy('cidade')->pluck('cidade');
 
         $agendas = Agenda::whereHas('curso')
-            ->with('curso', 'sindicato.sindicato')
+            ->with('curso','municipio.sindicato')
             ->orderBy('id')
             ->get();
 
