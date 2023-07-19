@@ -13,10 +13,9 @@ class Agenda extends CustomModel
         return $this->belongsTo(Curso::class, 'cod_curso', 'cod_curso');
     }
 
-    public function sindicato()
+    public function municipio()
     {
-        return $this->belongsTo(SindicatosMunicipio::class, 'id_municipio', 'id')
-                    ->join('sindicatos', 'sindicatos_municipios.sindicato_id', '=', 'sindicatos.id');
+        return $this->belongsTo(SindicatosMunicipio::class, 'id_municipio', 'id');
     }
 
 }
