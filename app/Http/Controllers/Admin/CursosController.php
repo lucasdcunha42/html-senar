@@ -117,7 +117,7 @@ class CursosController extends Controller
                             $xmlArray['idade'] = $curso['Idade'];
                             $xmlArray['created_at'] = now();
                             $xmlArray['updated_at'] = now();
-                            // $xmlArray['outros_requisitos'] = [];
+                            $xmlArray['outros_requisitos'] = [];
 
                             /** Teste para banco Agenda */
                             //$xmlParaAgenda['titulo'] = $evento['DESC_EVENTO'];
@@ -152,9 +152,20 @@ class CursosController extends Controller
 
                     $item['id_municipio'] = intval($this->obterIdMunicipio($item['cidade']));
 
-                    DB::table('agendas')->updateOrInsert(
-                        ['titulo' => $item['titulo']],
-                        ['titulo' => $item['titulo'], 'cod_curso' => $item['cod_curso'], 'id_municipio' => $item['id_municipio'] ]
+                    DB::table('agendas')->updateOrInsert(['titulo' => $item['titulo']],
+                    [
+                        'titulo' =>             $item['titulo'],
+                        'cod_curso' =>          $item['cod_curso'],
+                        'id_municipio' =>       $item['id_municipio'],
+                        'data_inicio' =>        $item['data_inicio'],
+                        'data_fim' =>           $item['data_fim'],
+                        'desc_fase_evento' =>   $item['desc_fase_evento'],
+                        'regiaoevento' =>       $item['regiaoevento'],
+                        'agenda_num_evento' =>  $item['agenda_num_evento'],
+                        'created_at' =>         $item['created_at'],
+                        'updated_at' =>         $item['updated_at'],
+                        'slug' =>               $item['slug']
+                    ]
                     );
 
                     if (DB::table('cursos')
