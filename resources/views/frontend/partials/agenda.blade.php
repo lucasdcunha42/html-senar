@@ -13,6 +13,7 @@
 
         <div class="row">
             @foreach($__cursos as $evento)
+            {{ddd($__cursos);}}
                 <div class="col-sm-4 col-md-3 curso-item">
                     @include('components.c-thumb-4', ['evento' => $evento])
                 </div>
