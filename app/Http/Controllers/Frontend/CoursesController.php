@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Frontend;
 
+use App\Agenda;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -97,7 +98,13 @@ class CoursesController extends Controller
                             ->where('slug', $slug)
                             ->firstOrfail();
 
-        return view('frontend.pages.cursos-single', compact('curso'));
+        $agenda = Agenda::whereHas('curso')
+                            ->with('curso','curso.depoimentos', 'municipio.sindicato')
+                            ->orderBy('id')
+                            ->where('slug', $slug)
+                            ->firstOrfail();
+
+        return view('frontend.pages.cursos-single', compact('agenda'));
     }
 
     public function loadMore()
