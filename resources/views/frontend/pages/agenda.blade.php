@@ -88,9 +88,9 @@
             <div class="row">
                 <div class="col-xs-12">
                     <div class="row agenda-itens" data-auto-load="{{ $startAutoLoadObject }}">
-                            @include('frontend.pages.agenda-load-more', ['cursos' => $cursos])
-                        </div>
+                        @include('frontend.pages.agenda-load-more', ['agendas' => $agendas])
                     </div>
+                </div>
                     <div class="col-xs-12 text-right counter">
                         <b>
                             <span class="current-count">{{ $cursos->count() }}</span>
