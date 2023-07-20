@@ -11,7 +11,7 @@
         </div>
     </div>
     <div class="c-thummb-4__city">
-        <p>{{ $evento->cidade }}</p>
+        <p>{{ $evento->nome_municipio }}</p>
     </div>
     <div class="c-thumb-4__link">
         <a href="{{ route('page.cursos.single', $evento->slug) }}">Ler mais</a>
