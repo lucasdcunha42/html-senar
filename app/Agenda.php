@@ -4,7 +4,6 @@ namespace App;
 use App\SindicatosMunicipio;
 use Illuminate\Database\Eloquent\Model;
 
-
 class Agenda extends CustomModel
 {
 

@@ -156,15 +156,18 @@ class CursosController extends Controller
                     [
                         'titulo' =>             $item['titulo'],
                         'cod_curso' =>          $item['cod_curso'],
+                        'nome_curso' =>         $item['nome_curso'],
                         'id_municipio' =>       $item['id_municipio'],
+                        'nome_municipio' =>     $item['cidade'],
                         'data_inicio' =>        $item['data_inicio'],
                         'data_fim' =>           $item['data_fim'],
+                        'modalidade' =>         $item['modalidade'],
                         'desc_fase_evento' =>   $item['desc_fase_evento'],
                         'regiaoevento' =>       $item['regiaoevento'],
                         'agenda_num_evento' =>  $item['agenda_num_evento'],
                         'created_at' =>         $item['created_at'],
                         'updated_at' =>         $item['updated_at'],
-                        'slug' =>               $item['slug']
+                        'slug' =>               $item['slug'],
                     ]
                     );
 
