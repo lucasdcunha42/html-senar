@@ -35,7 +35,7 @@ class PagesController extends Controller
 
         $agendas = Agenda::whereHas('curso')
             ->with('curso','municipio.sindicato')
-            ->orderBy('id')
+            ->orderBy('data_inicio','asc')
             ->get();
 
         $vars = ['page', 'blocos', 'cursos', 'regioes', 'agendas', 'modalidades','cidades', 'total', 'startAutoLoadObject'];
@@ -71,13 +71,13 @@ class PagesController extends Controller
         $query->take($perPage)
             ->skip($currentCount);
 
-        $cursos = $query->get();
+        $agendas = $query->get();
 
-        $view = view('frontend.pages.agenda-load-more', compact('cursos'))->render();
+        $view = view('frontend.pages.agenda-load-more', compact('agendas'))->render();
 
         return response()->json([
             'view' => $view,
-            'currentCount' => $currentCount + $cursos->count(),
+            'currentCount' => $currentCount + $agendas->count(),
             'total' => $total
         ]);
     }
