@@ -5,90 +5,36 @@ namespace App\Http\Controllers\Frontend;
 use App\Agenda;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 
 class CoursesController extends Controller
 {
     public function index(Request $request)
     {
+        // Obtém o ID da página de agendas (substitua o número 19 pelo ID correto)
         [$page, $blocos] = $this->getPageById(19);
 
-        // $todosOsCursos = \App\Curso::where('desc_fase_evento', 'Aprovado')->get();
-        $todosOsCursos = \App\Curso::where('situacao', 'A')->get();
+        // Obtém todas as agendas com a situação 'Aprovado'
+        $todosOsAgendas = \App\Agenda::where('situacao', 'Aprovado')->get();
 
-        $cursosGrouped = $todosOsCursos->groupBy(function($item, $key) {
-            return strtoupper($item->titulo[0]);
-        })
-        ->sortBy(function($item, $key) {
-            return $key;
-        });
+        // Agrupa as agendas por data ou outro critério relevante, se necessário
+        // $agendasGrouped = $todosOsAgendas->groupBy(function ($item, $key) {
+        //     return $item->data_evento;
+        // });
 
-        $ordenacaoTextPattern = setting('geral.ordenacao-listagem-cursos');
+        // Obtém os primeiros 8 registros de agendas
+        $agendas = $todosOsAgendas->take(8);
 
-        preg_match_all('/\[(.*?)\][\n\r]?/m', $ordenacaoTextPattern, $singlePatterns);
+        // Obtém as áreas de interesse disponíveis para as agendas
+        $areasDeInteresse = \DB::table('agendas')
+                                ->select('area_de_interesse')
+                                ->where('situacao', 'Aprovado')
+                                ->whereNotNull('area_de_interesse')
+                                ->distinct('area_de_interesse')
+                                ->get();
 
-        $arrayCollumns = [];
-
-        foreach($singlePatterns[1] as $result) {
-            $result = str_replace(' ', '', $result);
-            $arrayCollumns[] = explode(',', $result);
-        }
-
-        $finalArrayCollumns = [];
-
-        foreach($arrayCollumns as $arrayOrder) {
-            $orderedArray = [];
-            foreach($arrayOrder as $key => $letter) {
-                if(isset($cursosGrouped[strtoupper($letter)])) {
-                    $orderedArray[strtoupper($letter)] = $cursosGrouped[strtoupper($letter)];
-                } else {
-                    // deleta a letra que não tem na collection
-                    unset($arrayOrder[$key]);
-                }
-            }
-            $finalArrayCollumns[] = $orderedArray;
-        }
-
-        // $cursos = \App\Curso::where('data_fim', '>=', now()->format('Y-m-d'))->get();
-        // $cursos = \App\Curso::where('desc_fase_evento', 'Aprovado')
-
-
-        if($request->input('s')){
-            $cursos = \App\Curso::situacaoA()
-                        ->take(12)
-                        ->orderBy('data_inicio', 'desc')
-                        ->where('titulo', "like", "%{$request->input('s')}%")
-                        ->get();
-        } else {
-            $cursos = \App\Curso::situacaoA()
-                            ->take(12)
-                            ->orderBy('data_inicio', 'desc')
-                            ->get();
-        }
-
-        $regiaoEvento = \DB::table('cursos')
-                            ->where('situacao', 'A')
-                            ->select('regiaoevento as regiao')
-                            ->distinct('regiaoevento')
-                            ->get();
-
-        $areaInteresse = \DB::table('cursos')
-                            ->select('areadeinteresse as interesse')
-                            ->where('situacao', 'A')
-                            ->where('areadeinteresse', '!=', null)
-                            ->distinct('areadeinteresse')
-                            ->get();
-
-        $mesAno = \DB::table('cursos')
-                    ->where('situacao', 'A')
-                    ->select('data_inicio')
-                    ->distinct('data_inicio')
-                    ->get()
-                    ->groupBy(function($val) {
-                        return \Carbon\Carbon::createFromFormat('Y-m-d', $val->data_inicio)
-                            ->format('Y/m');
-                    });
-
-        return view('frontend.pages.cursos', compact('cursos', 'regiaoEvento', 'areaInteresse', 'mesAno', 'page', 'blocos', 'finalArrayCollumns', 'cursosGrouped'));
+        // Retorna a view "frontend.pages.agendas" com os dados obtidos
+        return view('frontend.pages.agendas', compact('agendas', 'areasDeInteresse', 'page', 'blocos'));
     }
 
     public function single($slug)
@@ -98,60 +44,61 @@ class CoursesController extends Controller
                             ->where('slug', $slug)
                             ->firstOrfail();
 
-        $agenda = Agenda::whereHas('curso')
-                            ->with('curso','curso.depoimentos', 'municipio.sindicato')
-                            ->orderBy('id')
-                            ->where('slug', $slug)
-                            ->firstOrfail();
-
-        return view('frontend.pages.cursos-single', compact('agenda'));
+        return view('frontend.pages.cursos-single', compact('curso'));
     }
 
     public function loadMore()
     {
-        $request = request();
+        try {
+            $request = request();
 
-        $skip = $request->get('skip', 0);
+            // Obtém o valor de 'skip' (quantidade de agendas já exibidas) a partir do request
+            $skip = $request->get('skip', 0);
 
-        $perPage = 6;
+            // Adicione um log para verificar o valor de $skip
+            debugbar()->info('Valor de $skip:', $skip);
 
-        $query = \App\Curso::query();
-        $query->where('desc_fase_evento', 'Aprovado');
+            // Define a quantidade de agendas a serem carregadas por vez
+            $perPage = 8;
 
-        if(!empty($request->filled('interesse'))) {
-            $query->where('areadeinteresse', $request->get('interesse'));
+            // Constrói a consulta para obter mais agendas
+            $query = Agenda::query();
+            $query->where('situacao', 'Aprovado');
+
+            // Se a área de interesse for selecionada, filtra por ela
+            if (!empty($request->filled('interesse'))) {
+                $query->where('area_de_interesse', $request->get('interesse'));
+            }
+
+            // Define o limite e a quantidade de registros a serem pulados
+            $query->take($perPage)->skip($skip);
+
+            // Obtém o SQL gerado pela consulta (para fins de debug, se necessário)
+            $sql = $query->toSql();
+
+            // Adicione um log para verificar o SQL gerado
+            debugbar()->info('SQL:', $sql);
+
+            // Executa a consulta para obter as agendas adicionais
+            $agendas = $query->get();
+
+            // Renderiza a view parcial 'frontend.pages.agenda-load-more' com as agendas adicionais
+            $view = view('frontend.pages.agenda-load-more', compact('agendas'))->render();
+
+            // Define se chegou ao final das agendas disponíveis
+            $finish = false;
+            if (!$agendas->count()) {
+                $finish = true;
+            }
+
+            // Retorna a resposta JSON com a view parcial e o indicador de finalização
+            return response()->json([
+                'view' => $view,
+                'finish' => $finish,
+            ]);
+        } catch (\Exception $e) {
+            Log::error('Erro na função loadMore: ' . $e->getMessage());
+            // Outras ações de tratamento de erro, se necessário
         }
-
-        if(!empty($request->filled('regiao'))) {
-            $query->where('regiaoevento', $request->get('regiao'));
-        }
-
-        if(!empty($request->filled('anoMes'))) {
-            $anoMes = explode('/', $request->get('anoMes'));
-            $query->whereYear('data_inicio', $anoMes[0]);
-            $query->whereMonth('data_inicio', $anoMes[1]);
-        }
-
-        $query->take($perPage)->skip($skip)->orderBy('data_inicio', 'desc');
-
-        $sql = $query->toSql();
-
-        $cursos = $query->get();
-
-        $view = view('frontend.pages.cursos-item', compact('cursos'))->render();
-
-        $finish = false;
-
-        if(!$cursos->count()) {
-            $finish = true;
-        }
-
-        return response()->json([
-            'view' => $view,
-            'finish' => $finish,
-            // 'request' => $request->all(),
-            // 'sql' => $sql
-        ]);
     }
-
 }

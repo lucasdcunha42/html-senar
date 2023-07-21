@@ -10,15 +10,11 @@ if($('.carregar-mais-cursos').length) {
     var finishCursos = false;
 
     var cursosAreaInteresseSelect = $('#cursos-area-interesse-select');
-    var cursosregioesSelect = $('#cursos-regiao-select');
-    var cursosAnoMesSelect = $('#cursos-ano-mes-select');
 
     var reloadAll = false;
 
     $.each([
-        cursosAreaInteresseSelect,
-        cursosregioesSelect,
-        cursosAnoMesSelect
+        cursosAreaInteresseSelect
     ], function(index, el) {
         $(el).on('change', function() {
             reloadAll = true;
@@ -39,9 +35,7 @@ if($('.carregar-mais-cursos').length) {
 
         var data = {
             skip: skip,
-            interesse: cursosAreaInteresseSelect.val(),
-            regiao: cursosregioesSelect.val(),
-            anoMes: cursosAnoMesSelect.val()
+            interesse: cursosAreaInteresseSelect.val()
         }
 
         __inloading = true;

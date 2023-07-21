@@ -10,6 +10,7 @@ use App\Http\Controllers\Frontend\FormController;
 use App\Http\Controllers\Admin\CursosController;
 use App\Http\Controllers\Admin\RegioesController;
 use App\Http\Controllers\Admin\SindicatosController;
+use App\Http\Controllers\Frontend\AgendasController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -48,9 +49,14 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/', [HomeController::class, 'index'])->name('page.home');
+
 Route::get('/cursos', [CoursesController::class, 'index'])->name('page.cursos');
 Route::post('/cursos-load-more', [CoursesController::class, 'loadMore'])->name('page.cursos.load.more');
 Route::get('/cursos/{slug}', [CoursesController::class, 'single'])->name('page.cursos.single');
+
+Route::get('/agenda', [AgendasController::class, 'agenda'])->name('page.agenda');
+Route::post('/agenda-load-more', [AgendasController::class, 'loadMore'])->name('page.agenda.loadMore');
+Route::get('/agendas/{slug}', [AgendasController::class, 'single'])->name('page.agendas.single');
 
 Route::get('/contato', [PagesController::class, 'contato'])->name('page.contato');
 Route::get('/fale-conosco', [PagesController::class, 'faleConosco'])->name('page.fale-conosco');
@@ -63,8 +69,8 @@ Route::get('/supervisao', [PagesController::class, 'supervisao'])->name('page.cu
 Route::get('/apoiadores', [PagesController::class, 'apoiadores'])->name('page.apoiadores');
 Route::get('/arrecadacao', [PagesController::class, 'arrecadacao'])->name('page.cursos.arrecadacao');
 
-Route::get('/agenda', [PagesController::class, 'agenda'])->name('page.agenda');
-Route::post('/agenda/load-more', [PagesController::class, 'loadMore'])->name('page.agenda.loadMore');
+//Route::get('/agenda', [PagesController::class, 'agenda'])->name('page.agenda');
+//Route::post('/agenda/load-more', [PagesController::class, 'loadMore'])->name('page.agenda.loadMore');
 Route::get('/eventos', [PagesController::class, 'eventos'])->name('page.eventos');
 Route::get('/eventos/{slug}', [PagesController::class, 'eventos'])->name('page.eventos.single');
 Route::get('/sindicatos', [PagesController::class, 'sindicatos'])->name('page.sindicatos');

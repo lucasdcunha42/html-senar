@@ -176,8 +176,8 @@ a.internal-link {
   font-weight: bold;
   font-size: 28px;
   text-transform: uppercase;
-  margin-top: 60px;
-  margin-bottom: 80px;
+  margin-top: 30px;
+  margin-bottom: 30px;
   letter-spacing: 5px;
 }
 
@@ -287,7 +287,7 @@ a.internal-link {
   padding: 0 0 100px;
   background-position: center;
   background-size: cover;
-}
+}a
 
 .depoimentos-carousel {
   color: #fff;
@@ -476,8 +476,8 @@ a.internal-link {
 }
 
 .footer {
-  margin-top: 60px;
-  padding: 40px 0;
+  margin-top: 50px;
+  padding: 20px 0 40px;
   background-color: #eeeeee;
 }
 .footer .logo-footer {
@@ -1489,16 +1489,38 @@ button.btn-open-close.open span {
 
 .depoimentos-cursos {
   background-color: #eeeeee;
-  padding: 50px 0 0;
+  padding: 1rem;
 }
-.depoimentos-cursos p {
-  padding: 0px 0 20px;
-  font-size: 18px;
-  color: #000;
+
+.depoimentos .body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
-.depoimentos-cursos p.quote {
-  padding: 0;
-  font-size: 40px;
+
+.quote-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    margin: 0 20px 0 20px;
+}
+
+.quote-text {
+    font-size: 20px;
+    font-style: italic;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+.quote-author {
+    font-size: 16px;
+    font-weight: bold;
+    color: #555555;
 }
 
 .depoimentos + .footer {
