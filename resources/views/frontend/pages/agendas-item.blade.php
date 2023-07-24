@@ -1,5 +1,6 @@
 @foreach ($agendas as $agenda)
-    <div class="c-thumb-4 col-sm-3">
+<div class="col-sm-3">
+    <div class="c-thumb-4">
         <div class="c-thumb-4__date">
             <span>{{ $agenda->getAttrDateFromFormat('data_inicio', 'Y-m-d', 'd.m.Y') }}</span>
         </div>
@@ -24,4 +25,6 @@
             </div>
         @endif
     </div>
+</div>
+
 @endforeach

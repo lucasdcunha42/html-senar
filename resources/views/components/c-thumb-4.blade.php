@@ -14,7 +14,7 @@
         <p>{{ $evento->nome_municipio }}</p>
     </div>
     <div class="c-thumb-4__link">
-        <a href="{{ route('page.cursos.single', $evento->slug) }}">Ler mais</a>
+        <a href="{{ route('page.agendas.single', $evento->slug) }}">Ler mais</a>
     </div>
     {{-- --}}
     @if($evento->desc_fase_evento == 'Cancelado')
