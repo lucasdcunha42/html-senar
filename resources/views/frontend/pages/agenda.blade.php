@@ -37,10 +37,11 @@
                                 <select
                                     name="regiao"
                                     id="agendas-regiao-select"
-                                    class="custom-select"                                >
+                                    class="custom-select">                             >
                                     <option value="">Região</option>
                                     @foreach ($regioes as $regiao)
                                         <option value="{{ $regiao->regiao }}">{{ $regiao->regiao }}</option>
+
                                     @endforeach
                                 </select>
                             </div>

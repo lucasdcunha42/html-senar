@@ -9,6 +9,7 @@ class CoursesController extends Controller
 {
     public function index()
     {
+        // Obtém o ID da página de agendas (substitua o número 19 pelo ID correto)
         [$page, $blocos] = $this->getPageById(19);
 
         $cursos = Curso::situacaoA()
@@ -22,6 +23,7 @@ class CoursesController extends Controller
                             ->get();
 
         return view('frontend.pages.cursos', compact('cursos', 'areaInteresse', 'page', 'blocos'));
+
     }
 
     public function single($slug)

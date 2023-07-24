@@ -44,7 +44,6 @@ class AgendasController extends Controller
     public function loadMore()
     {
         $request = request();
-
         debugbar()->info($request);
 
         $skip = $request->get('skip', 0);
