@@ -51,28 +51,6 @@
                                         @endforeach
                                     </select>
                                 </div>
-                                <div class="col-sm-4">
-                                    <select
-                                        name="regiao"
-                                        id="cursos-regiao-select"
-                                        class="custom-select">
-                                        <option value="">Região</option>
-                                        @foreach ($regiaoEvento as $value)
-                                            <option value="{{ $value->regiao }}">{{ $value->regiao }}</option>
-                                        @endforeach
-                                    </select>
-                                </div>
-                                <div class="col-sm-4">
-                                    <select
-                                        name="ano-mes"
-                                        id="cursos-ano-mes-select"
-                                        class="custom-select">
-                                        <option value="">Mês</option>
-                                        @foreach ($mesAno as $key => $value)
-                                            <option value="{{ $key }}">{{ $key }}</option>
-                                        @endforeach
-                                    </select>
-                                </div>
                             </div>
                         </div>
                     </div>
