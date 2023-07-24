@@ -152,35 +152,48 @@ class CursosController extends Controller
 
                     $item['id_municipio'] = intval($this->obterIdMunicipio($item['cidade']));
 
-                    DB::table('agendas')->updateOrInsert(['titulo' => $item['titulo']],
-                    [
-                        'titulo' =>             $item['titulo'],
-                        'cod_curso' =>          $item['cod_curso'],
-                        'nome_curso' =>         $item['nome_curso'],
-                        'id_municipio' =>       $item['id_municipio'],
-                        'nome_municipio' =>     $item['cidade'],
-                        'data_inicio' =>        $item['data_inicio'],
-                        'data_fim' =>           $item['data_fim'],
-                        'modalidade' =>         $item['modalidade'],
-                        'desc_fase_evento' =>   $item['desc_fase_evento'],
-                        'regiaoevento' =>       $item['regiaoevento'],
-                        'agenda_num_evento' =>  $item['agenda_num_evento'],
-                        'created_at' =>         $item['created_at'],
-                        'updated_at' =>         $item['updated_at'],
-                        'slug' =>               $item['slug'],
-                    ]
+                    DB::table('agendas')->updateOrInsert(
+                        ['titulo' => $item['titulo']],
+                            [
+                                'titulo' =>             $item['titulo'],
+                                'cod_curso' =>          $item['cod_curso'],
+                                'nome_curso' =>         $item['nome_curso'],
+                                'id_municipio' =>       $item['id_municipio'],
+                                'nome_municipio' =>     $item['cidade'],
+                                'data_inicio' =>        $item['data_inicio'],
+                                'data_fim' =>           $item['data_fim'],
+                                'modalidade' =>         $item['modalidade'],
+                                'desc_fase_evento' =>   $item['desc_fase_evento'],
+                                'regiaoevento' =>       $item['regiaoevento'],
+                                'agenda_num_evento' =>  $item['agenda_num_evento'],
+                                'created_at' =>         $item['created_at'],
+                                'updated_at' =>         $item['updated_at'],
+                                'slug' =>               $item['slug'],
+                            ]
                     );
 
-                    if (DB::table('cursos')
-                    ->where('slug', $item['slug'])
-                    ->where('cidade', $item['cidade'])
-                    ->first()) {
-                        continue;
-                    }
-
+                    $item['slug'] = \Str::slug($item['cod_curso'] . ' ' . $item['nome_curso']);
                     DB::table('cursos')->updateOrInsert(
-                        ['agenda_num_evento' => $item['agenda_num_evento']],
-                        $item
+                        ['cod_curso' => $item['cod_curso']],
+                        [    /** Dados Curso */
+                            'cod_curso' =>              $item['cod_curso'],
+                            'nome_curso' =>             $item['nome_curso'],
+                            'descricao' =>              $item['descricao'],
+                            'areadeinteresse' =>        $item['areadeinteresse'],
+                            'situacao' =>               $item['situacao'],
+                            'modalidade' =>             $item['modalidade'],
+                            /** Requisitos */
+                            'cargahorariatotal' =>      $item['cargahorariatotal'],
+                            'escolaridade' =>           $item['escolaridade'],
+                            'idade' =>                  $item['idade'],
+                            'minimodeparticipantes' =>  $item['minimodeparticipantes'],
+                            'maximodeparticipantes' =>  $item['maximodeparticipantes'],
+                            'conteudoprogramatico' =>   $item['conteudoprogramatico'],
+
+                            'created_at' =>             $item['created_at'],
+                            'updated_at' =>             $item['updated_at'],
+                            'slug' =>                   $item['slug'],
+                        ]
                     );
 
                     if(
