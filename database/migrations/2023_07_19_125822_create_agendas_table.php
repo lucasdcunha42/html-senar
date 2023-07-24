@@ -19,7 +19,7 @@ class CreateAgendasTable extends Migration
             $table->integer('cod_curso');
             $table->string('nome_curso');
             $table->integer('id_municipio');
-            $table->integer('nome_municipio');
+            $table->string('nome_municipio');
             $table->date('data_inicio');
             $table->date('data_fim');
             $table->string('modalidade');
