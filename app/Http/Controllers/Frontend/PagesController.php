@@ -51,6 +51,7 @@ class PagesController extends Controller
 
         $currentCount = $request->get('currentCount');
 
+
         $query = \App\Curso::orderBy('data_inicio', 'asc')
             ->sinceTomorrow('data_inicio');
 
@@ -62,22 +63,18 @@ class PagesController extends Controller
             $query->where('modalidade', $request->get('cursos-modalidade'));
         }
 
-        if ($request->has('cursos-cidade')) {
-            $query->where('cidade', $request->get('cursos-cidade'));
-        }
-
         $total = $query->count();
 
         $query->take($perPage)
             ->skip($currentCount);
 
-        $agendas = $query->get();
+        $cursos = $query->get();
 
-        $view = view('frontend.pages.agenda-load-more', compact('agendas'))->render();
+        $view = view('frontend.pages.agenda-load-more', compact('cursos'))->render();
 
         return response()->json([
             'view' => $view,
-            'currentCount' => $currentCount + $agendas->count(),
+            'currentCount' => $currentCount + $cursos->count(),
             'total' => $total
         ]);
     }
