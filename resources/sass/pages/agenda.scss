@@ -24,3 +24,49 @@
     margin-left: auto;
     margin-right: auto;
 }
+
+.sindicato {
+    padding: 10px 0;
+    background-color: #005c3c;
+    color: #ffffff;
+}
+
+  .sindicato-item {
+    font-size: 18px;
+}
+
+.agenda-lista {
+    margin: 50px 0;
+
+    .agenda-item {
+        position: relative;
+        height: 300px;
+        background-position: center;
+        background-size: cover;
+        padding: 30px;
+        margin-bottom: 30px;
+        background-color: $grey-base;
+
+        .d-table {
+            position: relative;
+            z-index: 1;
+        }
+
+        h4 {
+            a {
+                font-size: 24px;
+                color: #fff;
+            }
+        }
+
+        .curso-overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: rgba($color: #000000, $alpha: 0.5);
+            z-index: 0;
+        }
+    }
+}

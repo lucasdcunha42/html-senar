@@ -13,7 +13,7 @@
 
             <div class="row">
                 @foreach($composeAgenda as $evento)
-                    <div class="col-sm-4 col-md-3 curso-item">
+                    <div class="col-sm-4 col-md-3">
                         @include('components.c-thumb-4', ['evento' => $evento])
                     </div>
                 @endforeach

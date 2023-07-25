@@ -1362,11 +1362,11 @@ button.btn-open-close.open span {
 
 .container-auto-width-cursos {
   margin: 0 auto;
-  width: 90%;
+  width: 95%;
 }
 @media (max-width: 1199px) {
   .container-auto-width-cursos {
-    width: 90%;
+    width: 95%;
   }
 }
 @media (max-width: 991px) {
@@ -1378,6 +1378,34 @@ button.btn-open-close.open span {
   .container-auto-width-cursos {
     width: 100%;
   }
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.search-form .search-bar {
+  display: flex;
+  flex-grow: 1;
+  padding: 5px;
+}
+.search-form .search-bar input.custom-search {
+  width: 100%;
+  padding: 5px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px;
+}
+.search-form .search-bar button {
+  padding: 10px 5px;
+  font-size: 14px;
+  background-color: #034906;
+  color: #fff;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  width: 20%;
 }
 
 .cursos-lista {
@@ -1473,16 +1501,6 @@ button.btn-open-close.open span {
   float: left;
 }
 
-.sindicato {
-    padding: 10px 0;
-    background-color: #005c3c;
-    color: #ffffff;
-}
-
-  .sindicato-item {
-    font-size: 18px;
-}
-
 .conteudo-programatico.curso-single p {
   margin-left: 200px;
 }
@@ -1565,6 +1583,46 @@ button.btn-open-close.open span {
   .select-agenda-container {
     width: 100%;
   }
+}
+
+.sindicato {
+  padding: 10px 0;
+  background-color: #005c3c;
+  color: #ffffff;
+}
+
+.sindicato-item {
+  font-size: 18px;
+}
+
+.agenda-lista {
+  margin: 50px 0;
+}
+.agenda-lista .agenda-item {
+  position: relative;
+  height: 300px;
+  background-position: center;
+  background-size: cover;
+  padding: 30px;
+  margin-bottom: 30px;
+  background-color: #eeeeee;
+}
+.agenda-lista .agenda-item .d-table {
+  position: relative;
+  z-index: 1;
+}
+.agenda-lista .agenda-item h4 a {
+  font-size: 24px;
+  color: #fff;
+}
+.agenda-lista .agenda-item .curso-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 0;
 }
 
 .programas-section .introduction-text {

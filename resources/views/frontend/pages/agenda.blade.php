@@ -1,16 +1,15 @@
 @extends('templates.master')
 
 @section('content')
-
     @php
         $pageVars = [];
 
-        if($page && !empty(trim($page->banner))) {
+        if ($page && !empty(trim($page->banner))) {
             $pageVars['bgPagePath'] = urlStorage($page->banner, 1400, 300);
         }
     @endphp
 
-@include('components.banner-page', $pageVars);
+    @include('components.banner-page', $pageVars)
 
     <div class="agenda-section agenda-header">
         <div class="container">
@@ -31,79 +30,43 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 text-center">
-
                     {{-- Barra de Filtros --}}
                     <div class="select-agenda-container">
                         <div class="row">
-                            <div class="col-sm-2 hidden-xs"></div>
-                            <div class="col-xs-6 col-sm-4">
+                            <div class="col-sm-4">
                                 <select
-                                    id="cursos-regiao"
-                                    data-target="regiao"
-                                    class="custom-select">
-                                    <option value="">Região</option>
-                                    @foreach ($regioes as $key => $value)
-                                        <option value="{{ $key }}">{{ $key }}</option>
-                                    @endforeach
-                                </select>
-                            </div>
-                            <div class="col-xs-6 col-sm-4">
-                                <select
-                                    id="cursos-modalidade"
-                                    data-target="modalidade"
-                                    class="custom-select">
-                                    <option value="">Modalidades</option>
-                                    @foreach ($modalidades as $key => $value)
-                                        <option value="{{ $key }}">{{ $key }}</option>
-                                    @endforeach
-                                </select>
-                            </div>
-
-                            {{-- Filtro de Cidade --}}
-                            {{-- <div class="col-xs-12 col-sm-12">
-                                <select
-                                    id="cursos-cidade"
-                                    data-target="cidade"
-                                    class="custom-select">
+                                    name="cidade"
+                                    id="agendas-cidade-select"
+                                    class="custom-select">                             >
                                     <option value="">Cidade</option>
-                                    @foreach ($cidades as $key)
-                                        <option value="{{ $key }}">{{ $key }}</option>
+                                    @foreach ($cidades as $cidade)
+                                        <option value="{{ $cidade }}">{{ $cidade }}</option>
                                     @endforeach
                                 </select>
-                            </div> --}}
+                            </div>
                         </div>
                     </div>
-                    {{-- Texto Região Cidade
-                    <div class="select-agenda-container">
-                        <div class="row">
-                            <p class="page-title center">
-                            </p>
-                        </div>
-                    </div>  --}}
                 </div>
             </div>
 
-            {{-- Lista Cursos --}}
-
+            {{-- Lista de Agendas --}}
             <div class="row">
                 <div class="col-xs-12">
-                    <div class="row agenda-itens" data-auto-load="{{ $startAutoLoadObject }}">
-                        @include('frontend.pages.agenda-load-more', ['agendas' => $agendas])
+                    <div class="agenda-lista">
+                        <div class="row agendas-container">
+                            @include('frontend.pages.agendas-item', ['agendas' => $agendas])
+                        </div>
                     </div>
                 </div>
-                    <div class="col-xs-12 text-right counter">
-                        <b>
-                            <span class="current-count">{{ $cursos->count() }}</span>
-                            <span class="of-count">de</span>
-                            <span class="total-count">{{ $total }}</span>
-                        </b>
-                    </div>
-                    <div class="loading-container text-center">
-                        <img src="{{ asset('images/loading.gif') }}" alt="">
+                <div class="agendas-loading-container text-center hide-on-load">
+                    <img src="{{ asset('images/loading.gif') }}" alt="">
+                </div>
+                <div class="col-xs-12 text-center">
+                    <div class="see-more carregar-mais-agendas">
+                        <a href="{{ route('page.agenda.loadMore') }}">Ver mais</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
 @endsection
