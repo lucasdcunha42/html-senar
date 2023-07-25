@@ -2121,74 +2121,51 @@ if ($('.action-button').length) {
   \********************************/
 /***/ (() => {
 
-// if($('.buttons-tipos button').length) {
-
-//     var buttonsTipos = $('.buttons-tipos button');
-
-//     buttonsTipos.on('click', function() {
-//         var tipo = $(this).data('tipo');
-//         if(tipo == 0) {
-//             $('.agenda-itens [data-tipo]').stop().show('fast');
-//             return false;
-//         }
-//         $('.agenda-itens [data-tipo]').stop().hide('fast');
-//         $('.agenda-itens [data-tipo="'+ tipo +'"]').stop().show('fast');
-//     });
-
-// }
-
-if ($('.select-agenda-container-----').length) {
-  var _selects = $('.select-agenda-container select');
-  var _cursos = $('body .curso-item');
-  var search = {};
-  search.regiao_evento = '';
-  search.modalidade = '';
-  _selects.on('change', function () {
-    window.ScrollData.currentCount = 0;
-    $('body .curso-item').remove();
-    window.doIt();
-    return false;
-    _cursos = $('body .curso-item');
-    var isEmpty = true;
-    _selects.each(function (index, el) {
-      if ($(el).val() != '') {
-        isEmpty = false;
-      }
+if ($('.carregar-mais-agendas').length) {
+  var _loadMore = $('.carregar-mais-agendas a');
+  var _url = _loadMore.attr('href');
+  var agendasContainer = $('.agendas-container');
+  var agendasLoading = $('.agendas-loading-container');
+  var ___inloading = false;
+  var finishAgendas = false;
+  var agendasCidadeSelect = $('#agendas-cidade-select');
+  var reloadAll = false;
+  $.each([agendasCidadeSelect], function (index, el) {
+    $(el).on('change', function () {
+      reloadAll = true;
+      finishAgendas = false;
+      $('.carregar-mais-agendas').show();
+      _loadMore.trigger('click');
     });
-
-    // está vazio os 2 selects mostra todos os itens
-    if (isEmpty) {
-      _cursos.show('fast');
+  });
+  _loadMore.on('click', function (e) {
+    e.preventDefault();
+    if (___inloading || finishAgendas) {
       return false;
     }
-    search.regiao_evento = $('#cursos-regiao').first().val();
-    search.modalidade = $('#cursos-modalidade').first().val();
-    _cursos.hide('fast');
-    _cursos.each(function (index, el) {
-      var $el = $(el);
-      var modalidade = $el.data('modalidade');
-      var regiao = $el.data('regiao');
-      if (search.modalidade != '' && search.regiao_evento != '') {
-        if (modalidade == search.modalidade && regiao == search.regiao_evento) {
-          $el.stop().show('fast');
-        } else {
-          $el.stop().hide('fast');
-        }
+    var skip = reloadAll ? 0 : $('.agenda-lista .agendas-item').length;
+    var data = {
+      skip: skip,
+      cidade: agendasCidadeSelect.val()
+    };
+    console.log(data);
+    ___inloading = true;
+    agendasLoading.show('fast');
+    $.ajax({
+      method: 'POST',
+      url: _url,
+      data: data
+    }).done(function (response) {
+      var _method = reloadAll ? 'html' : 'append';
+      agendasContainer[_method](response.view);
+      if (response.finish) {
+        finishAgendas = true;
+        $('.carregar-mais-agendas').hide();
       }
-      if (search.modalidade != '' && search.regiao_evento == '') {
-        if (modalidade == search.modalidade) {
-          $el.stop().show('fast');
-        } else {
-          $el.stop().hide('fast');
-        }
-      }
-      if (search.modalidade == '' && search.regiao_evento != '') {
-        if (regiao == search.regiao_evento) {
-          $el.stop().show('fast');
-        } else {
-          $el.stop().hide('fast');
-        }
-      }
+    }).fail(function (jqXHR, textStatus) {}).always(function () {
+      reloadAll = false;
+      ___inloading = false;
+      agendasLoading.hide('fast');
     });
   });
 }
@@ -20230,7 +20207,7 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /************************************************************************/
 /******/ 	// The module cache
 /******/ 	var __webpack_module_cache__ = {};
-/******/
+/******/ 	
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
 /******/ 		// Check if module is in cache
@@ -20244,20 +20221,20 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 			loaded: false,
 /******/ 			exports: {}
 /******/ 		};
-/******/
+/******/ 	
 /******/ 		// Execute the module function
 /******/ 		__webpack_modules__[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-/******/
+/******/ 	
 /******/ 		// Flag the module as loaded
 /******/ 		module.loaded = true;
-/******/
+/******/ 	
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
 /******/ 	}
-/******/
+/******/ 	
 /******/ 	// expose the modules object (__webpack_modules__)
 /******/ 	__webpack_require__.m = __webpack_modules__;
-/******/
+/******/ 	
 /************************************************************************/
 /******/ 	/* webpack/runtime/chunk loaded */
 /******/ 	(() => {
@@ -20290,7 +20267,7 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 			return result;
 /******/ 		};
 /******/ 	})();
-/******/
+/******/ 	
 /******/ 	/* webpack/runtime/global */
 /******/ 	(() => {
 /******/ 		__webpack_require__.g = (function() {
@@ -20302,12 +20279,12 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 			}
 /******/ 		})();
 /******/ 	})();
-/******/
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
 /******/ 	})();
-/******/
+/******/ 	
 /******/ 	/* webpack/runtime/make namespace object */
 /******/ 	(() => {
 /******/ 		// define __esModule on exports
@@ -20318,7 +20295,7 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
 /******/ 	})();
-/******/
+/******/ 	
 /******/ 	/* webpack/runtime/node module decorator */
 /******/ 	(() => {
 /******/ 		__webpack_require__.nmd = (module) => {
@@ -20327,11 +20304,11 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 			return module;
 /******/ 		};
 /******/ 	})();
-/******/
+/******/ 	
 /******/ 	/* webpack/runtime/jsonp chunk loading */
 /******/ 	(() => {
 /******/ 		// no baseURI
-/******/
+/******/ 		
 /******/ 		// object to store loaded and loading chunks
 /******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
@@ -20339,19 +20316,19 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 			"/js/app": 0,
 /******/ 			"css/app": 0
 /******/ 		};
-/******/
+/******/ 		
 /******/ 		// no chunk on demand loading
-/******/
+/******/ 		
 /******/ 		// no prefetching
-/******/
+/******/ 		
 /******/ 		// no preloaded
-/******/
+/******/ 		
 /******/ 		// no HMR
-/******/
+/******/ 		
 /******/ 		// no HMR manifest
-/******/
+/******/ 		
 /******/ 		__webpack_require__.O.j = (chunkId) => (installedChunks[chunkId] === 0);
-/******/
+/******/ 		
 /******/ 		// install a JSONP callback for chunk loading
 /******/ 		var webpackJsonpCallback = (parentChunkLoadingFunction, data) => {
 /******/ 			var [chunkIds, moreModules, runtime] = data;
@@ -20376,20 +20353,20 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 			}
 /******/ 			return __webpack_require__.O(result);
 /******/ 		}
-/******/
+/******/ 		
 /******/ 		var chunkLoadingGlobal = self["webpackChunk"] = self["webpackChunk"] || [];
 /******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
 /******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
 /******/ 	})();
-/******/
+/******/ 	
 /************************************************************************/
-/******/
+/******/ 	
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
 /******/ 	__webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/js/app.js")))
 /******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/sass/app.scss")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
-/******/
+/******/ 	
 /******/ })()
 ;

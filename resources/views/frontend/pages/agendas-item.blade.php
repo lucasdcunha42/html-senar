@@ -1,6 +1,6 @@
 @foreach ($agendas as $agenda)
-<div class="col-sm-3">
-    <div class="c-thumb-4">
+<div class="col-sm-3" data-cidade="{{ $agenda->nome_municipio }}">
+    <div class="c-thumb-4 agendas-item">
         <div class="c-thumb-4__date">
             <span>{{ $agenda->getAttrDateFromFormat('data_inicio', 'Y-m-d', 'd.m.Y') }}</span>
         </div>

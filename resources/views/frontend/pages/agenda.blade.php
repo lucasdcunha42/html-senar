@@ -35,21 +35,9 @@
                         <div class="row">
                             <div class="col-sm-4">
                                 <select
-                                    name="regiao"
-                                    id="agendas-regiao-select"
-                                    class="custom-select">                             >
-                                    <option value="">Região</option>
-                                    @foreach ($regioes as $regiao)
-                                        <option value="{{ $regiao->regiao }}">{{ $regiao->regiao }}</option>
-
-                                    @endforeach
-                                </select>
-                            </div>
-                            <div class="col-sm-4">
-                                <select
                                     name="cidade"
                                     id="agendas-cidade-select"
-                                    class="custom-select"                                >
+                                    class="custom-select">                             >
                                     <option value="">Cidade</option>
                                     @foreach ($cidades as $cidade)
                                         <option value="{{ $cidade }}">{{ $cidade }}</option>
@@ -64,7 +52,7 @@
             {{-- Lista de Agendas --}}
             <div class="row">
                 <div class="col-xs-12">
-                    <div class="cursos-lista">
+                    <div class="agenda-lista">
                         <div class="row agendas-container">
                             @include('frontend.pages.agendas-item', ['agendas' => $agendas])
                         </div>

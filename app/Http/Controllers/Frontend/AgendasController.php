@@ -47,7 +47,7 @@ class AgendasController extends Controller
         debugbar()->info($request);
 
         $skip = $request->get('skip', 0);
-        debugbar()->info('Valor de $skip:', $skip);
+        debugbar()->info('Valor de $skip:'. $skip);
 
         $perPage = 8;
 
@@ -55,8 +55,8 @@ class AgendasController extends Controller
         $query->where('desc_fase_evento', 'Aprovado');
         debugbar()->info('Query:', $query);
 
-        if(!empty($request->filled('regiao'))) {
-            $query->where('regiaoevento', $request->get('regiao'));
+        if(!empty($request->filled('cidade'))) {
+            $query->where('nome_municipio', $request->get('cidade'));
         }
 
         $query->take($perPage)->skip($skip)->orderBy('data_inicio', 'desc');
