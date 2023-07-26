@@ -9,12 +9,12 @@ if ($('.carregar-mais-cursos').length) {
     var __inloading = false;
     var finishCursos = false;
 
-    var cursosAreaInteresseSelect = $('#cursos-area-interesse-select');
+    var cursosNome = $('#nome_curso');
 
     var reloadAll = false;
 
     $.each([
-        cursosAreaInteresseSelect
+        cursosNome
     ], function(index, el) {
         $(el).on('change', function() {
             reloadAll = true;
@@ -36,7 +36,7 @@ if ($('.carregar-mais-cursos').length) {
 
         var data = {
             skip: skip,
-            interesse: cursosAreaInteresseSelect.val()
+            nome: cursosNome.val()
         }
 
         __inloading = true;

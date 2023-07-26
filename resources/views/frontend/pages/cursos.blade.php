@@ -20,42 +20,16 @@
                     </h3>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-xs-12">
-                    <div class="container-auto-width-cursos">
-                        {{-- Pesquisa
-                        <div class="row">
-                            <form action="" method="GET" class="search-form">
-                                @csrf
-                                <div class="col-sm-12 col-xs-12">
-                                    <div class="search">
-                                        <input type="text" name="s" placeholder="Pesquisa" class="custom-search">
-                                        <div class="search-button">
-                                            <button type="submit">Buscar</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
-                        </div> --}}
 
-                        <div class="container-auto-width-cursos">
-                            <div class="row">
-                                <div class="col-sm-4">
-                                    <select
-                                        name="area-interesse"
-                                        id="cursos-area-interesse-select"
-                                        class="custom-select">
-                                        <option value="">Área de Interesse</option>
-                                        @foreach ($areaInteresse as $value)
-                                            <option value="{{ $value->interesse }}">{{ $value->interesse }}</option>
-                                        @endforeach
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
+            <div class="row container-auto-width-cursos">
+                <div class="search-form">
+                    <div class="search-bar">
+                        <input type="text" name="nome_curso" id="nome_curso" placeholder="Pesquisa" class="custom-search">
+                        <button type="submit" class="search-button">Buscar</button>
                     </div>
                 </div>
             </div>
+
             <div class="row">
                 <div class="col-xs-12">
                     <div class="cursos-lista">
@@ -1139,24 +1113,4 @@
     </div>
 
     @include('frontend.partials.agenda')
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script type="text/javascript">
-        $('#search').on('keyup', function()
-        {
-            $value=$(this).val();
-
-            $.ajax({
-                type:'get',
-                url:'{{URL::to('search')}}',
-                data: {'search':$value},
-
-                success:function(data)
-                {
-                    console.log(data);
-                    $('#content').html(data);
-                }
-            })
-        })
-    </script>
-
 @endsection

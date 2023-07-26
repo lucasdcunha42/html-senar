@@ -1,18 +1,17 @@
 .container-auto-width-cursos {
     margin: 0 auto;
-    @include auto-width(95%, 95%, 100%);
+    @include auto-width(100%);
 }
 
 $search-form-padding: 5px;
 
 .search-form {
-  display: flex;
-  justify-content: center;
+  justify-content: stretch;
   width: 100%;
 
   .search-bar {
     display: flex;
-    flex-grow: 1;
+    width: 100%;
     padding: $search-form-padding;
 
     input.custom-search {
@@ -24,14 +23,13 @@ $search-form-padding: 5px;
     }
 
     button {
-      padding: $search-form-padding * 2 $search-form-padding;
+      padding: $search-form-padding * 2 $search-form-padding * 6;
       font-size: 14px;
       background-color: #034906;
       color: #fff;
       border: none;
       border-radius: 0 4px 4px 0;
       cursor: pointer;
-      width: 20%;
     }
   }
 }
