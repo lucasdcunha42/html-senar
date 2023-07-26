@@ -1364,6 +1364,21 @@ button.btn-open-close.open span {
   margin: 0 auto;
   width: 100%;
 }
+@media (max-width: 1199px) {
+  .container-auto-width-cursos {
+    width: 80%;
+  }
+}
+@media (max-width: 991px) {
+  .container-auto-width-cursos {
+    width: 90%;
+  }
+}
+@media (max-width: 767px) {
+  .container-auto-width-cursos {
+    width: 100%;
+  }
+}
 
 .search-form {
   justify-content: stretch;
