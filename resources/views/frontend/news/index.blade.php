@@ -147,7 +147,7 @@
             dateInput.val(picker.startDate.format(dateFormat) + ' - ' + picker.endDate.format(dateFormat));
         });
 
-        dateInput.on('cancel.daterangepicker', function(ev, picker) {
+        dateInput.on    ('cancel.daterangepicker', function(ev, picker) {
             dateInput.val('');
         });
 

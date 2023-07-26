@@ -1362,32 +1362,16 @@ button.btn-open-close.open span {
 
 .container-auto-width-cursos {
   margin: 0 auto;
-  width: 95%;
-}
-@media (max-width: 1199px) {
-  .container-auto-width-cursos {
-    width: 95%;
-  }
-}
-@media (max-width: 991px) {
-  .container-auto-width-cursos {
-    width: 100%;
-  }
-}
-@media (max-width: 767px) {
-  .container-auto-width-cursos {
-    width: 100%;
-  }
+  width: 100%;
 }
 
 .search-form {
-  display: flex;
-  justify-content: center;
+  justify-content: stretch;
   width: 100%;
 }
 .search-form .search-bar {
   display: flex;
-  flex-grow: 1;
+  width: 100%;
   padding: 5px;
 }
 .search-form .search-bar input.custom-search {
@@ -1398,14 +1382,13 @@ button.btn-open-close.open span {
   border-radius: 4px 0 0 4px;
 }
 .search-form .search-bar button {
-  padding: 10px 5px;
+  padding: 10px 30px;
   font-size: 14px;
   background-color: #034906;
   color: #fff;
   border: none;
   border-radius: 0 4px 4px 0;
   cursor: pointer;
-  width: 20%;
 }
 
 .cursos-lista {

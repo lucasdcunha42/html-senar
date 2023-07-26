@@ -4,34 +4,36 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Curso;
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 
 class CoursesController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
         // Obtém o ID da página de agendas (substitua o número 19 pelo ID correto)
         [$page, $blocos] = $this->getPageById(19);
 
         $cursos = Curso::situacaoA()
-                            ->take(8)
-                            ->get();
+                        ->take(8);
 
-        $areaInteresse = Curso::select('areadeinteresse as interesse')
-                            ->where('situacao', 'A')
-                            ->where('areadeinteresse', '!=', null)
-                            ->distinct('areadeinteresse')
-                            ->get();
 
-        return view('frontend.pages.cursos', compact('cursos', 'areaInteresse', 'page', 'blocos'));
+        if($request->nome_curso) {
+            $cursos->where('nome_curso', 'like', "%$request->nome_curso%");
+        }
+
+        $cursos = $cursos->get();
+        debugbar()->info('Request:', $request->nome_curso);
+
+        return view('frontend.pages.cursos', compact('cursos', 'page', 'blocos'));
 
     }
 
     public function single($slug)
     {
         $curso = Curso::with('depoimentos')
-                            ->where('situacao', 'A')
-                            ->where('slug', $slug)
-                            ->firstOrfail();
+                        ->where('situacao', 'A')
+                        ->where('slug', $slug)
+                        ->firstOrfail();
 
         return view('frontend.pages.cursos-single', compact('curso'));
     }
@@ -39,24 +41,24 @@ class CoursesController extends Controller
     public function loadMore()
     {
             $request = request();
-            debugbar()->info('Request:', $request);
+            debugbar()->info('Request:', $request->nome, $request);
 
             $skip = $request->get('skip', 0);
-            debugbar()->info('Skip:', $skip);
+            //debugbar()->info('Skip:', $skip);
 
             $perPage = 8;
 
             $query = Curso::query()->where('situacao', 'A');
-            debugbar()->info('Query:', $query);
+            //debugbar()->info('Query:', $query);
 
-            if(!empty($request->filled('interesse'))) {
-                $query->where('areadeinteresse', $request->get('interesse'));
+            if(!empty($request->filled('nome'))) {
+                $query->where('nome_curso', 'like', "%$request->nome%");
             }
 
             $query->take($perPage)->skip($skip);
 
             $sql = $query->toSql();
-            debugbar()->info('SQL:', $sql);
+            //debugbar()->info('SQL:', $sql);
 
             $cursos = $query->get();
 
