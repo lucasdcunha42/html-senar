@@ -2129,8 +2129,11 @@ if ($('.carregar-mais-agendas').length) {
   var ___inloading = false;
   var finishAgendas = false;
   var agendasCidadeSelect = $('#agendas-cidade-select');
+  var agendaTitulo = $('#titulo_agenda');
+  var intervaloDeDatas = $('#calendarioAgenda');
+  var limpaFiltro = $('#limpa-filtro');
   var reloadAll = false;
-  $.each([agendasCidadeSelect], function (index, el) {
+  $.each([agendasCidadeSelect, agendaTitulo, intervaloDeDatas], function (index, el) {
     $(el).on('change', function () {
       reloadAll = true;
       finishAgendas = false;
@@ -2146,7 +2149,9 @@ if ($('.carregar-mais-agendas').length) {
     var skip = reloadAll ? 0 : $('.agenda-lista .agendas-item').length;
     var data = {
       skip: skip,
-      cidade: agendasCidadeSelect.val()
+      cidade: agendasCidadeSelect.val(),
+      titulo: agendaTitulo.val(),
+      datas: intervaloDeDatas.val()
     };
     console.log(data);
     ___inloading = true;

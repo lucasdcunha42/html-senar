@@ -1364,6 +1364,21 @@ button.btn-open-close.open span {
   margin: 0 auto;
   width: 100%;
 }
+@media (max-width: 1199px) {
+  .container-auto-width-cursos {
+    width: 80%;
+  }
+}
+@media (max-width: 991px) {
+  .container-auto-width-cursos {
+    width: 90%;
+  }
+}
+@media (max-width: 767px) {
+  .container-auto-width-cursos {
+    width: 100%;
+  }
+}
 
 .search-form {
   justify-content: stretch;
@@ -1372,7 +1387,6 @@ button.btn-open-close.open span {
 .search-form .search-bar {
   display: flex;
   width: 100%;
-  padding: 5px;
 }
 .search-form .search-bar input.custom-search {
   width: 100%;
@@ -1548,7 +1562,9 @@ button.btn-open-close.open span {
 }
 
 .select-agenda-container {
-  width: 70%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
   margin-left: auto;
   margin-right: auto;
 }

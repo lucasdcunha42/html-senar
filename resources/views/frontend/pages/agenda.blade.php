@@ -1,5 +1,16 @@
 @extends('templates.master')
 
+@section('js-vendor')
+    <script
+        type="text/javascript"
+        src="{{ asset('js/vendor/moment.min.js') }}">
+    </script>
+    <script
+        type="text/javascript"
+        src="{{ asset('js/vendor/daterangepicker/daterangepicker.min.js') }}">
+    </script>
+@endsection
+
 @section('content')
     @php
         $pageVars = [];
@@ -32,8 +43,8 @@
                 <div class="col-xs-12 text-center">
                     {{-- Barra de Filtros --}}
                     <div class="select-agenda-container">
-                        <div class="row">
-                            <div class="col-sm-4">
+
+                            <div class="col-sm-3">
                                 <select
                                     name="cidade"
                                     id="agendas-cidade-select"
@@ -44,7 +55,26 @@
                                     @endforeach
                                 </select>
                             </div>
-                        </div>
+
+                            <div class="col-sm-6">
+                                <div class="search-form">
+                                    <div class="search-bar">
+                                        <input type="text" name="titulo_agenda" id="titulo_agenda" placeholder="Pesquisa" class="custom-search">
+                                        <button type="submit" class="search-button">Buscar</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-3">
+                                <div class="btn-noticias">
+                                    <input type="text" id="calendarioAgenda" name="date" class="form-control search-date" placeholder="Calendario">
+                                </div>
+                            </div>
+
+                            <div class="col-sm-1">
+                                <button href="{{ route('page.agenda')}}" type="button" class="btn btn-primary" id="limpa-filtro">Remover Filtros</button>
+                            </div>
+
                     </div>
                 </div>
             </div>
@@ -70,3 +100,68 @@
         </div>
     </div>
 @endsection
+
+@section('js')
+    <script>
+
+        var dateFormat = 'DD/MM/YYYY';
+
+        var config = {
+            "autoUpdateInput": false,
+            "locale": {
+                "format": dateFormat,
+                "separator": " - ",
+                "applyLabel": "Aplicar",
+                "cancelLabel": "Cancelar",
+                "fromLabel": "De",
+                "toLabel": "Até",
+                "customRangeLabel": "Custom",
+                "daysOfWeek": [
+                    "Dom",
+                    "Seg",
+                    "Ter",
+                    "Qua",
+                    "Qui",
+                    "Sex",
+                    "Sáb"
+                ],
+                "monthNames": [
+                    "Janeiro",
+                    "Fevereiro",
+                    "Março",
+                    "Abril",
+                    "Maio",
+                    "Junho",
+                    "Julho",
+                    "Agosto",
+                    "Setembro",
+                    "Outubro",
+                    "Novembro",
+                    "Dezembro"
+                ],
+                "firstDay": 0
+            }
+        };
+
+        var inputSelector = $('#calendarioAgenda');
+        var dateInput = $(inputSelector);
+
+
+        dateInput.daterangepicker(config);
+        dateInput.val('');
+
+        dateInput.on('apply.daterangepicker', function(ev, picker) {
+            dateInput.val(picker.startDate.format(dateFormat) + ' - ' + picker.endDate.format(dateFormat));
+        });
+
+        dateInput.on('cancel.daterangepicker', function(ev, picker) {
+            dateInput.val('');
+        });
+
+        dateInput.on('apply.daterangepicker', function(ev, picker) {
+            $('.search-date + img').click();
+        });
+
+    </script>
+@endsection
+
