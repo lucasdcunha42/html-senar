@@ -16,6 +16,7 @@ class AgendasController extends Controller
 
         $agendas = Agenda::whereHas('curso')
             ->orderBy('data_inicio','asc')
+            ->sinceTomorrow('data_inicio')
             ->take(8)
             ->get();
 
@@ -64,7 +65,7 @@ class AgendasController extends Controller
                 $initialDate = \Carbon\Carbon::createFromFormat('d/m/Y', trim($explodedDate[0]))->startOfDay();
                 $finalDate = \Carbon\Carbon::createFromFormat('d/m/Y', trim($explodedDate[1]))->endOfDay();
 
-                $query->whereBetween('created_at', [$initialDate, $finalDate]);
+                $query->whereBetween('data_inicio', [$initialDate, $finalDate]);
             }
         }
 
@@ -73,7 +74,7 @@ class AgendasController extends Controller
         $sql = $query->toSql();
 
         $agendas = $query->get();
-
+        debugbar()->info($query);
         $view = view('frontend.pages.agendas-item', compact('agendas'))->render();
 
         $finish = false;
