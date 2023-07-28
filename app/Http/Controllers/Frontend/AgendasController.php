@@ -12,20 +12,15 @@ class AgendasController extends Controller
     {
         [$page, $blocos] = $this->getPageById(17);
 
-        $regioes = Agenda::select('regiaoevento as regiao')
-                    ->where('desc_fase_evento', 'Aprovado')
-                    ->where('regiaoevento', '!=', null)
-                    ->distinct('regiaoevento')
-                    ->get();
-
         $cidades = Agenda::distinct()->orderBy('nome_municipio')->pluck('nome_municipio');
 
         $agendas = Agenda::whereHas('curso')
             ->orderBy('data_inicio','asc')
+            ->sinceTomorrow('data_inicio')
             ->take(8)
             ->get();
 
-        $vars = ['page', 'blocos', 'agendas', 'regioes', 'cidades'];
+        $vars = ['page', 'blocos', 'agendas', 'cidades'];
 
         return view('frontend.pages.agenda', compact($vars));
     }
@@ -44,7 +39,7 @@ class AgendasController extends Controller
     public function loadMore()
     {
         $request = request();
-        debugbar()->info($request);
+        debugbar()->info($request->request);
 
         $skip = $request->get('skip', 0);
         debugbar()->info('Valor de $skip:'. $skip);
@@ -59,12 +54,27 @@ class AgendasController extends Controller
             $query->where('nome_municipio', $request->get('cidade'));
         }
 
-        $query->take($perPage)->skip($skip)->orderBy('data_inicio', 'desc');
+        if(!empty($request->filled('titulo'))) {
+            $query->where('nome_curso', 'like', "%$request->titulo%");
+        }
+
+        if(!empty($request->has('datas'))) {
+            $date = request()->get('datas');
+            $explodedDate = explode('-', $date);
+            if(count($explodedDate) == 2) {
+                $initialDate = \Carbon\Carbon::createFromFormat('d/m/Y', trim($explodedDate[0]))->startOfDay();
+                $finalDate = \Carbon\Carbon::createFromFormat('d/m/Y', trim($explodedDate[1]))->endOfDay();
+
+                $query->whereBetween('data_inicio', [$initialDate, $finalDate]);
+            }
+        }
+
+        $query->take($perPage)->skip($skip)->orderBy('data_inicio', 'ASC');
 
         $sql = $query->toSql();
 
         $agendas = $query->get();
-
+        debugbar()->info($query);
         $view = view('frontend.pages.agendas-item', compact('agendas'))->render();
 
         $finish = false;

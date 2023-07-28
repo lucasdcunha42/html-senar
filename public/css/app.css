@@ -1387,7 +1387,6 @@ button.btn-open-close.open span {
 .search-form .search-bar {
   display: flex;
   width: 100%;
-  padding: 5px;
 }
 .search-form .search-bar input.custom-search {
   width: 100%;
@@ -1562,25 +1561,109 @@ button.btn-open-close.open span {
   background-color: #fff;
 }
 
-.select-agenda-container {
-  width: 70%;
-  margin-left: auto;
-  margin-right: auto;
+.filtros-agenda {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
 }
 @media (max-width: 1199px) {
-  .select-agenda-container {
-    width: 80%;
+  .filtros-agenda {
+    width: 100%;
   }
 }
 @media (max-width: 991px) {
-  .select-agenda-container {
-    width: 90%;
+  .filtros-agenda {
+    width: 100%;
   }
 }
 @media (max-width: 767px) {
-  .select-agenda-container {
+  .filtros-agenda {
     width: 100%;
   }
+}
+.filtros-agenda .btn-agenda {
+  display: inline-block;
+  position: relative;
+}
+@media (max-width: 767px) {
+  .filtros-agenda .btn-agenda {
+    margin-bottom: 5px;
+  }
+}
+.filtros-agenda .btn-agenda .select-agendas {
+  padding: 10px 0;
+  text-indent: 10px;
+  text-transform: uppercase;
+  color: #464646;
+  border: 0;
+  outline: 0;
+  -moz-appearance: none;
+  /* Firefox */
+  -webkit-appearance: none;
+  /* Safari and Chrome */
+  appearance: none;
+  background-image: url("../images/arrow-down-1.png");
+  background-size: 26px;
+  background-repeat: no-repeat;
+  background-position: 90% center;
+  background-color: #ddd;
+}
+@media (max-width: 767px) {
+  .filtros-agenda .btn-agenda .select-agendas {
+    background-position: 95% center;
+  }
+}
+.filtros-agenda .btn-agenda .select-agendas:focus-visible {
+  outline: 0;
+}
+.filtros-agenda .btn-agenda .select-agendas.bg-white {
+  background-color: #fff;
+}
+.filtros-agenda .btn-agenda button {
+  border: 0px;
+  padding: 0px 20px;
+  background-color: #005c3c;
+  color: #fff;
+  font-size: 16px;
+  height: 40px;
+}
+.filtros-agenda .btn-agenda input {
+  border: 0;
+  background-color: #eeeeee;
+  color: #000;
+  width: 100%;
+  height: 40px;
+}
+.filtros-agenda .btn-agenda img {
+  position: absolute;
+  top: 7px;
+  right: 10px;
+  cursor: pointer;
+}
+.filtros-agenda .btn-agenda .search-form {
+  justify-content: stretch;
+  width: 100%;
+}
+.filtros-agenda .btn-agenda .search-form .search-bar {
+  display: flex;
+  width: 100%;
+}
+.filtros-agenda .btn-agenda .search-form .search-bar input.custom-search {
+  width: 100%;
+  padding: 5px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px;
+}
+.filtros-agenda .btn-agenda .search-form .search-bar button {
+  padding: 10px 30px;
+  font-size: 14px;
+  background-color: #034906;
+  color: #fff;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
 }
 
 .sindicato {

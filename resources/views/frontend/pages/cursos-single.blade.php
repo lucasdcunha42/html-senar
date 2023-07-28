@@ -81,7 +81,9 @@
     </div>
     @endif
     {{--Proximas agendas do Curso -Implementar- --}}
-    @include('frontend.partials.agenda')
+
+    @include('frontend.partials.curso', ['proximasAgendas' => $proximasAgendas]);
+
     @if($curso->depoimentos->isNotEmpty())
         <div class="depoimentos depoimentos-cursos">
             <div class="container">

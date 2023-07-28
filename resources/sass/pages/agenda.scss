@@ -17,12 +17,103 @@
     background-color: #fff;
 }
 
-.select-agenda-container {
+.filtros-agenda {
+    @include auto-width(100%, 100%, 100%, 100%);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
 
-    @include auto-width(70%, 80%, 90%, 100%);
+    .btn-agenda {
+        display: inline-block;
+        position: relative;
 
-    margin-left: auto;
-    margin-right: auto;
+        @include phone {
+            margin-bottom: 5px;
+        }
+
+        .select-agendas {
+            padding: 10px 0;
+            text-indent: 10px;
+            text-transform: uppercase;
+            color: #464646;
+            border: 0;
+            outline: 0;
+
+            -moz-appearance:none; /* Firefox */
+            -webkit-appearance:none; /* Safari and Chrome */
+            appearance:none;
+
+            background-image: url('../images/arrow-down-1.png');
+            background-size: 26px;
+            background-repeat: no-repeat;
+            background-position: 90% center;
+            background-color: #ddd;
+
+            @include phone {
+                background-position: 95% center;
+            }
+
+            &:focus-visible {
+                outline: 0;
+            }
+
+            &.bg-white {
+                background-color: #fff;
+            }
+        }
+
+        button {
+            border: 0px;
+            padding: 0px 20px;
+            background-color: $green-base;
+            color: #fff;
+            font-size: 16px;
+            height: 40px;
+        }
+
+        input {
+            border: 0;
+            background-color: $grey-base;
+            color: #000;
+            width: 100%;
+            height: 40px;
+        }
+
+        img {
+            position: absolute;
+            top: 7px;
+            right: 10px;
+            cursor: pointer;
+        }
+
+        .search-form {
+            justify-content: stretch;
+            width: 100%;
+
+            .search-bar {
+              display: flex;
+              width: 100%;
+
+                input.custom-search {
+                    width: 100%;
+                    padding: $search-form-padding;
+                    font-size: 14px;
+                    border: 1px solid #ccc;
+                    border-radius: 4px 0 0 4px;
+                }
+
+                button {
+                    padding: $search-form-padding * 2 $search-form-padding * 6;
+                    font-size: 14px;
+                    background-color: #034906;
+                    color: #fff;
+                    border: none;
+                    border-radius: 0 4px 4px 0;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
 }
 
 .sindicato {

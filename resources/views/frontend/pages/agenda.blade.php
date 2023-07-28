@@ -1,5 +1,10 @@
 @extends('templates.master')
 
+@section('js-vendor')
+    <script type="text/javascript" src="{{ asset('js/vendor/moment.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/vendor/daterangepicker/daterangepicker.min.js') }}"></script>
+@endsection
+
 @section('content')
     @php
         $pageVars = [];
@@ -29,25 +34,41 @@
     <div class="agenda-section agenda-busca bg-grey">
         <div class="container">
             <div class="row">
-                <div class="col-xs-12 text-center">
+                <div class="filtros-agenda">
                     {{-- Barra de Filtros --}}
-                    <div class="select-agenda-container">
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <select
-                                    name="cidade"
-                                    id="agendas-cidade-select"
-                                    class="custom-select">                             >
-                                    <option value="">Cidade</option>
-                                    @foreach ($cidades as $cidade)
-                                        <option value="{{ $cidade }}">{{ $cidade }}</option>
-                                    @endforeach
-                                </select>
+                    <div class="btn-agenda col-md-3 col-lg-2">
+                        <select name="cidade" id="agendas-cidade-select" class="select-agendas">
+                            <option value="">Cidade</option>
+                            @foreach ($cidades as $cidade)
+                                <option value="{{ $cidade }}">{{ $cidade }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="btn-agenda">
+                            <div class="search-form">
+                                <div class="search-bar">
+                                    <input type="text" name="titulo_agenda" id="titulo_agenda" placeholder="Pesquisa" class="custom-search">
+                                    <button type="submit" class="button">Buscar</button>
+                                </div>
                             </div>
                         </div>
                     </div>
+
+
+                    <div class="btn-agenda col-md-3 col-lg-3">
+                        <input type="text" id="calendarioAgenda" name="date" class="form-control search-date"
+                            placeholder="Calendario">
+                        <img class="img-form" style="width: 20px;top:10px;pointer-events: none;"
+                            src="{{ asset('images/icon-calendar.png') }}">
+                    </div>
+
+                    <div class="btn-agenda col-md-12 col-lg-1">
+                        <button href="{{ route('page.agenda') }}" type="button" class="button" id="limpar"> Limpar </button>
+                    </div>
+
                 </div>
-            </div>
 
             {{-- Lista de Agendas --}}
             <div class="row">
@@ -69,4 +90,68 @@
             </div>
         </div>
     </div>
+@endsection
+
+@section('js')
+    <script>
+        var dateFormat = 'DD/MM/YYYY';
+        var today = moment(); // Obtém o momento atual
+
+        var config = {
+            "autoUpdateInput": false,
+            "startDate": today,
+            "endDate": today.clone().add(1, 'year'), // Define o valor final como 1 ano após o dia atual
+            "locale": {
+                "format": dateFormat,
+                "separator": " - ",
+                "applyLabel": "Aplicar",
+                "cancelLabel": "Cancelar",
+                "fromLabel": "De",
+                "toLabel": "Até",
+                "customRangeLabel": "Custom",
+                "daysOfWeek": [
+                    "Dom",
+                    "Seg",
+                    "Ter",
+                    "Qua",
+                    "Qui",
+                    "Sex",
+                    "Sáb"
+                ],
+                "monthNames": [
+                    "Janeiro",
+                    "Fevereiro",
+                    "Março",
+                    "Abril",
+                    "Maio",
+                    "Junho",
+                    "Julho",
+                    "Agosto",
+                    "Setembro",
+                    "Outubro",
+                    "Novembro",
+                    "Dezembro"
+                ],
+                "firstDay": 0
+            }
+        };
+
+        var inputSelector = $('#calendarioAgenda');
+        var dateInput = $(inputSelector);
+
+        dateInput.daterangepicker(config);
+        dateInput.val('');
+
+        dateInput.on('apply.daterangepicker', function(ev, picker) {
+            dateInput.val(picker.startDate.format(dateFormat) + ' - ' + picker.endDate.format(dateFormat));
+        });
+
+        dateInput.on('cancel.daterangepicker', function(ev, picker) {
+            dateInput.val('');
+        });
+
+        dateInput.on('apply.daterangepicker', function(ev, picker) {
+            $('.search-date').change();
+        });
+    </script>
 @endsection
