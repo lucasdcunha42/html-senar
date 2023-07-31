@@ -23,7 +23,6 @@ class CoursesController extends Controller
         }
 
         $cursos = $cursos->get();
-        debugbar()->info('Request:', $request->nome_curso);
 
         return view('frontend.pages.cursos', compact('cursos', 'page', 'blocos'));
 
@@ -49,7 +48,6 @@ class CoursesController extends Controller
     public function loadMore()
     {
             $request = request();
-            debugbar()->info('Request:', $request->nome, $request);
 
             $skip = $request->get('skip', 0);
             //debugbar()->info('Skip:', $skip);

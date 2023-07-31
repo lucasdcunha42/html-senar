@@ -39,16 +39,13 @@ class AgendasController extends Controller
     public function loadMore()
     {
         $request = request();
-        debugbar()->info($request->request);
 
         $skip = $request->get('skip', 0);
-        debugbar()->info('Valor de $skip:'. $skip);
 
         $perPage = 8;
 
         $query = Agenda::query();
         $query->where('desc_fase_evento', 'Aprovado');
-        debugbar()->info('Query:', $query);
 
         if(!empty($request->filled('cidade'))) {
             $query->where('nome_municipio', $request->get('cidade'));
@@ -74,7 +71,6 @@ class AgendasController extends Controller
         $sql = $query->toSql();
 
         $agendas = $query->get();
-        debugbar()->info($query);
         $view = view('frontend.pages.agendas-item', compact('agendas'))->render();
 
         $finish = false;
