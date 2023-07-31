@@ -60,8 +60,8 @@
                         <img class="img-form" style="top:10px;pointer-events: none;">
                     </div>
 
-                    <div class="btn-agenda col-xs-6 col-md-6 col-lg-1">
-                        <button href="{{ route('page.agenda') }}" type="button" class="button"> Pesquisa </button>
+                    <div class="btn-agenda col-xs-6 col-md-6 col-lg-1" style="padding: 0 0 0 15px">
+                        <button href="{{ route('page.agenda') }}" type="button" class="button"> Pesquisar </button>
                     </div>
 
                     <div class="btn-agenda col-xs-6 col-md-6 col-lg-1">

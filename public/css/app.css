@@ -1657,7 +1657,9 @@ button.btn-open-close.open span {
 }
 .filtros-agenda .btn-agenda button {
   width: 100%;
+  padding: 0px;
   height: 40px;
+  text-align: center;
   font-size: 14px;
   background-color: #005c3c;
   color: #fff;

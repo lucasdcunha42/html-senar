@@ -17,6 +17,7 @@
     background-color: #fff;
 }
 
+
 .filtros-agenda {
     @include auto-width(100%, 100%, 100%, 100%);
     display: flex;
@@ -107,7 +108,9 @@
 
         button {
             width: 100%;
+            padding: 0px;
             height: 40px;
+            text-align: center;
             font-size: 14px;
             background-color: $green-base;
             color: #fff;
