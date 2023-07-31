@@ -2174,14 +2174,12 @@ if ($('.carregar-mais-agendas').length) {
     });
   });
   $(document).ready(function () {
-    // ...
-    // Outro código existente
-
     // Crie uma função para limpar os filtros
     function limparFiltros() {
       agendasCidadeSelect.val(''); // Limpar o campo de seleção da cidade
       agendaTitulo.val(''); // Limpar o campo de título da agenda
       intervaloDeDatas.val(''); // Limpar o campo de intervalo de datas
+      reloadAll = true;
 
       // Aqui você pode adicionar limpeza adicional para outros campos, se necessário
     }
@@ -2193,9 +2191,6 @@ if ($('.carregar-mais-agendas').length) {
       $('.carregar-mais-agendas').show(); // Mostre o botão de "Carregar mais" novamente
       _loadMore.trigger('click'); // Acione o clique no botão "Carregar mais" para recarregar as agendas
     });
-
-    // ...
-    // Outro código existente
   });
 }
 

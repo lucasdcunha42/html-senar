@@ -31,12 +31,13 @@
         </div>
     </div>
 
-    <div class="agenda-section agenda-busca bg-grey">
+    <div class="agenda-section col-xs-12 bg-grey">
         <div class="container">
             <div class="row">
                 <div class="filtros-agenda">
                     {{-- Barra de Filtros --}}
-                    <div class="btn-agenda col-md-3 col-lg-2">
+
+                    <div class="btn-agenda col-xs-12 col-md-3 col-lg-3">
                         <select name="cidade" id="agendas-cidade-select" class="select-agendas">
                             <option value="">Cidade</option>
                             @foreach ($cidades as $cidade)
@@ -45,28 +46,28 @@
                         </select>
                     </div>
 
-                    <div class="col-md-6 col-lg-4">
-                        <div class="btn-agenda">
-                            <div class="search-form">
-                                <div class="search-bar">
-                                    <input type="text" name="titulo_agenda" id="titulo_agenda" placeholder="Pesquisa" class="custom-search">
-                                    <button type="submit" class="button">Buscar</button>
-                                </div>
+                    <div class="btn-agenda col-xs-12 col-md-6 col-lg-4">
+                        <div class="search-form">
+                            <div class="search-bar">
+                                <input type="text" name="titulo_agenda" id="titulo_agenda" placeholder="Pesquisa" class="custom-search">
                             </div>
                         </div>
                     </div>
 
-
-                    <div class="btn-agenda col-md-3 col-lg-3">
+                    <div class="btn-agenda col-xs-12 col-md-3 col-lg-3">
                         <input type="text" id="calendarioAgenda" name="date" class="form-control search-date"
-                            placeholder="Calendario">
-                        <img class="img-form" style="width: 20px;top:10px;pointer-events: none;"
-                            src="{{ asset('images/icon-calendar.png') }}">
+                            placeholder="Calendário">
+                        <img class="img-form" style="top:10px;pointer-events: none;">
                     </div>
 
-                    <div class="btn-agenda col-md-12 col-lg-1">
+                    <div class="btn-agenda col-xs-6 col-md-6 col-lg-1">
+                        <button href="{{ route('page.agenda') }}" type="button" class="button"> Pesquisa </button>
+                    </div>
+
+                    <div class="btn-agenda col-xs-6 col-md-6 col-lg-1">
                         <button href="{{ route('page.agenda') }}" type="button" class="button" id="limpar"> Limpar </button>
                     </div>
+
 
                 </div>
 
