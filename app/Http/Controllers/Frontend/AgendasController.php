@@ -45,7 +45,8 @@ class AgendasController extends Controller
         $perPage = 8;
 
         $query = Agenda::query();
-        $query->where('desc_fase_evento', 'Aprovado');
+
+        $query->where('desc_fase_evento', 'Aprovado')->sinceTomorrow('data_inicio');
 
         if(!empty($request->filled('cidade'))) {
             $query->where('nome_municipio', $request->get('cidade'));
