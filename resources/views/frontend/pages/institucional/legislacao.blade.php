@@ -25,60 +25,68 @@
         </div>
     </div>
 
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 text-center">
+                <input type="text" id="filtroPesquisa" placeholder="Digite o termo de busca">
+            </div>
+        </div>
+    </div>
+
     @if($legislacaoCategorias->isNotEmpty())
         <div class="accordion-section">
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12">
                         <div class="accordion-container">
-                            <div class="accordion-container">
-                                @foreach ($legislacaoCategorias as $categoria)
-                                    <div class="accord-item">
-                                        <div class="accord-title">
-                                            <span>{!! $categoria->titulo !!}</span>
-                                            <button class="btn-open-close">
-                                                <span></span>
-                                                <span></span>
-                                            </button>
-                                        </div>
-                                        <div class="accord-desc">
-                                            @foreach($categoria->legislacoes as $legislacao)
-                                                <div class="link-legislacao">
-
-                                                    @php $files = $legislacao->getArrayFiles() @endphp
-                                                    @if(isset($files[0]) && !empty($files[0]->download_link))
-                                                        <div>
-                                                            <a target="_blank" class="legislacao-link" data-pdf="{{ 'storage/' . $files[0]->download_link }}" >
-                                                                {!! $legislacao->titulo !!}
-                                                            </a>
-                                                        </div>
-                                                    @elseif(!empty($legislacao->link))
-                                                        <div>
-                                                            <a target="_blank" href="{{ $legislacao->link }}">
-                                                                {!! $legislacao->titulo !!}
-                                                            </a>
-                                                        </div>
-                                                    @else
-                                                        <h4>{!! $legislacao->titulo !!}</h4>
-                                                    @endif
-                                                </div>
-                                            @endforeach
-                                        </div>
+                            @foreach ($legislacaoCategorias as $categoria)
+                                <div class="accord-item">
+                                    <div class="accord-title">
+                                        <span>{!! $categoria->titulo !!}</span>
+                                        <button class="btn-open-close">
+                                            <span></span>
+                                            <span></span>
+                                        </button>
                                     </div>
-                                @endforeach
-                            </div>
-                            <div class="modal fade" id="pdfModal" tabindex="-1" role="dialog" aria-labelledby="pdfModalLabel" aria-hidden="true">
-                                <div class="modal-dialog modal-lg" role="document">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="pdfModalLabel">Visualizar PDF</h5>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-                                                <span aria-hidden="true">&times;</span>
-                                            </button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <iframe id="pdfIframe" width="100%" height="700px"></iframe>
-                                        </div>
+                                    <div class="accord-desc">
+                                        @foreach($categoria->legislacoes as $legislacao)
+                                            <div class="link-legislacao">
+
+                                                @php $files = $legislacao->getArrayFiles() @endphp
+                                                @if(isset($files[0]) && !empty($files[0]->download_link))
+                                                    <div>
+                                                        <a target="_blank" class="legislacao-link" data-pdf="{{ 'storage/' . $files[0]->download_link }}" >
+                                                            {!! $legislacao->titulo !!}
+                                                        </a>
+                                                    </div>
+                                                @elseif(!empty($legislacao->link))
+                                                    <div class="link-legislacao">
+                                                        <a target="_blank" href="{{ $legislacao->link }}">
+                                                            {!! $legislacao->titulo !!}
+                                                        </a>
+                                                    </div>
+                                                @else
+                                                    <div class="link-legislacao">
+                                                        <h4>{!! $legislacao->titulo !!}</h4>
+                                                    </div>
+                                                @endif
+                                            </div>
+                                        @endforeach
+                                    </div>
+                                </div>
+                            @endforeach
+                        </div>
+                        <div class="modal fade" id="pdfModal" tabindex="-1" role="dialog" aria-labelledby="pdfModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="pdfModalLabel">Visualizar PDF</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <iframe id="pdfIframe" width="100%" height="700px"></iframe>
                                     </div>
                                 </div>
                             </div>
@@ -94,6 +102,34 @@
 
 @section('js')
     <script>
+
+        // Função para filtrar as legislações com base no termo de busca
+        function filtrarLegislacoes(termo) {
+            const linksLegislacao = document.querySelectorAll('.link-legislacao');
+            const categorias = document.querySelectorAll('.accord-item');
+
+            categorias.forEach(categoria => {
+                let categoriaEncontrada = false;
+
+                categoria.querySelectorAll('.link-legislacao').forEach(link => {
+                    const titulo = link.textContent.toLowerCase();
+
+                    if (termo === '' || titulo.includes(termo)) {
+                        link.style.display = 'block';
+                        categoriaEncontrada = true;
+                    } else {
+                        link.style.display = 'none';
+                    }
+                });
+
+                if (categoriaEncontrada) {
+                    categoria.style.display = 'block';
+                } else {
+                    categoria.style.display = 'none';
+                }
+            });
+        }
+
         // Evento para abrir o modal e carregar o PDF ao clicar no link da legislação
         $('.legislacao-link').click(function(e) {
             pdfLink = $(this).data('pdf');
@@ -107,6 +143,12 @@
         $('#pdfModal').on('hidden.bs.modal', function () {
             $('#pdfIframe').attr('src', '');
             pdfLink = '';
+        });
+
+        // Evento para filtrar as legislações ao digitar no campo de busca
+        $('#filtroPesquisa').on('input', function() {
+            const termoBusca = $(this).val().trim().toLowerCase();
+            filtrarLegislacoes(termoBusca);
         });
     </script>
 @endsection
