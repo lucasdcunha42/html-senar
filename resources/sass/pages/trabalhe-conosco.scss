@@ -8,13 +8,13 @@
 
 #filtroPesquisa {
 
-        border:0;
-        border-bottom: 1px solid gray;
-        width: 70%;
-        max-width: auto; /* Defina um valor máximo para o campo de busca */
-        margin: 0 auto 40px; /* Centraliza a barra de pesquisa e adiciona um espaçamento */
+    border:0;
+    border-bottom: 1px solid gray;
+    width: 70%;
+    max-width: auto; /* Defina um valor máximo para o campo de busca */
+    margin: 0 auto 40px; /* Centraliza a barra de pesquisa e adiciona um espaçamento */
 
-        &:focus-visible {
-            outline: 0;
-        }
+    &:focus-visible {
+        outline: 0;
+    }
 }

@@ -104,6 +104,7 @@
     <script>
 
         // Função para filtrar as legislações com base no termo de busca
+        // Função para filtrar as legislações com base no termo de busca
         function filtrarLegislacoes(termo) {
             const linksLegislacao = document.querySelectorAll('.link-legislacao');
             const categorias = document.querySelectorAll('.accord-item');
@@ -124,6 +125,8 @@
 
                 if (categoriaEncontrada) {
                     categoria.style.display = 'block';
+                    // Mostra o dropdown correspondente
+                    categoria.querySelector('.accord-desc').style.display = 'block';
                 } else {
                     categoria.style.display = 'none';
                 }
