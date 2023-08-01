@@ -23,3 +23,15 @@
 .legislacao-link {
     cursor: pointer;
 }
+
+.xis {
+
+        background-color: transparent; /* Define o fundo como totalmente transparente */
+        border-color: transparent; /* Define a borda como totalmente transparente */
+
+      /* Caso queira remover a aparência de botão ao passar o mouse sobre ele */
+    &:hover {
+        background-color: transparent;
+        border-color: transparent;
+    }
+}

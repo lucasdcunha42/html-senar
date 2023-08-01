@@ -2103,6 +2103,18 @@ button.btn-open-close.open span {
   cursor: pointer;
 }
 
+.xis {
+  background-color: transparent;
+  /* Define o fundo como totalmente transparente */
+  border-color: transparent;
+  /* Define a borda como totalmente transparente */
+  /* Caso queira remover a aparência de botão ao passar o mouse sobre ele */
+}
+.xis:hover {
+  background-color: transparent;
+  border-color: transparent;
+}
+
 .transparencia-accordion .texto {
   margin-bottom: 30px;
 }

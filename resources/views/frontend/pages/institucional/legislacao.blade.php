@@ -29,7 +29,9 @@
         <div class="row">
             <div class="col-xs-12 text-center">
                 <input type="text" id="filtroPesquisa" placeholder="Digite o termo de busca">
-                <button href="{{ route('page.legislacao') }}" type="button" class="button" id="limpar"> Limpar </button>
+                <button type="button" class="btn btn-transparent xis" aria-label="Close" id="limpar">
+                    <span aria-hidden="true">X</span>
+                </button>
             </div>
         </div>
     </div>
