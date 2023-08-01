@@ -29,6 +29,7 @@
         <div class="row">
             <div class="col-xs-12 text-center">
                 <input type="text" id="filtroPesquisa" placeholder="Digite o termo de busca">
+                <button href="{{ route('page.legislacao') }}" type="button" class="button" id="limpar"> Limpar </button>
             </div>
         </div>
     </div>
@@ -76,11 +77,11 @@
                                 </div>
                             @endforeach
                         </div>
-                        <div class="modal fade" id="pdfModal" tabindex="-1" role="dialog" aria-labelledby="pdfModalLabel" aria-hidden="true">
+                        <div class="modal fade custom-modal" id="pdfModal" tabindex="-1" role="dialog" aria-labelledby="pdfModalLabel" aria-hidden="true">
                             <div class="modal-dialog modal-lg" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title" id="pdfModalLabel">Visualizar PDF</h5>
+                                        <h5 class="modal-title text-center" id="pdfModalLabel">{!! $legislacao->titulo !!}</h5>
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
                                             <span aria-hidden="true">&times;</span>
                                         </button>
@@ -103,7 +104,29 @@
 @section('js')
     <script>
 
-        // Função para filtrar as legislações com base no termo de busca
+        // Função para fechar todos os dropdowns
+        function fecharTodosDropdowns() {
+            const dropdowns = document.querySelectorAll('.accord-desc');
+            dropdowns.forEach(dropdown => {
+                dropdown.style.display = 'none';
+            });
+        }
+
+        function mostrarTodasCategorias() {
+            const categorias = document.querySelectorAll('.accord-item');
+            categorias.forEach(categoria => {
+                categoria.style.display = 'block';
+            });
+        }
+
+
+        document.getElementById('limpar').addEventListener('click', function () {
+            filtrarLegislacoes('');
+            fecharTodosDropdowns();
+            mostrarTodasCategorias();
+            document.getElementById('filtroPesquisa').value = '';
+        });
+
         // Função para filtrar as legislações com base no termo de busca
         function filtrarLegislacoes(termo) {
             const linksLegislacao = document.querySelectorAll('.link-legislacao');

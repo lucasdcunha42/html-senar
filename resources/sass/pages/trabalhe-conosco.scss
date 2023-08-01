@@ -10,11 +10,16 @@
 
     border:0;
     border-bottom: 1px solid gray;
-    width: 70%;
+    width: 65%;
     max-width: auto; /* Defina um valor máximo para o campo de busca */
     margin: 0 auto 40px; /* Centraliza a barra de pesquisa e adiciona um espaçamento */
+    align-self: flex-start;
 
     &:focus-visible {
         outline: 0;
     }
+}
+
+.legislacao-link {
+    cursor: pointer;
 }
