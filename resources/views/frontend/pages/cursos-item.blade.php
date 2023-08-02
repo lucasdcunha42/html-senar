@@ -1,4 +1,4 @@
-@foreach($cursos as $curso)
+@forelse($cursos as $curso)
     <div class="col-sm-3" data-area-interesse="{{ $curso->areadeinteresse }}">
         <div class="curso-item" style="background-image: url({{ asset('storage/' . $curso->imagem) }})">
             <div class="curso-overlay"></div>
@@ -9,4 +9,7 @@
             </div>
         </div>
     </div>
-@endforeach
+
+    @empty
+        <p class="page-title center"> Não há mais Cursos </p>
+@endforelse

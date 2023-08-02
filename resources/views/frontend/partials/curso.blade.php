@@ -1,4 +1,3 @@
-@if($proximasAgendas->isNotEmpty())
     <div class="agenda" style="background-image: url('{{ imgSetting('geral.bg-agenda-home') }}')">
 
         <div class="container">
@@ -6,17 +5,21 @@
             <div class="row">
                 <div class="col-xs-12">
                     <h3 class="page-title center">
-                        Agenda
+                        Proximas agendas do Curso
                     </h3>
                 </div>
             </div>
 
             <div class="row">
-                @foreach($proximasAgendas as $evento)
+                @forelse($proximasAgendas as $evento)
                     <div class="col-sm-4 col-md-3">
                         @include('components.c-thumb-4', ['evento' => $evento])
                     </div>
-                @endforeach
+                @empty
+                    <h3 class="page-subtitle-center" style="color: white">
+                        Infelizmente não há agendas proximas para este curso
+                    </h3>
+                @endforelse
             </div>
 
         </div>
@@ -26,4 +29,3 @@
         </div>
 
     </div>
-@endif
