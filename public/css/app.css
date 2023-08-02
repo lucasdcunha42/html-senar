@@ -2085,6 +2085,36 @@ button.btn-open-close.open span {
   color: #777;
 }
 
+#filtroPesquisa {
+  border: 0;
+  border-bottom: 1px solid gray;
+  width: 65%;
+  max-width: auto;
+  /* Defina um valor máximo para o campo de busca */
+  margin: 0 auto 40px;
+  /* Centraliza a barra de pesquisa e adiciona um espaçamento */
+  align-self: flex-start;
+}
+#filtroPesquisa:focus-visible {
+  outline: 0;
+}
+
+.legislacao-link {
+  cursor: pointer;
+}
+
+.xis {
+  background-color: transparent;
+  /* Define o fundo como totalmente transparente */
+  border-color: transparent;
+  /* Define a borda como totalmente transparente */
+  /* Caso queira remover a aparência de botão ao passar o mouse sobre ele */
+}
+.xis:hover {
+  background-color: transparent;
+  border-color: transparent;
+}
+
 .transparencia-accordion .texto {
   margin-bottom: 30px;
 }
