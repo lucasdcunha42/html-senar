@@ -80,17 +80,31 @@
                             @endforeach
                         </div>
                         <div class="modal fade custom-modal" id="pdfModal" tabindex="-1" role="dialog" aria-labelledby="pdfModalLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-lg" role="document">
-                                <div class="modal-content">
+                            <div class="modal-dialog modal-lg custom-modal-dialog" role="document">
+                                <div class="modal-content custom-modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title text-center" id="pdfModalLabel">{!! $legislacao->titulo !!}</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
+                                        <div class="row align-items-center">
+                                            <!-- Botão de fechar (coluna 1) -->
+                                            <div class="col-4 text-right">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar" style="padding-right: 20px;">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <!-- Logo (coluna 2) -->
+                                            <div class="col-4 text-center">
+                                                <img src="{{ asset('storage/' . setting('site.logo')) }}" alt="Logo" class="img-fluid" style="max-height: 80px;">
+                                            </div>
+                                            <!-- Título (coluna 3) -->
+                                            <div class="col-4 text-center">
+                                                <h5 class="modal-title" id="pdfModalLabel">{!! $legislacao->titulo !!}</h5>
+                                            </div>
+                                        </div>
                                     </div>
+
                                     <div class="modal-body">
                                         <iframe id="pdfIframe" width="100%" height="700px"></iframe>
                                     </div>
+
                                 </div>
                             </div>
                         </div>
