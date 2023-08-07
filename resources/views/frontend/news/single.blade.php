@@ -96,6 +96,7 @@
                             <a target="_blank" href="https://twitter.com/share?url={{ $currentUrl }}&text={{ $noticia->titulo }}&hashtags=senar-rs">
                             <img
                                 src="{{ asset('images/icons/twitter.png') }}"
+                                style="height: 15px; margin: 5px"
                                 alt=""></a>
                         </span>
                         {{-- <span>
