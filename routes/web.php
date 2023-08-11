@@ -83,4 +83,4 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('/update-xml-sindicatos', [SindicatosController::class, 'update'])->name('xml.sindicatos.update');
 });
 
-Route::redirect('/admin', 'admin/cursos');
+//Route::redirect('/admin', 'admin/cursos');
