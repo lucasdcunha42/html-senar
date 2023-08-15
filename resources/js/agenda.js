@@ -43,7 +43,6 @@ if($('.carregar-mais-agendas').length) {
             titulo: agendaTitulo.val(),
             datas: intervaloDeDatas.val()
         }
-        console.log(data);
         ___inloading = true;
 
         agendasLoading.show('fast');
@@ -61,7 +60,9 @@ if($('.carregar-mais-agendas').length) {
 
             if(response.finish) {
                 finishAgendas = true;
-                $('.carregar-mais-agendas').hide();
+                _loadMore.hide();
+                $('.no-more-agendas').show();
+
             }
 
         })
@@ -74,6 +75,8 @@ if($('.carregar-mais-agendas').length) {
             agendasLoading.hide('fast');
         });
     });
+
+
 
     $(document).ready(function() {
 
