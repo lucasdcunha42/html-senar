@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Banner extends Model
 {
     public $appends = ['image_url'];
+    protected $fillable = ['status'];
 
     public function getImageUrlAttribute()
     {
@@ -28,4 +29,6 @@ class Banner extends Model
     {
         return !empty(trim($this->subtitulo)) ? '<p>'.$this->subtitulo.'</p>' : '';
     }
+
+
 }

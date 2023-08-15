@@ -86,6 +86,7 @@
                 <div class="col-xs-12 text-center">
                     <div class="see-more carregar-mais-agendas">
                         <a href="{{ route('page.agenda.loadMore') }}">Ver mais</a>
+                        <p class="col-xs-12 text-center no-more-agendas" style="display: none;"> Não há mais agendas</p>
                     </div>
                 </div>
             </div>

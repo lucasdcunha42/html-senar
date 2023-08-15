@@ -22,4 +22,25 @@ class Noticia extends CustomModel
         }
         return '';
     }
+
+    public function getArrayFiles()
+    {
+
+        $arquivos = json_decode($this->arquivo);
+
+        if(!is_array($arquivos)) {
+            return null;
+        }
+
+        if(!count($arquivos)) {
+            return null;
+        }
+
+        $arr = [];
+
+        foreach($arquivos as $arquivo) {
+            $arr[] = $arquivo;
+        }
+        return $arr;
+    }
 }
