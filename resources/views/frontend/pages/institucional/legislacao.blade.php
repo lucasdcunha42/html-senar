@@ -96,7 +96,7 @@
                                             </div>
                                             <!-- Título (coluna 3) -->
                                             <div class="col-4 text-center">
-                                                <h5 class="modal-title" id="pdfModalLabel">{!! $legislacao->titulo !!}</h5>
+                                                <h5 class="modal-title" id="pdfModalLabel"></h5>
                                             </div>
                                         </div>
                                     </div>
@@ -175,15 +175,18 @@
         // Evento para abrir o modal e carregar o PDF ao clicar no link da legislação
         $('.legislacao-link').click(function(e) {
             pdfLink = $(this).data('pdf');
-            console.log(pdfLink);
+            const legislacaoTitulo = $(this).text(); // Obtém o título da legislação
 
             $('#pdfIframe').attr('src', pdfLink);
+            $('#pdfModalLabel').text(legislacaoTitulo); // Define o título do modal dinamicamente
             $('#pdfModal').modal('show');
+
         });
 
         // Evento para limpar a URL do PDF quando o modal for fechado
         $('#pdfModal').on('hidden.bs.modal', function () {
             $('#pdfIframe').attr('src', '');
+            $('#pdfModalLabel').text(''); // Limpa o título do modal ao fechar
             pdfLink = '';
         });
 
