@@ -12,7 +12,8 @@ class AgendaComposer
 
     public function __construct()
     {
-        $this->agendas = Agenda::orderBy('data_inicio', 'desc')
+        $this->agendas = Agenda::orderBy('data_inicio', 'ASC')
+                            ->sinceTomorrow('data_inicio')
                             ->take(4)
                             ->get();
     }
