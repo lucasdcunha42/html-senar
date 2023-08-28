@@ -1834,8 +1834,8 @@ button.btn-open-close.open span {
 }
 
 .noticias-filter-buttons {
-  width: 80%;
-  margin: 80px auto 0;
+  width: 100%;
+  margin: 20px auto 0;
 }
 @media (max-width: 991px) {
   .noticias-filter-buttons {
@@ -1844,13 +1844,13 @@ button.btn-open-close.open span {
 }
 .noticias-filter-buttons .btn-noticias {
   display: inline-block;
-  width: 24%;
+  width: 49.5%;
   position: relative;
 }
 @media (max-width: 767px) {
   .noticias-filter-buttons .btn-noticias {
-    width: 49%;
-    margin-bottom: 3px;
+    width: 100%;
+    margin-bottom: 10px;
   }
 }
 .noticias-filter-buttons .btn-noticias button {

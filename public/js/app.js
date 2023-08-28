@@ -2153,7 +2153,6 @@ if ($('.carregar-mais-agendas').length) {
       titulo: agendaTitulo.val(),
       datas: intervaloDeDatas.val()
     };
-    console.log(data);
     ___inloading = true;
     agendasLoading.show('fast');
     $.ajax({
@@ -2165,7 +2164,8 @@ if ($('.carregar-mais-agendas').length) {
       agendasContainer[_method](response.view);
       if (response.finish) {
         finishAgendas = true;
-        $('.carregar-mais-agendas').hide();
+        _loadMore.hide();
+        $('.no-more-agendas').show();
       }
     }).fail(function (jqXHR, textStatus) {}).always(function () {
       reloadAll = false;

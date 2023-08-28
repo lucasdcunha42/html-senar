@@ -13,7 +13,8 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        //
+        'App\Console\Commands\ativarBanner',
+        'App\Console\Commands\desativarBanner'
     ];
 
     /**
@@ -24,7 +25,11 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        // $schedule->command('inspire')->hourly();
+        //$schedule->command('banner:ativar')->everyMinute();
+        //$schedule->command('banner:desativar')->everyMinute();
+        $schedule->call(function(){
+            info('Todo Minuto Teste Cron');
+        });
     }
 
     /**

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Agenda;
 use App\Http\Controllers\Controller;
+use App\SindicatosMunicipio;
 use Illuminate\Http\Request;
 
 class AgendasController extends Controller
@@ -12,7 +13,7 @@ class AgendasController extends Controller
     {
         [$page, $blocos] = $this->getPageById(17);
 
-        $cidades = Agenda::distinct()->orderBy('nome_municipio')->pluck('nome_municipio');
+        $cidades = SindicatosMunicipio::distinct()->orderBy('municipio')->pluck('municipio');
 
         $agendas = Agenda::whereHas('curso')
             ->orderBy('data_inicio','asc')
