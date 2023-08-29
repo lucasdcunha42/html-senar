@@ -1,4 +1,4 @@
-@if($composeAgenda->isNotEmpty())
+@if($proximasAgendas->isNotEmpty())
     <div class="agenda" style="background-image: url('{{ imgSetting('geral.bg-agenda-home') }}')">
 
         <div class="container">
@@ -12,7 +12,7 @@
             </div>
 
             <div class="row">
-                @foreach($composeAgenda as $evento)
+                @foreach($proximasAgendas as $evento)
                     <div class="col-sm-4 col-md-3">
                         @include('components.c-thumb-4', ['evento' => $evento])
                     </div>

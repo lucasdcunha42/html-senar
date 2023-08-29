@@ -28,7 +28,7 @@ class SindicatosController extends Controller
 
             foreach($xmlSindicatos['Sindicato'] as $sindicato){
 
-                $xmlArraySindicato['nome'] = (String)$sindicato['Nome'];
+                $xmlArraySindicato['nome'] =  mb_strtoupper($sindicato['Nome'], 'UTF-8');
                 $xmlArraySindicato['sistema'] = 'farsul';
 
                 if((string)$sindicato['Tipo'] == 'T') {
@@ -70,7 +70,6 @@ class SindicatosController extends Controller
 
                     if ($sindicatoCriado) {
                         $sindicatoCriado =  DB::table('sindicatos')->where(['codigo' => $xmlArraySindicato['codigo']])->first();
-
 
                         foreach($sindicato->Abrangencia as $cidades){
                             foreach ($cidades as $cidade) {

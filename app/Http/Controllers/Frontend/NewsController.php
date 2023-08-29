@@ -43,7 +43,7 @@ class NewsController extends Controller
         return view('frontend.news.single', compact('noticia', 'galeria'));
     }
 
-    public function loadMore()
+    public function     loadMore()
     {
         $request = request();
 

@@ -49,12 +49,7 @@
             <div class="row">
                 <div class="col-xs-12">
                     <div class="noticias-filter-buttons">
-                        <div class="btn-noticias">
-                            <button>Notícias</button>
-                        </div>
-                        <div class="btn-noticias">
-                            <button>Boletim de Rádio</button>
-                        </div>
+
                         <div class="btn-noticias">
                             <input type="text" name="date" class="form-control search-date">
                             <img
@@ -70,6 +65,7 @@
                                 data-route="{{ url()->current() }}"
                                 src="{{ asset('images/icon-search.png') }}" alt="">
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -147,7 +143,7 @@
             dateInput.val(picker.startDate.format(dateFormat) + ' - ' + picker.endDate.format(dateFormat));
         });
 
-        dateInput.on('cancel.daterangepicker', function(ev, picker) {
+        dateInput.on    ('cancel.daterangepicker', function(ev, picker) {
             dateInput.val('');
         });
 

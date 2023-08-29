@@ -17,10 +17,152 @@
     background-color: #fff;
 }
 
-.select-agenda-container {
 
-    @include auto-width(70%, 80%, 90%, 100%);
+.filtros-agenda {
+    @include auto-width(100%, 100%, 100%, 100%);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
 
-    margin-left: auto;
-    margin-right: auto;
+    .btn-agenda {
+        display: inline-block;
+        position: relative;
+        margin-bottom: 10px;
+
+        .select-agendas {
+            width: 100%;
+            padding: 10px 0;
+            text-indent: 10px;
+            text-transform: uppercase;
+            color: #464646;
+            border: 0;
+            outline: 0;
+
+            -moz-appearance:none; /* Firefox */
+            -webkit-appearance:none; /* Safari and Chrome */
+            appearance:none;
+
+            background-image: url('../images/arrow-down-1.png');
+            background-size: 20px;
+            background-repeat: no-repeat;
+            background-position: 95% center;
+            background-color: #ddd;
+
+            @include phone {
+                background-position: 95% center;
+            }
+
+            &:focus-visible {
+                outline: 0;
+            }
+
+            &.bg-white {
+                background-color: #fff;
+            }
+        }
+
+        input {
+            border: 0;
+            background-color: $grey-base;
+            color: #000;
+            width: 100%;
+            height: 40px;
+        }
+
+        img {
+            position: absolute;
+            top: 7px;
+            right: 10px;
+            cursor: pointer;
+        }
+
+        .search-form {
+            justify-content: stretch;
+            width: 100%;
+
+            .search-bar {
+              display: flex;
+              width: 100%;
+
+                input.custom-search {
+                    width: 100%;
+                    padding: $search-form-padding;
+                    font-size: 14px;
+                    border: 1px solid #ccc;
+                    border-radius: 4px 0 0 4px;
+                }
+            }
+        }
+
+        .search-date {
+            border: 1px solid #ccc;
+
+            background-image: url('../images/icon-calendar.png');
+            background-size: 20px;
+            background-repeat: no-repeat;
+            background-position: 95% center;
+            background-color: #ddd;
+        }
+
+        button {
+            width: 100%;
+            padding: 0px;
+            height: 40px;
+            text-align: center;
+            font-size: 14px;
+            background-color: $green-base;
+            color: #fff;
+            border: none;
+            border-radius:5px;
+            cursor: pointer;
+        }
+    }
+}
+
+.sindicato {
+    padding: 10px 0;
+    background-color: #005c3c;
+    color: #ffffff;
+}
+
+  .sindicato-item {
+    font-size: 18px;
+}
+
+.agenda-lista {
+    margin: 50px 0;
+
+    .agenda-item {
+        position: relative;
+        height: 300px;
+        background-position: center;
+        background-size: cover;
+        padding: 30px;
+        margin-bottom: 30px;
+        background-color: $grey-base;
+
+        .d-table {
+            position: relative;
+            z-index: 1;
+        }
+
+        h4 {
+            a {
+                font-size: 24px;
+                color: #fff;
+            }
+        }
+
+        .curso-overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: rgba($color: #000000, $alpha: 0.5);
+            z-index: 0;
+        }
+    }
 }

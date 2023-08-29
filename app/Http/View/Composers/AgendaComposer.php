@@ -2,17 +2,18 @@
 
 namespace App\Http\View\Composers;
 
-use App\Banner;
+use App\Agenda;
 use Illuminate\View\View;
 
 class AgendaComposer
 {
 
-    protected $cursos;
+    protected $agendas;
 
     public function __construct()
     {
-        $this->cursos = \App\Curso::orderBy('data_inicio', 'desc')
+        $this->agendas = Agenda::orderBy('data_inicio', 'ASC')
+                            ->sinceTomorrow('data_inicio')
                             ->take(4)
                             ->get();
     }
@@ -25,6 +26,6 @@ class AgendaComposer
      */
     public function compose(View $view)
     {
-        $view->with('__cursos', $this->cursos);
+        $view->with('composeAgenda', $this->agendas);
     }
 }

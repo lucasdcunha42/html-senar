@@ -45,7 +45,7 @@
     @if (session("error"))
     <div class="alert alert-warning" id="updated-alert">
         {{ session('error') }}
-    </div> 
+    </div>
     @endif
 @stop
 
