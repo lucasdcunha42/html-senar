@@ -64,12 +64,12 @@
                                     $files = $noticia->getArrayFiles();
                                 @endphp
 
-                                @if(count($files) > 0)
+                                @if(is_array($files) && count($files) > 0)
                                     <ul class="file-list">
                                         @foreach($files as $file)
                                             @if(!empty($file->download_link))
                                                 <li>
-                                                    <a target="_blank" class="legislacao-link" data-pdf="{{ asset('storage/' . $files[0]->download_link) }}">
+                                                    <a target="_blank" class="legislacao-link" data-pdf="{{ asset('storage/' . $file->download_link) }}">
                                                         {!! $file->original_name !!}
                                                     </a>
                                                 </li>
@@ -85,29 +85,49 @@
                             <div class="modal fade custom-modal" id="pdfModal" tabindex="-1" role="dialog" aria-labelledby="pdfModalLabel" aria-hidden="true">
                                 <div class="modal-dialog modal-lg custom-modal-dialog" role="document">
                                     <div class="modal-content custom-modal-content">
-                                        <div class="modal-header">
-                                            <div class="row align-items-center">
-                                                <!-- Botão de fechar (coluna 1) -->
-                                                <div class="col-4 text-right">
-                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar" style="padding-right: 20px;">
-                                                        <span aria-hidden="true">&times;</span>
-                                                    </button>
-                                                </div>
-                                                <!-- Logo (coluna 2) -->
-                                                <div class="col-4 text-center">
-                                                    <img src="{{ asset('storage/' . setting('site.logo')) }}" alt="Logo" class="img-fluid" style="max-height: 80px;">
-                                                </div>
-                                                <!-- Título (coluna 3) -->
-                                                <div class="col-4 text-center">
-                                                    <h5 class="modal-title" id="pdfModalLabel">{!! $file->original_name !!}</h5>
+                                        @if(is_array($files) && count($files) > 0)
+                                            <div class="modal-header">
+                                                <div class="row align-items-center">
+                                                    <!-- Botão de fechar (coluna 1) -->
+                                                    <div class="col-4 text-right">
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar" style="padding-right: 20px;">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <!-- Logo (coluna 2) -->
+                                                    <div class="col-4 text-center">
+                                                        <img src="{{ asset('storage/' . setting('site.logo')) }}" alt="Logo" class="img-fluid" style="max-height: 80px;">
+                                                    </div>
+                                                    <!-- Título (coluna 3) -->
+                                                    <div class="col-4 text-center">
+                                                        <h5 class="modal-title" id="pdfModalLabel">
+                                                            @if(!empty($files[0]->original_name))
+                                                                {!! $files[0]->original_name !!}
+                                                            @endif
+                                                        </h5>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
 
-                                        <div class="modal-body">
-                                            <iframe id="pdfIframe" width="100%" height="700px"></iframe>
-                                        </div>
-
+                                            <div class="modal-body">
+                                                <iframe id="pdfIframe" width="100%" height="700px"></iframe>
+                                            </div>
+                                        @else
+                                            <div class="modal-header">
+                                                <div class="row align-items-center">
+                                                    <!-- Botão de fechar (coluna 1) -->
+                                                    <div class="col-4 text-right">
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar" style="padding-right: 20px;">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <!-- Mensagem de erro (coluna 2) -->
+                                                    <div class="col-8 text-center">
+                                                        <h5 class="modal-title" id="pdfModalLabel">Nenhum arquivo disponível.</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        @endif
                                     </div>
                                 </div>
                             </div>
