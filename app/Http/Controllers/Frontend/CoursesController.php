@@ -5,10 +5,11 @@ namespace App\Http\Controllers\Frontend;
 use App\Agenda;
 use App\Curso;
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 
 class CoursesController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
         // Obtém o ID da página de agendas (substitua o número 19 pelo ID correto)
         [$page, $blocos] = $this->getPageById(19);

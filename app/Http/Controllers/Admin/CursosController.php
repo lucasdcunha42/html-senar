@@ -54,7 +54,7 @@ class CursosController extends Controller
         }
 
         try {
-            $xmlCursos = XML::import($pathCursos)->get()->toArray();
+            $xmlCursos =  XML::import($pathCursos)->get()->toArray();
         } catch (\Exception $e) {
              return redirect('/admin/cursos')->with('error', 'XML de CURSOS inválido, verifique e tente novamente.');
         }
@@ -64,7 +64,6 @@ class CursosController extends Controller
         } catch (\Exception $e) {
              return redirect('/admin/cursos')->with('error', 'XML de Agendas inválido, verifique e tente novamente.');
         }
-
 
         if(isset($xmlCursos['Curso']) && isset($xmlAgendas['Evento'])) {
             $deParaAgenda = [];
@@ -98,7 +97,9 @@ class CursosController extends Controller
                             $xmlArray['data_fim'] = $dataFormatada;
                             $xmlArray['titulo'] = $evento['DESC_EVENTO'];
                             $xmlArray['nome_curso'] = $evento['NOME_CURSO'];
+                            $xmlArray['entidade_coordenadora'] = $evento['NOMECOMPLETO_ENTCOORD'];
                             $xmlArray['desc_fase_evento'] = $evento['DESC_FASE_EVENTO'];
+                            $xmlArray['cidade'] = $evento['NOME_LOCALIDADE'];
                             $xmlArray['regiaoevento'] = $evento['REGIAOEVENTO'];
                             $xmlArray['agenda_num_evento'] = intval($evento['NUM_EVENTO']);
                             $xmlArray['nome_sindicato'] = $evento['NOMECOMPLETO_ENTCOORD'];

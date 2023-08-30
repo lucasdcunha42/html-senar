@@ -23,7 +23,7 @@ class PagesController extends Controller
 
         $startAutoLoadObject = json_encode([
             'perPage' => $perPage,
-            'filters' => ['cursos-regiao', 'cursos-modalidade'],
+            'filters' => ['cursos-regiao', 'cursos-modalidade','cursos-cidade'],
             'total' => $total,
             'currentCount' => $cursos->count(),
             'urlAjax' => route('page.agenda.loadMore')
