@@ -1,7 +1,7 @@
 <?php
 
 namespace App;
-class Curso extends CustomModel
+    class Curso extends CustomModel
 {
     public $appends = ['ano_mes'];
 
@@ -21,4 +21,10 @@ class Curso extends CustomModel
     {
         return $this->hasMany(CursosDepoimento::class, 'curso_id');
     }
+    //verificar
+    public function agendas()
+    {
+        return $this->hasMany(Agenda::class, 'curso_id');
+    }
+
 }

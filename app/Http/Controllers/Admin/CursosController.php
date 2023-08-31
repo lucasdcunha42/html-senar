@@ -3,12 +3,43 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\SindicatosMunicipio;
 use Illuminate\Support\Facades\DB;
+use Symfony\Polyfill\Intl\Normalizer\Normalizer;
 use XML;
 
+set_time_limit(300);
 class CursosController extends Controller
 {
     use XMLTrait;
+
+    public function limparString($str) {
+        // Remove acentos
+        $str = normalizer_normalize($str, Normalizer::FORM_KD);
+        $str = preg_replace('/[^a-zA-Z0-9]/', '', $str);
+
+        // Remove espaços em branco
+        $str = preg_replace('/\s+/', '', $str);
+
+        return $str;
+    }
+
+    public function obterIdMunicipio($nomeMunicipio)
+    {
+        $nomeMunicipioNormalizado = $this->limparString($nomeMunicipio);
+
+        $municipios = SindicatosMunicipio::all();
+
+        foreach ($municipios as $municipio) {
+            $nomeMunicipioBanco = $this->limparString($municipio->municipio);
+
+            if (strcmp(strtoupper($nomeMunicipioNormalizado), strtoupper($nomeMunicipioBanco)) === 0) {
+                return $municipio->id;
+            }
+        }
+
+        return null;
+}
 
     public function update()
     {
@@ -23,17 +54,16 @@ class CursosController extends Controller
         }
 
         try {
-            $xmlCursos = XML::import($pathCursos)->get()->toArray();
+            $xmlCursos =  XML::import($pathCursos)->get()->toArray();
         } catch (\Exception $e) {
              return redirect('/admin/cursos')->with('error', 'XML de CURSOS inválido, verifique e tente novamente.');
         }
 
         try {
-            $xmlAgendas = XML::import($pathAgenda)->get()->toArray();            
+            $xmlAgendas = XML::import($pathAgenda)->get()->toArray();
         } catch (\Exception $e) {
              return redirect('/admin/cursos')->with('error', 'XML de Agendas inválido, verifique e tente novamente.');
         }
-
 
         if(isset($xmlCursos['Curso']) && isset($xmlAgendas['Evento'])) {
             $deParaAgenda = [];
@@ -57,7 +87,8 @@ class CursosController extends Controller
                         {
                             $xmlArray = [];
 
-                            $xmlArray['cod_curso'] = $evento['COD_CURSO'];
+                            /** Agenda */
+                            $xmlArray['cod_curso'] = intval($evento['COD_CURSO']);
                             $data = new \DateTime(str_replace('/', '-', $evento['DATA_INICIO']));
                             $dataFormatada = $data->format('Y-m-d');
                             $xmlArray['data_inicio'] = $dataFormatada;
@@ -66,9 +97,14 @@ class CursosController extends Controller
                             $xmlArray['data_fim'] = $dataFormatada;
                             $xmlArray['titulo'] = $evento['DESC_EVENTO'];
                             $xmlArray['nome_curso'] = $evento['NOME_CURSO'];
+                            $xmlArray['entidade_coordenadora'] = $evento['NOMECOMPLETO_ENTCOORD'];
                             $xmlArray['desc_fase_evento'] = $evento['DESC_FASE_EVENTO'];
+                            $xmlArray['cidade'] = $evento['NOME_LOCALIDADE'];
                             $xmlArray['regiaoevento'] = $evento['REGIAOEVENTO'];
                             $xmlArray['agenda_num_evento'] = intval($evento['NUM_EVENTO']);
+                            $xmlArray['nome_sindicato'] = $evento['NOMECOMPLETO_ENTCOORD'];
+
+                            /** Curso */
                             $xmlArray['modalidade'] = $curso['Modalidade'];
                             $xmlArray['descricao'] = $curso['Nota'];
                             $xmlArray['areadeinteresse'] = $curso['AreaDeInteresse'];
@@ -81,9 +117,11 @@ class CursosController extends Controller
                             $xmlArray['idade'] = $curso['Idade'];
                             $xmlArray['created_at'] = now();
                             $xmlArray['updated_at'] = now();
-                            // $xmlArray['outros_requisitos'] = [];
+                            $xmlArray['outros_requisitos'] = [];
 
-                            $xmlArray['cod_curso'] = intval($evento['COD_CURSO']);
+                            /** Teste para banco Agenda */
+                            //$xmlParaAgenda['titulo'] = $evento['DESC_EVENTO'];
+                            //$xmlParaAgenda['cod_teste'] = intval($evento['COD_CURSO']);
                             array_push($deParaRequisitos, $xmlArray);
                             $deParaAgenda[] = $xmlArray;
                         }
@@ -106,23 +144,58 @@ class CursosController extends Controller
                 $item['outros_requisitos'] = $array;
             }
 
-            // dd($deParaRequisitos);
             DB::beginTransaction();
             try {
                 foreach($deParaAgenda as $key => $item) {
                     $item['slug'] = \Str::slug($item['titulo'] . ' ' . $item['cod_curso'] . ' ' . $item['regiaoevento']);
+                    //ddd($curso);
 
-                    if (DB::table('cursos')
-                    ->where('slug', $item['slug'])
-                    ->where('nome_curso', $item['nome_curso'])
-                    ->first()) {
-                        continue;
-                    }
+                    $item['id_municipio'] = intval($this->obterIdMunicipio($item['cidade']));
 
-                    DB::table('cursos')->updateOrInsert(
-                        ['agenda_num_evento' => $item['agenda_num_evento']],     
-                        $item
+                    DB::table('agendas')->updateOrInsert(
+                        ['titulo' => $item['titulo']],
+                            [
+                                'titulo' =>             $item['titulo'],
+                                'cod_curso' =>          $item['cod_curso'],
+                                'nome_curso' =>         $item['nome_curso'],
+                                'id_municipio' =>       $item['id_municipio'],
+                                'nome_municipio' =>     $item['cidade'],
+                                'data_inicio' =>        $item['data_inicio'],
+                                'data_fim' =>           $item['data_fim'],
+                                'modalidade' =>         $item['modalidade'],
+                                'desc_fase_evento' =>   $item['desc_fase_evento'],
+                                'regiaoevento' =>       $item['regiaoevento'],
+                                'agenda_num_evento' =>  $item['agenda_num_evento'],
+                                'created_at' =>         $item['created_at'],
+                                'updated_at' =>         $item['updated_at'],
+                                'slug' =>               $item['slug'],
+                            ]
                     );
+
+                    $item['slug'] = \Str::slug($item['cod_curso'] . ' ' . $item['nome_curso']);
+                    DB::table('cursos')->updateOrInsert(
+                        ['cod_curso' => $item['cod_curso']],
+                        [    /** Dados Curso */
+                            'cod_curso' =>              $item['cod_curso'],
+                            'nome_curso' =>             $item['nome_curso'],
+                            'descricao' =>              $item['descricao'],
+                            'areadeinteresse' =>        $item['areadeinteresse'],
+                            'situacao' =>               $item['situacao'],
+                            'modalidade' =>             $item['modalidade'],
+                            /** Requisitos */
+                            'cargahorariatotal' =>      $item['cargahorariatotal'],
+                            'escolaridade' =>           $item['escolaridade'],
+                            'idade' =>                  $item['idade'],
+                            'minimodeparticipantes' =>  $item['minimodeparticipantes'],
+                            'maximodeparticipantes' =>  $item['maximodeparticipantes'],
+                            'conteudoprogramatico' =>   $item['conteudoprogramatico'],
+
+                            'created_at' =>             $item['created_at'],
+                            'updated_at' =>             $item['updated_at'],
+                            'slug' =>                   $item['slug'],
+                        ]
+                    );
+
                     if(
                         array_key_exists('outros_requisitos', $deParaRequisitos[$key]) &&
                         $deParaRequisitos[$key]['outros_requisitos'] !== []) {

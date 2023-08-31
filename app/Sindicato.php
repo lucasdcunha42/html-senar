@@ -12,6 +12,14 @@ class Sindicato extends Model
         return $this->hasMany(SindicatosMunicipio::class, 'sindicato_id');
     }
 
+    /** revisar necessidade
+    public function agendas()
+    {
+        return $this->hasMany(Agenda::class, 'sindicato_id');
+    }
+    */
+
+
     public function getMunicipios()
     {
         return json_encode($this->municipios->pluck('municipio'));

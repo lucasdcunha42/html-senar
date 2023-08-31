@@ -1,83 +1,101 @@
-// if($('.buttons-tipos button').length) {
+if($('.carregar-mais-agendas').length) {
 
-//     var buttonsTipos = $('.buttons-tipos button');
+    var _loadMore = $('.carregar-mais-agendas a');
+    var _url = _loadMore.attr('href');
+    var agendasContainer = $('.agendas-container');
+    var agendasLoading = $('.agendas-loading-container');
 
-//     buttonsTipos.on('click', function() {
-//         var tipo = $(this).data('tipo');
-//         if(tipo == 0) {
-//             $('.agenda-itens [data-tipo]').stop().show('fast');
-//             return false;
-//         }
-//         $('.agenda-itens [data-tipo]').stop().hide('fast');
-//         $('.agenda-itens [data-tipo="'+ tipo +'"]').stop().show('fast');
-//     });
 
-// }
+    var ___inloading = false;
+    var finishAgendas = false;
 
-if($('.select-agenda-container-----').length) {
+    var agendasCidadeSelect = $('#agendas-cidade-select');
+    var agendaTitulo = $('#titulo_agenda');
+    var intervaloDeDatas = $('#calendarioAgenda');
+    var limpaFiltro = $('#limpa-filtro');
 
-    var _selects = $('.select-agenda-container select');
-    var _cursos = $('body .curso-item');
+    var reloadAll = false;
 
-    var search = {};
-        search.regiao_evento = '';
-        search.modalidade = '';
-
-    _selects.on('change', function() {
-
-        window.ScrollData.currentCount = 0;
-        $('body .curso-item').remove();
-        window.doIt();
-        return false;
-
-        _cursos = $('body .curso-item');
-        var isEmpty = true;
-
-        _selects.each(function(index, el) {
-            if($(el).val() != '') {
-                isEmpty = false;
-            }
+    $.each([
+        agendasCidadeSelect, agendaTitulo, intervaloDeDatas
+    ], function(index, el) {
+        $(el).on('change', function() {
+            reloadAll = true;
+            finishAgendas = false;
+            $('.carregar-mais-agendas').show();
+            _loadMore.trigger('click');
         });
 
-        // está vazio os 2 selects mostra todos os itens
-        if(isEmpty) {
-            _cursos.show('fast');
+    });
+
+    _loadMore.on('click', function(e) {
+        e.preventDefault();
+
+        if(___inloading || finishAgendas) {
             return false;
         }
 
-        search.regiao_evento = $('#cursos-regiao').first().val();
-        search.modalidade = $('#cursos-modalidade').first().val();
+        var skip = reloadAll ? 0 : $('.agenda-lista .agendas-item').length;
 
-        _cursos.hide('fast');
+        var data = {
+            skip: skip,
+            cidade: agendasCidadeSelect.val(),
+            titulo: agendaTitulo.val(),
+            datas: intervaloDeDatas.val()
+        }
+        ___inloading = true;
 
-        _cursos.each(function(index, el) {
-            var $el = $(el);
-            var modalidade = $el.data('modalidade');
-            var regiao = $el.data('regiao');
+        agendasLoading.show('fast');
 
-            if(search.modalidade != '' && search.regiao_evento != '') {
-                if(modalidade == search.modalidade && regiao == search.regiao_evento) {
-                    $el.stop().show('fast');
-                } else {
-                    $el.stop().hide('fast');
-                }
+        $.ajax({
+            method: 'POST',
+            url: _url,
+            data: data
+        })
+        .done(function( response ) {
+
+            var _method = reloadAll ? 'html' : 'append';
+
+            agendasContainer[_method](response.view);
+
+            if(response.finish) {
+                finishAgendas = true;
+                _loadMore.hide();
+                $('.no-more-agendas').show();
+
             }
 
-            if(search.modalidade != '' && search.regiao_evento == '') {
-                if(modalidade == search.modalidade) {
-                    $el.stop().show('fast');
-                } else {
-                    $el.stop().hide('fast');
-                }
-            }
+        })
+        .fail(function(jqXHR, textStatus) {
 
-            if(search.modalidade == '' && search.regiao_evento != '') {
-                if(regiao == search.regiao_evento) {
-                    $el.stop().show('fast');
-                } else {
-                    $el.stop().hide('fast');
-                }
-            }
+        })
+        .always(function() {
+            reloadAll = false;
+            ___inloading = false;
+            agendasLoading.hide('fast');
+        });
+    });
+
+
+
+    $(document).ready(function() {
+
+        // Crie uma função para limpar os filtros
+        function limparFiltros() {
+            agendasCidadeSelect.val(''); // Limpar o campo de seleção da cidade
+            agendaTitulo.val(''); // Limpar o campo de título da agenda
+            intervaloDeDatas.val(''); // Limpar o campo de intervalo de datas
+            reloadAll = true;
+
+            // Aqui você pode adicionar limpeza adicional para outros campos, se necessário
+        }
+
+        // Ao clicar no botão de limpar
+        $("#limpar").on("click", function() {
+            limparFiltros(); // Chame a função para limpar os filtros
+            finishAgendas = false; // Defina finishAgendas como falso para permitir o carregamento de mais agendas novamente
+            $('.carregar-mais-agendas').show(); // Mostre o botão de "Carregar mais" novamente
+            _loadMore.trigger('click'); // Acione o clique no botão "Carregar mais" para recarregar as agendas
         });
     });
 }

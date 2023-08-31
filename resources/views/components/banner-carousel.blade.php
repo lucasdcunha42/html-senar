@@ -28,8 +28,9 @@
 
                 <img
                     src="{{ asset('storage/' . $__banner->Imagem) }}"
-                    class="img-responsive"
-                    alt="">
+                    class="img-responsive banner-center"
+                    alt=""
+                    style="margin: auto">
 
                 @if($__banner->hasTitleOrSubtitle())
                     <div class="carousel-caption">
