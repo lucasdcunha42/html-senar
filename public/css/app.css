@@ -943,6 +943,36 @@ button.btn-open-close.open span {
   padding: 15px;
 }
 
+.maintenance-body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  text-align: center;
+  border: 1em solid green;
+  margin: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  /* Estilo do cabeçalho */
+  /* Estilo do parágrafo */
+}
+.maintenance-body .img-container {
+  margin: 20px;
+}
+.maintenance-body .img-logo {
+  max-width: 40%;
+}
+.maintenance-body h1 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 10px;
+}
+.maintenance-body p {
+  font-size: 18px;
+  color: #666;
+}
+
 .daterangepicker {
   position: absolute;
   color: inherit;
