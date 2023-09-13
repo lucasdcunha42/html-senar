@@ -2203,6 +2203,7 @@ if ($('.carregar-mais-agendas').length) {
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
+__webpack_require__(/*! ./cookies */ "./resources/js/cookies.js");
 __webpack_require__(/*! ./helpers */ "./resources/js/helpers.js");
 __webpack_require__(/*! ./hamburger */ "./resources/js/hamburger.js");
 __webpack_require__(/*! ./accordion */ "./resources/js/accordion.js");
@@ -2308,6 +2309,39 @@ $.ajaxSetup({
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     forceTLS: true
 // });
+
+/***/ }),
+
+/***/ "./resources/js/cookies.js":
+/*!*********************************!*\
+  !*** ./resources/js/cookies.js ***!
+  \*********************************/
+/***/ (() => {
+
+document.addEventListener('DOMContentLoaded', function () {
+  var acceptCookiesButton = document.getElementById('accept-cookies');
+  var rejectCookiesButton = document.getElementById('reject-cookies');
+  var cookieBanner = document.getElementById('cookie-banner');
+  if (acceptCookiesButton && rejectCookiesButton && cookieBanner) {
+    // Verifica se o usuário já aceitou ou recusou os cookies anteriormente (por meio de um cookie)
+    var cookiesAccepted = localStorage.getItem('cookiesAccepted');
+    var cookiesRejected = localStorage.getItem('cookiesRejected');
+    if (!cookiesAccepted && !cookiesRejected) {
+      // Se os cookies ainda não foram aceitos nem recusados, exibe a mensagem
+      cookieBanner.style.display = 'block';
+    }
+    acceptCookiesButton.addEventListener('click', function () {
+      // Oculta a mensagem e define um cookie de aceitação de cookies
+      cookieBanner.style.display = 'none';
+      localStorage.setItem('cookiesAccepted', 'true');
+    });
+    rejectCookiesButton.addEventListener('click', function () {
+      // Oculta a mensagem e define um cookie de recusa de cookies
+      cookieBanner.style.display = 'none';
+      localStorage.setItem('cookiesRejected', 'true');
+    });
+  }
+});
 
 /***/ }),
 

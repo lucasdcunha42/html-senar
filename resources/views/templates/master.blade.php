@@ -72,6 +72,7 @@ src="https://www.facebook.com/tr?id=1435749543520095&ev=PageView&noscript=1"/></
 
         @yield('content')
 
+        @include('components.cookie-consent')
         @include('frontend.structure.footer')
 
     </div>

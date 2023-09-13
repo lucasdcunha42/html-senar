@@ -911,6 +911,84 @@ button.btn-open-close.open span {
   opacity: 0.7 !important;
 }
 
+/* Estilos para a mensagem de aceite de cookies */
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 92, 60, 0.9);
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  z-index: 9999;
+}
+@media (max-width: 767px) {
+  .cookie-banner {
+    text-align: center;
+    padding: 10px 20px;
+  }
+}
+.cookie-banner .cookie-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 15px;
+}
+@media (max-width: 767px) {
+  .cookie-banner .cookie-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+.cookie-banner .cookie-content p {
+  flex-grow: 1;
+  margin-right: 10px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.cookie-banner .cookie-content .cookie-buttons {
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 767px) {
+  .cookie-banner .cookie-content .cookie-buttons {
+    flex-direction: row;
+  }
+}
+.cookie-banner .cookie-content .cookie-buttons button {
+  background-color: #008000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.cookie-banner .cookie-content .cookie-buttons button:first-child {
+  margin-right: 10px;
+}
+.cookie-banner .cookie-content .cookie-buttons button:hover {
+  background-color: #005000;
+}
+.cookie-banner .cookie-content .cookie-buttons #reject-cookies {
+  position: relative;
+  background-color: #777;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.cookie-banner .cookie-content .cookie-buttons #reject-cookies:hover {
+  background-color: #3b3a3a;
+}
+
 .carousel-caption {
   /* 100% - largura do contaier / 2 (sobra os 2 espaços - direito e esquerdo) - 15px da margin das col e row */
   left: calc(((100% - 1170px) / 2) + 15px);

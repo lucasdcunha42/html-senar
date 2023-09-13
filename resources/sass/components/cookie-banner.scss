@@ -1,0 +1,84 @@
+// cookies-banner.scss
+
+/* Estilos para a mensagem de aceite de cookies */
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 92, 60, 0.9);
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    z-index: 9999;
+
+    @include phone {
+        text-align: center;
+        padding: 10px 20px;
+    }
+
+    .cookie-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 15px;
+
+        @include phone {
+            flex-direction: column;
+            text-align: center; // Centraliza o texto em telas menores
+        }
+
+        p {
+            flex-grow: 1;
+            margin-right: 10px;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .cookie-buttons { // Classe para envolver os botões
+            display: flex; // Os botões ficarão lado a lado
+            align-items: center; // Alinha os botões verticalmente no centro
+
+            @include phone {
+                flex-direction: row; // Coloca os botões em coluna em telas menores
+            }
+
+            button {
+                background-color: #008000;
+                color: #fff;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 5px;
+                font-size: 14px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+
+                &:first-child { // Estilos para o primeiro botão (Aceitar)
+                    margin-right: 10px; // Espaço à direita do botão Aceitar
+                }
+            }
+
+            button:hover {
+                background-color: #005000;
+            }
+
+            #reject-cookies {
+                position: relative;
+                background-color: $grey-darker;
+                color: #fff;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 5px;
+                font-size: 14px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+            }
+
+            #reject-cookies:hover {
+                background-color: rgb(59, 58, 58);
+            }
+        }
+    }
+}
