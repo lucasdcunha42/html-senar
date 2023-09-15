@@ -7,26 +7,29 @@ use App\Curso;
 use App\Http\Controllers\Controller;
 use App\SearchLog;
 use Illuminate\Http\Request;
+use Illuminate\Pagination\Paginator;
 
 class CoursesController extends Controller
 {
     public function index(Request $request)
     {
-        // Obtém o ID da página de agendas (substitua o número 19 pelo ID correto)
-        [$page, $blocos] = $this->getPageById(19);
+    // Obtém o ID da página de cursos
+    [$page, $blocos] = $this->getPageById(19);
 
-        $cursos = Curso::situacaoA()
-                        ->take(8);
+    $cursos = Curso::query()
+                    ->situacaoA()
+                    ->paginate(8);
 
-
-        if($request->nome_curso) {
-            $cursos->where('nome_curso', 'like', "%$request->nome_curso%");
+    if($request->ajax()){
+            $query = $request->get('query');
+            $query = str_replace(" ", "%", $query);
+            $cursos = Curso::query()
+                        ->where('nome_curso', 'like', '%'.$query.'%')
+                        ->paginate(8);
+            return view('frontend.pages.cursos', compact('cursos', 'page', 'blocos'))->render();
         }
 
-        $cursos = $cursos->get();
-
-        return view('frontend.pages.cursos', compact('cursos', 'page', 'blocos'));
-
+    return view('frontend.pages.cursos', compact('cursos', 'page', 'blocos'));
     }
 
     public function single($slug)

@@ -11,7 +11,7 @@ require('./forms');
 require('./scroll');
 require('./sindicatos');
 require('./agenda');
-require('./cursos');
+require('./pagination');
 require('./eventos');
 require('./noticias');
 

@@ -2215,7 +2215,7 @@ __webpack_require__(/*! ./forms */ "./resources/js/forms.js");
 __webpack_require__(/*! ./scroll */ "./resources/js/scroll.js");
 __webpack_require__(/*! ./sindicatos */ "./resources/js/sindicatos.js");
 __webpack_require__(/*! ./agenda */ "./resources/js/agenda.js");
-__webpack_require__(/*! ./cursos */ "./resources/js/cursos.js");
+__webpack_require__(/*! ./pagination */ "./resources/js/pagination.js");
 __webpack_require__(/*! ./eventos */ "./resources/js/eventos.js");
 __webpack_require__(/*! ./noticias */ "./resources/js/noticias.js");
 var slickConfig = {
@@ -2342,63 +2342,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 });
-
-/***/ }),
-
-/***/ "./resources/js/cursos.js":
-/*!********************************!*\
-  !*** ./resources/js/cursos.js ***!
-  \********************************/
-/***/ (() => {
-
-if ($('.carregar-mais-cursos').length) {
-  var loadMore = $('.carregar-mais-cursos a');
-  var url = loadMore.attr('href');
-  var cursosContainer = $('.cursos-container');
-  var cursosLoading = $('.cursos-loading-container');
-  var __inloading = false;
-  var finishCursos = false;
-  var cursosNome = $('#nome_curso');
-  var reloadAll = false;
-  $.each([cursosNome], function (index, el) {
-    $(el).on('change', function () {
-      reloadAll = true;
-      finishCursos = false;
-      $('.carregar-mais-cursos').show();
-      loadMore.trigger('click');
-    });
-  });
-  loadMore.on('click', function (e) {
-    e.preventDefault();
-    console.log('Função loadMore() foi chamada ao clicar em "Load More"');
-    if (__inloading || finishCursos) {
-      return false;
-    }
-    var skip = reloadAll ? 0 : $('.cursos-lista .curso-item').length;
-    var data = {
-      skip: skip,
-      nome: cursosNome.val()
-    };
-    __inloading = true;
-    cursosLoading.show('fast');
-    $.ajax({
-      method: 'POST',
-      url: url,
-      data: data
-    }).done(function (response) {
-      var _method = reloadAll ? 'html' : 'append';
-      cursosContainer[_method](response.view);
-      if (response.finish) {
-        finishCursos = true;
-        $('.carregar-mais-cursos').hide();
-      }
-    }).fail(function (jqXHR, textStatus) {}).always(function () {
-      reloadAll = false;
-      __inloading = false;
-      cursosLoading.hide('fast');
-    });
-  });
-}
 
 /***/ }),
 
@@ -2550,6 +2493,40 @@ if ($('.img-form').length) {
     window.location.href = url;
   });
 }
+
+/***/ }),
+
+/***/ "./resources/js/pagination.js":
+/*!************************************!*\
+  !*** ./resources/js/pagination.js ***!
+  \************************************/
+/***/ (() => {
+
+$(document).ready(function () {
+  function fetch_data(page, query) {
+    $.ajax({
+      url: "?page=" + page + "&query=" + query,
+      success: function success(data) {
+        $('#cursos-container').html('');
+        $('#cursos-container').html(data);
+      }
+    });
+  }
+  $('#search-form').submit(function (event) {
+    event.preventDefault();
+    var query = $('#search').val();
+    var page = $('#hidden_page').val();
+    fetch_data(page, query);
+  });
+  $('body').on('click', '.pager a', function (event) {
+    var page = $(this).attr('href').split('page=')[1];
+    $('#hidden_page').val(page);
+    var query = $('#search').val();
+    $('li').removeClass('active');
+    $(this).parent().addClass('active');
+    fetch_data(page, query);
+  });
+});
 
 /***/ }),
 

@@ -1,0 +1,23 @@
+.pagination-green {
+    .page-item {
+        a {
+            color: $green-dark;
+        }
+    }
+    .page-item.active {
+        .page-link {
+            background-color: $green-dark;
+            color: #FFFFFF; /* Cor do texto branco */
+            border-radius: 50%; /* Torna o botão redondo */
+            width: 30px; /* Define a largura do botão (ajuste conforme necessário) */
+            height: 30px; /* Define a altura do botão (ajuste conforme necessário) */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+        }
+    }
+    .page-link {
+        border: none;
+    }
+}
