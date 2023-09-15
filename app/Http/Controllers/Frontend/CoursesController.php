@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Frontend;
 use App\Agenda;
 use App\Curso;
 use App\Http\Controllers\Controller;
+use App\SearchLog;
 use Illuminate\Http\Request;
 
 class CoursesController extends Controller
@@ -50,7 +51,6 @@ class CoursesController extends Controller
             $request = request();
 
             $skip = $request->get('skip', 0);
-            //debugbar()->info('Skip:', $skip);
 
             $perPage = 8;
 
@@ -58,7 +58,13 @@ class CoursesController extends Controller
             //debugbar()->info('Query:', $query);
 
             if(!empty($request->filled('nome'))) {
+                $searchQuery = $request->input('nome'); // Obtenha a consulta de pesquisa
+                $path = $request->path();
+                $response = response()->json(['message' => 'Seu conteúdo aqui'], 200);
+                $status = $response->status();
                 $query->where('nome_curso', 'like', "%$request->nome%");
+
+                SearchLog::registerSearch($searchQuery, $path, $status);
             }
 
             $query->take($perPage)->skip($skip);
