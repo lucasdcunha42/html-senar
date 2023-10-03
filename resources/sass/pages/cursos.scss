@@ -1,8 +1,3 @@
-.container-auto-width-cursos {
-    margin: 0 auto;
-    @include auto-width(100%);
-}
-
 $search-form-padding: 5px;
 
 .search-form {
@@ -33,13 +28,12 @@ $search-form-padding: 5px;
   }
 }
 
-
 .cursos-lista {
     margin: 50px 0;
 
     .curso-item {
         position: relative;
-        height: 300px;
+        height: 250px;
         background-position: center;
         background-size: cover;
         padding: 30px;
@@ -68,6 +62,7 @@ $search-form-padding: 5px;
             z-index: 0;
         }
     }
+
 }
 
 .curso-duration {
@@ -85,19 +80,20 @@ $search-form-padding: 5px;
     color: #fff;
     text-transform: uppercase;
     margin: 40px 0 20px;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.5);
 
-    @include auto-width(30%, 50%, 70%, 80%);
+    @include auto-width(100%, 100%, 100%, 100%);
 }
 
 .descricao-curso {
     font-size: 18px;
     text-align: center;
-    padding: 70px 0;
+    padding: 30px 0;
 }
 
 .como-participar {
 
-    padding: 120px 0;
+    padding: 30px 0;
     background-color: $grey-base;
 
     h6 {
@@ -150,7 +146,6 @@ $search-form-padding: 5px;
 
 .cursos-section.catalogo {
     margin-bottom: 80px;
-    padding-bottom: 80px;
 }
 
 .catalogo-item {
