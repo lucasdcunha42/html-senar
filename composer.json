@@ -17,7 +17,8 @@
         "laravel/framework": "^8.12",
         "laravel/tinker": "^2.5",
         "oliverad/parse-xml": "dev-master",
-        "tcg/voyager": "^1.4"
+        "tcg/voyager": "^1.4",
+        "the42coders/eu-cookie-consent": "^1.0"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.7",
