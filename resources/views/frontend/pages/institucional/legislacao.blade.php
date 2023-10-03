@@ -58,7 +58,7 @@
                                                 @php $files = $legislacao->getArrayFiles() @endphp
                                                 @if(isset($files[0]) && !empty($files[0]->download_link))
                                                     <div>
-                                                        <a target="_blank" class="legislacao-link" data-pdf="{{ 'storage/' . $files[0]->download_link }}" >
+                                                        <a target="_blank" class="legislacao-link" data-pdf="{{ 'http://127.0.0.1:8000/storage/' . $files[0]->download_link }}" >
                                                             {!! $legislacao->titulo !!}
                                                         </a>
                                                     </div>
@@ -176,7 +176,7 @@
         $('.legislacao-link').click(function(e) {
             pdfLink = $(this).data('pdf');
             const legislacaoTitulo = $(this).text(); // Obtém o título da legislação
-
+            console.log(pdfLink);
             $('#pdfIframe').attr('src', pdfLink);
             $('#pdfModalLabel').text(legislacaoTitulo); // Define o título do modal dinamicamente
             $('#pdfModal').modal('show');
