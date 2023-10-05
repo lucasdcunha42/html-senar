@@ -1,13 +1,10 @@
 @extends('templates.master')
 @section('content')
-    @include('components.banner-page', [
-        'title' => $agenda->titulo,
-        'duration' => $agenda->curso->cargahorariatotal,
+    @include('components.banner-agenda', [
         'bgPagePath' => !empty(trim($agenda->curso->imagem)) ? urlStorage($agenda->curso->imagem, 1400, 300) : '',
-        'overlay' => false
     ])
 
-    <div class="cursos-section cursos">
+    <div class="cursos-section">
         <div class="container">
             <div class="row">
                 <div class="col-xs-12">
@@ -69,13 +66,11 @@
             <div class="row">
                 <div class="col-xs-12">
                     <div class="row">
-                        <div class="course-requires">
                             <div class="sindicato-item">
                                 <span class="fw-bold"> {{$agenda->municipio->sindicato->nome}} </span> <span></span><br>
                                 <span class="fw-bold">Contato: </span> <span>{{$agenda->municipio->sindicato->telefones}}</span><br>
                                 <span class="fw-bold">Email: </span> <span>{{$agenda->municipio->sindicato->email}}</span>
                             </div>
-                        </div>
                     </div>
                 </div>
             </div>
