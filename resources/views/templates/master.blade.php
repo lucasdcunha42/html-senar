@@ -5,7 +5,7 @@
 
 <script type="text/javascript">
     var root = "http://www.senar-rs.com.br/";
-    
+
     /* Google Analytics */
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'G-29YF015CWZ']);
@@ -35,7 +35,7 @@ fbq('track', 'PageView');
 <noscript><img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=1435749543520095&ev=PageView&noscript=1"/></noscript>
 <!-- End Meta Pixel Code -->
-    
+
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -60,7 +60,7 @@ src="https://www.facebook.com/tr?id=1435749543520095&ev=PageView&noscript=1"/></
     <link rel="stylesheet" href="{{ asset('css/app.css?t=' . $timestamp) }}">
     @yield('css')
 
-    
+
 
 </head>
 <body>
@@ -71,6 +71,8 @@ src="https://www.facebook.com/tr?id=1435749543520095&ev=PageView&noscript=1"/></
         @include('frontend.structure.side-menu')
 
         @yield('content')
+
+        {!! EuCookieConsent::getPopup() !!}
 
         @include('frontend.structure.footer')
 

@@ -112,7 +112,7 @@ a:active {
 }
 
 .conteudo-programatico {
-  padding: 50px 0;
+  padding: 20px 0;
 }
 .conteudo-programatico h5 {
   font-size: 26px;
@@ -176,8 +176,8 @@ a.internal-link {
   font-weight: bold;
   font-size: 28px;
   text-transform: uppercase;
-  margin-top: 60px;
-  margin-bottom: 80px;
+  margin-top: 40px;
+  margin-bottom: 40px;
   letter-spacing: 5px;
 }
 
@@ -188,7 +188,6 @@ a.internal-link {
 
 .page-subtitle {
   font-size: 24px;
-  margin-bottom: 40px;
 }
 
 .bg-grey + .footer {
@@ -316,7 +315,7 @@ a.internal-link {
   height: 40px;
   display: inline-block;
   position: fixed;
-  right: 10px;
+  right: 20px;
   top: 10px;
   z-index: 101;
   transform: rotate(0deg);
@@ -476,7 +475,7 @@ a.internal-link {
 }
 
 .footer {
-  margin-top: 60px;
+  margin-top: 20px;
   padding: 40px 0;
   background-color: #eeeeee;
 }
@@ -911,6 +910,84 @@ button.btn-open-close.open span {
   opacity: 0.7 !important;
 }
 
+/* Estilos para a mensagem de aceite de cookies */
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 92, 60, 0.9);
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  z-index: 9999;
+}
+@media (max-width: 767px) {
+  .cookie-banner {
+    text-align: center;
+    padding: 10px 20px;
+  }
+}
+.cookie-banner .cookie-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 15px;
+}
+@media (max-width: 767px) {
+  .cookie-banner .cookie-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+.cookie-banner .cookie-content p {
+  flex-grow: 1;
+  margin-right: 10px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.cookie-banner .cookie-content .cookie-buttons {
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 767px) {
+  .cookie-banner .cookie-content .cookie-buttons {
+    flex-direction: row;
+  }
+}
+.cookie-banner .cookie-content .cookie-buttons button {
+  background-color: #008000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.cookie-banner .cookie-content .cookie-buttons button:first-child {
+  margin-right: 10px;
+}
+.cookie-banner .cookie-content .cookie-buttons button:hover {
+  background-color: #005000;
+}
+.cookie-banner .cookie-content .cookie-buttons #reject-cookies {
+  position: relative;
+  background-color: #777;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.cookie-banner .cookie-content .cookie-buttons #reject-cookies:hover {
+  background-color: #3b3a3a;
+}
+
 .carousel-caption {
   /* 100% - largura do contaier / 2 (sobra os 2 espaços - direito e esquerdo) - 15px da margin das col e row */
   left: calc(((100% - 1170px) / 2) + 15px);
@@ -941,6 +1018,36 @@ button.btn-open-close.open span {
 .table-site tbody tr td {
   vertical-align: middle;
   padding: 15px;
+}
+
+.maintenance-body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  text-align: center;
+  border: 1em solid green;
+  margin: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  /* Estilo do cabeçalho */
+  /* Estilo do parágrafo */
+}
+.maintenance-body .img-container {
+  margin: 20px;
+}
+.maintenance-body .img-logo {
+  max-width: 40%;
+}
+.maintenance-body h1 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 10px;
+}
+.maintenance-body p {
+  font-size: 18px;
+  color: #666;
 }
 
 .daterangepicker {
@@ -1360,24 +1467,33 @@ button.btn-open-close.open span {
   padding-bottom: 30px;
 }
 
-.container-auto-width-cursos {
-  margin: 0 auto;
+.cursos-section {
+  padding: 0 20px;
+}
+
+.search-form {
+  justify-content: stretch;
   width: 100%;
 }
-@media (max-width: 1199px) {
-  .container-auto-width-cursos {
-    width: 80%;
-  }
+.search-form .search-bar {
+  display: flex;
+  width: 100%;
 }
-@media (max-width: 991px) {
-  .container-auto-width-cursos {
-    width: 90%;
-  }
+.search-form .search-bar input.custom-search {
+  width: 100%;
+  padding: 5px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px;
 }
-@media (max-width: 767px) {
-  .container-auto-width-cursos {
-    width: 100%;
-  }
+.search-form .search-bar button {
+  padding: 10px 30px;
+  font-size: 14px;
+  background-color: #034906;
+  color: #fff;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
 }
 
 .search-form {
@@ -1410,7 +1526,7 @@ button.btn-open-close.open span {
 }
 .cursos-lista .curso-item {
   position: relative;
-  height: 300px;
+  height: 250px;
   background-position: center;
   background-size: cover;
   padding: 30px;
@@ -1450,32 +1566,33 @@ button.btn-open-close.open span {
   color: #fff;
   text-transform: uppercase;
   margin: 40px 0 20px;
-  width: 30%;
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.5);
+  width: 100%;
 }
 @media (max-width: 1199px) {
   .banner-title {
-    width: 50%;
+    width: 100%;
   }
 }
 @media (max-width: 991px) {
   .banner-title {
-    width: 70%;
+    width: 100%;
   }
 }
 @media (max-width: 767px) {
   .banner-title {
-    width: 80%;
+    width: 100%;
   }
 }
 
 .descricao-curso {
   font-size: 18px;
   text-align: center;
-  padding: 70px 0;
+  padding: 30px 0;
 }
 
 .como-participar {
-  padding: 120px 0;
+  padding: 30px 0;
   background-color: #eeeeee;
 }
 .como-participar h6 {
@@ -1523,7 +1640,6 @@ button.btn-open-close.open span {
 
 .cursos-section.catalogo {
   margin-bottom: 80px;
-  padding-bottom: 80px;
 }
 
 .catalogo-item .catalogo-item-letter {
@@ -1545,7 +1661,54 @@ button.btn-open-close.open span {
 }
 
 .agenda-header {
-  margin-bottom: 80px;
+  margin-bottom: 20px;
+}
+
+.banner-agenda {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  padding: 40px 0;
+}
+.banner-agenda .bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(85, 78, 78, 0.5);
+}
+.banner-agenda .agenda-title {
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+  margin: 20px;
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.5);
+}
+.banner-agenda .banner-info {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  font-size: 1em;
+  color: white;
+}
+.banner-agenda .banner-info .info-box {
+  color: white;
+  background-color: #688b823a;
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
+  max-width: 150px;
+  border-radius: 10px;
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.5);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
 .agenda-busca {
@@ -1669,7 +1832,8 @@ button.btn-open-close.open span {
 }
 
 .sindicato {
-  padding: 10px 0;
+  padding: 10px 10px;
+  margin: 0px;
   background-color: #005c3c;
   color: #ffffff;
 }

@@ -30,6 +30,7 @@
 
     <div class="noticias-section noticias-single">
         <div class="container">
+
             <div class="row">
                 <div class="col-xs-12">
                     <div class="news-date text-center">
@@ -52,70 +53,94 @@
             </div>
         </div>
 
-        <div class="accordion-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12">
-                        <div class="accordion-container">
-                            <h2> Arquivos </h2>
-                            <div class="link-legislacao">
+            <div class="accordion-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="accordion-container">
 
-                                @php
-                                    $files = $noticia->getArrayFiles();
-                                @endphp
+                                <div class="link-legislacao">
 
-                                @if(count($files) > 0)
-                                    <ul class="file-list">
-                                        @foreach($files as $file)
-                                            @if(!empty($file->download_link))
-                                                <li>
-                                                    <a target="_blank" class="legislacao-link" data-pdf="{{ asset('storage/' . $files[0]->download_link) }}">
-                                                        {!! $file->original_name !!}
-                                                    </a>
-                                                </li>
-                                            @endif
-                                        @endforeach
-                                    </ul>
-                                @else
-                                    <div class="link-legislacao">
-                                        <h4>Nenhum arquivo disponível.</h4>
-                                    </div>
-                                @endif
-                            </div>
-                            <div class="modal fade custom-modal" id="pdfModal" tabindex="-1" role="dialog" aria-labelledby="pdfModalLabel" aria-hidden="true">
-                                <div class="modal-dialog modal-lg custom-modal-dialog" role="document">
-                                    <div class="modal-content custom-modal-content">
-                                        <div class="modal-header">
-                                            <div class="row align-items-center">
-                                                <!-- Botão de fechar (coluna 1) -->
-                                                <div class="col-4 text-right">
-                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar" style="padding-right: 20px;">
-                                                        <span aria-hidden="true">&times;</span>
-                                                    </button>
-                                                </div>
-                                                <!-- Logo (coluna 2) -->
-                                                <div class="col-4 text-center">
-                                                    <img src="{{ asset('storage/' . setting('site.logo')) }}" alt="Logo" class="img-fluid" style="max-height: 80px;">
-                                                </div>
-                                                <!-- Título (coluna 3) -->
-                                                <div class="col-4 text-center">
-                                                    <h5 class="modal-title" id="pdfModalLabel">{!! $file->original_name !!}</h5>
+                                    @php
+                                        $files = $noticia->getArrayFiles();
+                                    @endphp
+
+                                    @if(is_array($files) && count($files) > 0)
+                                        <h2> Arquivos </h2>
+                                        <div class="link-legislacao">
+                                            <ul class="file-list">
+                                                @foreach($files as $file)
+                                                    @if(!empty($file->download_link))
+                                                        <li>
+                                                            <a target="_blank" class="legislacao-link" data-pdf="{{ asset('storage/' . $file->download_link) }}">
+                                                                {!! $file->original_name !!}
+                                                            </a>
+                                                        </li>
+                                                    @endif
+                                                @endforeach
+                                            </ul>
+                                        </div>
+
+                                        <div class="modal fade custom-modal" id="pdfModal" tabindex="-1" role="dialog" aria-labelledby="pdfModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog modal-lg custom-modal-dialog" role="document">
+                                                <div class="modal-content custom-modal-content">
+                                                    @if(is_array($files) && count($files) > 0)
+                                                        <div class="modal-header">
+                                                            <div class="row align-items-center">
+                                                                <!-- Botão de fechar (coluna 1) -->
+                                                                <div class="col-4 text-right">
+                                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar" style="padding-right: 20px;">
+                                                                        <span aria-hidden="true">&times;</span>
+                                                                    </button>
+                                                                </div>
+                                                                <!-- Logo (coluna 2) -->
+                                                                <div class="col-4 text-center">
+                                                                    <img src="{{ asset('storage/' . setting('site.logo')) }}" alt="Logo" class="img-fluid" style="max-height: 80px;">
+                                                                </div>
+                                                                <!-- Título (coluna 3) -->
+                                                                <div class="col-4 text-center">
+                                                                    <h5 class="modal-title" id="pdfModalLabel">
+                                                                        @if(!empty($file->original_name))
+                                                                            {!! $file->original_name !!}
+                                                                        @endif
+                                                                    </h5>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="modal-body">
+                                                            <div class="embed-container">
+                                                                <embed id="pdfEmbed" src="" type="application/pdf" width="100%" height="700px">
+                                                            </div>
+                                                        </div>
+                                                    @else
+                                                        <div class="modal-header">
+                                                            <div class="row align-items-center">
+                                                                <!-- Botão de fechar (coluna 1) -->
+                                                                <div class="col-4 text-right">
+                                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar" style="padding-right: 20px;">
+                                                                        <span aria-hidden="true">&times;</span>
+                                                                    </button>
+                                                                </div>
+                                                                <!-- Mensagem de erro (coluna 2) -->
+                                                                <div class="col-8 text-center">
+                                                                    <h5 class="modal-title" id="pdfModalLabel">Nenhum arquivo disponível.</h5>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    @endif
                                                 </div>
                                             </div>
                                         </div>
 
-                                        <div class="modal-body">
-                                            <iframe id="pdfIframe" width="100%" height="700px"></iframe>
-                                        </div>
-
-                                    </div>
+                                    @endif
                                 </div>
+
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
 
         @if(!empty($galeria))
             <br><br><br>
@@ -193,20 +218,29 @@
 @section('js')
     <script>
 
-        // Evento para abrir o modal e carregar o PDF ao clicar no link da legislação
-        $('.legislacao-link').click(function(e) {
-            pdfLink = $(this).data('pdf');
-            console.log(pdfLink);
+       // Função para definir a origem do PDF na tag <embed>
+function setPdfSource(newSrc) {
+    const pdfEmbed = document.getElementById('pdfEmbed');
+    pdfEmbed.src = newSrc;
+}
 
-            $('#pdfIframe').attr('src', pdfLink);
-            $('#pdfModal').modal('show');
-        });
+// Evento para abrir o modal e carregar o PDF ao clicar no link do arquivo da Noticia
+$('.legislacao-link').click(function(e) {
+    pdfLink = $(this).data('pdf');
+    const arquivoTitulo = $(this).text(); // Obtém o título do arquivo da Noticia
 
-        // Evento para limpar a URL do PDF quando o modal for fechado
-        $('#pdfModal').on('hidden.bs.modal', function () {
-            $('#pdfIframe').attr('src', '');
-            pdfLink = '';
-        });
+    // Chame a função para definir a origem do PDF na tag <embed>
+    setPdfSource(pdfLink);
+
+    $('#pdfModalLabel').text(arquivoTitulo); // Define o título do modal dinamicamente
+    $('#pdfModal').modal('show');
+});
+
+// Evento para limpar a origem do PDF quando o modal for fechado
+$('#pdfModal').on('hidden.bs.modal', function () {
+    // Chame a função para definir uma origem vazia na tag <embed>
+    setPdfSource('');
+});
 
     </script>
 @endsection

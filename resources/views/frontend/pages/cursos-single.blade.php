@@ -3,7 +3,9 @@
 @section('content')
     @include('components.banner-page', [
         'title' => $curso->nome_curso,
+        'title' => $curso->nome_curso,
         'duration' => $curso->cargahorariatotal,
+        'bgPagePath' => !empty(trim($curso->imagem)) ? urlStorage($curso->imagem, 1400, 300) : '',
         'bgPagePath' => !empty(trim($curso->imagem)) ? urlStorage($curso->imagem, 1400, 300) : '',
         'overlay' => false
     ])
@@ -27,11 +29,20 @@
                     <div class="row">
                         <div class="col-sm-6">
                             <h6>COMO <br> PARTICIPAR</h6>
-                            <p>São necessários</p>
+                            <h4>
+                                <p>
+                                    Procure o Sindicato Rural ou o Sindicato dos Trabalhadores Rurais de seu município e saiba como participar
+                                </p>
+                            </h4>
+
+                            <a href="https://www.senar-rs.com.br/sindicatos" class="internal-link">
+                                ACESSAR SINDICATOS
+                            </a>
                         </div>
 
                         <div class="col-sm-6">
                             <div class="course-requires">
+                                <h6> Requisitos </h6>
                                 @if(!empty(trim($curso->escolaridade)))
                                 <div class="required-item">
                                     <img src="{{ asset('images/icons/pencil.png') }}" alt="">
@@ -82,7 +93,7 @@
     @endif
     {{--Proximas agendas do Curso -Implementar- --}}
 
-    @include('frontend.partials.curso', ['proximasAgendas' => $proximasAgendas]);
+    @include('frontend.partials.curso', ['proximasAgendas' => $proximasAgendas])
 
     @if($curso->depoimentos->isNotEmpty())
         <div class="depoimentos depoimentos-cursos">

@@ -99,6 +99,30 @@ module.exports = function xhrAdapter(config) {
         setTimeout(onloadend);
       };
     }
+    }
+
+    if ('onloadend' in request) {
+      // Use onloadend if available
+      request.onloadend = onloadend;
+    } else {
+      // Listen for ready state to emulate onloadend
+      request.onreadystatechange = function handleLoad() {
+        if (!request || request.readyState !== 4) {
+          return;
+        }
+
+        // The request errored out and we didn't get a response, this will be
+        // handled by onerror instead
+        // With one exception: request that using file: protocol, most browsers
+        // will return status as 0 even though it's a successful request
+        if (request.status === 0 && !(request.responseURL && request.responseURL.indexOf('file:') === 0)) {
+          return;
+        }
+        // readystate handler is calling before onerror or ontimeout handlers,
+        // so we should call onloadend on the next 'tick'
+        setTimeout(onloadend);
+      };
+    }
 
     // Handle browser request cancellation (as opposed to a manual cancellation)
     request.onabort = function handleAbort() {
@@ -2203,6 +2227,7 @@ if ($('.carregar-mais-agendas').length) {
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
+__webpack_require__(/*! ./cookies */ "./resources/js/cookies.js");
 __webpack_require__(/*! ./helpers */ "./resources/js/helpers.js");
 __webpack_require__(/*! ./hamburger */ "./resources/js/hamburger.js");
 __webpack_require__(/*! ./accordion */ "./resources/js/accordion.js");
@@ -2311,60 +2336,83 @@ $.ajaxSetup({
 
 /***/ }),
 
+/***/ "./resources/js/cookies.js":
+/*!*********************************!*\
+  !*** ./resources/js/cookies.js ***!
+  \*********************************/
+/***/ (() => {
+
+document.addEventListener('DOMContentLoaded', function () {
+  var acceptCookiesButton = document.getElementById('accept-cookies');
+  var rejectCookiesButton = document.getElementById('reject-cookies');
+  var cookieBanner = document.getElementById('cookie-banner');
+  if (acceptCookiesButton && rejectCookiesButton && cookieBanner) {
+    // Verifica se o usuário já aceitou ou recusou os cookies anteriormente (por meio de um cookie)
+    var cookiesAccepted = localStorage.getItem('cookiesAccepted');
+    var cookiesRejected = localStorage.getItem('cookiesRejected');
+    if (!cookiesAccepted && !cookiesRejected) {
+      // Se os cookies ainda não foram aceitos nem recusados, exibe a mensagem
+      cookieBanner.style.display = 'block';
+    }
+    acceptCookiesButton.addEventListener('click', function () {
+      // Oculta a mensagem e define um cookie de aceitação de cookies
+      cookieBanner.style.display = 'none';
+      localStorage.setItem('cookiesAccepted', 'true');
+    });
+    rejectCookiesButton.addEventListener('click', function () {
+      // Oculta a mensagem e define um cookie de recusa de cookies
+      cookieBanner.style.display = 'none';
+      localStorage.setItem('cookiesRejected', 'true');
+    });
+  }
+});
+
+/***/ }),
+
 /***/ "./resources/js/cursos.js":
 /*!********************************!*\
   !*** ./resources/js/cursos.js ***!
   \********************************/
 /***/ (() => {
 
-if ($('.carregar-mais-cursos').length) {
-  var loadMore = $('.carregar-mais-cursos a');
-  var url = loadMore.attr('href');
-  var cursosContainer = $('.cursos-container');
-  var cursosLoading = $('.cursos-loading-container');
-  var __inloading = false;
-  var finishCursos = false;
-  var cursosNome = $('#nome_curso');
-  var reloadAll = false;
-  $.each([cursosNome], function (index, el) {
-    $(el).on('change', function () {
-      reloadAll = true;
-      finishCursos = false;
-      $('.carregar-mais-cursos').show();
-      loadMore.trigger('click');
-    });
+$(function () {
+  $('#nome_curso').on('change', function () {
+    // Obter o valor do elemento 'nome_curso' após a mudança.
+    var searchTerm = $(this).val();
+
+    // Chamar a função getCursos com o termo de busca.
+    getCursos(searchTerm);
   });
-  loadMore.on('click', function (e) {
+  $('body').on('click', '.pagination a', function (e) {
     e.preventDefault();
-    console.log('Função loadMore() foi chamada ao clicar em "Load More"');
-    if (__inloading || finishCursos) {
-      return false;
-    }
-    var skip = reloadAll ? 0 : $('.cursos-lista .curso-item').length;
-    var data = {
-      skip: skip,
-      nome: cursosNome.val()
-    };
-    __inloading = true;
-    cursosLoading.show('fast');
-    $.ajax({
-      method: 'POST',
-      url: url,
-      data: data
-    }).done(function (response) {
-      var _method = reloadAll ? 'html' : 'append';
-      cursosContainer[_method](response.view);
-      if (response.finish) {
-        finishCursos = true;
-        $('.carregar-mais-cursos').hide();
-      }
-    }).fail(function (jqXHR, textStatus) {}).always(function () {
-      reloadAll = false;
-      __inloading = false;
-      cursosLoading.hide('fast');
-    });
+    var url = $(this).attr('href');
+    getCursosWithPagination(url);
+    window.history.pushState("", "", url);
   });
-}
+  function getCursos(searchTerm) {
+    $.ajax({
+      url: '/cursos',
+      method: 'GET',
+      data: {
+        q: searchTerm
+      }
+    }).done(function (data) {
+      $('.cursos-container').html(data);
+    }).fail(function () {
+      alert('Cursos could not be loaded.');
+    });
+  }
+  function getCursosWithPagination(url) {
+    $.ajax({
+      url: url,
+      method: 'GET'
+    }).done(function (data) {
+      $('.cursos-container').html(data);
+    }).fail(function () {
+      alert('Cursos could not be loaded.');
+    });
+  }
+});
 
 /***/ }),
 
