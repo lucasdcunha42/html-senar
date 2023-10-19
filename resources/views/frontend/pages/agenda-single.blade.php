@@ -4,18 +4,6 @@
         'bgPagePath' => !empty(trim($agenda->curso->imagem)) ? urlStorage($agenda->curso->imagem, 1400, 300) : '',
     ])
 
-    <div class="cursos-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12">
-                    <div class="descricao-curso html">
-                        {!! $agenda->curso->descricao !!}
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <div class="como-participar">
         <div class="container">
             <div class="row">

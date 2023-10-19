@@ -10,18 +10,6 @@
         'overlay' => false
     ])
 
-    <div class="cursos-section cursos">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12">
-                    <div class="descricao-curso html">
-                        {!! $curso->descricao !!}
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <div class="como-participar">
         <div class="container">
             <div class="row">

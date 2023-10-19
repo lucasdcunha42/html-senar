@@ -560,12 +560,15 @@ a.internal-link {
 
 .c-thumb-1 {
   position: relative;
+  display: flex;
+  justify-content: center;
   margin-bottom: 30px;
 }
 .c-thumb-1 .c-thumb-caption {
   background: rgba(51, 51, 51, 0.9);
   position: absolute;
   width: 100%;
+  max-width: 360px;
   top: 60%;
   height: 40%;
   text-align: center;
@@ -1612,7 +1615,6 @@ button.btn-open-close.open span {
   display: inline-block;
   margin-right: 10px;
   width: 30px;
-  float: left;
 }
 
 .conteudo-programatico.curso-single p {
