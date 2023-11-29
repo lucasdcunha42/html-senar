@@ -6,13 +6,12 @@
         <h1 class="titulo-evento"> Titulo </h1>
 
         <p class="texto-evento">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa,
-            recusandae!
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur autem, saepe impedit veniam id necessitatibus labore. Rerum, ipsa ducimus tempora minima cum similique, deserunt nisi cumque facilis libero incidunt deleniti.
         </p>
 
         <div class="botoes-evento">
-            <i class="mais-informacoes">Mais Informaçoes</i>
-            <button class="inscreva-se"> Inscreva-se </button>
+            <span class="mais-informacoes">Mais Informaçoes</span>
+            <button class="inscrevase"> Inscreva-se </button>
         </div>
     </div>
   </div>

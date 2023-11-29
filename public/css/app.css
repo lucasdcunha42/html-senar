@@ -1970,13 +1970,12 @@ button.btn-open-close.open span {
   font-size: 28px;
   font-style: normal;
   font-weight: 500;
-  line-height: 16px;
-  /* 57.143% */
   text-transform: uppercase;
 }
 .card-body-evento .texto-evento {
   color: #000;
   text-align: justify;
+  flex-grow: 1;
   font-feature-settings: "clig" off, "liga" off;
   font-size: 16px;
   font-style: normal;
@@ -1986,16 +1985,31 @@ button.btn-open-close.open span {
 }
 .card-body-evento .botoes-evento {
   display: flex;
-  flex-flow: row wrap;
-  align-items: flex-end;
-  justify-content: space-around;
+  align-items: center;
+  justify-content: space-between;
 }
 .card-body-evento .botoes-evento .mais-informacoes {
-  color: #000;
+  color: #FFF;
+  text-shadow: 1px 2px 1px #00573E;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 26px;
+  /* 130% */
 }
 .card-body-evento .botoes-evento .inscrevase {
-  color: #000;
-  margin-right: auto;
+  display: flex;
+  width: 200px;
+  height: 30px;
+  padding: 15px 40px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border: 0;
+  border-radius: 8px;
+  color: #fff;
+  background: #02805B;
 }
 
 .container-selects {
