@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Agenda;
+use App\Evento;
 use App\Http\Controllers\Controller;
 
 class PagesController extends Controller
@@ -83,11 +84,20 @@ class PagesController extends Controller
     {
         [$page, $blocos] = $this->getPageById(20);
 
-        $eventos = \App\Evento::inComming()->active()->orderBy('data_inicio', 'asc')->get();
-
-        $tipos = \App\Evento::getTipos();
+        $eventos = Evento::inComming()->active()->orderBy('data_inicio', 'asc')->get();
+        $tipos = Evento::getTipos();
 
         return view('frontend.pages.eventos', compact('page', 'blocos', 'eventos', 'tipos'));
+    }
+
+    public function single($slug)
+    {
+        $evento = Evento::inComming()
+                        ->active()
+                        ->where('slug', $slug)
+                        ->firstOrfail();
+
+        return view('frontend.pages.eventos-single', compact('evento'));
     }
 
     public function sindicatos()
