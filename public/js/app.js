@@ -2438,6 +2438,23 @@ if ($('.buttons-eventos').length) {
   });
 }
 
+if ($('.banner-page').length) {
+  $(function () {
+    var shrinkHeader = 100;
+    $(window).scroll(function () {
+      var scroll = getCurrentScroll();
+      if (scroll >= shrinkHeader) {
+        $('.banner-page').addClass('pqno');
+      } else {
+        $('.banner-page').removeClass('pqno');
+      }
+    });
+    function getCurrentScroll() {
+      return window.pageYOffset || document.documentElement.scrollTop;
+    }
+  });
+}
+
 /***/ }),
 
 /***/ "./resources/js/forms.js":

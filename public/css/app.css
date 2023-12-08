@@ -1914,6 +1914,14 @@ button.btn-open-close.open span {
   color: #fff;
 }
 
+.pqno {
+  position: sticky;
+  top: 0px;
+  overflow: hidden;
+  height: 100px;
+  transition: color 0.3s ease-in-out;
+}
+
 .button-actions-container {
   text-align: center;
   margin-bottom: 35px;

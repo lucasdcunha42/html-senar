@@ -3,6 +3,14 @@
 $main-green: #79dd09 !default;
 $main-green-rgb-015: rgba(121, 221, 9, 0.1) !default;
 
+.pqno {
+    position: sticky;
+    top: 0px;
+    overflow: hidden;
+    height: 100px;
+    transition: color 0.3s ease-in-out;
+}
+
 .button-actions-container {
     text-align: center;
     margin-bottom: 35px;
