@@ -47,6 +47,10 @@ Route::get('/arrecadacao', [PagesController::class, 'arrecadacao'])->name('page.
 
 Route::get('/eventos', [PagesController::class, 'eventos'])->name('page.eventos');
 Route::get('/eventos/{slug}', [PagesController::class, 'single'])->name('page.eventos.single');
+Route::get('/eventos/{slug}/inscricao', [PagesController::class, 'inscricao'])->name('page.eventos.inscricao');
+Route::post('/eventos/{slug}/inscricao', [PagesController::class, 'realizarInscricao'])->name('page.eventos.realizarInscricao');
+
+
 Route::get('/sindicatos', [PagesController::class, 'sindicatos'])->name('page.sindicatos');
 
 Route::get('/transparencia', [PagesController::class, 'transparencia'])->name('page.transparencia');
