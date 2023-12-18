@@ -1914,17 +1914,9 @@ button.btn-open-close.open span {
   color: #fff;
 }
 
-.pqno {
-  position: sticky;
-  top: 0px;
-  overflow: hidden;
-  height: 100px;
-  transition: color 0.3s ease-in-out;
-}
-
 .button-actions-container {
   text-align: center;
-  margin-bottom: 35px;
+  margin-bottom: 20px;
 }
 .button-actions-container button {
   width: 20%;
@@ -1952,6 +1944,7 @@ button.btn-open-close.open span {
 
 .light {
   background: #f3f5f7;
+  padding-top: 10px;
 }
 
 a, a:hover {

@@ -4,7 +4,9 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Agenda;
 use App\Evento;
+use App\Inscrito;
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 
 class PagesController extends Controller
 {
@@ -98,6 +100,60 @@ class PagesController extends Controller
                         ->firstOrfail();
 
         return view('frontend.pages.eventos-single', compact('evento'));
+    }
+
+    public function showInscricao($slug)
+    {
+        $evento = Evento::where('slug', $slug)->first();
+
+        if (!$evento) {
+            abort(404);
+        }
+
+        // Retorna a view com o formulário de inscrição e o evento
+        return view('frontend.pages.eventos-inscricao')->with('evento', $evento);
+    }
+
+    public function storeInscricao(Request $request, $slug)
+    {
+        // Recupera o evento com base no slug
+        $evento = Evento::where('slug', $slug)->first();
+
+        // Verifica se o evento existe
+        if (!$evento) {
+            abort(404); // Ou redirecione para uma página de erro, como preferir
+        }
+
+        // Validação dos dados do formulário
+        $request->validate([
+            'nome' => 'required|string|max:255',
+            'cpf' => 'required|string|max:14',
+            'email' => 'required|email',
+        ]);
+
+        // Verifica se o inscrito já está inscrito neste evento pelo CPF
+        $inscrito = Inscrito::where('cpf', $request->input('cpf'))->first();
+
+        // Se já estiver inscrito neste evento, exibe a mensagem
+        if ($evento->inscritos->contains($inscrito)) {
+            return redirect()->route('page.eventos.inscricao', ['slug' => $slug])->with('error', 'Você já está inscrito neste evento.');
+        }
+
+        // Se não estiver inscrito neste evento, verifica se já está no banco pelo CPF
+        if (!$inscrito) {
+            // Cria um novo inscrito se não existir
+            $inscrito = Inscrito::create([
+                'nome' => $request->input('nome'),
+                'cpf' => $request->input('cpf'),
+                'email' => $request->input('email'),
+            ]);
+        }
+
+        // Relaciona o inscrito ao evento
+        $evento->inscritos()->attach($inscrito->id);
+
+        // Redireciona com uma mensagem de sucesso
+        return redirect()->route('page.eventos.inscricao', ['slug' => $slug])->with('success', 'Inscrição realizada com sucesso!');
     }
 
     public function sindicatos()
