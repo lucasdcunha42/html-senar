@@ -72,7 +72,6 @@ src="https://www.facebook.com/tr?id=1435749543520095&ev=PageView&noscript=1"/></
 
         @yield('content')
 
-        {!! EuCookieConsent::getPopup() !!}
 
         @include('frontend.structure.footer')
 

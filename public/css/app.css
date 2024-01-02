@@ -1499,31 +1499,6 @@ button.btn-open-close.open span {
   cursor: pointer;
 }
 
-.search-form {
-  justify-content: stretch;
-  width: 100%;
-}
-.search-form .search-bar {
-  display: flex;
-  width: 100%;
-}
-.search-form .search-bar input.custom-search {
-  width: 100%;
-  padding: 5px;
-  font-size: 14px;
-  border: 1px solid #ccc;
-  border-radius: 4px 0 0 4px;
-}
-.search-form .search-bar button {
-  padding: 10px 30px;
-  font-size: 14px;
-  background-color: #034906;
-  color: #fff;
-  border: none;
-  border-radius: 0 4px 4px 0;
-  cursor: pointer;
-}
-
 .cursos-lista {
   margin: 50px 0;
 }
