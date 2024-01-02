@@ -39,7 +39,7 @@
 
                     <div class="btn-agenda col-xs-12 col-md-3 col-lg-3">
                         <select name="cidade" id="agendas-cidade-select" class="select-agendas">
-                            <option value="">Cidade</option>
+                            <option value="">Municipio</option>
                             @foreach ($cidades as $cidade)
                                 <option value="{{ $cidade }}">{{ $cidade }}</option>
                             @endforeach
