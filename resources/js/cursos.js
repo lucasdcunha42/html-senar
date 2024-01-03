@@ -1,72 +1,40 @@
-if ($('.carregar-mais-cursos').length) {
+$(function() {
+    $('#nome_curso').on('change', function() {
+        // Obter o valor do elemento 'nome_curso' após a mudança.
+        var searchTerm = $(this).val();
 
-    var loadMore = $('.carregar-mais-cursos a');
-    var url = loadMore.attr('href');
-    var cursosContainer = $('.cursos-container');
-
-    var cursosLoading = $('.cursos-loading-container');
-
-    var __inloading = false;
-    var finishCursos = false;
-
-    var cursosNome = $('#nome_curso');
-
-    var reloadAll = false;
-
-    $.each([
-        cursosNome
-    ], function(index, el) {
-        $(el).on('change', function() {
-            reloadAll = true;
-            finishCursos = false;
-            $('.carregar-mais-cursos').show();
-            loadMore.trigger('click');
-        });
+        // Chamar a função getCursos com o termo de busca.
+        getCursos(searchTerm);
     });
 
-    loadMore.on('click', function(e) {
+    $('body').on('click', '.pagination a', function(e) {
         e.preventDefault();
-        console.log('Função loadMore() foi chamada ao clicar em "Load More"');
 
-        if(__inloading || finishCursos) {
-            return false;
-        }
-
-        var skip = reloadAll ? 0 : $('.cursos-lista .curso-item').length;
-
-        var data = {
-            skip: skip,
-            nome: cursosNome.val()
-        }
-
-        __inloading = true;
-
-        cursosLoading.show('fast');
-
-        $.ajax({
-            method: 'POST',
-            url: url,
-            data: data
-        })
-        .done(function( response ) {
-
-            var _method = reloadAll ? 'html' : 'append';
-
-            cursosContainer[_method](response.view);
-
-            if(response.finish) {
-                finishCursos = true;
-                $('.carregar-mais-cursos').hide();
-            }
-
-        })
-        .fail(function(jqXHR, textStatus) {
-
-        })
-        .always(function() {
-            reloadAll = false;
-            __inloading = false;
-            cursosLoading.hide('fast');
-        });
+        var url = $(this).attr('href');
+        getCursosWithPagination(url);
+        window.history.pushState("", "", url);
     });
-}
+
+    function getCursos(searchTerm) {
+        $.ajax({
+            url: '/cursos',
+            method: 'GET',
+            data: { q: searchTerm },
+        }).done(function(data) {
+            $('.cursos-container').html(data);
+        }).fail(function() {
+            alert('Cursos could not be loaded.');
+        });
+    }
+
+    function getCursosWithPagination(url) {
+        $.ajax({
+            url: url,
+            method: 'GET',
+        }).done(function(data) {
+            $('.cursos-container').html(data);
+        }).fail(function() {
+            alert('Cursos could not be loaded.');
+        });
+    }
+});

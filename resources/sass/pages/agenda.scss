@@ -1,5 +1,56 @@
 .agenda-header {
-    margin-bottom: 80px;
+    margin-bottom: 20px;
+}
+
+.banner-agenda {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    padding: 40px 0;
+
+    .bg-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(85, 78, 78, 0.5);
+    }
+
+    .agenda-title {
+        color: white;
+        text-align: center;
+        font-weight: bold;
+        font-size: 24px;
+        margin: 20px;
+        text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.5);
+    }
+
+    .banner-info {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        font-size: 1em;
+        color: white;
+
+        .info-box {
+            color: white;
+            background-color: #688b823a;
+            text-align: center;
+            margin: 10px;
+            padding: 10px;
+            max-width: 150px;
+            border-radius: 10px;
+            text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.5);
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+        }
+    }
 }
 
 .agenda-busca {
@@ -122,13 +173,14 @@
 }
 
 .sindicato {
-    padding: 10px 0;
+    padding: 10px 10px;
+    margin: 0px;
     background-color: #005c3c;
     color: #ffffff;
 }
 
-  .sindicato-item {
-    font-size: 18px;
+.sindicato-item {
+font-size: 18px;
 }
 
 .agenda-lista {
