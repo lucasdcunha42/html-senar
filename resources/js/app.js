@@ -1,4 +1,5 @@
 require('./bootstrap');
+require('./cookies');
 require('./helpers');
 require('./hamburger');
 require('./accordion');

@@ -176,7 +176,6 @@
         $('.legislacao-link').click(function(e) {
             pdfLink = $(this).data('pdf');
             const legislacaoTitulo = $(this).text(); // Obtém o título da legislação
-
             $('#pdfIframe').attr('src', pdfLink);
             $('#pdfModalLabel').text(legislacaoTitulo); // Define o título do modal dinamicamente
             $('#pdfModal').modal('show');

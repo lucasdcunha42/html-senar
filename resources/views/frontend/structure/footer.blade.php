@@ -1,7 +1,7 @@
 <div class="footer">
     <div class="container">
         <div class="row">
-            <div class="col-sm-12 col-md-7">
+            <div class="col-sm-12 col-md-6">
                 <div class="row">
                     <div class="col-sm-5">
                         <a href="{{ route('page.home') }}">
@@ -21,21 +21,24 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-12 col-md-5">
-                <div class="footer-icons text-right">
-                    {{-- <a href="https://www.cnabrasil.org.br/" target="_blank">
-                        <img src="http://senar.allto.digital/storage/settings/June2021/x1zMeQn4FpcZ2QlyAughN.png.pagespeed.ic.7jZwNa_Lea.webp" alt="" data-pagespeed-url-hash="1125176109" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
-                    </a>
-                    <a href="https://www.farsul.org.br/" target="_blank">
-                        <img src="http://senar.allto.digital/storage/settings/June2021/xOna1sPRoj0ZZupXD5Apz.png.pagespeed.ic.NYsQEExYpP.webp" alt="" data-pagespeed-url-hash="2011897543" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
-                    </a>
-                    <a href="http://fetagrs.org.br/" target="_blank">
-                        <img src="http://senar.allto.digital/storage/settings/June2021/x10ZKnwJzHV1oPP2pBeVy.png.pagespeed.ic.D_yxU1yCes.webp" alt="" data-pagespeed-url-hash="3335550896" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
-                    </a>
-                    <a href="http://www.casaruralrs.com.br/" target="_blank">
-                        <img src="http://senar.allto.digital/storage/settings/June2021/xZv64QDKz40GM2rHF7dHA.png.pagespeed.ic.T7XsXATVSj.webp" alt="" data-pagespeed-url-hash="4081322457" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
-                    </a> --}}
-                    @include('components.social-links')
+            <div class="col-sm-12 col-md-6">
+                <div class="row center">
+
+                    <div class="col-sm-6 text-center">
+                        <a href="{{ route('page.home') }}">
+                            <img
+                            style="max-width: 140px"
+                            src="{{ asset('storage/' . setting('site.selo')) }}"
+                            class="img-responsive center-on-xs"
+                            alt="">
+                        </a>
+                    </div>
+
+                        <div class="col-sm-6">
+                            <div class="footer-icons">
+                                @include('components.social-links')
+                            </div>
+                        </div>
                 </div>
             </div>
         </div>
