@@ -12,11 +12,14 @@
 					</time>
 				</div>
 				<div class="postcard__bar"></div>
-				<div class="postcard__preview-txt"> {{$evento->texto}}</div>
+				<div class="postcard__preview-txt"> {!! $evento->texto !!}</div>
 				<ul class="postcard__tagbox">
-					<li class="tag__item"><i class="fas fa-clock mr-2"></i>Inscrever-se</li>
+					<li class="tag__item">
+                        <i class="fas fa-clock mr-2"></i>
+                        <a href="{{ route('page.eventos.inscricao', $evento->slug) }}">Inscrever-se</a>
+                    </li>
 					<li class="tag__item play green">
-						<a href="#"><i class="fas fa-play mr-2"></i>Ver Mais...</a>
+						<a href="{{route('page.eventos.single', $evento->slug)}}"><i class="fas fa-play mr-2"></i>Ver Mais...</a>
 					</li>
 				</ul>
 			</div>

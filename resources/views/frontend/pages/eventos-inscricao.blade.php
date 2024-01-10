@@ -16,6 +16,12 @@
             </div>
         @endif
 
+        @if(session('error'))
+            <div class="alert alert-danger">
+                {{ session('error') }}
+            </div>
+        @endif
+
         @if ($errors->any())
             <div class="alert alert-danger">
                 <ul>
@@ -46,7 +52,22 @@
 
             <!-- Resto dos dados aqui pai -->
 
-            <button type="submit" class="btn btn-primary">Inscrever-se</button>
+            <div class="form-group">
+                <label for="ocupaçao"> Ocupação: </label>
+                <input type="ocupaçao" name="ocupaçao" id="ocupaçao" class="form-control" value="{{ old('ocupaçao') }}">
+            </div>
+
+            <div class="form-group">
+                <label for="cargo">Cargo:</label>
+                <input type="cargo" name="cargo" id="cargo" class="form-control" value="{{ old('cargo') }}">
+            </div>
+
+            <div class="form-group">
+                <label for="cidade">Cidade:</label>
+                <input type="cidade" name="cidade" id="cidade" class="form-control" value="{{ old('cidade') }}">
+            </div>
+
+            <button type="submit" class="btn btn-success">Inscrever-se</button>
         </form>
     </div>
 @endsection

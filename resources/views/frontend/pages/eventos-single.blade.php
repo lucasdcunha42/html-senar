@@ -8,7 +8,7 @@
     ])
     <div class="container">
         <div class="col-xs-12">
-            <p class="descricao">{{$evento->texto}}</p>
+            <div class="descricao"> {!! $evento->texto !!} </div>
         </div>
         <div class="col-xs-6">
             <a href="{{ route('page.eventos.inscricao', $evento->slug) }}"><button type="button" class="btn btn-success btn-floating btn-lg">Inscrever-se</button></a>
