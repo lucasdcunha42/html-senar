@@ -11,7 +11,10 @@ use App\Http\Controllers\Admin\CursosController;
 use App\Http\Controllers\Admin\RegioesController;
 use App\Http\Controllers\Admin\SindicatosController;
 use App\Http\Controllers\Frontend\AgendasController;
+use App\Http\Controllers\Admin\ListaInscritosController;
+use App\Http\Controllers\Admin\InscritosEventosController;
 use Illuminate\Support\Facades\Route;
+use TCG\Voyager\Http\Controllers\VoyagerBreadController;
 
 /*
 |--------------------------------------------------------------------------
@@ -84,6 +87,19 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('/update-xml-cursos', [CursosController::class, 'update'])->name('xml.cursos.update');
     Route::get('/update-xml-regioes', [RegioesController::class, 'update'])->name('xml.regioes.update');
     Route::get('/update-xml-sindicatos', [SindicatosController::class, 'update'])->name('xml.sindicatos.update');
+
+    Route::get('/eventos-inscritos/{event}/inscritos', [ListaInscritosController::class, 'index'])->name('lista.inscritos.index');
+
+    Route::get('/eventos-inscritos/{evento}/inscricao', [InscritosEventosController::class, 'formulario'])->name('lista.inscritos.formulario');
+    Route::post('/eventos-inscritos/{evento}/adicionar', [InscritosEventosController::class, 'adicionaInscrito'])->name('lista.inscritos.adicionar');
+
+    Route::get('/eventos-inscritos/{evento}/remover-inscrito/{inscrito}', [InscritosEventosController::class, 'removeInscritoEvento'])->name('lista.inscritos.remover');
+    Route::post('/eventos-inscritos/{evento}/bulk-detach-inscritos', [InscritosEventosController::class, 'bulkDetachInscritos'])->name('lista.inscritos.bulkDetach');
+
+    Route::get('/eventos-inscritos/{evento}/inscrito/{inscrito}/cracha', [InscritosEventosController::class, 'imprimeCracha'])->name('lista.inscritos.imprimeCracha');
+    Route::get('/eventos-inscritos/{evento}/inscrito/{inscrito}/certificado', [InscritosEventosController::class, 'imprimeCertificado'])->name('lista.inscritos.imprimeCertificado');
+
+
 });
 
 Route::redirect('/admin', 'admin/cursos');
