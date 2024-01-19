@@ -16,7 +16,11 @@
         "intervention/imagecache": "^2.5.1",
         "laravel/framework": "^8.12",
         "laravel/tinker": "^2.5",
+<<<<<<< HEAD
         "the42coders/eu-cookie-consent": "^1.0",
+=======
+        "laravellegends/pt-br-validator": "^10.0",
+>>>>>>> d95305cd4794c0dfca82714f9c58be8a239bd533
         "oliverad/parse-xml": "dev-master",
         "tcg/voyager": "^1.4"
     },

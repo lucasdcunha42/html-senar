@@ -39,16 +39,17 @@
         </div>
     </div>
 
-    <div class="eventos-container bg-grey">
-        <div class="container">
-            <div class="row">
+
+    <div class="container col-xs-12 bg-grey">
+        <div class="row">
                 @foreach($eventos as $evento)
-                    <div class="col-sm-4 col-md-3 evento-item" data-type="{{ $evento->tipo }}">
-                        @include('components.c-thumb-4', ['evento' => $evento])
+                    <div class="evento-item" data-type="{{ $evento->tipo }}">
+                        @include('components.card-eventos', ['evento' => $evento, 'bgPagePath' => $page->banner, 1400, 300])
                     </div>
                 @endforeach
             </div>
         </div>
     </div>
+
 
 @endsection

@@ -18,4 +18,9 @@ class Evento extends CustomModel
         ]);
     }
 
+    public function inscritos()
+    {
+        return $this->belongsToMany(Inscrito::class, 'eventos_inscritos');
+    }
+
 }
