@@ -19,8 +19,7 @@ class CreateInscritosTable extends Migration
             $table->text('cpf');
             $table->text('email');
             $table->text('cidade');
-            $table->text('empresa');
-            $table->text('cargo');
+            $table->text('atividade');
 
             $table->timestamps();
             $table->softDeletes();
