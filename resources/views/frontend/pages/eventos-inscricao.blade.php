@@ -2,8 +2,7 @@
 
 @section('content')
     @include('components.banner-page', [
-        'title' => $evento->titulo,
-//        'bgPagePath' => !empty(trim($curso->imagem)) ? urlStorage($curso->imagem, 1400, 300) : '',
+        'bgPagePath' => !empty(trim($evento->banner)) ? urlStorage($evento->banner, 1400, 300) : '',
         'overlay' => false
     ])
 
@@ -53,13 +52,8 @@
             <!-- Resto dos dados aqui pai -->
 
             <div class="form-group">
-                <label for="ocupaçao"> Ocupação: </label>
-                <input type="ocupaçao" name="ocupaçao" id="ocupaçao" class="form-control" value="{{ old('ocupaçao') }}">
-            </div>
-
-            <div class="form-group">
-                <label for="cargo">Cargo:</label>
-                <input type="cargo" name="cargo" id="cargo" class="form-control" value="{{ old('cargo') }}">
+                <label for="atividade"> Atividade: </label>
+                <input type="atividade" name="atividade" id="atividade" class="form-control" value="{{ old('atividade') }}">
             </div>
 
             <div class="form-group">

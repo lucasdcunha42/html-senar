@@ -7,17 +7,29 @@
         <h1 class="page-title">
             <i class="{{ $dataType->icon }}"></i> {{ $dataType->getTranslatedAttribute('display_name_plural') }}
         </h1>
-        @can('add', app($dataType->model_name))
-            <a href="{{ route('voyager.'.$dataType->slug.'.create') }}" class="btn btn-success btn-add-new">
-                <i class="voyager-plus"></i> <span>{{ __('voyager::generic.add_new') }}</span>
-            </a>
-        @endcan
-        @can('delete', app($dataType->model_name))
-            @include('voyager::partials.bulk-delete')
-        @endcan
-        <a href="{{ route('lista.inscritos.adicionar')}}" class="btn btn-success btn-add-new">
+
+        <!-- Botão Header Adiciona inscrito em evento -->
+        <a href="{{ route('lista.inscritos.formulario',  ['evento' => $evento->id] )}}" class="btn btn-success btn-add-new">
             <i class="voyager-plus"></i> Adcionar Inscrito
         </a>
+
+        <!-- Impressão de Cetificado de todos os Participantes -->
+        <a href="{{ route('lista.inscritos.formulario',  ['evento' => $evento->id] )}}" class="btn btn-info btn-add-new">
+            <i class="voyager-certificate"></i> Imprimir Certificados
+        </a>
+
+        <!-- Impressão de Crachas de todos os Participantes -->
+        <a href="{{ route('lista.inscritos.formulario',  ['evento' => $evento->id] )}}" class="btn btn-warning btn-add-new">
+            <i class="voyager-news"></i> Imprimir Crachás
+        </a>
+
+        <!-- Remover participantes em massa -->
+        <form method="post" action="{{ route('lista.inscritos.bulkDetach',  ['evento' => $evento->id] ) }}" style="display:inline">
+            {{ csrf_field() }}
+            <button type="submit" class="btn btn-warning btn-danger"><i class="voyager-trash"></i> Remover Selecionados </button>
+            <input type="hidden" name="ids" value="" class="selected_ids">
+        </form>
+
         @can('edit', app($dataType->model_name))
             @if(isset($dataType->order_column) && isset($dataType->order_display_column))
                 <a href="{{ route('voyager.'.$dataType->slug.'.order') }}" class="btn btn-primary btn-add-new">
@@ -267,8 +279,17 @@
                                         <td class="no-sort no-click bread-actions">
 
                                             <span class="input-group-btn text-right">
-                                                <a class="btn btn-danger" href="{{ route('lista.inscritos.remover', ['event' => $event->id, 'id' => $data->id]) }}">
+                                                <a class="btn btn-danger" href="{{ route('lista.inscritos.remover', ['evento' => $evento->id, 'inscrito' => $data]) }}">
                                                     <i class="voyager-person"></i> <span> - Remover Inscrição</span>
+                                                </a>
+                                            </span>
+                                            <span>
+                                                <a href="{{ route('lista.inscritos.imprimeCracha',  ['evento' => $evento->id, 'inscrito' => $data] )}}" class="btn btn-info btn-add-new">
+                                                    <i class="voyager-certificate"></i> Certificado
+                                                </a>
+
+                                                <a href="{{ route('lista.inscritos.imprimeCracha',  ['evento' => $evento->id, 'inscrito' => $data] )}}" class="btn btn-warning btn-add-new">
+                                                    <i class="voyager-news"></i> Crachá
                                                 </a>
                                             </span>
 
@@ -333,6 +354,7 @@
 
 @section('javascript')
     <!-- DataTables -->
+
     @if(!$dataType->server_side && config('dashboard.data_tables.responsive'))
         <script src="{{ voyager_asset('lib/js/dataTables.responsive.min.js') }}"></script>
     @endif
@@ -369,12 +391,7 @@
             $('#open-loader').on('click', function(e) {
                 document.getElementById('voyager-loader').style.display = "block";
             });
-
-            setTimeout(function() {
-                document.getElementById('updated-alert').style.display = "none";
-            }, 5000);
         });
-
 
         var deleteFormAction;
         $('td').on('click', '.delete', function (e) {
@@ -404,6 +421,7 @@
                 })
             })
         @endif
+
         $('input[name="row_id"]').on('change', function () {
             var ids = [];
             $('input[name="row_id"]').each(function() {

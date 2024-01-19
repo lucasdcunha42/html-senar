@@ -44,7 +44,7 @@
         <div class="row">
                 @foreach($eventos as $evento)
                     <div class="evento-item" data-type="{{ $evento->tipo }}">
-                        @include('components.card-eventos', ['evento' => $evento])
+                        @include('components.card-eventos', ['evento' => $evento, 'bgPagePath' => $page->banner, 1400, 300])
                     </div>
                 @endforeach
             </div>

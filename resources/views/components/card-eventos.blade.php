@@ -2,7 +2,7 @@
 	<div class="container py-2">
 		<article class="postcard light green">
 			<a class="postcard__img_link" href="{{route('page.eventos.single', $evento->slug)}}">
-				<img class="postcard__img" src="https://picsum.photos/500/501" alt="Image Title" />
+				<img class="postcard__img" src="{{urlStorage($evento->card, 300, 300)}}" alt="Image Title" />
 			</a>
 			<div class="postcard__text t-dark">
 				<h1 class="postcard__title green"><a href="{{route('page.eventos.single', $evento->slug)}}">{{$evento->titulo}}</a></h1>
@@ -12,14 +12,19 @@
 					</time>
 				</div>
 				<div class="postcard__bar"></div>
-				<div class="postcard__preview-txt"> {!! $evento->texto !!}</div>
+				<div class="postcard__preview-txt">
+                    <?php
+                        $paragrafos = explode("\n", $evento->texto);
+                        echo isset($paragrafos[0]) ? $paragrafos[0] : '';
+                    ?>
+                </div>
 				<ul class="postcard__tagbox">
 					<li class="tag__item">
                         <i class="fas fa-clock mr-2"></i>
-                        <a href="{{ route('page.eventos.inscricao', $evento->slug) }}">Inscrever-se</a>
+                        <a href="{{ route('page.eventos.inscricao', $evento->slug) }}"> Inscrever-se </a>
                     </li>
 					<li class="tag__item play green">
-						<a href="{{route('page.eventos.single', $evento->slug)}}"><i class="fas fa-play mr-2"></i>Ver Mais...</a>
+						<a href="{{ route('page.eventos.single', $evento->slug) }}"><i class="fas fa-play mr-2"></i> Ver Mais... </a>
 					</li>
 				</ul>
 			</div>
