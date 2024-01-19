@@ -13,9 +13,9 @@ class EventosInscrito extends Model
         'evento_id',
         'inscrito_id'
     ];
+    public $timestamp = true;
 
     public function evento() {
         return $this->belongsTo(Evento::class);
     }
-
 }
