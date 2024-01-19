@@ -7,6 +7,8 @@ use App\Evento;
 use App\Inscrito;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
+
 
 class PagesController extends Controller
 {
@@ -125,11 +127,15 @@ class PagesController extends Controller
         }
 
         // Validação dos dados do formulário
-        $request->validate([
+        $validator = Validator::make($request->all(), [
             'nome' => 'required|string|max:255',
-            'cpf' => 'required|string|max:14',
+            'cpf' => 'required|string|cpf',
             'email' => 'required|email',
         ]);
+
+        if ($validator->fails()) {
+            return response()->json(['errors' => $validator->errors()], 422);
+        }
 
         // Verifica se o inscrito já está inscrito neste evento pelo CPF
         $inscrito = Inscrito::where('cpf', $request->input('cpf'))->first();
@@ -146,6 +152,8 @@ class PagesController extends Controller
                 'nome' => $request->input('nome'),
                 'cpf' => $request->input('cpf'),
                 'email' => $request->input('email'),
+                'cidade' => $request->input('cidade'),
+                'atividade' => $request->input('atividade'),
             ]);
         }
 

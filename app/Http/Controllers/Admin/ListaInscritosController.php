@@ -40,9 +40,10 @@ class ListaInscritosController extends VoyagerBaseController
         $slug = 'eventos-inscritos';
         $idEvento = $request->route()->event;
 
-        $event = Evento::findOrFail($idEvento);
-        $registrations = $event->inscritos;
-        $pivotIds = $event->inscritos()->pluck('eventos_inscritos.id')->toArray();
+        $evento = Evento::findOrFail($idEvento);
+
+        $registrations = $evento->inscritos;
+        $pivotIds = $evento->inscritos()->pluck('eventos_inscritos.id')->toArray();
 
         // GET THE DataType based on the slug
         $dataType = Voyager::model('DataType')->where('slug', '=', 'inscritos')->first();
@@ -191,7 +192,7 @@ class ListaInscritosController extends VoyagerBaseController
         $dataTypeContent = $registrations;
 
         return Voyager::view($view, compact(
-            'event',
+            'evento',
             'actions',
             'dataType',
             'dataTypeContent',
