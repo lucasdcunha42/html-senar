@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Inscrito extends Model
 {
-    protected $fillable = ['nome','cpf', 'email','cidade', 'atividade'];
+    protected $fillable = ['nome','cpf', 'email','cidade', 'atividade','telefone'];
     public $timestamps = true;
 
     public function evento() {
