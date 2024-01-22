@@ -4,11 +4,12 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Agenda;
 use App\Evento;
+use App\Http\Requests\EventoInscricao;
 use App\Inscrito;
 use App\Http\Controllers\Controller;
+use App\SindicatosMunicipio;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Validator;
-
+use LaravelLegends\PtBrValidator\Validator;
 
 class PagesController extends Controller
 {
@@ -107,16 +108,20 @@ class PagesController extends Controller
     public function showInscricao($slug)
     {
         $evento = Evento::where('slug', $slug)->first();
+        $cidades = SindicatosMunicipio::pluck('municipio','id');
 
         if (!$evento) {
             abort(404);
         }
 
         // Retorna a view com o formulário de inscrição e o evento
-        return view('frontend.pages.eventos-inscricao')->with('evento', $evento);
+        return view('frontend.pages.eventos-inscricao', [
+            'evento' => $evento,
+            'cidades' => $cidades,
+        ]);
     }
 
-    public function storeInscricao(Request $request, $slug)
+    public function storeInscricao(EventoInscricao $request, $slug)
     {
         // Recupera o evento com base no slug
         $evento = Evento::where('slug', $slug)->first();
@@ -126,16 +131,6 @@ class PagesController extends Controller
             abort(404); // Ou redirecione para uma página de erro, como preferir
         }
 
-        // Validação dos dados do formulário
-        $validator = Validator::make($request->all(), [
-            'nome' => 'required|string|max:255',
-            'cpf' => 'required|string|cpf',
-            'email' => 'required|email',
-        ]);
-
-        if ($validator->fails()) {
-            return response()->json(['errors' => $validator->errors()], 422);
-        }
 
         // Verifica se o inscrito já está inscrito neste evento pelo CPF
         $inscrito = Inscrito::where('cpf', $request->input('cpf'))->first();
@@ -147,14 +142,8 @@ class PagesController extends Controller
 
         // Se não estiver inscrito neste evento, verifica se já está no banco pelo CPF
         if (!$inscrito) {
-            // Cria um novo inscrito se não existir
-            $inscrito = Inscrito::create([
-                'nome' => $request->input('nome'),
-                'cpf' => $request->input('cpf'),
-                'email' => $request->input('email'),
-                'cidade' => $request->input('cidade'),
-                'atividade' => $request->input('atividade'),
-            ]);
+            // Cria um novo inscrito com somente os dados validados laravel 5.6
+            $inscrito = Inscrito::create($request->validated());
         }
 
         // Relaciona o inscrito ao evento

@@ -30,7 +30,6 @@
                 </ul>
             </div>
         @endif
-
         <form action="{{ route('page.eventos.inscricao.store', ['slug' => $evento->slug]) }}" method="post">
             @csrf
 
@@ -46,7 +45,7 @@
 
             <div class="form-group">
                 <label for="email">Email:</label>
-                <input type="email" name="email" id="email" class="form-control" value="{{ old('email') }}" required>
+                <input type="email" name="email" id="email" class="form-control" value="{{ old('email') }}">
             </div>
 
             <!-- Resto dos dados aqui pai -->
@@ -57,8 +56,20 @@
             </div>
 
             <div class="form-group">
-                <label for="cidade">Cidade:</label>
-                <input type="cidade" name="cidade" id="cidade" class="form-control" value="{{ old('cidade') }}">
+                <label for="cidade">Municipio:</label>
+                <select name="cidade" id="cidade" class="form-control" required>
+                    <option value="" disabled selected>Selecione um município</option>
+                    @foreach($cidades as $id => $cidade)
+                        <option value="{{ $cidade }}" {{ old('cidade') == $id ? 'selected' : '' }}>
+                            {{ $cidade }}
+                        </option>
+                    @endforeach
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="telefone">Telefone:</label>
+                <input type="telefone" name="telefone" id="telefone" class="form-control" value="{{ old('telefone') }}">
             </div>
 
             <button type="submit" class="btn btn-success">Inscrever-se</button>

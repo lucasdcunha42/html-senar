@@ -25,8 +25,13 @@
     </div>
 
     <div class="form-group">
-        <label for="cidade">Cidade:</label>
+        <label for="cidade">Municipio:</label>
         <input type="cidade" name="cidade" id="cidade" class="form-control" value="{{ old('cidade') }}">
+    </div>
+
+    <div class="form-group">
+        <label for="telefone">Telefone:</label>
+        <input type="telefone" name="telefone" class="form-control" value="{{ old('telefone') }}">
     </div>
 
     {{-- Botão de envio --}}
