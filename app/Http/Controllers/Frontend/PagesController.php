@@ -108,7 +108,7 @@ class PagesController extends Controller
     public function showInscricao($slug)
     {
         $evento = Evento::where('slug', $slug)->first();
-        $cidades = SindicatosMunicipio::pluck('municipio','id');
+        $cidades = SindicatosMunicipio::orderBy('municipio')->pluck('municipio','id');
 
         if (!$evento) {
             abort(404);
