@@ -83,6 +83,8 @@ src="https://www.facebook.com/tr?id=1435749543520095&ev=PageView&noscript=1"/></
     <script src="{{ asset('js/vendor/jquery-migrate.1.4.1.min.js') }}"></script>
     <script src="{{ asset('css/bootstrap-3.4.1-dist/js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('js/vendor/slick-1.8.1/slick/slick.min.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js" integrity="sha256-u7MY6EG5ass8JhTuxBek18r5YG6pllB9zLqE4vZyTn4=" crossorigin="anonymous"></script>
+
     @yield('js-vendor')
     <script src="{{ asset('js/app.js?t=' . $timestamp) }}"></script>
     @yield('js')
