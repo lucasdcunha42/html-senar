@@ -13,6 +13,7 @@ use App\Http\Controllers\Admin\SindicatosController;
 use App\Http\Controllers\Frontend\AgendasController;
 use App\Http\Controllers\Admin\ListaInscritosController;
 use App\Http\Controllers\Admin\InscritosEventosController;
+use App\Http\Controllers\Admin\AtendenteController;
 use Illuminate\Support\Facades\Route;
 use TCG\Voyager\Http\Controllers\VoyagerBreadController;
 
@@ -99,7 +100,10 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('/eventos-inscritos/{evento}/inscrito/{inscrito}/cracha', [InscritosEventosController::class, 'imprimeCracha'])->name('lista.inscritos.imprimeCracha');
     Route::get('/eventos-inscritos/{evento}/inscrito/{inscrito}/certificado', [InscritosEventosController::class, 'imprimeCertificado'])->name('lista.inscritos.imprimeCertificado');
 
+    //Atendente
+    Route::get('/atendente', [AtendenteController::class, 'listaEventos'])->name('atendente.eventos');
+
 
 });
 
-Route::redirect('/admin', 'admin/cursos');
+//Route::redirect('/admin', 'admin/cursos');
