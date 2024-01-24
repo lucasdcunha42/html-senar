@@ -102,6 +102,9 @@ Route::group(['prefix' => 'admin'], function () {
 
     //Atendente
     Route::get('/atendente', [AtendenteController::class, 'listaEventos'])->name('atendente.eventos');
+    Route::get('/atendente/{evento}/inscrito', [AtendenteController::class, 'showInscritos'])->name('atendente.showInscritos');
+
+
 
 
 });

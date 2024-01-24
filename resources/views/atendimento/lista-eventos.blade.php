@@ -1,28 +1,18 @@
 @extends('voyager::master')
 
-
-
 @section('content')
 
     <style>
         @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
         @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
         @import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700');
-        body{
-            font-family: 'Open Sans', sans-serif;
-        }
-        *:hover{
-            -webkit-transition: all 1s ease;
-            transition: all 1s ease;
-        }
+
         section{
             float:left;
             width:100%;
             background: #fff;  /* fallback for old browsers */
             padding:30px 0;
         }
-        h1{float:left; width:100%; color:#232323; margin-bottom:30px; font-size: 14px;}
-        h1 span{font-family: 'Libre Baskerville', serif; display:block; font-size:45px; text-transform:none; margin-bottom:20px; margin-top:30px; font-weight:700}
 
         /*Profile Card 3*/
         .profile-card-3 {
@@ -34,10 +24,6 @@
         text-align: center;
         height:368px;
         border:none;
-        }
-        .h2{
-            text-decoration: none;
-            border:1px solid black;
         }
         .profile-card-3 .background-block {
             float: left;
@@ -76,23 +62,12 @@
             z-index: -1;
             transform: rotate(-13deg);
         }
-        .profile-card-3 .profile {
-        border-radius: 50%;
-        position: absolute;
-        bottom: 50%;
-        left: 50%;
-        max-width: 100px;
-        opacity: 1;
-        box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
-        border: 2px solid rgba(255, 255, 255, 1);
-        -webkit-transform: translate(-50%, 0%);
-        transform: translate(-50%, 0%);
-        z-index:2;
-        }
+
         .profile-card-3 h2 {
         margin: 0 0 5px;
         font-weight: 600;
         font-size:25px;
+        text-decoration: none;
         }
         .profile-card-3 h2 small {
         display: block;
@@ -130,10 +105,10 @@
         <div class="container">
             <div class="row">
                 @forelse ($eventos as $evento)
-                    <div class="col-md-4">
+                    <div class="col-10 col-md-4">
                         <div class="card profile-card-3">
                             <div class="background-block">
-                                <img src="{{$evento->card}}" alt="profile-sample1" class="background"/>
+                                <img src="https://images.unsplash.com/photo-1704475336842-0ab3798abf0e?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTcwNjA5ODY2Mg&ixlib=rb-4.0.3&q=80&w=300" alt="profile-sample1" class="background"/>
                             </div>
 
                             <!--
@@ -143,8 +118,8 @@
                             -->
 
                             <div class="card-content">
-                                <a href="#">
-                                    <h2>{{$evento->titulo}}
+                                <a href="{{ route('atendente.showInscritos', $evento) }}">
+                                    <h2 style="color: #232323">{{$evento->titulo}}
                                         <small>{{$evento->cidade}}</small>
                                     </h2>
                                 </a>
