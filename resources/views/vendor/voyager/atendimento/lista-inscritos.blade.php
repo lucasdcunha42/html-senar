@@ -1,33 +1,34 @@
 @extends('voyager::master')
 
 @section('content')
-    <div class="container">
-        <h1>Inscritos</h1>
 
-        <ul class="nav nav-tabs" id="myTabs">
-            <li class="active"><a data-toggle="tab" href="#compareceram">Compareceram</a></li>
-            <li><a data-toggle="tab" href="#ausentes">Ausentes</a></li>
+    <div class="container">
+        <h1 class="text-center">{{$evento->titulo}} - {{$evento->data_inicio}} - {{$evento->data_fim}}</h1>
+        <h2>Inscritos</h2>
+
+        <ul class="nav nav-pills text-center" id="myTabs">
+            <li class="col-md-6 active" style="padding: 0"><a data-toggle="tab" href="#compareceram">Presentes</a></li>
+            <li class="col-md-5" style="padding: 0"><a data-toggle="tab" href="#ausentes">Ausentes</a></li>
         </ul>
 
         <div class="tab-content">
             <!-- Tab Compareceram -->
             <div id="compareceram" class="tab-pane fade in active">
-                @if(count($compareceram) > 0)
-                    <table class="table">
+                @if(count($presentes) > 0)
+
+                    <table id="dataTable" class="table">
                         <thead>
                             <tr>
-                                <th>ID</th>
                                 <th>Nome</th>
-                                <th>Email</th>
+                                <th>CPF</th>
                                 <!-- Adicione mais colunas conforme necessário -->
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach($compareceram as $inscrito)
+                            @foreach($presentes as $presente)
                                 <tr>
-                                    <td>{{ $inscrito->id }}</td>
-                                    <td>{{ $inscrito->nome }}</td>
-                                    <td>{{ $inscrito->email }}</td>
+                                    <td>{{ $presente->nome }}</td>
+                                    <td>{{ $presente->cpf }}</td>
                                     <!-- Adicione mais colunas conforme necessário -->
                                 </tr>
                             @endforeach
@@ -44,18 +45,16 @@
                     <table class="table">
                         <thead>
                             <tr>
-                                <th>ID</th>
                                 <th>Nome</th>
-                                <th>Email</th>
+                                <th>CPF</th>
                                 <!-- Adicione mais colunas conforme necessário -->
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach($ausentes as $inscrito)
+                            @foreach($ausentes as $ausente)
                                 <tr>
-                                    <td>{{ $inscrito->id }}</td>
-                                    <td>{{ $inscrito->nome }}</td>
-                                    <td>{{ $inscrito->email }}</td>
+                                    <td>{{ $ausente->nome }}</td>
+                                    <td>{{ $ausente->cpf }}</td>
                                     <!-- Adicione mais colunas conforme necessário -->
                                 </tr>
                             @endforeach
@@ -68,12 +67,16 @@
         </div>
     </div>
 
-    <script>
-        $(document).ready(function(){
-            $('#myTabs a').click(function (e) {
-                e.preventDefault();
-                $(this).tab('show');
-            });
-        });
-    </script>
+
 @endsection
+
+@section('javascript')
+<script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js" type="text/javascript"></script>
+<script>
+
+    $(document).ready(function() {
+        new DataTable('#dataTable');
+    });
+</script>
+@endsection
+

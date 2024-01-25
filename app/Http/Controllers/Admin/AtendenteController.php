@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Evento;
 use App\EventosInscrito;
+use App\Inscrito;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -13,21 +14,31 @@ class AtendenteController extends Controller
     public function listaEventos(){
         $eventos = Evento::all();
 
-        return view('atendimento.lista-eventos', ['eventos' => $eventos]);
+        return view('voyager::atendimento.lista-eventos', ['eventos' => $eventos]);
     }
 
     public function showInscritos(Evento $evento) {
 
         $inscritos = $evento->inscritos;
 
-        ddd($inscritos);
-
         // Obtém os inscritos que compareceram
-        $compareceram = EventosInscrito::where('presenca', 1)->get();
+        $presentes = DB::table('inscritos')
+            ->select('inscritos.*', 'eventos_inscritos.evento_id as pivot_evento_id', 'eventos_inscritos.inscrito_id as pivot_inscrito_id', 'eventos_inscritos.presenca as pivot_presenca')
+            ->join('eventos_inscritos', 'inscritos.id', '=', 'eventos_inscritos.inscrito_id')
+            ->where('eventos_inscritos.evento_id', '=', $evento->id)
+            ->where('eventos_inscritos.presenca', '=', 1)
+            ->orderBy('nome')
+            ->get();
 
         // Obtém os inscritos que estão ausentes
-        $ausentes = EventosInscrito::where('presenca', 0)->get();
+        $ausentes = DB::table('inscritos')
+            ->select('inscritos.*', 'eventos_inscritos.evento_id as pivot_evento_id', 'eventos_inscritos.inscrito_id as pivot_inscrito_id', 'eventos_inscritos.presenca as pivot_presenca')
+            ->join('eventos_inscritos', 'inscritos.id', '=', 'eventos_inscritos.inscrito_id')
+            ->where('eventos_inscritos.evento_id', '=', $evento->id)
+            ->where('eventos_inscritos.presenca', '=', 0)
+            ->orderBy('nome')
+            ->get();
 
-        return view('atendimento.lista-inscritos', ['inscritos' => $inscritos, 'evento' => $evento, 'compareceram' => $compareceram, 'ausentes' => $ausentes]);
+        return view('voyager::atendimento.lista-inscritos', ['inscritos' => $inscritos, 'evento' => $evento, 'presentes' => $presentes, 'ausentes' => $ausentes]);
     }
 }

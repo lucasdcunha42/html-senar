@@ -1,13 +1,13 @@
 @extends('voyager::master')
 
 @section('content')
-
+    
     <style>
         @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
         @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
         @import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700');
 
-        section{
+        section {
             float:left;
             width:100%;
             background: #fff;  /* fallback for old browsers */
