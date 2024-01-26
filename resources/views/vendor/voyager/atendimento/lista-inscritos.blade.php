@@ -11,6 +11,7 @@
             <li class="col-md-5" style="padding: 0"><a data-toggle="tab" href="#ausentes">Ausentes</a></li>
         </ul>
 
+
         <div class="tab-content">
             <!-- Tab Compareceram -->
             <div id="compareceram" class="tab-pane fade in active">
@@ -75,8 +76,16 @@
 <script>
 
     $(document).ready(function() {
-        new DataTable('#dataTable');
+        $('#dataTable').DataTable({
+            "language": {
+                "search": "Pesquisar:",
+                "searchPlaceholder": "Digite sua pesquisa..."
+            },
+            "paging": false
+
+        });
     });
+
 </script>
 @endsection
 
