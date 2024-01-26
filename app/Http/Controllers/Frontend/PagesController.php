@@ -97,6 +97,7 @@ class PagesController extends Controller
 
     public function single($slug)
     {
+
         $evento = Evento::inComming()
                         ->active()
                         ->where('slug', $slug)

@@ -42,12 +42,11 @@
 
     <div class="container col-xs-12 bg-grey">
         <div class="row">
-                @foreach($eventos as $evento)
-                    <div class="evento-item" data-type="{{ $evento->tipo }}">
-                        @include('components.card-eventos', ['evento' => $evento, 'bgPagePath' => $page->banner, 1400, 300])
-                    </div>
-                @endforeach
-            </div>
+            @foreach($eventos as $evento)
+                <div class="evento-item" data-type="{{ $evento->tipo }}">
+                    @include('components.card-eventos', ['evento' => $evento, 'page' => $page])
+                </div>
+            @endforeach
         </div>
     </div>
 

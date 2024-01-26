@@ -350,7 +350,7 @@ a, a:hover {
 </style>
 
 <section class="light">
-	<div class="container py-2">
+	<div class="container">
 
 		<article class="postcard light blue">
 			<a class="postcard__img_link" href="#">

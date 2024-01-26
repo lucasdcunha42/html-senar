@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Baloo+2&display=swap");
 
-$main-green: #79dd09 !default;
+$main-green: #005c3c !default;
 $main-green-rgb-015: rgba(121, 221, 9, 0.1) !default;
 
 .button-actions-container {
@@ -39,7 +39,6 @@ $main-green-rgb-015: rgba(121, 221, 9, 0.1) !default;
 
 .light {
 	background: #f3f5f7;
-    padding-top: 10px;
 }
 
 a, a:hover {
@@ -138,7 +137,8 @@ a, a:hover {
 			transition: background-color 0.3s;
 
 			&:hover {
-				background: rgba(83, 83, 83, 0.8);
+				background: $main-green;
+                color: #fff;
 			}
 		}
 	}
@@ -242,7 +242,7 @@ a, a:hover {
 /* COLORS */
 .postcard .postcard__tagbox .green.play:hover {
 	background: $main-green;
-	color: black;
+	color: white;
 }
 
 .green .postcard__title:hover {

@@ -479,10 +479,12 @@ a.internal-link {
   margin-top: 20px;
   padding: 40px 0;
   background-color: #eeeeee;
+  border: 3px solid black;
 }
 .footer .logo-footer {
   position: relative;
   top: 10px;
+  border: 3px solid red;
 }
 .footer .address {
   padding-top: 20px;
@@ -497,6 +499,7 @@ a.internal-link {
 .footer .footer-icons a {
   display: inline-block;
   margin-left: 5px;
+  border: 3px solid gold;
 }
 @media (max-width: 991px) {
   .footer .footer-icons {
@@ -1944,7 +1947,6 @@ button.btn-open-close.open span {
 
 .light {
   background: #f3f5f7;
-  padding-top: 10px;
 }
 
 a, a:hover {
@@ -2034,7 +2036,8 @@ a, a:hover {
   transition: background-color 0.3s;
 }
 .postcard .postcard__tagbox .tag__item:hover {
-  background: rgba(83, 83, 83, 0.8);
+  background: #005c3c;
+  color: #fff;
 }
 .postcard:before {
   content: "";
@@ -2117,16 +2120,16 @@ a, a:hover {
 }
 /* COLORS */
 .postcard .postcard__tagbox .green.play:hover {
-  background: #79dd09;
-  color: black;
+  background: #005c3c;
+  color: white;
 }
 
 .green .postcard__title:hover {
-  color: #79dd09;
+  color: #005c3c;
 }
 
 .green .postcard__bar {
-  background-color: #79dd09;
+  background-color: #005c3c;
 }
 
 .green::before {
