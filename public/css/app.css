@@ -479,12 +479,10 @@ a.internal-link {
   margin-top: 20px;
   padding: 40px 0;
   background-color: #eeeeee;
-  border: 3px solid black;
 }
 .footer .logo-footer {
   position: relative;
   top: 10px;
-  border: 3px solid red;
 }
 .footer .address {
   padding-top: 20px;
@@ -499,7 +497,6 @@ a.internal-link {
 .footer .footer-icons a {
   display: inline-block;
   margin-left: 5px;
-  border: 3px solid gold;
 }
 @media (max-width: 991px) {
   .footer .footer-icons {
@@ -2025,7 +2022,7 @@ a, a:hover {
 }
 .postcard .postcard__tagbox .tag__item {
   display: inline-block;
-  background: rgba(83, 83, 83, 0.4);
+  background: #005c3c;
   border-radius: 3px;
   padding: 2.5px 10px;
   margin: 0 5px 5px 0;
@@ -2034,6 +2031,9 @@ a, a:hover {
      -moz-user-select: none;
           user-select: none;
   transition: background-color 0.3s;
+}
+.postcard .postcard__tagbox .tag__item a {
+  color: #fff;
 }
 .postcard .postcard__tagbox .tag__item:hover {
   background: #005c3c;
@@ -2085,20 +2085,6 @@ a, a:hover {
   .postcard:hover .postcard__img {
     transform: scale(1.1);
   }
-  .postcard:nth-child(2n+1) {
-    flex-direction: row;
-  }
-  .postcard:nth-child(2n+0) {
-    flex-direction: row-reverse;
-  }
-  .postcard:nth-child(2n+1) .postcard__text::before {
-    left: -12px !important;
-    transform: rotate(4deg);
-  }
-  .postcard:nth-child(2n+0) .postcard__text::before {
-    right: -12px !important;
-    transform: rotate(-4deg);
-  }
 }
 @media screen and (min-width: 1024px) {
   .postcard__text {
@@ -2117,6 +2103,25 @@ a, a:hover {
   .postcard.light .postcard__text:before {
     background: #e1e5ea;
   }
+
+  /*
+  &:nth-child(2n+1) {
+  	flex-direction: row;
+  }
+
+  &:nth-child(2n+0) {
+  	flex-direction: row-reverse;
+  }
+
+  &:nth-child(2n+1) .postcard__text::before {
+  	left: -12px !important;
+  	transform: rotate(4deg);
+  }
+
+  &:nth-child(2n+0) .postcard__text::before {
+  	right: -12px !important;
+  	transform: rotate(-4deg);
+  }*/
 }
 /* COLORS */
 .postcard .postcard__tagbox .green.play:hover {
@@ -2178,6 +2183,25 @@ a, a:hover {
   /* Add a border and shadow to the container */
   border: 1px solid gray;
   box-shadow: 2px 2px 5px #ccc;
+}
+
+.bloco-info {
+  padding: 10px;
+  border: 2px solid red;
+}
+.bloco-info .google-maps {
+  margin-top: 20px;
+  position: relative;
+  padding-bottom: 75%;
+  height: 0;
+  overflow: hidden;
+}
+.bloco-info .google-maps iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
 }
 
 .container-selects {

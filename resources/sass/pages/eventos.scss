@@ -128,7 +128,7 @@ a, a:hover {
 
 		.tag__item {
 			display: inline-block;
-			background: rgba(83, 83, 83, 0.4);
+			background: $main-green;
 			border-radius: 3px;
 			padding: 2.5px 10px;
 			margin: 0 5px 5px 0;
@@ -136,6 +136,9 @@ a, a:hover {
 			user-select: none;
 			transition: background-color 0.3s;
 
+            a {
+                color: #fff;
+            }
 			&:hover {
 				background: $main-green;
                 color: #fff;
@@ -196,23 +199,7 @@ a, a:hover {
 			transform: scale(1.1);
 		}
 
-		&:nth-child(2n+1) {
-			flex-direction: row;
-		}
 
-		&:nth-child(2n+0) {
-			flex-direction: row-reverse;
-		}
-
-		&:nth-child(2n+1) .postcard__text::before {
-			left: -12px !important;
-			transform: rotate(4deg);
-		}
-
-		&:nth-child(2n+0) .postcard__text::before {
-			right: -12px !important;
-			transform: rotate(-4deg);
-		}
 	}
 }
 
@@ -236,6 +223,24 @@ a, a:hover {
 			background: #e1e5ea;
 		}
   	}
+    /*
+	&:nth-child(2n+1) {
+		flex-direction: row;
+	}
+
+	&:nth-child(2n+0) {
+		flex-direction: row-reverse;
+	}
+
+	&:nth-child(2n+1) .postcard__text::before {
+		left: -12px !important;
+		transform: rotate(4deg);
+	}
+
+	&:nth-child(2n+0) .postcard__text::before {
+		right: -12px !important;
+		transform: rotate(-4deg);
+	}*/
 }
 
 
@@ -312,4 +317,24 @@ a, a:hover {
     /* Add a border and shadow to the container */
     border: 1px solid gray;
     box-shadow: 2px 2px 5px #ccc;
+}
+
+.bloco-info {
+    padding: 10px;
+    border: 2px solid red;
+
+    .google-maps {
+        margin-top: 20px;
+        position: relative;
+        padding-bottom: 75%; // This is the aspect ratio
+        height: 0;
+        overflow: hidden;
+      }
+      .google-maps iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100% !important;
+        height: 100% !important;
+      }
 }

@@ -1,4 +1,4 @@
-<section class="light">
+<section>
 	<div class="container py-2">
 		<article class="postcard light green">
 			<a class="postcard__img_link" href="{{route('page.eventos.single', $evento->slug)}}">

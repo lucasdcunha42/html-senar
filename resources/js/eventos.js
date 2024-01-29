@@ -62,3 +62,29 @@ if($('#form-evento-incricao').length){
         $('#telefone').unmask();
     });
 }
+
+if($('.evento-single').length){
+
+    // Função para ajustar as imagens dentro das tags <p>
+    function ajustarImagens() {
+      // Seleciona todas as tags <p> no documento
+      var paragrafos = document.querySelectorAll('p');
+
+      // Itera sobre cada tag <p>
+      paragrafos.forEach(function(paragrafo) {
+        // Verifica se o parágrafo contém uma tag <img>
+        var imagem = paragrafo.querySelector('img');
+
+        // Se existir uma tag <img> no parágrafo, ajusta seus atributos
+        if (imagem) {
+          imagem.style.maxWidth = '1200px';
+          imagem.style.width = '100%';
+          imagem.style.height = 'auto';
+        }
+      });
+    }
+
+    // Chama a função quando a página for totalmente carregada
+    window.onload = ajustarImagens;
+}
+

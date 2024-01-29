@@ -40,7 +40,7 @@
     </div>
 
 
-    <div class="container col-xs-12 bg-grey">
+    <div class="container">
         <div class="row">
             @foreach($eventos as $evento)
                 <div class="evento-item" data-type="{{ $evento->tipo }}">
