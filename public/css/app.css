@@ -2085,6 +2085,20 @@ a, a:hover {
   .postcard:hover .postcard__img {
     transform: scale(1.1);
   }
+  .postcard:nth-child(2n+1) {
+    flex-direction: row;
+  }
+  .postcard:nth-child(2n+0) {
+    flex-direction: row-reverse;
+  }
+  .postcard:nth-child(2n+1) .postcard__text::before {
+    left: -12px !important;
+    transform: rotate(4deg);
+  }
+  .postcard:nth-child(2n+0) .postcard__text::before {
+    right: -12px !important;
+    transform: rotate(-4deg);
+  }
 }
 @media screen and (min-width: 1024px) {
   .postcard__text {
@@ -2103,25 +2117,6 @@ a, a:hover {
   .postcard.light .postcard__text:before {
     background: #e1e5ea;
   }
-
-  /*
-  &:nth-child(2n+1) {
-  	flex-direction: row;
-  }
-
-  &:nth-child(2n+0) {
-  	flex-direction: row-reverse;
-  }
-
-  &:nth-child(2n+1) .postcard__text::before {
-  	left: -12px !important;
-  	transform: rotate(4deg);
-  }
-
-  &:nth-child(2n+0) .postcard__text::before {
-  	right: -12px !important;
-  	transform: rotate(-4deg);
-  }*/
 }
 /* COLORS */
 .postcard .postcard__tagbox .green.play:hover {
