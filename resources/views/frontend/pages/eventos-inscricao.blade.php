@@ -2,7 +2,7 @@
 
 @section('content')
     @include('components.banner-page', [
-        'bgPagePath' => !empty(trim($evento->banner)) ? urlStorage($evento->banner, 1400, 300) : '',
+        'bgPagePath' => !empty(trim($evento->banner)) ? urlStorage($evento->banner) : '',
         'overlay' => false
     ])
 

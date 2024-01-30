@@ -1944,7 +1944,6 @@ button.btn-open-close.open span {
 
 .light {
   background: #f3f5f7;
-  padding-top: 10px;
 }
 
 a, a:hover {
@@ -2023,7 +2022,7 @@ a, a:hover {
 }
 .postcard .postcard__tagbox .tag__item {
   display: inline-block;
-  background: rgba(83, 83, 83, 0.4);
+  background: #005c3c;
   border-radius: 3px;
   padding: 2.5px 10px;
   margin: 0 5px 5px 0;
@@ -2033,8 +2032,12 @@ a, a:hover {
           user-select: none;
   transition: background-color 0.3s;
 }
+.postcard .postcard__tagbox .tag__item a {
+  color: #fff;
+}
 .postcard .postcard__tagbox .tag__item:hover {
-  background: rgba(83, 83, 83, 0.8);
+  background: #005c3c;
+  color: #fff;
 }
 .postcard:before {
   content: "";
@@ -2117,16 +2120,16 @@ a, a:hover {
 }
 /* COLORS */
 .postcard .postcard__tagbox .green.play:hover {
-  background: #79dd09;
-  color: black;
+  background: #005c3c;
+  color: white;
 }
 
 .green .postcard__title:hover {
-  color: #79dd09;
+  color: #005c3c;
 }
 
 .green .postcard__bar {
-  background-color: #79dd09;
+  background-color: #005c3c;
 }
 
 .green::before {
@@ -2175,6 +2178,25 @@ a, a:hover {
   /* Add a border and shadow to the container */
   border: 1px solid gray;
   box-shadow: 2px 2px 5px #ccc;
+}
+
+.bloco-info {
+  padding: 10px;
+  border: 2px solid red;
+}
+.bloco-info .google-maps {
+  margin-top: 20px;
+  position: relative;
+  padding-bottom: 75%;
+  height: 0;
+  overflow: hidden;
+}
+.bloco-info .google-maps iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
 }
 
 .container-selects {
