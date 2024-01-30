@@ -1,12 +1,13 @@
-<section class="light">
+<section>
 	<div class="container py-2">
 		<article class="postcard light green">
 			<a class="postcard__img_link" href="{{route('page.eventos.single', $evento->slug)}}">
-				<img class="postcard__img" src="{{urlStorage($evento->card, 300, 300)}}" alt="Image Title" />
+				<img class="postcard__img img-responsive" src="{{urlStorage($evento->card)}}" alt="Image Title" />
 			</a>
+
 			<div class="postcard__text t-dark">
 				<h1 class="postcard__title green"><a href="{{route('page.eventos.single', $evento->slug)}}">{{$evento->titulo}}</a></h1>
-				<div class="postcard__subtitle small">
+				<div class="postcard__subtitle">
 					<time datetime="2020-05-25 12:00:00">
 						<i class="fas fa-calendar-alt mr-2"></i>{{$evento->data_inicio}}
 					</time>
@@ -27,7 +28,7 @@
 						<a href="{{ route('page.eventos.single', $evento->slug) }}"><i class="fas fa-play mr-2"></i> Ver Mais... </a>
 					</li>
 				</ul>
-			</div>
+            </div>
 		</article>
     </div>
 </section>

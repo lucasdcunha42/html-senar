@@ -11,7 +11,8 @@ class EventosInscrito extends Model
 
     protected $fillable = [
         'evento_id',
-        'inscrito_id'
+        'inscrito_id',
+        'presenca'
     ];
     public $timestamp = true;
 
