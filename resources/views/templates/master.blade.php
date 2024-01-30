@@ -72,10 +72,6 @@ src="https://www.facebook.com/tr?id=1435749543520095&ev=PageView&noscript=1"/></
 
         @yield('content')
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 2621dea513ed21c18b4a0e1b9c2fa43dc3d675ca
         @include('frontend.structure.footer')
 
     </div>
