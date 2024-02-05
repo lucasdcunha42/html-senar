@@ -4,6 +4,11 @@
 			<a class="postcard__img_link" href="{{route('page.eventos.single', $evento->slug)}}">
 				<img class="postcard__img img-responsive" src="{{urlStorage($evento->card)}}" alt="Image Title" />
 			</a>
+            @if ($evento->estaCheio())
+                <div class="postcard__img-overlay">
+                    <p class="inscricoes-encerradas">Inscrições Encerradas</p>
+                </div>
+            @endif
 
 			<div class="postcard__text t-dark">
 				<h1 class="postcard__title green"><a href="{{route('page.eventos.single', $evento->slug)}}">{{$evento->titulo}}</a></h1>
@@ -22,7 +27,11 @@
 				<ul class="postcard__tagbox">
 					<li class="tag__item">
                         <i class="fas fa-clock mr-2"></i>
-                        <a href="{{ route('page.eventos.inscricao', $evento->slug) }}"> Inscrever-se </a>
+                        @if ($evento->estaCheio())
+                            <span style="color: white;">Evento Lotado</span>
+                        @else
+                            <a href="{{ route('page.eventos.inscricao', $evento->slug) }}"> Inscrever-se </a>
+                        @endif
                     </li>
 					<li class="tag__item play green">
 						<a href="{{ route('page.eventos.single', $evento->slug) }}"><i class="fas fa-play mr-2"></i> Ver Mais... </a>
