@@ -3722,6 +3722,711 @@ if ($('.evento-single').length) {
   window.onload = ajustarImagens;
 }
 
+<<<<<<< HEAD
+=======
+/**
+ * Determine if a value is a view on an ArrayBuffer
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a view on an ArrayBuffer, otherwise false
+ */
+function isArrayBufferView(val) {
+  var result;
+  if ((typeof ArrayBuffer !== 'undefined') && (ArrayBuffer.isView)) {
+    result = ArrayBuffer.isView(val);
+  } else {
+    result = (val) && (val.buffer) && (val.buffer instanceof ArrayBuffer);
+  }
+  return result;
+}
+
+/**
+ * Determine if a value is a String
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a String, otherwise false
+ */
+function isString(val) {
+  return typeof val === 'string';
+}
+
+/**
+ * Determine if a value is a Number
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a Number, otherwise false
+ */
+function isNumber(val) {
+  return typeof val === 'number';
+}
+
+/**
+ * Determine if a value is an Object
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is an Object, otherwise false
+ */
+function isObject(val) {
+  return val !== null && typeof val === 'object';
+}
+
+/**
+ * Determine if a value is a plain Object
+ *
+ * @param {Object} val The value to test
+ * @return {boolean} True if value is a plain Object, otherwise false
+ */
+function isPlainObject(val) {
+  if (toString.call(val) !== '[object Object]') {
+    return false;
+  }
+
+  var prototype = Object.getPrototypeOf(val);
+  return prototype === null || prototype === Object.prototype;
+}
+
+/**
+ * Determine if a value is a Date
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a Date, otherwise false
+ */
+function isDate(val) {
+  return toString.call(val) === '[object Date]';
+}
+
+/**
+ * Determine if a value is a File
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a File, otherwise false
+ */
+function isFile(val) {
+  return toString.call(val) === '[object File]';
+}
+
+/**
+ * Determine if a value is a Blob
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a Blob, otherwise false
+ */
+function isBlob(val) {
+  return toString.call(val) === '[object Blob]';
+}
+
+/**
+ * Determine if a value is a Function
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a Function, otherwise false
+ */
+function isFunction(val) {
+  return toString.call(val) === '[object Function]';
+}
+
+/**
+ * Determine if a value is a Stream
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a Stream, otherwise false
+ */
+function isStream(val) {
+  return isObject(val) && isFunction(val.pipe);
+}
+
+/**
+ * Determine if a value is a URLSearchParams object
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a URLSearchParams object, otherwise false
+ */
+function isURLSearchParams(val) {
+  return typeof URLSearchParams !== 'undefined' && val instanceof URLSearchParams;
+}
+
+/**
+ * Trim excess whitespace off the beginning and end of a string
+ *
+ * @param {String} str The String to trim
+ * @returns {String} The String freed of excess whitespace
+ */
+function trim(str) {
+  return str.trim ? str.trim() : str.replace(/^\s+|\s+$/g, '');
+}
+
+/**
+ * Determine if we're running in a standard browser environment
+ *
+ * This allows axios to run in a web worker, and react-native.
+ * Both environments support XMLHttpRequest, but not fully standard globals.
+ *
+ * web workers:
+ *  typeof window -> undefined
+ *  typeof document -> undefined
+ *
+ * react-native:
+ *  navigator.product -> 'ReactNative'
+ * nativescript
+ *  navigator.product -> 'NativeScript' or 'NS'
+ */
+function isStandardBrowserEnv() {
+  if (typeof navigator !== 'undefined' && (navigator.product === 'ReactNative' ||
+                                           navigator.product === 'NativeScript' ||
+                                           navigator.product === 'NS')) {
+    return false;
+  }
+  return (
+    typeof window !== 'undefined' &&
+    typeof document !== 'undefined'
+  );
+}
+
+/**
+ * Iterate over an Array or an Object invoking a function for each item.
+ *
+ * If `obj` is an Array callback will be called passing
+ * the value, index, and complete array for each item.
+ *
+ * If 'obj' is an Object callback will be called passing
+ * the value, key, and complete object for each property.
+ *
+ * @param {Object|Array} obj The object to iterate
+ * @param {Function} fn The callback to invoke for each item
+ */
+function forEach(obj, fn) {
+  // Don't bother if no value provided
+  if (obj === null || typeof obj === 'undefined') {
+    return;
+  }
+
+  // Force an array if not already something iterable
+  if (typeof obj !== 'object') {
+    /*eslint no-param-reassign:0*/
+    obj = [obj];
+  }
+
+  if (isArray(obj)) {
+    // Iterate over array values
+    for (var i = 0, l = obj.length; i < l; i++) {
+      fn.call(null, obj[i], i, obj);
+    }
+  } else {
+    // Iterate over object keys
+    for (var key in obj) {
+      if (Object.prototype.hasOwnProperty.call(obj, key)) {
+        fn.call(null, obj[key], key, obj);
+      }
+    }
+  }
+}
+
+/**
+ * Accepts varargs expecting each argument to be an object, then
+ * immutably merges the properties of each object and returns result.
+ *
+ * When multiple objects contain the same key the later object in
+ * the arguments list will take precedence.
+ *
+ * Example:
+ *
+ * ```js
+ * var result = merge({foo: 123}, {foo: 456});
+ * console.log(result.foo); // outputs 456
+ * ```
+ *
+ * @param {Object} obj1 Object to merge
+ * @returns {Object} Result of all merge properties
+ */
+function merge(/* obj1, obj2, obj3, ... */) {
+  var result = {};
+  function assignValue(val, key) {
+    if (isPlainObject(result[key]) && isPlainObject(val)) {
+      result[key] = merge(result[key], val);
+    } else if (isPlainObject(val)) {
+      result[key] = merge({}, val);
+    } else if (isArray(val)) {
+      result[key] = val.slice();
+    } else {
+      result[key] = val;
+    }
+  }
+
+  for (var i = 0, l = arguments.length; i < l; i++) {
+    forEach(arguments[i], assignValue);
+  }
+  return result;
+}
+
+/**
+ * Extends object a by mutably adding to it the properties of object b.
+ *
+ * @param {Object} a The object to be extended
+ * @param {Object} b The object to copy properties from
+ * @param {Object} thisArg The object to bind function to
+ * @return {Object} The resulting value of object a
+ */
+function extend(a, b, thisArg) {
+  forEach(b, function assignValue(val, key) {
+    if (thisArg && typeof val === 'function') {
+      a[key] = bind(val, thisArg);
+    } else {
+      a[key] = val;
+    }
+  });
+  return a;
+}
+
+/**
+ * Remove byte order marker. This catches EF BB BF (the UTF-8 BOM)
+ *
+ * @param {string} content with BOM
+ * @return {string} content value without BOM
+ */
+function stripBOM(content) {
+  if (content.charCodeAt(0) === 0xFEFF) {
+    content = content.slice(1);
+  }
+  return content;
+}
+
+module.exports = {
+  isArray: isArray,
+  isArrayBuffer: isArrayBuffer,
+  isBuffer: isBuffer,
+  isFormData: isFormData,
+  isArrayBufferView: isArrayBufferView,
+  isString: isString,
+  isNumber: isNumber,
+  isObject: isObject,
+  isPlainObject: isPlainObject,
+  isUndefined: isUndefined,
+  isDate: isDate,
+  isFile: isFile,
+  isBlob: isBlob,
+  isFunction: isFunction,
+  isStream: isStream,
+  isURLSearchParams: isURLSearchParams,
+  isStandardBrowserEnv: isStandardBrowserEnv,
+  forEach: forEach,
+  merge: merge,
+  extend: extend,
+  trim: trim,
+  stripBOM: stripBOM
+};
+
+
+/***/ }),
+
+/***/ "./resources/js/accordion.js":
+/*!***********************************!*\
+  !*** ./resources/js/accordion.js ***!
+  \***********************************/
+/***/ (() => {
+
+// accordion site
+
+if ($('.btn-open-close').length && $('.accord-title').length) {
+  $('.accord-title').on('click', function (e) {
+    $(this).find('.btn-open-close').first().trigger('click');
+  });
+  $('.btn-open-close').on('click', function (e) {
+    // var link = null;
+
+    // if($(this).find('a').first()) {
+    //     link = $(this).find('a').first().attr('href');
+    //     window.open(link, '_blank').focus();
+    //     return false;
+    // }
+
+    e.stopPropagation();
+    var _self = $(this);
+
+    // se não tiver tag <a> como parent, segue o arccordion
+    // caso tenha tag <a> carrega o link
+    if (_self.parent().prop('tagName') != 'A') {
+      _self.toggleClass('open');
+      var slide = _self.hasClass('open') ? 'slideDown' : 'slideUp';
+      _self.closest('.accord-item').find('.accord-desc')[slide]();
+    }
+  });
+}
+
+/***/ }),
+
+/***/ "./resources/js/action-button.js":
+/*!***************************************!*\
+  !*** ./resources/js/action-button.js ***!
+  \***************************************/
+/***/ (() => {
+
+var ACTION_BUTTONS_FN = {
+  showFormLicitacaoCliente: function showFormLicitacaoCliente() {
+    $('.form-licitacao').hide('fast');
+    $('#form-licitacao-cliente').show('fast');
+  },
+  showFormLicitacaoEmpresa: function showFormLicitacaoEmpresa() {
+    $('.form-licitacao').hide('fast');
+    $('#form-licitacao-empresa').show('fast');
+  }
+};
+if ($('.action-button').length) {
+  $('.action-button').on('click', function () {
+    var fn = $(this).data('method');
+    ACTION_BUTTONS_FN[fn]();
+  });
+}
+
+/***/ }),
+
+/***/ "./resources/js/agenda.js":
+/*!********************************!*\
+  !*** ./resources/js/agenda.js ***!
+  \********************************/
+/***/ (() => {
+
+if ($('.carregar-mais-agendas').length) {
+  var _loadMore = $('.carregar-mais-agendas a');
+  var _url = _loadMore.attr('href');
+  var agendasContainer = $('.agendas-container');
+  var agendasLoading = $('.agendas-loading-container');
+  var ___inloading = false;
+  var finishAgendas = false;
+  var agendasCidadeSelect = $('#agendas-cidade-select');
+  var agendaTitulo = $('#titulo_agenda');
+  var intervaloDeDatas = $('#calendarioAgenda');
+  var limpaFiltro = $('#limpa-filtro');
+  var reloadAll = false;
+  $.each([agendasCidadeSelect, agendaTitulo, intervaloDeDatas], function (index, el) {
+    $(el).on('change', function () {
+      reloadAll = true;
+      finishAgendas = false;
+      $('.carregar-mais-agendas').show();
+      _loadMore.trigger('click');
+    });
+  });
+  _loadMore.on('click', function (e) {
+    e.preventDefault();
+    if (___inloading || finishAgendas) {
+      return false;
+    }
+    var skip = reloadAll ? 0 : $('.agenda-lista .agendas-item').length;
+    var data = {
+      skip: skip,
+      cidade: agendasCidadeSelect.val(),
+      titulo: agendaTitulo.val(),
+      datas: intervaloDeDatas.val()
+    };
+    ___inloading = true;
+    agendasLoading.show('fast');
+    $.ajax({
+      method: 'POST',
+      url: _url,
+      data: data
+    }).done(function (response) {
+      var _method = reloadAll ? 'html' : 'append';
+      agendasContainer[_method](response.view);
+      if (response.finish) {
+        finishAgendas = true;
+        _loadMore.hide();
+        $('.no-more-agendas').show();
+      }
+    }).fail(function (jqXHR, textStatus) {}).always(function () {
+      reloadAll = false;
+      ___inloading = false;
+      agendasLoading.hide('fast');
+    });
+  });
+  $(document).ready(function () {
+    // Crie uma função para limpar os filtros
+    function limparFiltros() {
+      agendasCidadeSelect.val(''); // Limpar o campo de seleção da cidade
+      agendaTitulo.val(''); // Limpar o campo de título da agenda
+      intervaloDeDatas.val(''); // Limpar o campo de intervalo de datas
+      reloadAll = true;
+
+      // Aqui você pode adicionar limpeza adicional para outros campos, se necessário
+    }
+
+    // Ao clicar no botão de limpar
+    $("#limpar").on("click", function () {
+      limparFiltros(); // Chame a função para limpar os filtros
+      finishAgendas = false; // Defina finishAgendas como falso para permitir o carregamento de mais agendas novamente
+      $('.carregar-mais-agendas').show(); // Mostre o botão de "Carregar mais" novamente
+      _loadMore.trigger('click'); // Acione o clique no botão "Carregar mais" para recarregar as agendas
+    });
+  });
+}
+
+/***/ }),
+
+/***/ "./resources/js/app.js":
+/*!*****************************!*\
+  !*** ./resources/js/app.js ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+
+__webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
+__webpack_require__(/*! ./cookies */ "./resources/js/cookies.js");
+__webpack_require__(/*! ./helpers */ "./resources/js/helpers.js");
+__webpack_require__(/*! ./hamburger */ "./resources/js/hamburger.js");
+__webpack_require__(/*! ./accordion */ "./resources/js/accordion.js");
+__webpack_require__(/*! ./side-menu */ "./resources/js/side-menu.js");
+__webpack_require__(/*! ./state-city-select */ "./resources/js/state-city-select.js");
+__webpack_require__(/*! ./regioes */ "./resources/js/regioes.js");
+__webpack_require__(/*! ./action-button */ "./resources/js/action-button.js");
+__webpack_require__(/*! ./forms */ "./resources/js/forms.js");
+__webpack_require__(/*! ./scroll */ "./resources/js/scroll.js");
+__webpack_require__(/*! ./sindicatos */ "./resources/js/sindicatos.js");
+__webpack_require__(/*! ./agenda */ "./resources/js/agenda.js");
+__webpack_require__(/*! ./cursos */ "./resources/js/cursos.js");
+__webpack_require__(/*! ./eventos */ "./resources/js/eventos.js");
+__webpack_require__(/*! ./noticias */ "./resources/js/noticias.js");
+var slickConfig = {
+  adaptiveHeight: true,
+  autoplay: false
+};
+if ($('.html').length) {
+  $('.html img').addClass('img-responsive');
+}
+$('.depoimentos-carousel').slick(slickConfig);
+if ($('a[data-rel^=lightcase]').length) {
+  var lightCaseConfig = {
+    'errorMessage': 'Arquivo não encontrado...',
+    'sequenceInfo.of': ' de ',
+    'close': 'Fechar',
+    'navigator.prev': 'Anterior',
+    'navigator.next': 'Próxima',
+    'navigator.play': 'Play',
+    'navigator.pause': 'Pause',
+    'swipe': true
+  };
+  $('a[data-rel^=lightcase]').lightcase(lightCaseConfig);
+}
+if ($('[data-link]').length) {
+  $('[data-link]').css('cursor', 'pointer').on('click', function () {
+    window.open($(this).data('link'), '_blank').focus();
+  });
+}
+
+// animacao da busca da agenda
+var buttonsBusca = $('.buttons-animated button');
+var line = $('.line-indicator').first();
+function goLine() {
+  var el = $('button.active span');
+  if (!el.length) {
+    return false;
+  }
+  var css = {
+    'width': el.width() + 40 + 'px',
+    'left': el.position().left - 20
+  };
+  line.css(css);
+}
+goLine();
+buttonsBusca.on('click', function (e) {
+  buttonsBusca.removeClass('active');
+  $(this).addClass('active');
+  goLine();
+});
+
+// console.log(currentSpan.width(), currentSpan.position().left);
+
+/***/ }),
+
+/***/ "./resources/js/bootstrap.js":
+/*!***********************************!*\
+  !*** ./resources/js/bootstrap.js ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+
+window._ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
+
+/**
+ * We'll load the axios HTTP library which allows us to easily issue requests
+ * to our Laravel back-end. This library automatically handles sending the
+ * CSRF token as a header based on the value of the "XSRF" token cookie.
+ */
+
+window.axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+$.ajaxSetup({
+  headers: {
+    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
+    'Accept': 'application/json'
+  }
+});
+
+/**
+ * Echo exposes an expressive API for subscribing to channels and listening
+ * for events that are broadcast by Laravel. Echo and event broadcasting
+ * allows your team to easily build robust real-time web applications.
+ */
+
+// import Echo from 'laravel-echo';
+
+// window.Pusher = require('pusher-js');
+
+// window.Echo = new Echo({
+//     broadcaster: 'pusher',
+//     key: process.env.MIX_PUSHER_APP_KEY,
+//     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
+//     forceTLS: true
+// });
+
+/***/ }),
+
+/***/ "./resources/js/cookies.js":
+/*!*********************************!*\
+  !*** ./resources/js/cookies.js ***!
+  \*********************************/
+/***/ (() => {
+
+document.addEventListener('DOMContentLoaded', function () {
+  var acceptCookiesButton = document.getElementById('accept-cookies');
+  var rejectCookiesButton = document.getElementById('reject-cookies');
+  var cookieBanner = document.getElementById('cookie-banner');
+  if (acceptCookiesButton && rejectCookiesButton && cookieBanner) {
+    // Verifica se o usuário já aceitou ou recusou os cookies anteriormente (por meio de um cookie)
+    var cookiesAccepted = localStorage.getItem('cookiesAccepted');
+    var cookiesRejected = localStorage.getItem('cookiesRejected');
+    if (!cookiesAccepted && !cookiesRejected) {
+      // Se os cookies ainda não foram aceitos nem recusados, exibe a mensagem
+      cookieBanner.style.display = 'block';
+    }
+    acceptCookiesButton.addEventListener('click', function () {
+      // Oculta a mensagem e define um cookie de aceitação de cookies
+      cookieBanner.style.display = 'none';
+      localStorage.setItem('cookiesAccepted', 'true');
+    });
+    rejectCookiesButton.addEventListener('click', function () {
+      // Oculta a mensagem e define um cookie de recusa de cookies
+      cookieBanner.style.display = 'none';
+      localStorage.setItem('cookiesRejected', 'true');
+    });
+  }
+});
+
+/***/ }),
+
+/***/ "./resources/js/cursos.js":
+/*!********************************!*\
+  !*** ./resources/js/cursos.js ***!
+  \********************************/
+/***/ (() => {
+
+$(function () {
+  $('#nome_curso').on('change', function () {
+    // Obter o valor do elemento 'nome_curso' após a mudança.
+    var searchTerm = $(this).val();
+
+    // Chamar a função getCursos com o termo de busca.
+    getCursos(searchTerm);
+  });
+  $('body').on('click', '.pagination a', function (e) {
+    e.preventDefault();
+    var url = $(this).attr('href');
+    getCursosWithPagination(url);
+    window.history.pushState("", "", url);
+  });
+  function getCursos(searchTerm) {
+    $.ajax({
+      url: '/cursos',
+      method: 'GET',
+      data: {
+        q: searchTerm
+      }
+    }).done(function (data) {
+      $('.cursos-container').html(data);
+    }).fail(function () {
+      alert('Cursos could not be loaded.');
+    });
+  }
+  function getCursosWithPagination(url) {
+    $.ajax({
+      url: url,
+      method: 'GET'
+    }).done(function (data) {
+      $('.cursos-container').html(data);
+    }).fail(function () {
+      alert('Cursos could not be loaded.');
+    });
+  }
+});
+
+/***/ }),
+
+/***/ "./resources/js/eventos.js":
+/*!*********************************!*\
+  !*** ./resources/js/eventos.js ***!
+  \*********************************/
+/***/ (() => {
+
+if ($('.buttons-eventos').length) {
+  var changeItems = function changeItems() {
+    var arr = [];
+    _buttons.each(function (index, el) {
+      if ($(el).hasClass('active')) {
+        arr.push($(el).data('type'));
+      }
+    });
+    _eventosItems.each(function (index, el) {
+      var _fn = arr.indexOf($(el).data('type')) > -1 ? 'show' : 'hide';
+      $(el)[_fn]('fast');
+    });
+  };
+  var _buttons = $('.buttons-eventos [data-type]');
+  var _eventosItems = $('.evento-item');
+  _buttons.on('click', function () {
+    $(this).toggleClass('active');
+    if (!$('.buttons-eventos [data-type].active').length) {
+      _eventosItems.show('fast');
+      return false;
+    }
+    changeItems();
+  });
+}
+if ($('#form-evento-incricao').length) {
+  $('#cpf').mask('000.000.000-00', {
+    reverse: true
+  });
+  var maskBehavior = function maskBehavior(val) {
+      return val.replace(/\D/g, '').length === 11 ? '(00) 00000-0000' : '(00) 0000-00009';
+    },
+    options = {
+      onKeyPress: function onKeyPress(val, e, field, options) {
+        field.mask(maskBehavior.apply({}, arguments), options);
+      }
+    };
+  $('#telefone').mask(maskBehavior, options);
+  $('form').on('submit', function () {
+    $('#cpf').unmask();
+    $('#telefone').unmask();
+  });
+}
+if ($('.evento-single').length) {
+  // Função para ajustar as imagens dentro das tags <p>
+  var ajustarImagens = function ajustarImagens() {
+    // Seleciona todas as tags <p> no documento
+    var paragrafos = document.querySelectorAll('p');
+
+    // Itera sobre cada tag <p>
+    paragrafos.forEach(function (paragrafo) {
+      // Verifica se o parágrafo contém uma tag <img>
+      var imagem = paragrafo.querySelector('img');
+
+      // Se existir uma tag <img> no parágrafo, ajusta seus atributos
+      if (imagem) {
+        imagem.style.maxWidth = '1200px';
+        imagem.style.width = '100%';
+        imagem.style.height = 'auto';
+      }
+    });
+  }; // Chama a função quando a página for totalmente carregada
+  window.onload = ajustarImagens;
+}
+
+>>>>>>> b7d529b9c8573674452805bdc4506aa2e293650b
 /***/ }),
 
 /***/ "./resources/js/forms.js":

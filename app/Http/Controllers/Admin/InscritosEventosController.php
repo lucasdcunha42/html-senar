@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Evento;
 use App\Http\Controllers\Controller;
 use App\Inscrito;
+use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Http\Request;
 
 class InscritosEventosController extends Controller
@@ -50,7 +51,14 @@ class InscritosEventosController extends Controller
 
     public function imprimeCracha(Evento $evento, Inscrito $inscrito){
 
-        ddd($evento, $inscrito);
+        $data = [
+            'inscrito' => $inscrito->nome,
+            'evento' => $evento->titulo,
+        ];
+
+        $cracha = Pdf::loadView('pdf.cracha', ['data' => $data])->setPaper('a6', 'portrait');
+
+        return $cracha->stream('cracha.pdf');
     }
 
     public function ImprimeCertificado(Evento $evento, Inscrito $inscrito){
