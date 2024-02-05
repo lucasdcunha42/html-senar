@@ -2420,24 +2420,8 @@ if ($('.buttons-eventos').length) {
       return false;
     }
     changeItems();
-
-    // var type = $(this).data('type');
-    // var _fn = $(this).hasClass('active') ? 'show' : 'hide';
-
-    // $('.evento-item[data-type="' + type + '"]')[_fn]('fast');
-
-    // _eventosItems.each(function(index, el) {
-
-    //     if() {
-    //         $(el).show('fast');
-    //     } else {
-    //         $(el).hide('fast');
-    //     }
-
-    // });
   });
 }
-
 if ($('#form-evento-incricao').length) {
   $('#cpf').mask('000.000.000-00', {
     reverse: true
