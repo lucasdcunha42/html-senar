@@ -26,21 +26,6 @@ if($('.buttons-eventos').length) {
         }
 
         changeItems();
-
-        // var type = $(this).data('type');
-        // var _fn = $(this).hasClass('active') ? 'show' : 'hide';
-
-        // $('.evento-item[data-type="' + type + '"]')[_fn]('fast');
-
-        // _eventosItems.each(function(index, el) {
-
-        //     if() {
-        //         $(el).show('fast');
-        //     } else {
-        //         $(el).hide('fast');
-        //     }
-
-        // });
     });
 }
 
