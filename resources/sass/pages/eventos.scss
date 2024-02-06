@@ -47,9 +47,22 @@ a, a:hover {
 }
 
 /* Cards */
+
+.postcard__img-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo semi-transparente para destacar o texto */
+    color: white;
+    padding: 10px; /* Espaçamento interno para o texto */
+    width: 100%; /* Ocupa toda a largura da imagem */
+    box-sizing: border-box; /* Garante que o padding não aumente o tamanho do elemento */
+    text-align: center; /* Centraliza o texto horizontalmente */
+}
+
 .postcard {
-	flex-wrap: wrap;
-  display: flex;
+    flex-wrap: wrap;
+    display: flex;
 
 	box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.66);
 	border-radius: 10px;
@@ -286,7 +299,6 @@ a, a:hover {
 }
 
 /* Eventos Single*/
-
 .descricao {
     padding: 25px;
     color: #000;

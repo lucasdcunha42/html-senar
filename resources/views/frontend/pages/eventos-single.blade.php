@@ -1,11 +1,16 @@
 @extends('templates.master')
 
 @section('content')
-    <img
+    <div style="position: relative;">
+        <img
         src="{{ !empty(trim($evento->banner)) ? urlStorage($evento->banner) : '' }}"
         class="img-responsive banner-center"
         alt=""
         style="margin: auto">
+        @if ($evento->estaCheio())
+            <img src="{{ asset('images/InscricoesEncerradas.webp') }}" alt="" style="position: absolute; top: 5%; right: 10%; margin: 20px; max-height: 80%;" class="lotado">
+        @endif
+    </div>
 
     <div class="container evento-single">
         <div class="row">
@@ -13,8 +18,8 @@
             <div class="col-xs-12" style="margin-bottom: 20px;">
                 <div class="page-title center" style="margin-bottom: 0px;"> {!! $evento->titulo !!} </div>
                 <div class="page-subtitle text-center">
-                    {{ $evento->getAttrDateFromFormat('data_inicio', 'Y-m-d', 'd.m.Y') }}
-                    {!! ($evento->data_fim != $evento->data_inicio) ? ' á ' . $evento->getAttrDateFromFormat('data_fim', 'Y-m-d', 'd.m.Y') : '' !!}
+                    {{ $evento->getAttrDateFromFormat('data_inicio', 'Y-m-d', 'd/m/Y') }}
+                    {!! ($evento->data_fim != $evento->data_inicio) ? ' á ' . $evento->getAttrDateFromFormat('data_fim', 'Y-m-d', 'd/m/Y') : '' !!}
                 </div>
             </div>
 
@@ -23,7 +28,7 @@
             </div>
 
             @if(!empty($evento->local))
-                <div class="col-md-12">
+                <div class="col-xs-12">
                     <div class="col-md-6 bloco-info">
                         <h3 style="color: darkgreen">Local:</h3>
                         {{$evento->local}}
@@ -62,8 +67,13 @@
             @endif
 
             <div class="col-xs-12" style="padding-top: 20px">
-                <a href="{{ route('page.eventos.inscricao', $evento->slug) }}"><button type="button" class="btn btn-success btn-floating btn-lg">Inscrever-se</button></a>
+                @if ($evento->estaCheio())
+                    <a href="{{ route('page.eventos.inscricao', $evento->slug) }}"><button type="button" class="btn btn-success btn-floating btn-lg" disabled>Evento Lotado</button></a>
+                @else
+                    <a href="{{ route('page.eventos.inscricao', $evento->slug) }}"><button type="button" class="btn btn-success btn-floating btn-lg">Inscrever-se</button></a>
+                @endif
             </div>
+
         </div>
     </div>
 
