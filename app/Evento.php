@@ -23,4 +23,8 @@ class Evento extends CustomModel
         return $this->belongsToMany(Inscrito::class, 'eventos_inscritos')->withPivot('presenca');
     }
 
+    public function estaCheio()
+    {
+        return $this->inscritos->count() >= $this->capacidade;
+    }
 }
