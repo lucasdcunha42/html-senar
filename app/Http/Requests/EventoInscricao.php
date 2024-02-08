@@ -26,10 +26,11 @@ class EventoInscricao extends FormRequest
         return [
             'nome' => 'required',
             'cpf' => 'required|numeric|digits:11|cpf',
-            'email' => 'email',
+            'email' => 'nullable|email',
             'cidade' => 'required',
             'atividade' => 'nullable|alpha',
-            'telefone' => 'numeric'
+            'telefone' => 'nullable|numeric',
+            'aceitar-termos' => 'required'
         ];
     }
 
@@ -47,6 +48,7 @@ class EventoInscricao extends FormRequest
             'cidade.exists' => 'A cidade selecionada é inválida.',
             //'atividade.required' => 'O campo atividade é obrigatório.',
             'atividade.alpha' => 'A atividade deve conter apenas letras se preenchida.',
+            'aceitar-termos.required' => 'Você deve aceitar os termos para continuar.'
         ];
     }
 }
