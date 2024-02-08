@@ -132,7 +132,6 @@ class PagesController extends Controller
             abort(404); // Ou redirecione para uma página de erro, como preferir
         }
 
-
         // Verifica se o inscrito já está inscrito neste evento pelo CPF
         $inscrito = Inscrito::where('cpf', $request->input('cpf'))->first();
 
