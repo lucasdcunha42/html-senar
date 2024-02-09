@@ -46,7 +46,7 @@
                 @if(!empty($evento->download != "[]"))
                     <div class="col-md-6 bloco-info">
                         <div class="text-center">
-                            <h3 style="color: darkgreen">Arquivos Disponiveis:</h3>
+                            <h3 style="color: darkgreen">Arquivos Disponíveis:</h3>
                             <h4><a href="{{ asset($evento->download) }}" download="{{ $evento->download }}">Especicação do Evento</a></h4>
                         </div>
                     </div>
@@ -56,8 +56,8 @@
                 @if(!empty($evento->link))
                     <div class="col-md-6 bloco-info">
                         <div class="text-center">
-                            <h3 style="color: darkgreen">Mais Informaçoes:</h3>
-                            <h4> {!! $evento->link !!}} </h4>
+                            <h3 style="color: darkgreen">Mais informações: </h3>
+                            <h4> {!! $evento->link !!} </h4>
                         </div>
                     </div>
                 @endif
