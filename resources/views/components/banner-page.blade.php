@@ -1,5 +1,5 @@
 @if(isset($bgPagePath) && $bgPagePath)
-<div class="banner-page" style="background-image: url({{ $bgPagePath }})">
+<div class="img-responsive banner-page" style="background-image: url('{{ $bgPagePath }}')">
 @else
 <div class="banner-page" style="background-image: url('{{ asset('images/bg-cinza.png') }}')">
 @endif
