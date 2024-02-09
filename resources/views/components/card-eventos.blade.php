@@ -13,8 +13,12 @@
 				<h1 class="postcard__title green"><a href="{{route('page.eventos.single', $evento->slug)}}">{{$evento->titulo}}</a></h1>
 				<div class="postcard__subtitle">
 					<time datetime="2020-05-25 12:00:00">
-						<i class="fas fa-calendar-alt mr-2"></i>{{ $evento->getAttrDateFromFormat('data_inicio', 'Y-m-d', 'd/m/Y') }}
-					</time>
+						<i class="fas fa-calendar-alt mr-2"></i>
+                        {{ $evento->getAttrDateFromFormat('data_inicio', 'Y-m-d', 'd/m/Y') }}
+                        @if ($evento->data_fim)
+                            {!! ($evento->data_fim != $evento->data_inicio) ? ' a ' . $evento->getAttrDateFromFormat('data_fim', 'Y-m-d', 'd/m/Y') : '' !!}
+                        @endif
+                    </time>
 				</div>
 				<div class="postcard__bar"></div>
 				<div class="postcard__preview-txt">

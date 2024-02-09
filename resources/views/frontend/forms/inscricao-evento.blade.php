@@ -2,7 +2,7 @@
     @csrf
 
     <div class="form-group">
-        <label for="nome">Nome: <span class="small" style="color:#C0C0C0">( obrigatório )</span></label>
+        <label for="nome">Nome Completo: <span class="small" style="color:#C0C0C0">( obrigatório )</span></label>
         <input type="text" name="nome" id="nome" class="form-control" value="{{ old('nome') }}" required>
     </div>
 
@@ -24,7 +24,7 @@
     <div class="form-group">
         <label for="cidade">Municipio: <span class="small" style="color:#C0C0C0">( obrigatório )</span></label>
         <select name="cidade" id="cidade" class="form-control" required>
-            <option value="" disabled selected>Selecione um município</option>
+            <option value="{{ old('cidade') }}" disabled selected>Selecione um município</option>
             @foreach($cidades as $id => $cidade)
                 <option value="{{ $cidade }}" {{ old('cidade') == $id ? 'selected' : '' }}>
                     {{ $cidade }}

@@ -19,7 +19,9 @@
                 <div class="page-title center" style="margin-bottom: 0px;"> {!! $evento->titulo !!} </div>
                 <div class="page-subtitle text-center">
                     {{ $evento->getAttrDateFromFormat('data_inicio', 'Y-m-d', 'd/m/Y') }}
-                    {!! ($evento->data_fim != $evento->data_inicio) ? ' á ' . $evento->getAttrDateFromFormat('data_fim', 'Y-m-d', 'd/m/Y') : '' !!}
+                    @if ($evento->data_fim)
+                        {!! ($evento->data_fim != $evento->data_inicio) ? ' a ' . $evento->getAttrDateFromFormat('data_fim', 'Y-m-d', 'd/m/Y') : '' !!}
+                    @endif
                 </div>
             </div>
 
@@ -55,7 +57,7 @@
                     <div class="col-md-6 bloco-info">
                         <div class="text-center">
                             <h3 style="color: darkgreen">Mais Informaçoes:</h3>
-                            <h4> {{ $evento->link }} </h4>
+                            <h4> {!! $evento->link !!}} </h4>
                         </div>
                     </div>
                 @endif
