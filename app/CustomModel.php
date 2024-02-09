@@ -35,7 +35,7 @@ class CustomModel extends Model
     }
 
     // scopes
-    public function scopeInComming($query, $col_data_fim = 'data_fim', $final_format = 'Y-m-d')
+    public function scopeInComming($query, $col_data_fim = 'divulgacao_fim', $final_format = 'Y-m-d')
     {
         return $query->where($col_data_fim, '>=', now()->format($final_format));
     }

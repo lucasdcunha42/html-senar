@@ -9,14 +9,17 @@
     "license": "MIT",
     "require": {
         "php": "^7.3|^8.0",
+        "barryvdh/laravel-dompdf": "^2.0",
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
+        "igorescobar/jquery-mask-plugin": "^1.14",
         "intervention/image": "^2.5.1",
         "intervention/imagecache": "^2.5.1",
         "laravel/framework": "^8.12",
         "laravel/tinker": "^2.5",
         "the42coders/eu-cookie-consent": "^1.0",
+        "laravellegends/pt-br-validator": "^10.0",
         "oliverad/parse-xml": "dev-master",
         "tcg/voyager": "^1.4"
     },
