@@ -260,6 +260,9 @@
                                                 @endif
                                             </td>
                                         @endforeach
+                                        <td>
+                                            Numero de inscritos
+                                        </td>
                                         <td class="no-sort no-click bread-actions">
                                             @foreach($actions as $action)
                                                 @if (!method_exists($action, 'massAction'))

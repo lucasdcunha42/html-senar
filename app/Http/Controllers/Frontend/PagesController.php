@@ -8,6 +8,7 @@ use App\Http\Requests\EventoInscricao;
 use App\Inscrito;
 use App\Http\Controllers\Controller;
 use App\SindicatosMunicipio;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use LaravelLegends\PtBrValidator\Validator;
 
