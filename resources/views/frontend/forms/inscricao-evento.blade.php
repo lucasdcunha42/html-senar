@@ -41,7 +41,8 @@
     <div class="form-group">
         <div class="form-check">
             <label>
-                <input type="checkbox" class="form-check-input" id="aceitar-termos" name="aceitar-termos" required> Aceito os termos e condições
+                <input type="checkbox" class="form-check-input" id="aceitar-termos" name="aceitar-termos" required>
+                    Estou de acordo que o Senar RS armazene meus dados para serem utilizados para o processo de inscrição neste evento.
             </label>
         </div>
     </div>
