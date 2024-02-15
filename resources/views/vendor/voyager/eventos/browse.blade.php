@@ -111,6 +111,7 @@
                                             @endif
                                         </th>
                                         @endforeach
+                                        <th> Inscritos </th>
                                         <th class="actions text-right dt-not-orderable">{{ __('voyager::generic.actions') }}</th>
                                     </tr>
                                 </thead>
@@ -261,7 +262,7 @@
                                             </td>
                                         @endforeach
                                         <td>
-                                            Numero de inscritos
+                                            {{ $data->inscritos->count() }}
                                         </td>
                                         <td class="no-sort no-click bread-actions">
                                             @foreach($actions as $action)

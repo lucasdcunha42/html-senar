@@ -23,12 +23,13 @@
             <i class="voyager-news"></i> Imprimir Crachás
         </a>
 
-        <!-- Remover participantes em massa -->
+        <!-- Remover participantes em massa
         <form method="post" action="{{ route('lista.inscritos.bulkDetach',  ['evento' => $evento->id] ) }}" style="display:inline">
             {{ csrf_field() }}
             <button type="submit" class="btn btn-warning btn-danger"><i class="voyager-trash"></i> Remover Selecionados </button>
             <input type="hidden" name="ids" value="" class="selected_ids">
         </form>
+        -->
 
         @can('edit', app($dataType->model_name))
             @if(isset($dataType->order_column) && isset($dataType->order_display_column))
@@ -37,6 +38,7 @@
                 </a>
             @endif
         @endcan
+
         @can('delete', app($dataType->model_name))
             @if($usesSoftDeletes)
                 <input type="checkbox" @if ($showSoftDeleted) checked @endif id="show_soft_deletes" data-toggle="toggle" data-on="{{ __('voyager::bread.soft_deletes_off') }}" data-off="{{ __('voyager::bread.soft_deletes_on') }}">
@@ -48,7 +50,21 @@
             @endif
         @endforeach
         @include('voyager::multilingual.language-selector')
+
+        <div style="display: inline-block;
+                margin: 0;
+                padding: 6px 15px;
+                font-size: 14px;
+                position: relative;
+                color: white;
+                position:relative;
+                font-weight:700;
+                border-radius: 3px;
+                background-color: #005c3c;">
+                N° de Inscritos: {{$evento->inscritos->count()}} / {{$evento->capacidade}}
+        </div>
     </div>
+
     @if (session('success'))
     <div class="alert alert-success" id="updated-alert">
         {{ session('success') }}
@@ -279,16 +295,15 @@
                                         <td class="no-sort no-click bread-actions">
 
                                             <span class="input-group-btn text-right">
-                                                <a class="btn btn-danger" href="{{ route('lista.inscritos.remover', ['evento' => $evento->id, 'inscrito' => $data]) }}">
+                                                <a href="{{ route('lista.inscritos.remover', ['evento' => $evento->id, 'inscrito' => $data]) }}" class="btn btn-danger" style="margin: 0 2px; border-radius: 3px">
                                                     <i class="voyager-person"></i> <span> - Remover Inscrição</span>
                                                 </a>
-                                            </span>
-                                            <span>
-                                                <a href="{{ route('lista.inscritos.imprimeCracha',  ['evento' => $evento->id, 'inscrito' => $data] )}}" class="btn btn-info btn-add-new">
+
+                                                <a href="{{ route('lista.inscritos.imprimeCracha',  ['evento' => $evento->id, 'inscrito' => $data] )}}" class="btn btn-info btn-add-new" style="margin: 0 2px; border-radius: 3px">
                                                     <i class="voyager-certificate"></i> Certificado
                                                 </a>
 
-                                                <a href="{{ route('lista.inscritos.imprimeCracha',  ['evento' => $evento->id, 'inscrito' => $data] )}}" class="btn btn-warning btn-add-new">
+                                                <a href="{{ route('lista.inscritos.imprimeCracha',  ['evento' => $evento->id, 'inscrito' => $data] )}}" class="btn btn-warning btn-add-new" style="margin: 0 2px; border-radius: 3px">
                                                     <i class="voyager-news"></i> Crachá
                                                 </a>
                                             </span>
