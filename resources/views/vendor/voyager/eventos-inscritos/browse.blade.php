@@ -295,16 +295,15 @@
                                         <td class="no-sort no-click bread-actions">
 
                                             <span class="input-group-btn text-right">
-                                                <a class="btn btn-danger" href="{{ route('lista.inscritos.remover', ['evento' => $evento->id, 'inscrito' => $data]) }}">
+                                                <a href="{{ route('lista.inscritos.remover', ['evento' => $evento->id, 'inscrito' => $data]) }}" class="btn btn-danger" style="margin: 0 2px; border-radius: 3px">
                                                     <i class="voyager-person"></i> <span> - Remover Inscrição</span>
                                                 </a>
-                                            </span>
-                                            <span>
-                                                <a href="{{ route('lista.inscritos.imprimeCracha',  ['evento' => $evento->id, 'inscrito' => $data] )}}" class="btn btn-info btn-add-new">
+
+                                                <a href="{{ route('lista.inscritos.imprimeCracha',  ['evento' => $evento->id, 'inscrito' => $data] )}}" class="btn btn-info btn-add-new" style="margin: 0 2px; border-radius: 3px">
                                                     <i class="voyager-certificate"></i> Certificado
                                                 </a>
 
-                                                <a href="{{ route('lista.inscritos.imprimeCracha',  ['evento' => $evento->id, 'inscrito' => $data] )}}" class="btn btn-warning btn-add-new">
+                                                <a href="{{ route('lista.inscritos.imprimeCracha',  ['evento' => $evento->id, 'inscrito' => $data] )}}" class="btn btn-warning btn-add-new" style="margin: 0 2px; border-radius: 3px">
                                                     <i class="voyager-news"></i> Crachá
                                                 </a>
                                             </span>
