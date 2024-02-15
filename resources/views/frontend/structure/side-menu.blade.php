@@ -52,7 +52,7 @@
                     <a href="#">Certificados</a>
                 </li> --}}
                 <li class="side-menu-item">
-                    <a href="{{ route('page.transparencia') }}">Transparência e Prestação de Contas</a>
+                    <a href="https://app3.cna.org.br/transparencia/#RS-2023-0">Transparência e Prestação de Contas</a>
                 </li>
                 <li class="side-menu-item">
                     <a href="{{ route('page.contato') }}" target="_blank">Contato</a>

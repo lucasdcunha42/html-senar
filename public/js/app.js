@@ -2420,22 +2420,46 @@
         return false;
       }
       changeItems();
-  
-      // var type = $(this).data('type');
-      // var _fn = $(this).hasClass('active') ? 'show' : 'hide';
-  
-      // $('.evento-item[data-type="' + type + '"]')[_fn]('fast');
-  
-      // _eventosItems.each(function(index, el) {
-  
-      //     if() {
-      //         $(el).show('fast');
-      //     } else {
-      //         $(el).hide('fast');
-      //     }
-  
-      // });
     });
+  }
+  if ($('#form-evento-incricao').length) {
+    $('#cpf').mask('000.000.000-00', {
+      reverse: true
+    });
+    var maskBehavior = function maskBehavior(val) {
+        return val.replace(/\D/g, '').length === 11 ? '(00) 00000-0000' : '(00) 0000-00009';
+      },
+      options = {
+        onKeyPress: function onKeyPress(val, e, field, options) {
+          field.mask(maskBehavior.apply({}, arguments), options);
+        }
+      };
+    $('#telefone').mask(maskBehavior, options);
+    $('form').on('submit', function () {
+      $('#cpf').unmask();
+      $('#telefone').unmask();
+    });
+  }
+  if ($('.evento-single').length) {
+    // Função para ajustar as imagens dentro das tags <p>
+    var ajustarImagens = function ajustarImagens() {
+      // Seleciona todas as tags <p> no documento
+      var paragrafos = document.querySelectorAll('p');
+  
+      // Itera sobre cada tag <p>
+      paragrafos.forEach(function (paragrafo) {
+        // Verifica se o parágrafo contém uma tag <img>
+        var imagem = paragrafo.querySelector('img');
+  
+        // Se existir uma tag <img> no parágrafo, ajusta seus atributos
+        if (imagem) {
+          imagem.style.maxWidth = '1200px';
+          imagem.style.width = '100%';
+          imagem.style.height = 'auto';
+        }
+      });
+    }; // Chama a função quando a página for totalmente carregada
+    window.onload = ajustarImagens;
   }
   
   /***/ }),
@@ -3663,77 +3687,6 @@
       return value === value
         ? strictIndexOf(array, value, fromIndex)
         : baseFindIndex(array, baseIsNaN, fromIndex);
-    changeItems();
-  });
-}
-if ($('#form-evento-incricao').length) {
-  $('#cpf').mask('000.000.000-00', {
-    reverse: true
-  });
-  var maskBehavior = function maskBehavior(val) {
-      return val.replace(/\D/g, '').length === 11 ? '(00) 00000-0000' : '(00) 0000-00009';
-    },
-    options = {
-      onKeyPress: function onKeyPress(val, e, field, options) {
-        field.mask(maskBehavior.apply({}, arguments), options);
-      }
-    };
-  $('#telefone').mask(maskBehavior, options);
-  $('form').on('submit', function () {
-    $('#cpf').unmask();
-    $('#telefone').unmask();
-  });
-}
-if ($('.evento-single').length) {
-  // Função para ajustar as imagens dentro das tags <p>
-  var ajustarImagens = function ajustarImagens() {
-    // Seleciona todas as tags <p> no documento
-    var paragrafos = document.querySelectorAll('p');
-
-    // Itera sobre cada tag <p>
-    paragrafos.forEach(function (paragrafo) {
-      // Verifica se o parágrafo contém uma tag <img>
-      var imagem = paragrafo.querySelector('img');
-
-      // Se existir uma tag <img> no parágrafo, ajusta seus atributos
-      if (imagem) {
-        imagem.style.maxWidth = '1200px';
-        imagem.style.width = '100%';
-        imagem.style.height = 'auto';
-      }
-    });
-  }; // Chama a função quando a página for totalmente carregada
-  window.onload = ajustarImagens;
-}
-
-/***/ }),
-
-/***/ "./resources/js/forms.js":
-/*!*******************************!*\
-  !*** ./resources/js/forms.js ***!
-  \*******************************/
-/***/ (() => {
-
-$('form .btn-submit').on('click', function (e) {
-  e.preventDefault();
-  var submitBtn = $(this);
-  var loading = $(this).next('img');
-  var form = $(this).closest('form');
-  var action = form.attr('action');
-  var method = form.attr('method');
-  var config = {
-    method: String(method).toUpperCase(),
-    url: action,
-    data: form.serialize()
-  };
-  submitBtn.hide('fast');
-  loading.show('fast');
-  $.ajax(config).done(function (response) {
-    var alertText = '';
-    var reset = true;
-    if (!response.success) {
-      alertText += 'Erro:\n';
-      reset = false;
     }
   
     /**
