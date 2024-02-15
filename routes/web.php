@@ -109,8 +109,4 @@ Route::group(['prefix' => 'admin'], function () {
 
 });
 
-<<<<<<< HEAD
-Route::redirect('/senar/legislacao', '/legislacao');
-=======
 //Route::redirect('/admin', 'admin/cursos');
->>>>>>> dde7df96cdf4c9c966d2d1ae6f52fb6b774a282f
