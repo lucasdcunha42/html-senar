@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Evento;
 use App\Http\Controllers\Controller;
 use App\Inscrito;
+use App\SindicatosMunicipio;
 use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Http\Request;
 
@@ -20,10 +21,11 @@ class InscritosEventosController extends Controller
 
     public function formulario($eventoId)
     {
-        ddd($eventoId);
+        $evento = Evento::findOrFail($eventoId);
+        $cidades = SindicatosMunicipio::orderBy('municipio')->pluck('municipio','id');
 
         // talvez precise da logica de permissão;
-        return view('frontend.forms.inscricao-evento', ['eventoId' => $eventoId]);
+        return view('frontend.forms.inscricao-evento', ['evento' => $evento, 'cidades' => $cidades ]);
     }
 
     public function adicionaInscrito(Request $request)

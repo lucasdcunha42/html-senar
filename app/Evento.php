@@ -27,4 +27,9 @@ class Evento extends CustomModel
     {
         return $this->inscritos->count() >= $this->capacidade;
     }
+
+    public function cidades(){
+        $cidades = SindicatosMunicipio::orderBy('municipio')->pluck('municipio','id');
+        return $cidades;
+    }
 }
