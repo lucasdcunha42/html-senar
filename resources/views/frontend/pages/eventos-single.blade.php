@@ -43,22 +43,24 @@
                 @endif
 
                 <!-- Downloads -->
-                @if(!empty($evento->download != "[]"))
-                    <div class="col-md-6 bloco-info">
-                        <div class="text-center">
-                            <h3 style="color: darkgreen">Arquivos Disponíveis:</h3>
-                            <h4><a href="{{ asset($evento->download) }}" download="{{ $evento->download }}">Especicação do Evento</a></h4>
-                        </div>
-                    </div>
-                @endif
+                @php
+                    $files = $evento->getArrayFiles();
+                @endphp
 
-                <!-- Link -->
-                @if(!empty($evento->link))
-                    <div class="col-md-6 bloco-info">
-                        <div class="text-center">
-                            <h3 style="color: darkgreen">Mais informações: </h3>
-                            <h4> {!! $evento->link !!} </h4>
-                        </div>
+                @if(is_array($files) && count($files) > 0)
+                    <h3 style="color: darkgreen" class="text-center">Arquivos Disponíveis:</h3>
+                    <div class="bloco-info">
+                        <ul class="list-group col-xs-6" style="display:inline">
+                            @foreach($files as $file)
+                                @if(!empty($file->download_link))
+                                    <li class="list-group-item">
+                                        <a target="_blank" class="legislacao-link" data-pdf="{{ asset('storage/' . $file->download_link) }}">
+                                            {!! $file->original_name !!}
+                                        </a>
+                                    </li>
+                                @endif
+                            @endforeach
+                        </ul>
                     </div>
                 @endif
 
