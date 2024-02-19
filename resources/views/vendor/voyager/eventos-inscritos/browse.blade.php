@@ -8,9 +8,15 @@
             <i class="{{ $dataType->icon }}"></i> {{ $dataType->getTranslatedAttribute('display_name_plural') }}
         </h1>
 
+        @can('add', app($dataType->model_name))
+            <a href="{{ route('voyager.'.$dataType->slug.'.create') }}" class="btn btn-success btn-add-new">
+                <i class="voyager-plus"></i> <span>{{ __('voyager::generic.add_new') }}</span>
+            </a>
+        @endcan
+
         <!-- Botão Header Adiciona inscrito em evento -->
         <a href="{{ route('lista.inscritos.formulario',  ['evento' => $evento->id] )}}" class="btn btn-success btn-add-new">
-            <i class="voyager-plus"></i> Adcionar Inscrito
+            <i class="voyager-plus"></i> Adcionar aaaaaInscrito
         </a>
 
         <!-- Impressão de Cetificado de todos os Participantes -->

@@ -20,11 +20,16 @@ class Evento extends CustomModel
 
     public function inscritos()
     {
-        return $this->belongsToMany(Inscrito::class, 'eventos_inscritos')->withPivot('presenca');
+        return $this->belongsToMany(Inscrito::class, 'eventos_inscritos')->withPivot('presenca')->withTimestamps();
     }
 
     public function estaCheio()
     {
         return $this->inscritos->count() >= $this->capacidade;
+    }
+
+    public function cidades(){
+        $cidades = SindicatosMunicipio::orderBy('municipio')->pluck('municipio','id');
+        return $cidades;
     }
 }

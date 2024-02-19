@@ -403,7 +403,10 @@ class ListaInscritosController extends VoyagerBaseController
 
     public function create(Request $request)
     {
-        $slug = $this->getSlug($request);
+        $slug = 'eventos-inscritos';
+        $idEvento = $request->route()->event;
+
+        $evento = Evento::findOrFail($idEvento);
 
         $dataType = Voyager::model('DataType')->where('slug', '=', $slug)->first();
 
@@ -432,8 +435,8 @@ class ListaInscritosController extends VoyagerBaseController
         if (view()->exists("voyager::$slug.edit-add")) {
             $view = "voyager::$slug.edit-add";
         }
-
-        return Voyager::view($view, compact('dataType', 'dataTypeContent', 'isModelTranslatable'));
+        ddd($evento);
+        return Voyager::view($view, compact('evento', 'dataType', 'dataTypeContent', 'isModelTranslatable'));
     }
 
     /**
