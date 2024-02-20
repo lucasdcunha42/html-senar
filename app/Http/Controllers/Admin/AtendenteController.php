@@ -66,7 +66,15 @@ class AtendenteController extends Controller
 
         if (!$inscrito) {
             // Cria um novo inscrito com somente os dados validados laravel 5.6
-            $inscrito = Inscrito::create($request->validated());
+            $inscrito = new Inscrito();
+            $inscrito->nome = $request->nome;
+            $inscrito->cpf = $request->cpf;
+            $inscrito->email = $request->email;
+            $inscrito->cidade = $request->cidade;
+            $inscrito->atividade = $request->atividade;
+            $inscrito->telefone = $request->telefone;
+
+            $inscrito->save();
         }
 
         // Anexe o inscrito ao evento
