@@ -3,12 +3,51 @@
 @section('content')
 
     <div class="container">
-        <h1 class="text-center">{{$evento->titulo}} - {{$evento->getAttrDateFromFormat('data_inicio', 'Y-m-d', 'd/m/Y')}} - {{$evento->getAttrDateFromFormat('data_fim', 'Y-m-d', 'd/m/Y')}}</h1>
+
+        <h1 class="text-center">{{$evento->titulo}} -
+            {{$evento->getAttrDateFromFormat('data_inicio', 'Y-m-d', 'd/m/Y')}}
+            @if ($evento->data_fim)
+                {!! ($evento->data_fim != $evento->data_inicio) ? ' a ' . $evento->getAttrDateFromFormat('data_fim', 'Y-m-d', 'd/m/Y') : '' !!}
+            @endif
+        </h1>
         <h2>Inscritos</h2>
 
+        @if(session('success'))
+            <div class="alert alert-success">
+                {{ session('success') }}
+            </div>
+        @endif
+
+        @if(session('error'))
+            <div class="alert alert-danger">
+                {{ session('error') }}
+            </div>
+        @endif
+
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+
         <ul class="nav nav-pills text-center" id="myTabs">
-            <li class="col-xs-3" style="padding: 0"><a data-toggle="tab" href="#compareceram">Presentes</a></li>
-            <li class="col-xs-4 active" style="padding: 0"><a data-toggle="tab" href="#ausentes">Ausentes</a></li>
+            <li class="col-xs-3" style="padding: 0">
+                <a data-toggle="tab" href="#compareceram">Presentes
+                <span class="badge badge-pill badge-light">{{ $presentes->count() }}</span>
+                </a>
+            </li>
+
+            <li class="col-xs-4 active" style="padding: 0">
+                <a data-toggle="tab" href="#ausentes">
+                    Inscritos <span class="badge badge-pill badge-light">{{ $ausentes->count() }}</span>
+
+                </a>
+            </li>
+
             <li class="col-xs-4" style="padding: 0;"><a data-toggle="tab" href="#adicionar">Adicionar</a></li>
         </ul>
 

@@ -1,7 +1,7 @@
 @extends('voyager::master')
 
 @section('content')
-    
+
     <style>
         @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
         @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
@@ -108,7 +108,7 @@
                     <div class="col-10 col-md-4">
                         <div class="card profile-card-3">
                             <div class="background-block">
-                                <img src="https://images.unsplash.com/photo-1704475336842-0ab3798abf0e?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTcwNjA5ODY2Mg&ixlib=rb-4.0.3&q=80&w=300" alt="profile-sample1" class="background"/>
+                                <img src="{{ urlStorage($evento->card) }}" alt="profile-sample1" class="background"/>
                             </div>
 
                             <!--

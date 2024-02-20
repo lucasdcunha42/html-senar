@@ -2,7 +2,7 @@
 	<div class="container py-2">
 		<article class="postcard light green">
 			<a class="postcard__img_link" href="{{route('page.eventos.single', $evento->slug)}}">
-				<img class="postcard__img img-responsive" src="{{urlStorage($evento->card)}}" alt="Image Title" />
+				<img class="postcard__img img-responsive" src="{{urlStorage($evento->card, 300, 300)}}" alt="Image Title" />
                 @if ($evento->estaCheio())
                     <img src="{{ asset('images/InscricoesEncerradas.webp') }}" style="position: absolute; height: 75%; top: 10%; left: 50px">
                 @endif
