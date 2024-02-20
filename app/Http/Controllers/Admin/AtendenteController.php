@@ -46,20 +46,30 @@ class AtendenteController extends Controller
 
     public function store(Request $request) {
 
+        $evento = Evento::findOrFail($request->evento_id);
+
+        $inscrito = Inscrito::where('cpf', $request->input('cpf'))->first();
+
+        if ($evento->inscritos->contains($inscrito)) {
+            return redirect()->back()->with('error', 'Participante ja Cadastrado no evento neste evento.');
+        }
+
         $request->validate([
             'nome' => 'required|string',
-            'cpf' => 'required|string|unique:inscritos,cpf', // Verifica se o CPF é único na tabela de inscritos
+            'cpf' => 'required|numeric|digits:11',
+            'email' => 'nullable|email',
+            'cidade' => 'required',
+            'atividade' => 'nullable',
+            'telefone' => 'nullable|numeric',
             'evento_id' => 'required|exists:eventos,id', // Verifica se o evento existe
         ]);
 
-        // Crie um novo inscrito
-        $inscrito = new Inscrito();
-        $inscrito->nome = $request->nome;
-        $inscrito->cpf = $request->cpf;
-        $inscrito->save();
+        if (!$inscrito) {
+            // Cria um novo inscrito com somente os dados validados laravel 5.6
+            $inscrito = Inscrito::create($request->validated());
+        }
 
         // Anexe o inscrito ao evento
-        $evento = Evento::findOrFail($request->evento_id);
         $evento->inscritos()->attach($inscrito->id, ['presenca' => 1]);
 
         // Redirecione de volta para a página do evento ou para onde for apropriado

@@ -123,7 +123,7 @@
                         <input type="text" class="form-control" id="nome" name="nome" required>
                     </div>
                     <div class="form-group">
-                        <label for="cpf">CPF:</label>
+                        <label for="cpf">CPF: <span class="small" style="color:#C0C0C0">( obrigatório )</span> </label>
                         <input type="text" class="form-control" id="cpf" name="cpf" required>
                     </div>
 
@@ -139,7 +139,7 @@
 
                     <div class="form-group">
                         <label for="cidade">Municipio: <span class="small" style="color:#C0C0C0">( obrigatório )</span></label>
-                        <select name="cidade" id="cidade" class="form-control" required>
+                        <select name="cidade" id="cidade" class="form-control" style="width: 100%" required>
                             <option value="{{ old('cidade') }}" disabled selected>Selecione um município</option>
                             @foreach($cidades as $id => $cidade)
                                 <option value="{{ $cidade }}" {{ old('cidade') == $id ? 'selected' : '' }}>
@@ -166,6 +166,7 @@
 
 @section('javascript')
 <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" integrity="sha512-pHVGpX7F/27yZ0ISY+VVjyULApbDlD0/X0rgGbTqCE7WFW5MezNTWG/dnhtbBuICzsd0WQPgpE4REBLv+UqChw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>
 
     $(document).ready(function() {
@@ -178,6 +179,27 @@
             "paging": false
 
         });
+    });
+
+    $('#cpf').mask('000.000.000-00', {
+        reverse: true
+    });
+    var maskBehavior = function maskBehavior(val) {
+        return val.replace(/\D/g, '').length === 11 ? '(00) 00000-0000' : '(00) 0000-00009';
+        },
+        options = {
+        onKeyPress: function onKeyPress(val, e, field, options) {
+            field.mask(maskBehavior.apply({}, arguments), options);
+        }
+        };
+    $('#telefone').mask(maskBehavior, options);
+    $('form').on('submit', function () {
+        $('#cpf').unmask();
+        $('#telefone').unmask();
+    });
+
+    $(document).ready(function() {
+        $('#cidade').select2();
     });
 
 </script>
