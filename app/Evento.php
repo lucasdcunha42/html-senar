@@ -32,4 +32,25 @@ class Evento extends CustomModel
         $cidades = SindicatosMunicipio::orderBy('municipio')->pluck('municipio','id');
         return $cidades;
     }
+
+    public function getArrayFiles()
+    {
+
+        $arquivos = json_decode($this->download);
+
+        if(!is_array($arquivos)) {
+            return null;
+        }
+
+        if(!count($arquivos)) {
+            return null;
+        }
+
+        $arr = [];
+
+        foreach($arquivos as $arquivo) {
+            $arr[] = $arquivo;
+        }
+        return $arr;
+    }
 }

@@ -63,13 +63,13 @@ class AtendenteController extends Controller
         $evento->inscritos()->attach($inscrito->id, ['presenca' => 1]);
 
         // Redirecione de volta para a página do evento ou para onde for apropriado
-        return redirect()->back()->with('success', 'Inscrito adicionado com sucesso!');
+        return redirect()->back()->with('success', $inscrito->nome . ' adicionado com sucesso!');
     }
 
     public function presenca(Request $request, Evento $evento, Inscrito $inscrito) {
         $evento->inscritos()->updateExistingPivot($inscrito->id, ['presenca' => 1]);
 
         // Redirecione de volta para onde quer que seja apropriado
-        return redirect()->back()->with('success', 'Inscrito marcado como presente com sucesso!');
+        return redirect()->back()->with('success', $inscrito->nome . ' presente no Evento!');
     }
 }
