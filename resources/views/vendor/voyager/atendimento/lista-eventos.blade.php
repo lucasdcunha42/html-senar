@@ -114,12 +114,6 @@
                                 <img src="{{ urlStorage($evento->card) }}" alt="profile-sample1" style="object-fit: cover"/>
                             </div>
 
-                            <!--
-                            <div class="profile-thumb-block">
-                                <img src="https://randomuser.me/api/portraits/men/41.jpg" alt="profile-image" class="profile"/>
-                            </div>
-                            -->
-
                             <div class="card-content">
                                 <a href="{{ route('atendente.showInscritos', $evento) }}">
                                     <h2 style="color: #232323">{{$evento->titulo}}

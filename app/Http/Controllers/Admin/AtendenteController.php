@@ -12,7 +12,9 @@ use Illuminate\Support\Facades\DB;
 class AtendenteController extends Controller
 {
     public function listaEventos(){
-        $eventos = Evento::all();
+        $eventos = Evento::where('data_fim', '>=', now())
+                        ->orderBy('data_inicio')
+                        ->get();
 
         return view('voyager::atendimento.lista-eventos', ['eventos' => $eventos]);
     }
@@ -20,6 +22,8 @@ class AtendenteController extends Controller
     public function showInscritos(Evento $evento) {
 
         $inscritos = $evento->inscritos;
+
+        $listaGeral = Inscrito::all();
 
         // Obtém os inscritos que compareceram
         $presentes = DB::table('inscritos')
@@ -41,7 +45,16 @@ class AtendenteController extends Controller
 
         $cidades = $evento->cidades();
 
-        return view('voyager::atendimento.lista-inscritos', ['inscritos' => $inscritos, 'evento' => $evento, 'presentes' => $presentes, 'ausentes' => $ausentes, 'cidades' => $cidades]);
+        return view('voyager::atendimento.lista-inscritos',
+        [
+            'inscritos' => $inscritos,
+            'evento' => $evento,
+            'presentes' => $presentes,
+            'ausentes' => $ausentes,
+            'cidades' => $cidades,
+            'listaGeral' => $listaGeral,
+
+        ]);
     }
 
     public function store(Request $request) {
@@ -85,6 +98,7 @@ class AtendenteController extends Controller
     }
 
     public function presenca(Request $request, Evento $evento, Inscrito $inscrito) {
+
         $evento->inscritos()->updateExistingPivot($inscrito->id, ['presenca' => 1]);
 
         // Redirecione de volta para onde quer que seja apropriado
