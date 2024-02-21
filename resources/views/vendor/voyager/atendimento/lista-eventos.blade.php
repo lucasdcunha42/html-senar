@@ -105,10 +105,13 @@
         <div class="container">
             <div class="row">
                 @forelse ($eventos as $evento)
-                    <div class="col-10 col-md-4">
+                    <div class="col-xs-12 col-md-4"
+                    @if (!$evento->estaOcorrendo())
+                        style="opacity: 50%"
+                    @endif>
                         <div class="card profile-card-3">
                             <div class="background-block">
-                                <img src="{{ urlStorage($evento->card) }}" alt="profile-sample1" class="background"/>
+                                <img src="{{ urlStorage($evento->card) }}" alt="profile-sample1" style="object-fit: cover"/>
                             </div>
 
                             <!--
@@ -123,7 +126,15 @@
                                         <small>{{$evento->cidade}}</small>
                                     </h2>
                                 </a>
+                                <div>
+                                    @if ($evento->estaOcorrendo())
+                                        <h3 style="color: green"> Em Andamento </h3>
+                                    @else
+                                        <h3> Inativo </h3>
+                                    @endif
+                                </div>
                             </div>
+
                         </div>
                     </div>
                 @empty

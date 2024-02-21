@@ -147,7 +147,11 @@ class PagesController extends Controller
         }
 
         // Relaciona o inscrito ao evento
-        $evento->inscritos()->attach($inscrito->id);
+        if($evento->estaOcorrendo()){
+            $evento->inscritos()->attach($inscrito->id, ['presenca' => 1]);
+        } else {
+            $evento->inscritos()->attach($inscrito->id);
+        }
 
         // Redireciona com uma mensagem de sucesso
         return redirect()->route('page.eventos.inscricao', ['slug' => $slug])->with('success', 'Inscrição realizada com sucesso!');
