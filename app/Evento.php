@@ -1,6 +1,9 @@
 <?php
 
 namespace App;
+
+use Carbon\Carbon;
+
 class Evento extends CustomModel
 {
     private const TIPO_FEIRAS_E_EXPOSICOES = 1;
@@ -8,7 +11,7 @@ class Evento extends CustomModel
 
     public function getDataInicioFormatada()
     {
-        return \Carbon\Carbon::parse($this->data_inicio)->format('d.m.Y');
+        return Carbon::parse($this->data_inicio)->format('d.m.Y');
     }
 
     public static function getTipos() {
@@ -30,6 +33,7 @@ class Evento extends CustomModel
 
     public function cidades(){
         $cidades = SindicatosMunicipio::orderBy('municipio')->pluck('municipio','id');
+        $cidades->prepend('Outra', '');
         return $cidades;
     }
 
@@ -52,5 +56,15 @@ class Evento extends CustomModel
             $arr[] = $arquivo;
         }
         return $arr;
+    }
+
+    public function estaOcorrendo() {
+        $now = Carbon::now();
+
+        if($now->between($this->data_inicio, $this->data_fim)){
+            return true;
+        }
+
+        return false;
     }
 }
