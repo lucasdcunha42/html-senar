@@ -100,7 +100,6 @@ class PagesController extends Controller
     {
 
         $evento = Evento::inComming()
-                        ->active()
                         ->where('slug', $slug)
                         ->firstOrfail();
 
