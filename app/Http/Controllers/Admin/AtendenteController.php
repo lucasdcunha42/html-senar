@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\DB;
 class AtendenteController extends Controller
 {
     public function listaEventos(){
-        $eventos = Evento::where('data_fim', '>=', now())
+        $eventos = Evento::where('data_fim', '>=', today())
                         ->orderBy('data_inicio')
                         ->get();
 

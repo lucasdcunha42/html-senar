@@ -109,6 +109,7 @@
                     @if (!$evento->estaOcorrendo())
                         style="opacity: 50%"
                     @endif>
+
                         <div class="card profile-card-3">
                             <div class="background-block">
                                 <img src="{{ urlStorage($evento->card) }}" alt="profile-sample1" style="object-fit: cover"/>
@@ -116,13 +117,18 @@
 
                             <div class="card-content">
                                 <a href="{{ route('atendente.showInscritos', $evento) }}">
-                                    <h2 style="color: #232323">{{$evento->titulo}}
-                                        <small>{{$evento->cidade}}</small>
-                                    </h2>
+                                    <h3 style="color: #232323; word-wrap: break-word; margin-top: 0">{{$evento->titulo}} </h3>
+                                    <h5 style="color: #232323;">
+                                        {{$evento->cidade}} -
+                                        {{$evento->getAttrDateFromFormat('data_inicio', 'Y-m-d', 'd/m/Y')}}
+                                        @if ($evento->data_fim)
+                                            {!! ($evento->data_fim != $evento->data_inicio) ? ' a ' . $evento->getAttrDateFromFormat('data_fim', 'Y-m-d', 'd/m/Y') : '' !!}
+                                        @endif
+                                    </h5>
                                 </a>
                                 <div>
                                     @if ($evento->estaOcorrendo())
-                                        <h3 style="color: green"> Em Andamento </h3>
+                                        <h3 style="color: green; margin-top: 0"> Em Andamento </h3>
                                     @else
                                         <h3> Inativo </h3>
                                     @endif

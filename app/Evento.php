@@ -59,9 +59,9 @@ class Evento extends CustomModel
     }
 
     public function estaOcorrendo() {
-        $now = Carbon::now();
+        $hoje = Carbon::today();
 
-        if($now->between($this->data_inicio, $this->data_fim)){
+        if($hoje->betweenIncluded($this->data_inicio, $this->data_fim)){
             return true;
         }
 
