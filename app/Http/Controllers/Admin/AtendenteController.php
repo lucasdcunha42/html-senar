@@ -23,8 +23,6 @@ class AtendenteController extends Controller
 
         $inscritos = $evento->inscritos;
 
-        $listaGeral = Inscrito::all();
-
         // Obtém os inscritos que compareceram
         $presentes = DB::table('inscritos')
             ->select('inscritos.*', 'eventos_inscritos.evento_id as pivot_evento_id', 'eventos_inscritos.inscrito_id as pivot_inscrito_id', 'eventos_inscritos.presenca as pivot_presenca')
@@ -44,6 +42,8 @@ class AtendenteController extends Controller
             ->get();
 
         $cidades = $evento->cidades();
+
+        $listaGeral = Inscrito::whereNotIn('id', $presentes->pluck('id')->merge($ausentes->pluck('id')))->get();
 
         return view('voyager::atendimento.lista-inscritos',
         [
@@ -98,6 +98,13 @@ class AtendenteController extends Controller
     }
 
     public function presenca(Request $request, Evento $evento, Inscrito $inscrito) {
+
+        // Verifica se o inscrito está cadastrado no evento
+        if (!$evento->inscritos->contains($inscrito)) {
+            $evento->inscritos()->attach($inscrito->id, ['presenca' => 1]);
+
+            return redirect()->back()->with('success', $inscrito->nome . ' inscrito e presente no evento!');
+        }
 
         $evento->inscritos()->updateExistingPivot($inscrito->id, ['presenca' => 1]);
 

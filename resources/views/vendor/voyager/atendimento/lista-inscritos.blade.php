@@ -3,13 +3,16 @@
 @section('content')
 
     <div class="container">
-
-        <h1 class="text-center">{{$evento->titulo}} -
-            {{$evento->getAttrDateFromFormat('data_inicio', 'Y-m-d', 'd/m/Y')}}
-            @if ($evento->data_fim)
-                {!! ($evento->data_fim != $evento->data_inicio) ? ' a ' . $evento->getAttrDateFromFormat('data_fim', 'Y-m-d', 'd/m/Y') : '' !!}
-            @endif
-        </h1>
+        <div class="row text-center">
+            <h2 style="color: #232323; word-wrap: break-word; margin-top: 0;">{{$evento->titulo}} </h2>
+            <h5 style="color: #232323;">
+                {{$evento->cidade}} -
+                {{$evento->getAttrDateFromFormat('data_inicio', 'Y-m-d', 'd/m/Y')}}
+                @if ($evento->data_fim)
+                    {!! ($evento->data_fim != $evento->data_inicio) ? ' a ' . $evento->getAttrDateFromFormat('data_fim', 'Y-m-d', 'd/m/Y') : '' !!}
+                @endif
+            </h5>
+        </div>
         <h2>Inscritos</h2>
 
         @if(session('success'))
@@ -33,24 +36,23 @@
                 </ul>
             </div>
         @endif
+        <div class="row">
+            <ul class="nav nav-pills text-center" id="myTabs">
+                <li class="col-xs-4">
+                    <a data-toggle="tab" href="#compareceram">Presentes
+                    <span class="badge badge-pill badge-light">{{ $presentes->count() }}</span>
+                    </a>
+                </li>
 
-        <ul class="nav nav-pills text-center" id="myTabs">
-            <li class="col-xs-3" style="padding: 0">
-                <a data-toggle="tab" href="#compareceram">Presentes
-                <span class="badge badge-pill badge-light">{{ $presentes->count() }}</span>
-                </a>
-            </li>
+                <li class="col-xs-4 active">
+                    <a data-toggle="tab" href="#ausentes">
+                        Inscritos <span class="badge badge-pill badge-light">{{ $ausentes->count() }}</span>
+                    </a>
+                </li>
 
-            <li class="col-xs-4 active" style="padding: 0">
-                <a data-toggle="tab" href="#ausentes">
-                    Inscritos <span class="badge badge-pill badge-light">{{ $ausentes->count() }}</span>
-
-                </a>
-            </li>
-
-            <li class="col-xs-4" style="padding: 0;"><a data-toggle="tab" href="#adicionar">Adicionar</a></li>
-        </ul>
-
+                <li class="col-xs-3"><a data-toggle="tab" href="#adicionar">Adicionar</a></li>
+            </ul>
+        </div>
 
         <div class="tab-content">
             <!-- Tab Compareceram -->
@@ -62,7 +64,6 @@
                             <tr>
                                 <th>Nome</th>
                                 <th>CPF</th>
-                                <!-- Adicione mais colunas conforme necessário -->
                             </tr>
                         </thead>
                         <tbody>
@@ -70,7 +71,6 @@
                                 <tr>
                                     <td>{{ $presente->nome }}</td>
                                     <td>{{ $presente->cpf }}</td>
-                                    <!-- Adicione mais colunas conforme necessário -->
                                 </tr>
                             @endforeach
                         </tbody>
@@ -82,35 +82,61 @@
 
             <!-- Tab Ausentes -->
             <div id="ausentes" class="tab-pane fade in active table-responsive">
-                @if(count($ausentes) > 0)
-
-                    <table id="dataTable" class="table stripe" style="width:100%">
-                        <thead>
+                <p>
+                    <label for="mySearch"></label>
+                    <input type="text" placeholder="Pesquise por CPF ou Nome" id="mySearch">
+                </p>
+                <h3>Pré Inscritos</h3>
+                <table id="ausente" class="display nowrap mytables" style="width:100%">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>CPF</th>
+                            <th>Presença</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach($ausentes as $ausente)
                             <tr>
-                                <th>Nome</th>
-                                <th>CPF</th>
-                                <th> Presença </th>
+                                <td>{{ $ausente->nome }}</td>
+                                <td>{{ $ausente->cpf }}</td>
+                                <td class="text-center">
+                                    <form action="{{ route('atendente.presenca', ['evento' => $evento->id, 'inscrito' => $ausente->id]) }}" method="POST">
+                                        @csrf
+                                        <button type="submit" class="btn btn-success btn-sm">Presente</button>
+                                    </form>
+                                </td>
                             </tr>
-                        </thead>
-                        <tbody>
-                            @foreach($ausentes as $ausente)
-                                <tr>
-                                    <td>{{ $ausente->nome }}</td>
-                                    <td>{{ $ausente->cpf }}</td>
-                                    <td class="text-center">
-                                        <form action="{{ route('atendente.presenca', ['evento' => $evento->id, 'inscrito' => $ausente->id]) }}" method="POST">
-                                            @csrf
-                                            <button type="submit" class="btn btn-success btn-sm">Presente</button>
-                                        </form>
-                                    </td>
+                        @endforeach
+                    </tbody>
+                </table>
 
-                                </tr>
-                            @endforeach
-                        </tbody>
-                    </table>
-                @else
-                    <p>Nenhum inscrito está ausente.</p>
-                @endif
+                <!-- Incluir a listaGeral no corpo da tabela -->
+                <h3>Lista Geral</h3>
+                <table id="Geral" class="display nowrap mytables" style="width:100%">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>CPF</th>
+                            <th>Presença</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        @foreach($listaGeral as $inscrito)
+                            <tr>
+                                <td>{{ $inscrito->nome }}</td>
+                                <td>{{ $inscrito->cpf }}</td>
+                                <td class="text-center">
+                                    <form action="{{ route('atendente.presenca', ['evento' => $evento->id, 'inscrito' => $inscrito->id]) }}" method="POST">
+                                        @csrf
+                                        <button type="submit" class="btn btn-success btn-sm">Presente</button>
+                                    </form>
+                                </td>
+                            </tr>
+                        @endforeach
+                    </tbody>
+                </table>
             </div>
 
             <div id="adicionar" class="tab-pane fade">
@@ -169,17 +195,15 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" integrity="sha512-pHVGpX7F/27yZ0ISY+VVjyULApbDlD0/X0rgGbTqCE7WFW5MezNTWG/dnhtbBuICzsd0WQPgpE4REBLv+UqChw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>
 
-    $(document).ready(function() {
+$(document).ready( function () {
+  var tables = $('.mytables').DataTable({
+    "dom": '<"top">rt<"bottom"ip><"clear">'
+  });
 
-        $('#dataTable').DataTable({
-            "language": {
-                "search": "",
-                "searchPlaceholder": "Digite sua pesquisa..."
-            },
-            "paging": false
-
-        });
-    });
+  $('#mySearch').on( 'keyup click', function () {
+    tables.tables().search($(this).val()).draw();
+  });
+});
 
     $('#cpf').mask('000.000.000-00', {
         reverse: true
@@ -208,25 +232,29 @@
 @section('css')
 
 <style>
-    .dataTables_filter {
-        position: relative;
+    #mySearch {
+        text-align: center;
+        border: 0.25rem solid rgb(240, 240, 240);
+        border-left-color: green;
+        border-right-color: green;
+        border-radius: 5rem;
+        padding: 10px;
+        font-size: 16px;
+        width: 100%;
+        transition: box-shadow 0.5s;
+        outline: none;
     }
 
-    .dataTables_filter input {
-        width: 65vw;
-        height: 32px;
-        background: #fcfcfc;
-        border: 1px solid #aaa;
-        border-radius: 5px;
-        box-shadow: 0 0 3px #ccc, 0 10px 15px #ebebeb inset;
-        text-indent: 10px;
+    #mySearch:focus {
+        border-color: green;
     }
 
-    .dataTables_filter .fa-search {
-        position: absolute;
-        top: 10px;
-        left: auto;
-        right: 10px;
+    /* Estilos para a label */
+    label {
+        font-size: 18px;
+        font-weight: bold;
+        display: block;
+        margin-bottom: 10px;
     }
 </style>
 @endsection
