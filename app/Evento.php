@@ -31,7 +31,7 @@ class Evento extends CustomModel
         return $this->inscritos->count() >= $this->capacidade;
     }
 
-    public function cidades(){
+    public static function cidades(){
         $cidades = SindicatosMunicipio::orderBy('municipio')->pluck('municipio','id');
         $cidades->prepend('Outra', '');
         return $cidades;
