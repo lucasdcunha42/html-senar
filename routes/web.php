@@ -89,6 +89,8 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('/update-xml-regioes', [RegioesController::class, 'update'])->name('xml.regioes.update');
     Route::get('/update-xml-sindicatos', [SindicatosController::class, 'update'])->name('xml.sindicatos.update');
 
+    Route::get('/eventos/{evento}/relatorio', [InscritosEventosController::class, 'exportaRelatorio'])->name('eventos.inscritos.relatorio');
+
     Route::get('/eventos-inscritos/{event}/inscritos', [ListaInscritosController::class, 'index'])->name('lista.inscritos.index');
 
     Route::get('/eventos-inscritos/{evento}/inscricao', [InscritosEventosController::class, 'formulario'])->name('lista.inscritos.formulario');
