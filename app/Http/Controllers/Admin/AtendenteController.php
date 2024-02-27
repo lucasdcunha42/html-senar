@@ -23,27 +23,30 @@ class AtendenteController extends Controller
 
         $inscritos = $evento->inscritos;
 
-        // Obtém os inscritos que compareceram
-        $presentes = DB::table('inscritos')
-            ->select('inscritos.*', 'eventos_inscritos.evento_id as pivot_evento_id', 'eventos_inscritos.inscrito_id as pivot_inscrito_id', 'eventos_inscritos.presenca as pivot_presenca')
-            ->join('eventos_inscritos', 'inscritos.id', '=', 'eventos_inscritos.inscrito_id')
-            ->where('eventos_inscritos.evento_id', '=', $evento->id)
-            ->where('eventos_inscritos.presenca', '=', 1)
-            ->orderBy('nome')
-            ->get();
+         // Obtém os inscritos que compareceram
+        $presentes = $evento->inscritos()
+                    ->select('inscritos.nome', 'inscritos.cpf','inscritos.id')
+                    ->wherePivot('presenca', 1)
+                    ->orderBy('nome')
+                    ->get();
 
         // Obtém os inscritos que estão ausentes
-        $ausentes = DB::table('inscritos')
-            ->select('inscritos.*', 'eventos_inscritos.evento_id as pivot_evento_id', 'eventos_inscritos.inscrito_id as pivot_inscrito_id', 'eventos_inscritos.presenca as pivot_presenca')
-            ->join('eventos_inscritos', 'inscritos.id', '=', 'eventos_inscritos.inscrito_id')
-            ->where('eventos_inscritos.evento_id', '=', $evento->id)
-            ->where('eventos_inscritos.presenca', '=', 0)
-            ->orderBy('nome')
-            ->get();
+        $ausentes = $evento->inscritos()
+                ->select('inscritos.nome', 'inscritos.cpf', 'inscritos.id')
+                ->wherePivot('presenca', 0)
+                ->orderBy('nome')
+                ->get();
 
+        // Obtém as cidades do evento
         $cidades = $evento->cidades();
 
-        $listaGeral = Inscrito::whereNotIn('id', $presentes->pluck('id')->merge($ausentes->pluck('id')))->get();
+        // Obtém os inscritos que não estão nem presentes nem ausentes
+        $listaGeral = Inscrito::select('nome', 'cpf', 'id')
+                ->whereDoesntHave('evento', function ($query) use ($evento) {
+                    $query->where('evento_id', $evento->id);
+                })
+                ->get();
+
 
         return view('voyager::atendimento.lista-inscritos',
         [
@@ -110,5 +113,9 @@ class AtendenteController extends Controller
 
         // Redirecione de volta para onde quer que seja apropriado
         return redirect()->back()->with('success', $inscrito->nome . ' presente no Evento!');
+    }
+
+    public function getData(){
+
     }
 }

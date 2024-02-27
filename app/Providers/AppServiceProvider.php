@@ -27,5 +27,6 @@ class AppServiceProvider extends ServiceProvider
     {
         Paginator::useBootstrap();
         Voyager::addAction(\App\Actions\MyAction::class);
+        Voyager::addAction(\App\Actions\RelatorioInscritosEventos::class);
     }
 }

@@ -128,15 +128,13 @@
                                 <td>{{ $inscrito->nome }}</td>
                                 <td>{{ $inscrito->cpf }}</td>
                                 <td class="text-center">
-                                    <form action="{{ route('atendente.presenca', ['evento' => $evento->id, 'inscrito' => $inscrito->id]) }}" method="POST">
-                                        @csrf
-                                        <button type="submit" class="btn btn-success btn-sm">Presente</button>
-                                    </form>
+
                                 </td>
                             </tr>
                         @endforeach
                     </tbody>
                 </table>
+
             </div>
 
             <div id="adicionar" class="tab-pane fade">
@@ -196,13 +194,13 @@
 <script>
 
 $(document).ready( function () {
-  var tables = $('.mytables').DataTable({
-    "dom": '<"top">rt<"bottom"ip><"clear">'
-  });
+    var tables = $('.mytables').DataTable({
+        "dom": '<"top">rt<"bottom"ip><"clear">'
+    });
 
-  $('#mySearch').on( 'keyup click', function () {
-    tables.tables().search($(this).val()).draw();
-  });
+    $('#mySearch').on( 'keyup click', function () {
+        tables.tables().search($(this).val()).draw();
+    });
 });
 
     $('#cpf').mask('000.000.000-00', {
