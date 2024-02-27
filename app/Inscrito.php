@@ -12,6 +12,6 @@ class Inscrito extends Model
 
     public function evento() {
 
-        return $this->belongsToMany(Evento::class, 'eventos_inscritos', 'inscrito_id', 'evento_id' );
+        return $this->belongsToMany(Evento::class, 'eventos_inscritos', 'inscrito_id', 'evento_id' )->withPivot('presenca');
     }
 }
