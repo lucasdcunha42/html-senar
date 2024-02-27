@@ -3,7 +3,9 @@
 @section('content')
     @include('components.banner-page', [
         'title' => $curso->nome_curso,
+        'title' => $curso->nome_curso,
         'duration' => $curso->cargahorariatotal,
+        'bgPagePath' => !empty(trim($curso->imagem)) ? urlStorage($curso->imagem, 1400, 300) : '',
         'bgPagePath' => !empty(trim($curso->imagem)) ? urlStorage($curso->imagem, 1400, 300) : '',
         'overlay' => false
     ])
