@@ -8,6 +8,8 @@ use App\Inscrito;
 use App\SindicatosMunicipio;
 use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Rap2hpoutre\FastExcel\FastExcel as FastExcelFastExcel;
 
 class InscritosEventosController extends Controller
 {
@@ -65,5 +67,16 @@ class InscritosEventosController extends Controller
 
     public function ImprimeCertificado(Evento $evento, Inscrito $inscrito){
         ddd($evento, $inscrito);
+    }
+
+    public function exportaRelatorio(Evento $evento) {
+
+        $data = $evento->inscritos()
+        ->select('inscritos.nome', 'inscritos.cpf','inscritos.atividade', 'inscritos.cidade','inscritos.email', 'inscritos.telefone', DB::raw("DATE_FORMAT(eventos_inscritos.created_at, '%d/%m/%Y') AS inscrito_em"))
+        ->wherePivot('presenca', 1)
+        ->orderBy('nome')
+        ->get();
+
+        return (new FastExcelFastExcel($data))->download( $evento->titulo . '.xlsx');
     }
 }
