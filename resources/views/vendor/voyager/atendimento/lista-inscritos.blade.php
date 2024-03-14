@@ -218,7 +218,7 @@ $(document).ready(function() {
                 success: function(data) {
                     var parsedData = $.map(data, function(item) {
                         return {
-                            label: item.cpf, // Texto exibido no autocomplete
+                            label:  item.nome + ' - ' + item.cpf, // Texto exibido no autocomplete
                             inscrito: item // Valor selecionado ao clicar em um item
                         };
                     });
@@ -234,6 +234,7 @@ $(document).ready(function() {
             $('#atividade').val(ui.item.inscrito.atividade);
             $('#cidade').val(ui.item.inscrito.cidade);
             $('#telefone').val(ui.item.inscrito.telefone);
+            return false;
 
         } // Número mínimo de caracteres antes de iniciar a pesquisa
 
