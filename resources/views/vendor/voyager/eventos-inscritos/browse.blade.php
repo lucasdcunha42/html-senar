@@ -8,15 +8,9 @@
             <i class="{{ $dataType->icon }}"></i> {{ $dataType->getTranslatedAttribute('display_name_plural') }}
         </h1>
 
-        @can('add', app($dataType->model_name))
-            <a href="{{ route('voyager.'.$dataType->slug.'.create') }}" class="btn btn-success btn-add-new">
-                <i class="voyager-plus"></i> <span>{{ __('voyager::generic.add_new') }}</span>
-            </a>
-        @endcan
-
         <!-- Botão Header Adiciona inscrito em evento -->
-        <a href="{{ route('lista.inscritos.formulario',  ['evento' => $evento->id] )}}" class="btn btn-success btn-add-new">
-            <i class="voyager-plus"></i> Adcionar aaaaaInscrito
+        <a href="#" class="btn btn-success btn-add-new" data-toggle="modal" data-target="#modalAdicionarInscrito">
+            <i class="voyager-plus"></i> Adcionar Inscrito
         </a>
 
         <!-- Impressão de Cetificado de todos os Participantes -->
@@ -302,18 +296,17 @@
 
                                             <span class="input-group-btn text-right">
                                                 <a href="{{ route('lista.inscritos.remover', ['evento' => $evento->id, 'inscrito' => $data]) }}" class="btn btn-danger" style="margin: 0 2px; border-radius: 3px">
-                                                    <i class="voyager-person"></i> <span> - Remover Inscrição</span>
+                                                    <i class="voyager-person"></i> <span> Remover Inscrição</span>
                                                 </a>
 
-                                                <a href="{{ route('lista.inscritos.imprimeCracha',  ['evento' => $evento->id, 'inscrito' => $data] )}}" class="btn btn-info btn-add-new" style="margin: 0 2px; border-radius: 3px">
-                                                    <i class="voyager-certificate"></i> Certificado
+                                                <a href="{{ route('lista.inscritos.imprimeCertificado', ['evento' => $evento->id, 'inscrito' => $data]) }}" target="_blank" class="btn btn-primary">Ver Certificado</a>
+                                                <i class="voyager-certificate"></i> Certificado
                                                 </a>
 
                                                 <a href="{{ route('lista.inscritos.imprimeCracha',  ['evento' => $evento->id, 'inscrito' => $data] )}}" class="btn btn-warning btn-add-new" style="margin: 0 2px; border-radius: 3px">
                                                     <i class="voyager-news"></i> Crachá
                                                 </a>
                                             </span>
-
                                         </td>
                                     </tr>
                                     @endforeach
@@ -365,6 +358,22 @@
             </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
+
+    <div class="modal fade" id="modalAdicionarInscrito" tabindex="-1" role="dialog" aria-labelledby="modalAdicionarInscritoLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalAdicionarInscritoLabel">Adicionar Inscrito em <em>{{ $evento->titulo}}</em></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    @include('frontend.forms.inscricao-evento-admin', ['cidades' => $evento])
+                </div>
+            </div>
+        </div>
+    </div>
 @stop
 
 @section('css')
@@ -452,5 +461,6 @@
             });
             $('.selected_ids').val(ids);
         });
+
     </script>
 @stop

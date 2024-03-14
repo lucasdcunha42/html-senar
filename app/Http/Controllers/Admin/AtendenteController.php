@@ -115,7 +115,11 @@ class AtendenteController extends Controller
         return redirect()->back()->with('success', $inscrito->nome . ' presente no Evento!');
     }
 
-    public function getData(){
+    public function getData(Evento $evento, Request $request){
+        $term = $request->input('term');
 
+        $inscritos = Inscrito::select('id', 'cpf' ,'nome', 'email', 'atividade', 'cidade', 'telefone')->where('cpf', 'like', $term.'%')->get();
+
+        return response()->json($inscritos);
     }
 }

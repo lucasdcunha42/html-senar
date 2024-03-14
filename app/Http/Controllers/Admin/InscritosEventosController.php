@@ -8,11 +8,14 @@ use App\Inscrito;
 use App\SindicatosMunicipio;
 use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 use Illuminate\Support\Facades\DB;
 use Rap2hpoutre\FastExcel\FastExcel as FastExcelFastExcel;
+use Rawilk\Printing\Facades\Printing;
 
 class InscritosEventosController extends Controller
 {
+    //*@ArieLops Remove somente do Evento, não da Lista Geral.
     public function removeInscritoEvento(Evento $evento, Inscrito $inscrito) {
 
         //$this->authorize('add', app($dataType->model_name));
@@ -23,17 +26,18 @@ class InscritosEventosController extends Controller
 
     public function formulario($eventoId)
     {
+
         $evento = Evento::findOrFail($eventoId);
         $cidades = SindicatosMunicipio::orderBy('municipio')->pluck('municipio','id');
 
         // talvez precise da logica de permissão;
-        return view('frontend.forms.inscricao-evento', ['evento' => $evento, 'cidades' => $cidades ]);
+        return view('frontend.forms.inscricao-evento-admin', ['evento' => $evento, 'cidades' => $cidades ]);
     }
 
-    public function adicionaInscrito(Request $request)
+    public function adicionaInscrito(Request $request, $eventoId)
     {
+
         //Lógica para adicionar o inscrito ao evento
-        $eventoId = $request->input('evento_id');
         $inscrito = Inscrito::create([
             'nome' => $request->input('nome'),
             'cpf' => $request->input('cpf'),
@@ -45,7 +49,7 @@ class InscritosEventosController extends Controller
         $evento = Evento::findOrFail($eventoId);
         $evento->inscritos()->attach($inscrito->id);
 
-        return redirect()->route('lista.inscritos.index', ['event' => $eventoId])->with('success', 'Inscrito adicionado com sucesso.');
+        return redirect()->route('lista.inscritos.index', ['evento' => $eventoId])->with('success', 'Inscrito adicionado com sucesso.');
     }
 
     public function bulkDetachInscritos(Request $request, Evento $evento)
@@ -54,19 +58,16 @@ class InscritosEventosController extends Controller
     }
 
     public function imprimeCracha(Evento $evento, Inscrito $inscrito){
-
-        $data = [
-            'inscrito' => $inscrito->nome,
-            'evento' => $evento->titulo,
-        ];
-
-        $cracha = Pdf::loadView('pdf.cracha', ['data' => $data])->setPaper('a6', 'portrait');
-
-        return $cracha->stream('cracha.pdf');
+        //Abortado opção de pdf pelo momento, necessita servidor de impressão ='(
+        //Abre uma view com os dados. Javascript usa o print()
+        return view('pdf.cracha', ['evento' => $evento, 'inscrito' => $inscrito]);
     }
 
     public function ImprimeCertificado(Evento $evento, Inscrito $inscrito){
-        ddd($evento, $inscrito);
+
+        //Abortado opção de pdf pelo momento, necessita servidor de impressão ='(
+        //Abre uma view com os dados. Javascript usa o print()
+        return view('pdf.certificado',  ['evento' => $evento, 'inscrito' => $inscrito ]);
     }
 
     public function exportaRelatorio(Evento $evento) {
@@ -80,3 +81,5 @@ class InscritosEventosController extends Controller
         return (new FastExcelFastExcel($data))->download( $evento->titulo . '.xlsx');
     }
 }
+
+

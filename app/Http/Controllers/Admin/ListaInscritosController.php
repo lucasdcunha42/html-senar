@@ -38,7 +38,7 @@ class ListaInscritosController extends VoyagerBaseController
     {
         // GET THE SLUG, ex. 'posts', 'pages', etc.
         $slug = 'eventos-inscritos';
-        $idEvento = $request->route()->event;
+        $idEvento = $request->route()->evento;
 
         $evento = Evento::findOrFail($idEvento);
 
@@ -50,6 +50,9 @@ class ListaInscritosController extends VoyagerBaseController
 
         // Check permission
         $this->authorize('browse', app($dataType->model_name));
+
+        //Forçando serverside off p/ inscritos para um evento especifico
+        $dataType->server_side = 0;
 
         $getter = $dataType->server_side ? 'paginate' : 'get';
 
