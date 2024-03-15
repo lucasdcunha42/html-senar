@@ -91,8 +91,7 @@ Route::group(['prefix' => 'admin'], function () {
 
     Route::get('/eventos/{evento}/relatorio', [InscritosEventosController::class, 'exportaRelatorio'])->name('eventos.inscritos.relatorio');
 
-    Route::get('/eventos-inscritos/{event}/inscritos', [ListaInscritosController::class, 'index'])->name('lista.inscritos.index');
-
+    Route::get('/eventos-inscritos/{evento}/inscritos', [ListaInscritosController::class, 'index'])->name('lista.inscritos.index');
     Route::get('/eventos-inscritos/{evento}/inscricao', [InscritosEventosController::class, 'formulario'])->name('lista.inscritos.formulario');
     Route::post('/eventos-inscritos/{evento}/adicionar', [InscritosEventosController::class, 'adicionaInscrito'])->name('lista.inscritos.adicionar');
 
@@ -109,7 +108,6 @@ Route::group(['prefix' => 'admin'], function () {
 
     Route::post('/atendente/store', [AtendenteController::class, 'store'])->name('atendente.store');
     Route::post('/atendente/{evento}/inscritos/{inscrito}/marcar-presente', [AtendenteController::class, 'presenca'])->name('atendente.presenca');
-
 
 });
 

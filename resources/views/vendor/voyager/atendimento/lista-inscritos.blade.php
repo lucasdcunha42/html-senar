@@ -110,31 +110,6 @@
                         @endforeach
                     </tbody>
                 </table>
-
-                <!-- Incluir a listaGeral no corpo da tabela -->
-                <h3>Lista Geral</h3>
-                <table id="Geral" class="display nowrap mytables" style="width:100%">
-                    <thead>
-                        <tr>
-                            <th>Nome</th>
-                            <th>CPF</th>
-                            <th>Presença</th>
-                        </tr>
-                    </thead>
-
-                    <tbody>
-                        @foreach($listaGeral as $inscrito)
-                            <tr>
-                                <td>{{ $inscrito->nome }}</td>
-                                <td>{{ $inscrito->cpf }}</td>
-                                <td class="text-center">
-
-                                </td>
-                            </tr>
-                        @endforeach
-                    </tbody>
-                </table>
-
             </div>
 
             <div id="adicionar" class="tab-pane fade">
@@ -142,13 +117,15 @@
                 <form method="POST" action="{{ route('atendente.store') }}">
                     @csrf
                     <input type="hidden" name="evento_id" value="{{ $evento->id }}">
-                    <div class="form-group">
-                        <label for="nome">Nome Completo: <span class="small" style="color:#C0C0C0">( obrigatório )</span></label>
-                        <input type="text" class="form-control" id="nome" name="nome" required>
-                    </div>
+
                     <div class="form-group">
                         <label for="cpf">CPF: <span class="small" style="color:#C0C0C0">( obrigatório )</span> </label>
                         <input type="text" class="form-control" id="cpf" name="cpf" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="nome">Nome Completo: <span class="small" style="color:#C0C0C0">( obrigatório )</span></label>
+                        <input type="text" class="form-control" id="nome" name="nome" required>
                     </div>
 
                     <div class="form-group">
@@ -191,6 +168,7 @@
 @section('javascript')
 <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js" type="text/javascript"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" integrity="sha512-pHVGpX7F/27yZ0ISY+VVjyULApbDlD0/X0rgGbTqCE7WFW5MezNTWG/dnhtbBuICzsd0WQPgpE4REBLv+UqChw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 <script>
 
 $(document).ready( function () {
@@ -203,31 +181,71 @@ $(document).ready( function () {
     });
 });
 
-    $('#cpf').mask('000.000.000-00', {
-        reverse: true
-    });
-    var maskBehavior = function maskBehavior(val) {
-        return val.replace(/\D/g, '').length === 11 ? '(00) 00000-0000' : '(00) 0000-00009';
-        },
-        options = {
-        onKeyPress: function onKeyPress(val, e, field, options) {
-            field.mask(maskBehavior.apply({}, arguments), options);
-        }
-        };
-    $('#telefone').mask(maskBehavior, options);
-    $('form').on('submit', function () {
-        $('#cpf').unmask();
-        $('#telefone').unmask();
-    });
+$('#cpf').mask('00000000000', {
+    reverse: true
+});
+var maskBehavior = function maskBehavior(val) {
+    return val.replace(/\D/g, '').length === 11 ? '(00) 00000-0000' : '(00) 0000-00009';
+    },
+    options = {
+    onKeyPress: function onKeyPress(val, e, field, options) {
+        field.mask(maskBehavior.apply({}, arguments), options);
+    }
+    };
+$('#telefone').mask(maskBehavior, options);
+$('form').on('submit', function () {
+    $('#cpf').unmask();
+    $('#telefone').unmask();
+});
 
-    $(document).ready(function() {
-        $('#cidade').select2();
-    });
+$(document).ready(function() {
+    $('#cidade').select2();
+});
 
 </script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+<script>
+$(document).ready(function() {
+    $('#cpf').autocomplete({
+        source: function(request, response) {
+            // Fazer uma requisição AJAX para buscar os dados dos inscritos
+            $.ajax({
+                url: '{{ route('atendente.getdata',['evento' => $evento]) }}',
+                dataType: 'json',
+                data: {
+                    term: request.term // Termo de pesquisa inserido pelo usuário
+                },
+                success: function(data) {
+                    var parsedData = $.map(data, function(item) {
+                        return {
+                            label:  item.nome + ' - ' + item.cpf, // Texto exibido no autocomplete
+                            inscrito: item // Valor selecionado ao clicar em um item
+                        };
+                    });
+                    response(parsedData);
+                }
+            });
+        },
+        minLength: 3,
+        select: function(event, ui) {
+            $('#nome').val(ui.item.inscrito.nome);
+            $('#cpf').val(ui.item.inscrito.cpf);
+            $('#email').val(ui.item.inscrito.email);
+            $('#atividade').val(ui.item.inscrito.atividade);
+            $('#cidade').val(ui.item.inscrito.cidade);
+            $('#telefone').val(ui.item.inscrito.telefone);
+            return false;
+
+        } // Número mínimo de caracteres antes de iniciar a pesquisa
+
+    });
+});
+</script>
+
 @endsection
 
 @section('css')
+<link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
 
 <style>
     #mySearch {
@@ -254,6 +272,50 @@ $(document).ready( function () {
         display: block;
         margin-bottom: 10px;
     }
+
+    #pesquisaGeral {
+        text-align: center;
+        border: 0.25rem solid rgb(240, 240, 240);
+        border-left-color: green;
+        border-right-color: green;
+        border-radius: 5rem;
+        padding: 10px;
+        font-size: 16px;
+        width: 100%;
+        transition: box-shadow 0.5s;
+        outline: none;
+    }
+
+    #pesquisaGeral:focus {
+        border-color: green;
+    }
+
+    .ui-autocomplete {
+    background-color: #fff; /* Cor de fundo */
+    border: 1px solid #ccc; /* Borda */
+    border-radius: 5px; /* Bordas arredondadas */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Sombra */
+    padding: 0; /* Espaçamento interno */
+    max-height: 200px; /* Altura máxima para rolagem */
+    overflow-y: auto; /* Adiciona barra de rolagem vertical se necessário */
+}
+
+    .ui-menu-item {
+        border-bottom:1px solid #232323
+        padding: 8px 12px; /* Espaçamento interno */
+        cursor: pointer; /* Cursor ao passar o mouse */
+        transition: background-color 0.3s; /* Transição suave */
+    }
+
+    .ui-menu-item:hover {
+        background-color: #f0f0f0; /* Cor de fundo ao passar o mouse */
+    }
+
+    .ui-menu-item-wrapper {
+        font-size: 14px; /* Tamanho da fonte */
+        color: #333; /* Cor do texto */
+    }
+
 </style>
 @endsection
 

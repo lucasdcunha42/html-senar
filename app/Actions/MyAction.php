@@ -30,7 +30,7 @@ class MyAction extends AbstractAction
 
     public function getDefaultRoute()
     {
-        return route('lista.inscritos.index', ['event' => $this->data->{$this->data->getKeyName()}]);
+        return route('lista.inscritos.index', ['evento' => $this->data->{$this->data->getKeyName()}]);
     }
 
     public function shouldActionDisplayOnDataType()

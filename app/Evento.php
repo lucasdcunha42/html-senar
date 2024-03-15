@@ -14,6 +14,11 @@ class Evento extends CustomModel
         return Carbon::parse($this->data_inicio)->format('d.m.Y');
     }
 
+    public function getDataInicioFormatadaCertificado()
+    {
+        return Carbon::parse($this->data_inicio)->format('d/m/Y');
+    }
+
     public static function getTipos() {
         return collect([
             self::TIPO_FEIRAS_E_EXPOSICOES => 'Feiras e Exposições',
